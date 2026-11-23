@@ -1,0 +1,47 @@
+## A derivative is a slope
+
+The <Term id="derivative" /> $\mathrm{d}y/\mathrm{d}x$ says how fast $y$ changes per unit of $x$: the slope of the curve at that point. For a straight line it is simply (change in y) / (change in x).
+
+Units come along: if $n$ is in cm⁻³ and $x$ in cm, the slope $\mathrm{d}n/\mathrm{d}x$ is in cm⁻³/cm = **cm⁻⁴**. In week 3 that slope, the concentration **gradient**, drives the diffusion current $J = qD\,\mathrm{d}n/\mathrm{d}x$. A flat profile has slope zero: no diffusion current.
+
+**Example (book ex. 6.14).** $n$ falls linearly from $2.7 \times 10^{16}$ to $1.0 \times 10^{15}$ cm⁻³ over 2 µm $= 2 \times 10^{-4}$ cm:
+
+$$
+\left|\frac{\mathrm{d}n}{\mathrm{d}x}\right| = \frac{2.6 \times 10^{16}}{2 \times 10^{-4}} = 1.3 \times 10^{20}\ \mathrm{cm^{-4}}
+$$
+
+Rules you need: the slope of $e^{-x/L}$ is $-\frac{1}{L}e^{-x/L}$ (the curve times $-1/L$); the slope of $x^2$ is $2x$.
+
+## The second derivative is curvature
+
+Differentiate twice and you get $y''$: how fast the slope changes. Positive $y''$: the curve bends upwards (a valley). Negative: it bends downwards (a hill). Constant $y''$: a parabola.
+
+<Diagram id="slope-explorer" />
+
+## Two differential equations cover week 3
+
+A <Term id="differential-equation" /> links a function to its own derivatives. The carrier profiles of week 3 come from just two:
+
+**1. Constant curvature, $y'' = -c$** (generation, no recombination). Integrate twice:
+
+$$
+y = -\frac{c}{2}x^2 + C_1 x + C_0
+$$
+
+a downward parabola.
+
+**2. Curvature proportional to the value, $y'' = y/L^2$** (recombination, no generation). Solutions are exponentials:
+
+$$
+y = A\,e^{-x/L} + B\,e^{x/L}
+$$
+
+In a thick wafer the growing term must vanish ($B = 0$), leaving the decay $A e^{-x/L}$: the value drops to 37 % every distance $L$.
+
+## Boundary conditions fix the constants
+
+Each solution has two unknown constants, so you need two <Term id="boundary-condition">boundary conditions</Term>: for example $y = 0$ at both ends, or $y = 0$ at one end and slope zero at the other (no flow through a wall). Find the general solution first, then substitute both conditions.
+
+<KeyIdea>
+Recipe: (1) write the equation for each region, (2) write its general solution, (3) use the boundary conditions, and where regions meet, match the value **and** the slope.
+</KeyIdea>

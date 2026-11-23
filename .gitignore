@@ -1,0 +1,7 @@
+.work/
+node_modules/
+dist/
+.DS_Store
+
+# Course PDFs (copyrighted, not needed to build the site)
+Material/

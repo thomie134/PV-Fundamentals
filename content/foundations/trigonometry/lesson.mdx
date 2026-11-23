@@ -1,0 +1,35 @@
+<Ctx c="optics">
+
+## The three functions you need
+
+In a right-angled triangle with angle θ:
+
+$$
+\sin\theta = \frac{\text{opposite}}{\text{hypotenuse}}, \qquad \cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}}
+$$
+
+On the unit circle (radius 1) this becomes very visual: a point at angle θ has height $\sin\theta$ and horizontal distance $\cos\theta$. As θ goes from 0° to 90°, sin rises from 0 to 1 and cos falls from 1 to 0. Neither can ever exceed 1.
+
+$\arcsin$ (also written $\sin^{-1}$) undoes sin: it answers ‘which angle has this sine?’. It only accepts values between −1 and 1.
+
+<Diagram id="unit-circle" />
+
+## Degrees and radians
+
+A full circle is 360° or 2π <Term id="radian">radians</Term>, so 1 rad ≈ 57.3°. Calculators and spreadsheets often default to radians. If Snell’s law gives you an angle of 0.43, you are almost certainly looking at radians: 0.43 × 57.3 = 24.8°.
+
+## Angles in optics
+
+All angles in optics are measured from the <Term id="surface-normal" />, the line perpendicular to the surface, never from the surface itself. Normal incidence is 0°; grazing incidence is 90°.
+
+Three places the course uses trigonometry:
+
+1. **Snell’s law** $n_1\sin\theta_i = n_2\sin\theta_t$: solve for $\sin\theta_t$, then take arcsin.
+2. **Total internal reflection:** if Snell’s law asks for $\sin\theta_t > 1$, there is no angle that fits: no refracted ray exists and all light is reflected. The boundary case $\sin\theta_t = 1$ ($\theta_t = 90°$) defines the <Term id="critical-angle" />.
+3. **Path lengths:** a ray crossing a layer of thickness $d$ at angle θ from the normal travels the hypotenuse, $d/\cos\theta$.
+
+<KeyIdea>
+‘arcsin of something bigger than 1’ is not a calculator error to work around: it is the physics telling you the light is totally internally reflected.
+</KeyIdea>
+
+</Ctx>

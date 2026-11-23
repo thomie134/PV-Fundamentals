@@ -1,0 +1,2289 @@
+{
+  "ignore": [
+    "e",
+    "i",
+    "\\pi"
+  ],
+  "symbols": [
+    {
+      "id": "sym-h",
+      "latex": "h",
+      "contexts": [
+        "radiation",
+        "optics",
+        "semiconductor",
+        "transport",
+        "junction",
+        "cell",
+        "general",
+        "math"
+      ],
+      "name": "Planck constant",
+      "unit": "J s",
+      "typical": "6.626 × 10⁻³⁴ J s",
+      "glossary": "planck-constant"
+    },
+    {
+      "id": "sym-h-height",
+      "latex": "h",
+      "contexts": [
+        "energy"
+      ],
+      "name": "height",
+      "unit": "m",
+      "typical": "1 m in the lecture example"
+    },
+    {
+      "id": "sym-c",
+      "latex": "c",
+      "contexts": [
+        "*"
+      ],
+      "name": "speed of light in vacuum",
+      "unit": "m s⁻¹",
+      "typical": "2.998 × 10⁸ m s⁻¹",
+      "glossary": "speed-of-light"
+    },
+    {
+      "id": "sym-c0",
+      "latex": "c_0",
+      "contexts": [
+        "*"
+      ],
+      "name": "speed of light in vacuum",
+      "unit": "m s⁻¹",
+      "typical": "2.998 × 10⁸ m s⁻¹",
+      "glossary": "speed-of-light",
+      "note": "The book writes c₀ to stress ‘in vacuum’; the lecture writes c."
+    },
+    {
+      "id": "sym-q",
+      "latex": "q",
+      "contexts": [
+        "*"
+      ],
+      "name": "elementary charge",
+      "unit": "C",
+      "typical": "1.602 × 10⁻¹⁹ C",
+      "glossary": "elementary-charge"
+    },
+    {
+      "id": "sym-kB",
+      "latex": "k_B",
+      "contexts": [
+        "*"
+      ],
+      "name": "Boltzmann constant",
+      "unit": "J K⁻¹",
+      "typical": "1.381 × 10⁻²³ J K⁻¹ = 8.617 × 10⁻⁵ eV K⁻¹",
+      "glossary": "boltzmann-constant"
+    },
+    {
+      "id": "sym-T",
+      "latex": "T",
+      "contexts": [
+        "*"
+      ],
+      "name": "absolute temperature",
+      "unit": "K",
+      "typical": "300 K (room), ≈ 5800 K (Sun’s surface)",
+      "glossary": "kelvin"
+    },
+    {
+      "id": "sym-lambda",
+      "latex": "\\lambda",
+      "contexts": [
+        "*"
+      ],
+      "name": "wavelength",
+      "unit": "m (often given in nm)",
+      "typical": "300–2500 nm for sunlight",
+      "glossary": "wavelength"
+    },
+    {
+      "id": "sym-lambda0",
+      "latex": "\\lambda_0",
+      "contexts": [
+        "*"
+      ],
+      "name": "wavelength in vacuum",
+      "unit": "m",
+      "typical": "the wavelength you are given, e.g. 650 nm",
+      "glossary": "wavelength",
+      "note": "Inside a medium the wavelength is λ₀/n; formulas with λ₀ want the vacuum value."
+    },
+    {
+      "id": "sym-lambda1",
+      "latex": "\\lambda_1",
+      "contexts": [
+        "*"
+      ],
+      "name": "lower wavelength limit",
+      "unit": "m or nm",
+      "glossary": "wavelength"
+    },
+    {
+      "id": "sym-lambda2",
+      "latex": "\\lambda_2",
+      "contexts": [
+        "*"
+      ],
+      "name": "upper wavelength limit",
+      "unit": "m or nm",
+      "glossary": "wavelength"
+    },
+    {
+      "id": "sym-lambdag",
+      "latex": "\\lambda_g",
+      "contexts": [
+        "*"
+      ],
+      "name": "absorption-edge wavelength (λ at which E_ph = E_G)",
+      "unit": "nm",
+      "typical": "≈ 1107 nm for c-Si",
+      "glossary": "bandgap"
+    },
+    {
+      "id": "sym-lambdamax",
+      "latex": "\\lambda_{\\max}",
+      "contexts": [
+        "*"
+      ],
+      "name": "wavelength of maximum spectral radiance",
+      "unit": "m",
+      "typical": "≈ 500 nm for the Sun",
+      "glossary": "wien-law"
+    },
+    {
+      "id": "sym-lambdamax2",
+      "latex": "\\lambda_{\\mathrm{max}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "wavelength of maximum spectral radiance",
+      "unit": "m",
+      "typical": "≈ 500 nm for the Sun",
+      "glossary": "wien-law"
+    },
+    {
+      "id": "sym-nu",
+      "latex": "\\nu",
+      "contexts": [
+        "*"
+      ],
+      "name": "frequency",
+      "unit": "Hz = s⁻¹",
+      "typical": "≈ 5 × 10¹⁴ Hz for visible light",
+      "glossary": "frequency"
+    },
+    {
+      "id": "sym-omega",
+      "latex": "\\omega",
+      "contexts": [
+        "*"
+      ],
+      "name": "angular frequency (2πν)",
+      "unit": "rad s⁻¹"
+    },
+    {
+      "id": "sym-E-energy",
+      "latex": "E",
+      "contexts": [
+        "energy",
+        "general",
+        "math"
+      ],
+      "name": "energy",
+      "unit": "J",
+      "glossary": "energy"
+    },
+    {
+      "id": "sym-E-photon",
+      "latex": "E",
+      "contexts": [
+        "radiation",
+        "optics"
+      ],
+      "name": "photon energy",
+      "unit": "J or eV",
+      "typical": "1.77 eV for 700 nm",
+      "glossary": "photon-energy"
+    },
+    {
+      "id": "sym-Eph",
+      "latex": "E_{\\mathrm{ph}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "photon energy",
+      "unit": "J or eV",
+      "typical": "0.5–4 eV for sunlight",
+      "glossary": "photon-energy"
+    },
+    {
+      "id": "sym-EG",
+      "latex": "E_G",
+      "contexts": [
+        "*"
+      ],
+      "name": "bandgap energy",
+      "unit": "eV",
+      "typical": "1.12 eV for c-Si",
+      "glossary": "bandgap"
+    },
+    {
+      "id": "sym-Eg",
+      "latex": "E_g",
+      "contexts": [
+        "*"
+      ],
+      "name": "bandgap energy",
+      "unit": "eV",
+      "typical": "1.12 eV for c-Si",
+      "glossary": "bandgap",
+      "note": "Same quantity as E_G; the lecture writes both."
+    },
+    {
+      "id": "sym-Erad",
+      "latex": "E_{\\mathrm{rad}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "irradiation (energy per area)",
+      "unit": "J m⁻² (often kWh m⁻²)",
+      "typical": "≈ 1000 kWh m⁻² per year in NL",
+      "glossary": "irradiation"
+    },
+    {
+      "id": "sym-n-refr",
+      "latex": "n",
+      "contexts": [
+        "optics",
+        "radiation"
+      ],
+      "name": "refractive index (real part)",
+      "unit": "– (dimensionless)",
+      "typical": "air 1.0, glass 1.5, c-Si ≈ 3.6 (near-IR)",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-n0-optics",
+      "latex": "n_0",
+      "contexts": [
+        "optics"
+      ],
+      "name": "refractive index of the surrounding medium",
+      "unit": "–",
+      "typical": "1.0 for air",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-ns",
+      "latex": "n_s",
+      "contexts": [
+        "optics"
+      ],
+      "name": "refractive index of the substrate (absorber)",
+      "unit": "–",
+      "typical": "c-Si ≈ 3.6–4.3",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-nc",
+      "latex": "n_c",
+      "contexts": [
+        "optics"
+      ],
+      "name": "refractive index of the coating",
+      "unit": "–",
+      "typical": "1.4–2.5",
+      "glossary": "anti-reflective-coating"
+    },
+    {
+      "id": "sym-nSi",
+      "latex": "n_{\\mathrm{Si}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "refractive index of silicon",
+      "unit": "–",
+      "typical": "3.57 at 1000 nm",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-nair",
+      "latex": "n_{\\mathrm{air}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "refractive index of air",
+      "unit": "–",
+      "typical": "1.0",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-ntilde",
+      "latex": "\\tilde{n}",
+      "contexts": [
+        "*"
+      ],
+      "name": "complex refractive index n + iκ",
+      "unit": "–",
+      "typical": "c-Si at 650 nm: 3.84 + 0.015i",
+      "glossary": "complex-refractive-index"
+    },
+    {
+      "id": "sym-kappa",
+      "latex": "\\kappa",
+      "contexts": [
+        "optics",
+        "radiation"
+      ],
+      "name": "extinction coefficient (imaginary part of ñ)",
+      "unit": "–",
+      "typical": "c-Si: 0.015 at 650 nm, 5 × 10⁻⁴ at 1000 nm",
+      "glossary": "extinction-coefficient"
+    },
+    {
+      "id": "sym-k-ext",
+      "latex": "k",
+      "contexts": [
+        "optics",
+        "transport",
+        "semiconductor"
+      ],
+      "name": "extinction coefficient (written k in some exercises)",
+      "unit": "–",
+      "glossary": "extinction-coefficient",
+      "note": "Exercise 7.5 writes ñ = n − ik; the book writes ñ = n + iκ. The sign convention does not change R or α."
+    },
+    {
+      "id": "sym-alpha",
+      "latex": "\\alpha",
+      "contexts": [
+        "optics",
+        "radiation",
+        "transport",
+        "cell"
+      ],
+      "name": "absorption coefficient",
+      "unit": "m⁻¹ (often cm⁻¹)",
+      "typical": "c-Si: 2.9 × 10³ cm⁻¹ at 650 nm, 64 cm⁻¹ at 1000 nm",
+      "glossary": "absorption-coefficient"
+    },
+    {
+      "id": "sym-I-optics",
+      "latex": "I",
+      "contexts": [
+        "optics"
+      ],
+      "name": "intensity (irradiance) of the light beam",
+      "unit": "W m⁻²",
+      "glossary": "irradiance"
+    },
+    {
+      "id": "sym-I0",
+      "latex": "I_0",
+      "contexts": [
+        "optics",
+        "radiation"
+      ],
+      "name": "intensity entering the layer (at z = 0)",
+      "unit": "W m⁻²",
+      "glossary": "irradiance"
+    },
+    {
+      "id": "sym-z",
+      "latex": "z",
+      "contexts": [
+        "optics"
+      ],
+      "name": "depth below the surface",
+      "unit": "m",
+      "glossary": "lambert-beer"
+    },
+    {
+      "id": "sym-d-thick",
+      "latex": "d",
+      "contexts": [
+        "optics",
+        "general"
+      ],
+      "name": "layer thickness",
+      "unit": "m (often µm or nm)",
+      "typical": "c-Si wafer 100–180 µm; ARC ≈ 75 nm"
+    },
+    {
+      "id": "sym-t-thick",
+      "latex": "t",
+      "contexts": [
+        "optics"
+      ],
+      "name": "layer thickness",
+      "unit": "m",
+      "typical": "100 µm in instruction 1"
+    },
+    {
+      "id": "sym-A-abs",
+      "latex": "A",
+      "contexts": [
+        "optics"
+      ],
+      "name": "absorptance (fraction of light absorbed in the layer)",
+      "unit": "– (0 to 1)",
+      "glossary": "absorptance"
+    },
+    {
+      "id": "sym-deltap",
+      "latex": "\\delta_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "penetration depth (1/α)",
+      "unit": "m",
+      "typical": "c-Si: 3.4 µm at 650 nm, 156 µm at 1000 nm",
+      "glossary": "penetration-depth"
+    },
+    {
+      "id": "sym-thetai",
+      "latex": "\\theta_i",
+      "contexts": [
+        "*"
+      ],
+      "name": "angle of incidence (from the surface normal)",
+      "unit": "° (degrees)",
+      "glossary": "angle-of-incidence"
+    },
+    {
+      "id": "sym-thetat",
+      "latex": "\\theta_t",
+      "contexts": [
+        "*"
+      ],
+      "name": "angle of refraction (transmitted ray, from the normal)",
+      "unit": "°",
+      "glossary": "angle-of-incidence"
+    },
+    {
+      "id": "sym-thetar",
+      "latex": "\\theta_r",
+      "contexts": [
+        "*"
+      ],
+      "name": "angle of reflection (equals θᵢ)",
+      "unit": "°",
+      "glossary": "angle-of-incidence"
+    },
+    {
+      "id": "sym-theta-optics",
+      "latex": "\\theta",
+      "contexts": [
+        "optics"
+      ],
+      "name": "angle of a ray with the surface normal",
+      "unit": "°",
+      "glossary": "angle-of-incidence"
+    },
+    {
+      "id": "sym-theta-zenith",
+      "latex": "\\theta",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "angle between the Sun and the zenith",
+      "unit": "°",
+      "glossary": "air-mass"
+    },
+    {
+      "id": "sym-theta-math",
+      "latex": "\\theta",
+      "contexts": [
+        "math",
+        "general"
+      ],
+      "name": "angle",
+      "unit": "° or rad"
+    },
+    {
+      "id": "sym-thetacrit",
+      "latex": "\\theta_{\\mathrm{crit}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "critical angle for total internal reflection",
+      "unit": "°",
+      "typical": "16.3° for c-Si/air",
+      "glossary": "critical-angle"
+    },
+    {
+      "id": "sym-thetaBR",
+      "latex": "\\theta_{\\mathrm{BR}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "angle of the ray after the back reflector (in the absorber)",
+      "unit": "°",
+      "glossary": "light-trapping"
+    },
+    {
+      "id": "sym-rs",
+      "latex": "r_s",
+      "contexts": [
+        "*"
+      ],
+      "name": "amplitude reflection coefficient, s-polarised",
+      "unit": "– (−1 to 1)",
+      "glossary": "fresnel-equations"
+    },
+    {
+      "id": "sym-rp",
+      "latex": "r_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "amplitude reflection coefficient, p-polarised",
+      "unit": "– (−1 to 1)",
+      "glossary": "fresnel-equations"
+    },
+    {
+      "id": "sym-R-optics",
+      "latex": "R",
+      "contexts": [
+        "optics",
+        "radiation",
+        "general"
+      ],
+      "name": "reflectance (fraction of power reflected)",
+      "unit": "– (0 to 1) or %",
+      "typical": "≈ 0.32 for bare c-Si",
+      "glossary": "reflectance"
+    },
+    {
+      "id": "sym-Rs",
+      "latex": "R_s",
+      "contexts": [
+        "optics"
+      ],
+      "name": "reflectance for s-polarised light (r_s²)",
+      "unit": "–",
+      "glossary": "reflectance"
+    },
+    {
+      "id": "sym-Rp",
+      "latex": "R_p",
+      "contexts": [
+        "optics"
+      ],
+      "name": "reflectance for p-polarised light (r_p²)",
+      "unit": "–",
+      "glossary": "reflectance"
+    },
+    {
+      "id": "sym-Rtot",
+      "latex": "R_{\\mathrm{tot}}",
+      "contexts": [
+        "optics"
+      ],
+      "name": "total reflectance of a coated surface (instruction approach R₁ + R₂)",
+      "unit": "–",
+      "glossary": "anti-reflective-coating"
+    },
+    {
+      "id": "sym-Topt",
+      "latex": "T_{\\mathrm{opt}}",
+      "contexts": [
+        "optics"
+      ],
+      "name": "transmittance (1 − R)",
+      "unit": "–",
+      "glossary": "reflectance"
+    },
+    {
+      "id": "sym-xi",
+      "latex": "\\xi",
+      "contexts": [
+        "optics",
+        "transport",
+        "junction",
+        "semiconductor"
+      ],
+      "name": "electric field",
+      "unit": "V m⁻¹",
+      "glossary": "electric-field",
+      "note": "The book and lecture use ξ (xi) for the electric field."
+    },
+    {
+      "id": "sym-Ie",
+      "latex": "I_e",
+      "contexts": [
+        "*"
+      ],
+      "name": "irradiance (power per area)",
+      "unit": "W m⁻²",
+      "typical": "1000 W m⁻² for AM1.5",
+      "glossary": "irradiance"
+    },
+    {
+      "id": "sym-Ielambda",
+      "latex": "I_{e\\lambda}",
+      "contexts": [
+        "*"
+      ],
+      "name": "spectral irradiance (power per area per wavelength)",
+      "unit": "W m⁻² m⁻¹ (often W m⁻² nm⁻¹)",
+      "typical": "≈ 1.5 W m⁻² nm⁻¹ peak of AM1.5",
+      "glossary": "spectral-irradiance"
+    },
+    {
+      "id": "sym-P-spectral",
+      "latex": "P",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "spectral power density P(λ) (lecture notation for I_eλ)",
+      "unit": "W m⁻² m⁻¹",
+      "glossary": "spectral-irradiance",
+      "note": "Lecture 1 writes P(λ); the book writes I_eλ. Same quantity."
+    },
+    {
+      "id": "sym-P-power",
+      "latex": "P",
+      "contexts": [
+        "energy",
+        "general",
+        "cell"
+      ],
+      "name": "power",
+      "unit": "W = J s⁻¹",
+      "glossary": "power"
+    },
+    {
+      "id": "sym-Phi",
+      "latex": "\\Phi",
+      "contexts": [
+        "radiation",
+        "optics"
+      ],
+      "name": "photon flux density (lecture: Φ(λ) per unit wavelength)",
+      "unit": "m⁻² s⁻¹ (per m for Φ(λ))",
+      "typical": "≈ 4 × 10²¹ m⁻² s⁻¹ for AM1.5",
+      "glossary": "photon-flux"
+    },
+    {
+      "id": "sym-Phiph",
+      "latex": "\\Phi_{\\mathrm{ph}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "photon flux (density): photons per area per time",
+      "unit": "m⁻² s⁻¹",
+      "typical": "≈ 4.3 × 10²¹ m⁻² s⁻¹ for AM1.5",
+      "glossary": "photon-flux"
+    },
+    {
+      "id": "sym-Phiphl",
+      "latex": "\\Phi_{\\mathrm{ph},\\lambda}",
+      "contexts": [
+        "*"
+      ],
+      "name": "spectral photon flux (per wavelength)",
+      "unit": "m⁻² s⁻¹ m⁻¹",
+      "glossary": "spectral-photon-flux"
+    },
+    {
+      "id": "sym-Phi0phl",
+      "latex": "\\Phi^0_{\\mathrm{ph},\\lambda}",
+      "contexts": [
+        "*"
+      ],
+      "name": "incident spectral photon flux",
+      "unit": "m⁻² s⁻¹ m⁻¹",
+      "glossary": "spectral-photon-flux",
+      "note": "Superscript 0: the flux arriving at the surface (formula sheet eq. 7.3)."
+    },
+    {
+      "id": "sym-MeBB",
+      "latex": "M_e^{BB}",
+      "contexts": [
+        "*"
+      ],
+      "name": "radiant emittance of a blackbody (total power emitted per area)",
+      "unit": "W m⁻²",
+      "typical": "6.3 × 10⁷ W m⁻² at 5800 K",
+      "glossary": "stefan-boltzmann-law"
+    },
+    {
+      "id": "sym-sigma-sb",
+      "latex": "\\sigma",
+      "contexts": [
+        "radiation",
+        "general",
+        "energy"
+      ],
+      "name": "Stefan–Boltzmann constant",
+      "unit": "W m⁻² K⁻⁴",
+      "typical": "5.670 × 10⁻⁸ W m⁻² K⁻⁴",
+      "glossary": "stefan-boltzmann-law"
+    },
+    {
+      "id": "sym-b-wien",
+      "latex": "b",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "Wien displacement constant",
+      "unit": "m K",
+      "typical": "2.898 × 10⁻³ m K",
+      "glossary": "wien-law"
+    },
+    {
+      "id": "sym-LBB",
+      "latex": "L_{e\\lambda}^{BB}",
+      "contexts": [
+        "*"
+      ],
+      "name": "spectral radiance of a blackbody (Planck’s law)",
+      "unit": "W m⁻² sr⁻¹ m⁻¹",
+      "glossary": "planck-law"
+    },
+    {
+      "id": "sym-B-planck",
+      "latex": "B",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "spectral radiance per unit frequency (lecture’s Planck law)",
+      "unit": "W m⁻² sr⁻¹ Hz⁻¹",
+      "glossary": "planck-law"
+    },
+    {
+      "id": "sym-OmegaSun",
+      "latex": "\\Omega_{\\mathrm{Sun}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "solid angle of the Sun seen from Earth",
+      "unit": "sr",
+      "typical": "≈ 68 µsr"
+    },
+    {
+      "id": "sym-AM",
+      "latex": "\\mathit{AM}",
+      "contexts": [
+        "*"
+      ],
+      "name": "air mass (relative path length through the atmosphere)",
+      "unit": "–",
+      "typical": "AM1.5 = standard test spectrum",
+      "glossary": "air-mass"
+    },
+    {
+      "id": "sym-Jph",
+      "latex": "J_{\\mathrm{ph}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "photocurrent density",
+      "unit": "A m⁻² (often mA cm⁻²)",
+      "typical": "≈ 40 mA cm⁻² for c-Si under AM1.5",
+      "glossary": "photocurrent-density"
+    },
+    {
+      "id": "sym-Phiabs",
+      "latex": "\\Phi_{\\mathrm{abs}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "absorbed photon flux (density)",
+      "unit": "m⁻² s⁻¹",
+      "glossary": "photon-flux"
+    },
+    {
+      "id": "sym-F",
+      "latex": "F",
+      "contexts": [
+        "energy",
+        "general"
+      ],
+      "name": "force",
+      "unit": "N = kg m s⁻²",
+      "glossary": "work"
+    },
+    {
+      "id": "sym-m",
+      "latex": "m",
+      "contexts": [
+        "energy",
+        "general"
+      ],
+      "name": "mass",
+      "unit": "kg"
+    },
+    {
+      "id": "sym-a-acc",
+      "latex": "a",
+      "contexts": [
+        "energy"
+      ],
+      "name": "acceleration",
+      "unit": "m s⁻²"
+    },
+    {
+      "id": "sym-g",
+      "latex": "g",
+      "contexts": [
+        "energy"
+      ],
+      "name": "gravitational acceleration",
+      "unit": "m s⁻²",
+      "typical": "≈ 9.8 (lecture rounds to 10) m s⁻²"
+    },
+    {
+      "id": "sym-W",
+      "latex": "W",
+      "contexts": [
+        "energy",
+        "general"
+      ],
+      "name": "work (energy transferred)",
+      "unit": "J",
+      "glossary": "work"
+    },
+    {
+      "id": "sym-s-dist",
+      "latex": "s",
+      "contexts": [
+        "energy"
+      ],
+      "name": "distance",
+      "unit": "m"
+    },
+    {
+      "id": "sym-v",
+      "latex": "v",
+      "contexts": [
+        "energy"
+      ],
+      "name": "speed",
+      "unit": "m s⁻¹"
+    },
+    {
+      "id": "sym-t-time",
+      "latex": "t",
+      "contexts": [
+        "energy",
+        "radiation",
+        "general",
+        "math",
+        "transport"
+      ],
+      "name": "time",
+      "unit": "s"
+    },
+    {
+      "id": "sym-x-math",
+      "latex": "x",
+      "contexts": [
+        "math",
+        "general"
+      ],
+      "name": "variable (input)",
+      "unit": "–"
+    },
+    {
+      "id": "sym-y-math",
+      "latex": "y",
+      "contexts": [
+        "math",
+        "general"
+      ],
+      "name": "variable (output)",
+      "unit": "–"
+    },
+    {
+      "id": "sym-f-math",
+      "latex": "f",
+      "contexts": [
+        "math",
+        "radiation"
+      ],
+      "name": "a function",
+      "unit": "–"
+    },
+    {
+      "id": "sym-a-math",
+      "latex": "a",
+      "contexts": [
+        "math"
+      ],
+      "name": "constant / lower limit",
+      "unit": "–"
+    },
+    {
+      "id": "sym-b-math",
+      "latex": "b",
+      "contexts": [
+        "math"
+      ],
+      "name": "constant / upper limit",
+      "unit": "–"
+    },
+    {
+      "id": "sym-k-math",
+      "latex": "k",
+      "contexts": [
+        "math"
+      ],
+      "name": "constant (decay rate)",
+      "unit": "per unit of x"
+    },
+    {
+      "id": "sym-L-math",
+      "latex": "L",
+      "contexts": [
+        "math",
+        "optics",
+        "radiation"
+      ],
+      "name": "decay length",
+      "unit": "same as x",
+      "note": "After a distance L an exponential decay has dropped to 1/e ≈ 37 %."
+    },
+    {
+      "id": "sym-N-count",
+      "latex": "N",
+      "contexts": [
+        "math",
+        "radiation"
+      ],
+      "name": "number of photons (count)",
+      "unit": "–"
+    },
+    {
+      "id": "sym-A-area",
+      "latex": "A",
+      "contexts": [
+        "radiation",
+        "math",
+        "general"
+      ],
+      "name": "area",
+      "unit": "m²"
+    },
+    {
+      "id": "sym-RS",
+      "latex": "R_S",
+      "contexts": [
+        "radiation",
+        "*"
+      ],
+      "name": "radius of the Sun",
+      "unit": "m",
+      "typical": "6.96 × 10⁸ m"
+    },
+    {
+      "id": "sym-RE",
+      "latex": "R_E",
+      "contexts": [
+        "*"
+      ],
+      "name": "radius of the Earth",
+      "unit": "m",
+      "typical": "6.4 × 10⁶ m"
+    },
+    {
+      "id": "sym-d-dist",
+      "latex": "d",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "Sun–Earth distance",
+      "unit": "m",
+      "typical": "1.50 × 10¹¹ m"
+    },
+    {
+      "id": "sym-M",
+      "latex": "M",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "radiant emittance (power emitted per area)",
+      "unit": "W m⁻²",
+      "glossary": "stefan-boltzmann-law"
+    },
+    {
+      "id": "sym-J",
+      "latex": "J",
+      "contexts": [
+        "*"
+      ],
+      "name": "current density",
+      "unit": "A m⁻² (often mA cm⁻²)",
+      "glossary": "current-density"
+    },
+    {
+      "id": "sym-V",
+      "latex": "V",
+      "contexts": [
+        "energy",
+        "cell",
+        "junction"
+      ],
+      "name": "voltage",
+      "unit": "V"
+    },
+    {
+      "id": "sym-I-current",
+      "latex": "I",
+      "contexts": [
+        "energy",
+        "cell"
+      ],
+      "name": "electric current",
+      "unit": "A"
+    },
+    {
+      "id": "sym-Isc",
+      "latex": "I_{sc}",
+      "contexts": [
+        "*"
+      ],
+      "name": "short-circuit current",
+      "unit": "A",
+      "glossary": "short-circuit-current"
+    },
+    {
+      "id": "sym-Voc",
+      "latex": "V_{oc}",
+      "contexts": [
+        "*"
+      ],
+      "name": "open-circuit voltage",
+      "unit": "V",
+      "typical": "≈ 0.7 V for c-Si",
+      "glossary": "open-circuit-voltage"
+    },
+    {
+      "id": "sym-Pmax",
+      "latex": "P_{\\max}",
+      "contexts": [
+        "*"
+      ],
+      "name": "maximum output power (at the maximum power point)",
+      "unit": "W"
+    },
+    {
+      "id": "sym-Pin",
+      "latex": "P_{\\mathrm{in}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "incident light power",
+      "unit": "W"
+    },
+    {
+      "id": "sym-eta",
+      "latex": "\\eta",
+      "contexts": [
+        "energy",
+        "cell",
+        "general"
+      ],
+      "name": "conversion efficiency",
+      "unit": "– (often %)",
+      "typical": "≈ 20–26 % for c-Si cells",
+      "glossary": "efficiency"
+    },
+    {
+      "id": "sym-FF",
+      "latex": "\\mathit{FF}",
+      "contexts": [
+        "*"
+      ],
+      "name": "fill factor",
+      "unit": "–",
+      "typical": "0.75–0.85",
+      "glossary": "fill-factor"
+    },
+    {
+      "id": "sym-thetac-coating",
+      "latex": "\\theta_c",
+      "contexts": [
+        "optics"
+      ],
+      "name": "angle of the ray inside the coating",
+      "unit": "°",
+      "note": "Here c = coating, not ‘critical’; the critical angle is written θ_crit."
+    },
+    {
+      "id": "sym-thetaair",
+      "latex": "\\theta_{\\mathrm{air}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "angle of the ray in air",
+      "unit": "°"
+    },
+    {
+      "id": "sym-thetaB",
+      "latex": "\\theta_B",
+      "contexts": [
+        "optics"
+      ],
+      "name": "Brewster angle (p-reflectance is zero)",
+      "unit": "°",
+      "typical": "≈ 74° for c-Si",
+      "note": "Beyond the course: tan θ_B = n₂/n₁."
+    },
+    {
+      "id": "sym-nlow",
+      "latex": "n_{\\mathrm{low}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "the lower of the two refractive indices",
+      "unit": "–",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-nhigh",
+      "latex": "n_{\\mathrm{high}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "the higher of the two refractive indices",
+      "unit": "–",
+      "glossary": "refractive-index"
+    },
+    {
+      "id": "sym-r",
+      "latex": "r",
+      "contexts": [
+        "optics"
+      ],
+      "name": "amplitude reflection coefficient",
+      "unit": "–",
+      "glossary": "fresnel-equations"
+    },
+    {
+      "id": "sym-r01",
+      "latex": "r_{01}",
+      "contexts": [
+        "optics"
+      ],
+      "name": "amplitude reflection coefficient, outside medium → coating",
+      "unit": "–",
+      "glossary": "fresnel-equations"
+    },
+    {
+      "id": "sym-r12",
+      "latex": "r_{12}",
+      "contexts": [
+        "optics"
+      ],
+      "name": "amplitude reflection coefficient, coating → substrate",
+      "unit": "–",
+      "glossary": "fresnel-equations"
+    },
+    {
+      "id": "sym-delta-phase",
+      "latex": "\\delta",
+      "contexts": [
+        "optics"
+      ],
+      "name": "phase thickness of the coating (2π n_c d/λ₀)",
+      "unit": "rad",
+      "glossary": "interference"
+    },
+    {
+      "id": "sym-kz",
+      "latex": "k_z",
+      "contexts": [
+        "optics"
+      ],
+      "name": "wave number along z (2π/λ in the medium)",
+      "unit": "m⁻¹"
+    },
+    {
+      "id": "sym-kz-complex",
+      "latex": "\\tilde{k}_z",
+      "contexts": [
+        "optics"
+      ],
+      "name": "complex wave number ñω/c",
+      "unit": "m⁻¹"
+    },
+    {
+      "id": "sym-kz1",
+      "latex": "k'_z",
+      "contexts": [
+        "optics"
+      ],
+      "name": "real part of the wave number",
+      "unit": "m⁻¹"
+    },
+    {
+      "id": "sym-kz2",
+      "latex": "k''_z",
+      "contexts": [
+        "optics"
+      ],
+      "name": "imaginary part of the wave number (attenuation of the field)",
+      "unit": "m⁻¹",
+      "note": "Intensity decays with 2k''_z = α."
+    },
+    {
+      "id": "sym-I-rad",
+      "latex": "I",
+      "contexts": [
+        "radiation"
+      ],
+      "name": "irradiance of the (monochromatic) light",
+      "unit": "W m⁻²",
+      "glossary": "irradiance"
+    },
+    {
+      "id": "sym-n-elec",
+      "latex": "n",
+      "contexts": [
+        "semiconductor",
+        "transport",
+        "junction",
+        "math"
+      ],
+      "name": "electron concentration (density of free electrons)",
+      "unit": "cm⁻³",
+      "typical": "≈ 10¹⁰ cm⁻³ intrinsic Si; ≈ N_D in n-type"
+    },
+    {
+      "id": "sym-NC",
+      "latex": "N_C",
+      "contexts": [
+        "*"
+      ],
+      "name": "effective density of states in the conduction band",
+      "unit": "cm⁻³",
+      "typical": "3.22 × 10¹⁹ cm⁻³ for c-Si at 300 K"
+    },
+    {
+      "id": "sym-NV",
+      "latex": "N_V",
+      "contexts": [
+        "*"
+      ],
+      "name": "effective density of states in the valence band",
+      "unit": "cm⁻³",
+      "typical": "1.83 × 10¹⁹ cm⁻³ for c-Si at 300 K"
+    },
+    {
+      "id": "sym-EF",
+      "latex": "E_F",
+      "contexts": [
+        "*"
+      ],
+      "name": "Fermi level",
+      "unit": "eV"
+    },
+    {
+      "id": "sym-EC",
+      "latex": "E_C",
+      "contexts": [
+        "*"
+      ],
+      "name": "conduction band edge (lowest CB energy)",
+      "unit": "eV"
+    },
+    {
+      "id": "sym-EV",
+      "latex": "E_V",
+      "contexts": [
+        "*"
+      ],
+      "name": "valence band edge (highest VB energy)",
+      "unit": "eV"
+    },
+    {
+      "id": "sym-p-hole",
+      "latex": "p",
+      "contexts": [
+        "semiconductor",
+        "transport",
+        "junction",
+        "cell"
+      ],
+      "name": "hole concentration (density of holes)",
+      "unit": "cm⁻³",
+      "typical": "≈ 10¹⁰ cm⁻³ intrinsic Si; ≈ N_A in p-type",
+      "glossary": "hole"
+    },
+    {
+      "id": "sym-ni",
+      "latex": "n_i",
+      "contexts": [
+        "*"
+      ],
+      "name": "intrinsic carrier density",
+      "unit": "cm⁻³",
+      "typical": "≈ 10¹⁰ cm⁻³ for c-Si at 300 K",
+      "glossary": "intrinsic-carrier-density"
+    },
+    {
+      "id": "sym-ND",
+      "latex": "N_D",
+      "contexts": [
+        "*"
+      ],
+      "name": "donor density",
+      "unit": "cm⁻³",
+      "typical": "10¹⁴–10²⁰ cm⁻³",
+      "glossary": "donor"
+    },
+    {
+      "id": "sym-NA",
+      "latex": "N_A",
+      "contexts": [
+        "*"
+      ],
+      "name": "acceptor density",
+      "unit": "cm⁻³",
+      "typical": "10¹⁴–10²⁰ cm⁻³",
+      "glossary": "acceptor"
+    },
+    {
+      "id": "sym-NDp",
+      "latex": "N_D^+",
+      "contexts": [
+        "*"
+      ],
+      "name": "density of ionised donors",
+      "unit": "cm⁻³",
+      "typical": "≈ N_D at 300 K",
+      "glossary": "donor"
+    },
+    {
+      "id": "sym-NAm",
+      "latex": "N_A^-",
+      "contexts": [
+        "*"
+      ],
+      "name": "density of ionised acceptors",
+      "unit": "cm⁻³",
+      "typical": "≈ N_A at 300 K",
+      "glossary": "acceptor"
+    },
+    {
+      "id": "sym-EFi",
+      "latex": "E_{Fi}",
+      "contexts": [
+        "*"
+      ],
+      "name": "intrinsic Fermi level",
+      "unit": "eV",
+      "typical": "0.567 eV below E_C for c-Si",
+      "glossary": "intrinsic-fermi-level"
+    },
+    {
+      "id": "sym-EFn",
+      "latex": "E_{Fn}",
+      "contexts": [
+        "*"
+      ],
+      "name": "quasi-Fermi level of electrons",
+      "unit": "eV",
+      "glossary": "quasi-fermi-level"
+    },
+    {
+      "id": "sym-EFp",
+      "latex": "E_{Fp}",
+      "contexts": [
+        "*"
+      ],
+      "name": "quasi-Fermi level of holes",
+      "unit": "eV",
+      "glossary": "quasi-fermi-level"
+    },
+    {
+      "id": "sym-ED",
+      "latex": "E_D",
+      "contexts": [
+        "*"
+      ],
+      "name": "donor energy level",
+      "unit": "eV",
+      "typical": "just below E_C",
+      "glossary": "dopant-level"
+    },
+    {
+      "id": "sym-EA",
+      "latex": "E_A",
+      "contexts": [
+        "*"
+      ],
+      "name": "acceptor energy level",
+      "unit": "eV",
+      "typical": "just above E_V",
+      "glossary": "dopant-level"
+    },
+    {
+      "id": "sym-E-sc",
+      "latex": "E",
+      "contexts": [
+        "semiconductor",
+        "junction",
+        "transport",
+        "cell"
+      ],
+      "name": "electron energy",
+      "unit": "eV"
+    },
+    {
+      "id": "sym-f-fd",
+      "latex": "f",
+      "contexts": [
+        "semiconductor",
+        "junction"
+      ],
+      "name": "Fermi–Dirac occupation probability",
+      "unit": "– (0 to 1)",
+      "typical": "½ at E = E_F",
+      "glossary": "fermi-dirac"
+    },
+    {
+      "id": "sym-fB",
+      "latex": "f_B",
+      "contexts": [
+        "*"
+      ],
+      "name": "Boltzmann approximation of f(E)",
+      "unit": "–",
+      "glossary": "boltzmann-approximation"
+    },
+    {
+      "id": "sym-gC",
+      "latex": "g_C",
+      "contexts": [
+        "*"
+      ],
+      "name": "density of states in the conduction band",
+      "unit": "cm⁻³ eV⁻¹",
+      "glossary": "density-of-states"
+    },
+    {
+      "id": "sym-gV",
+      "latex": "g_V",
+      "contexts": [
+        "*"
+      ],
+      "name": "density of states in the valence band",
+      "unit": "cm⁻³ eV⁻¹",
+      "glossary": "density-of-states"
+    },
+    {
+      "id": "sym-mn",
+      "latex": "m_n^*",
+      "contexts": [
+        "*"
+      ],
+      "name": "effective mass of electrons",
+      "unit": "kg",
+      "note": "The electron mass corrected for the periodic crystal potential."
+    },
+    {
+      "id": "sym-mp",
+      "latex": "m_p^*",
+      "contexts": [
+        "*"
+      ],
+      "name": "effective mass of holes",
+      "unit": "kg"
+    },
+    {
+      "id": "sym-rho",
+      "latex": "\\rho",
+      "contexts": [
+        "semiconductor",
+        "junction",
+        "transport"
+      ],
+      "name": "charge density",
+      "unit": "C cm⁻³",
+      "typical": "0 in uniformly doped material (charge neutrality)",
+      "glossary": "charge-neutrality"
+    },
+    {
+      "id": "sym-n0",
+      "latex": "n_0",
+      "contexts": [
+        "*"
+      ],
+      "name": "equilibrium electron density (dark)",
+      "unit": "cm⁻³"
+    },
+    {
+      "id": "sym-p0",
+      "latex": "p_0",
+      "contexts": [
+        "*"
+      ],
+      "name": "equilibrium hole density (dark)",
+      "unit": "cm⁻³"
+    },
+    {
+      "id": "sym-NSi",
+      "latex": "N_{\\mathrm{Si}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "density of Si atoms",
+      "unit": "cm⁻³",
+      "typical": "5.0 × 10²² cm⁻³"
+    },
+    {
+      "id": "sym-a-lattice",
+      "latex": "a",
+      "contexts": [
+        "semiconductor"
+      ],
+      "name": "lattice constant",
+      "unit": "m",
+      "typical": "5.43 × 10⁻¹⁰ m for c-Si",
+      "glossary": "lattice-constant"
+    },
+    {
+      "id": "sym-sigma-cond",
+      "latex": "\\sigma",
+      "contexts": [
+        "semiconductor",
+        "transport"
+      ],
+      "name": "electrical conductivity",
+      "unit": "Ω⁻¹ cm⁻¹",
+      "glossary": "conductivity"
+    },
+    {
+      "id": "sym-mun",
+      "latex": "\\mu_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron mobility",
+      "unit": "cm² V⁻¹ s⁻¹",
+      "typical": "1360 for c-Si (sheet)",
+      "glossary": "mobility"
+    },
+    {
+      "id": "sym-mup",
+      "latex": "\\mu_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole mobility",
+      "unit": "cm² V⁻¹ s⁻¹",
+      "typical": "450 for c-Si (sheet)",
+      "glossary": "mobility"
+    },
+    {
+      "id": "sym-Etop",
+      "latex": "E_{\\mathrm{top}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "top of the conduction band",
+      "unit": "eV"
+    },
+    {
+      "id": "sym-Ebottom",
+      "latex": "E_{\\mathrm{bottom}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "bottom of the valence band",
+      "unit": "eV"
+    },
+    {
+      "id": "sym-Delta",
+      "latex": "\\Delta",
+      "contexts": [
+        "*"
+      ],
+      "name": "Δ: change in, or excess of, the quantity that follows",
+      "unit": "same as that quantity",
+      "note": "Δn = n − n₀: excess electron density under illumination."
+    },
+    {
+      "id": "sym-Vu",
+      "latex": "V_u",
+      "contexts": [
+        "*"
+      ],
+      "name": "volume of one unit cell",
+      "unit": "m³ or cm³",
+      "typical": "1.60 × 10⁻²⁸ m³ for c-Si",
+      "glossary": "unit-cell"
+    },
+    {
+      "id": "sym-Erelax",
+      "latex": "E_{\\mathrm{relaxation}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "energy lost by thermal relaxation (thermalisation)",
+      "unit": "eV",
+      "glossary": "thermalisation"
+    },
+    {
+      "id": "sym-Z",
+      "latex": "Z",
+      "contexts": [
+        "*"
+      ],
+      "name": "atomic number (protons in the nucleus)",
+      "unit": "–",
+      "typical": "Si 14, B 5, P 15",
+      "glossary": "atomic-number"
+    },
+    {
+      "id": "sym-mu",
+      "latex": "\\mu",
+      "contexts": [
+        "semiconductor",
+        "transport",
+        "junction"
+      ],
+      "name": "mobility",
+      "unit": "cm² V⁻¹ s⁻¹",
+      "glossary": "mobility"
+    },
+    {
+      "id": "sym-D",
+      "latex": "D",
+      "contexts": [
+        "*"
+      ],
+      "name": "diffusion coefficient",
+      "unit": "cm²/s",
+      "typical": "Dₙ ≈ 35, Dₚ ≈ 12 cm²/s in c-Si",
+      "glossary": "diffusion-coefficient"
+    },
+    {
+      "id": "sym-Dn",
+      "latex": "D_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron diffusion coefficient",
+      "unit": "cm²/s",
+      "typical": "≈ 35 cm²/s (c-Si, Einstein)",
+      "glossary": "diffusion-coefficient"
+    },
+    {
+      "id": "sym-Dp",
+      "latex": "D_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole diffusion coefficient",
+      "unit": "cm²/s",
+      "typical": "≈ 12 cm²/s (c-Si, Einstein)",
+      "glossary": "diffusion-coefficient"
+    },
+    {
+      "id": "sym-tau",
+      "latex": "\\tau",
+      "contexts": [
+        "*"
+      ],
+      "name": "(minority-carrier) lifetime",
+      "unit": "s",
+      "typical": "~1 µs typical c-Si, ~1 ms very pure",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taun",
+      "latex": "\\tau_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron (minority) lifetime in p-type",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taup",
+      "latex": "\\tau_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole (minority) lifetime in n-type",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taui",
+      "latex": "\\tau_i",
+      "contexts": [
+        "*"
+      ],
+      "name": "lifetime of mechanism i",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-tautot",
+      "latex": "\\tau_{\\mathrm{tot}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "effective (total) lifetime",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taurad",
+      "latex": "\\tau_{\\mathrm{rad}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "radiative lifetime",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-tauAug",
+      "latex": "\\tau_{\\mathrm{Aug}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "Auger lifetime",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-tauSRH",
+      "latex": "\\tau_{\\mathrm{SRH}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "SRH lifetime",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taupd",
+      "latex": "\\tau_{pd}",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole lifetime for direct recombination (n-type)",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taund",
+      "latex": "\\tau_{nd}",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron lifetime for direct recombination (p-type)",
+      "unit": "s",
+      "glossary": "minority-carrier-lifetime"
+    },
+    {
+      "id": "sym-taupsrh",
+      "latex": "\\tau_{p,\\mathrm{SRH}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole SRH lifetime",
+      "unit": "s",
+      "glossary": "srh-recombination"
+    },
+    {
+      "id": "sym-G-tr",
+      "latex": "G",
+      "contexts": [
+        "transport",
+        "cell",
+        "junction"
+      ],
+      "name": "generation rate",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "generation-rate"
+    },
+    {
+      "id": "sym-GL",
+      "latex": "G_L",
+      "contexts": [
+        "*"
+      ],
+      "name": "(optical) generation rate",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "generation-rate"
+    },
+    {
+      "id": "sym-Gn",
+      "latex": "G_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "generation rate of electrons (other than thermal)",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "generation-rate"
+    },
+    {
+      "id": "sym-Gp",
+      "latex": "G_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "generation rate of holes (other than thermal)",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "generation-rate"
+    },
+    {
+      "id": "sym-Gth",
+      "latex": "G_{th}",
+      "contexts": [
+        "*"
+      ],
+      "name": "thermal generation rate",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "generation"
+    },
+    {
+      "id": "sym-GLl",
+      "latex": "G_{L,\\lambda}",
+      "contexts": [
+        "*"
+      ],
+      "name": "spectral generation rate (per wavelength)",
+      "unit": "cm⁻³ s⁻¹ nm⁻¹",
+      "glossary": "generation-rate"
+    },
+    {
+      "id": "sym-etag",
+      "latex": "\\eta_g",
+      "contexts": [
+        "*"
+      ],
+      "name": "generation quantum efficiency (pairs per absorbed photon)",
+      "unit": "–",
+      "typical": "1"
+    },
+    {
+      "id": "sym-S",
+      "latex": "S",
+      "contexts": [
+        "transport",
+        "junction",
+        "cell"
+      ],
+      "name": "surface recombination velocity",
+      "unit": "cm/s",
+      "glossary": "surface-recombination-velocity"
+    },
+    {
+      "id": "sym-Sr",
+      "latex": "S_r",
+      "contexts": [
+        "*"
+      ],
+      "name": "surface recombination velocity",
+      "unit": "cm/s",
+      "glossary": "surface-recombination-velocity"
+    },
+    {
+      "id": "sym-Jn",
+      "latex": "J_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron current density",
+      "unit": "A/cm²",
+      "glossary": "current-density"
+    },
+    {
+      "id": "sym-Jp",
+      "latex": "J_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole current density",
+      "unit": "A/cm²",
+      "glossary": "current-density"
+    },
+    {
+      "id": "sym-JN",
+      "latex": "J_N",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron current density",
+      "unit": "A/cm²",
+      "glossary": "current-density"
+    },
+    {
+      "id": "sym-JP",
+      "latex": "J_P",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole current density",
+      "unit": "A/cm²",
+      "glossary": "current-density"
+    },
+    {
+      "id": "sym-Jdrift",
+      "latex": "J_{\\mathrm{drift}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "drift current density",
+      "unit": "A/cm²",
+      "glossary": "drift"
+    },
+    {
+      "id": "sym-Jdiff",
+      "latex": "J_{\\mathrm{diff}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "diffusion current density",
+      "unit": "A/cm²",
+      "glossary": "diffusion"
+    },
+    {
+      "id": "sym-Jndiff",
+      "latex": "J_{n,\\mathrm{diff}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron diffusion current density",
+      "unit": "A/cm²",
+      "glossary": "diffusion"
+    },
+    {
+      "id": "sym-Jpdiff",
+      "latex": "J_{p,\\mathrm{diff}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole diffusion current density",
+      "unit": "A/cm²",
+      "glossary": "diffusion"
+    },
+    {
+      "id": "sym-L-tr",
+      "latex": "L",
+      "contexts": [
+        "transport",
+        "general"
+      ],
+      "name": "length: diffusion length, or a given length (ex. 7.7)",
+      "unit": "cm or µm",
+      "glossary": "diffusion-length"
+    },
+    {
+      "id": "sym-Ln",
+      "latex": "L_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron diffusion length",
+      "unit": "µm or cm",
+      "glossary": "diffusion-length"
+    },
+    {
+      "id": "sym-Lp",
+      "latex": "L_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole diffusion length",
+      "unit": "µm or cm",
+      "glossary": "diffusion-length"
+    },
+    {
+      "id": "sym-Cn",
+      "latex": "C_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "Auger coefficient (eeh process)",
+      "unit": "cm⁶/s",
+      "typical": "≈ 2.8 × 10⁻³¹ cm⁶/s for c-Si (literature)",
+      "glossary": "auger-recombination"
+    },
+    {
+      "id": "sym-Cp",
+      "latex": "C_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "Auger coefficient (ehh process); the lecture also writes C_p for the SRH capture coefficient",
+      "unit": "cm⁶/s",
+      "glossary": "auger-recombination"
+    },
+    {
+      "id": "sym-cn",
+      "latex": "c_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron capture coefficient (SRH)",
+      "unit": "cm³/s",
+      "glossary": "srh-recombination"
+    },
+    {
+      "id": "sym-cp",
+      "latex": "c_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole capture coefficient (SRH)",
+      "unit": "cm³/s",
+      "glossary": "srh-recombination"
+    },
+    {
+      "id": "sym-C1",
+      "latex": "C_1",
+      "contexts": [
+        "transport",
+        "math"
+      ],
+      "name": "integration constant",
+      "unit": "depends on the equation"
+    },
+    {
+      "id": "sym-C0",
+      "latex": "C_0",
+      "contexts": [
+        "transport",
+        "math"
+      ],
+      "name": "integration constant",
+      "unit": "depends on the equation"
+    },
+    {
+      "id": "sym-C",
+      "latex": "C",
+      "contexts": [
+        "transport",
+        "math"
+      ],
+      "name": "integration constant",
+      "unit": "depends on the equation"
+    },
+    {
+      "id": "sym-A-tr",
+      "latex": "A",
+      "contexts": [
+        "transport"
+      ],
+      "name": "constant (amplitude or slope) fixed by boundary conditions",
+      "unit": "depends on the equation"
+    },
+    {
+      "id": "sym-I-tr",
+      "latex": "I",
+      "contexts": [
+        "transport"
+      ],
+      "name": "irradiance of the incident light",
+      "unit": "W/m²",
+      "glossary": "irradiance"
+    },
+    {
+      "id": "sym-R-tr",
+      "latex": "R",
+      "contexts": [
+        "transport"
+      ],
+      "name": "recombination rate (or reflectance R in optics parts)",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "recombination"
+    },
+    {
+      "id": "sym-Rn",
+      "latex": "R_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "net recombination rate of electrons",
+      "unit": "cm⁻³ s⁻¹ (R_s: cm⁻² s⁻¹)",
+      "glossary": "recombination"
+    },
+    {
+      "id": "sym-Rd",
+      "latex": "R_d",
+      "contexts": [
+        "*"
+      ],
+      "name": "net direct (radiative) recombination rate",
+      "unit": "cm⁻³ s⁻¹ (R_s: cm⁻² s⁻¹)",
+      "glossary": "radiative-recombination"
+    },
+    {
+      "id": "sym-RSRH",
+      "latex": "R_{\\mathrm{SRH}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "SRH recombination rate",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "srh-recombination"
+    },
+    {
+      "id": "sym-RAug",
+      "latex": "R_{\\mathrm{Aug}}",
+      "contexts": [
+        "*"
+      ],
+      "name": "Auger recombination rate",
+      "unit": "cm⁻³ s⁻¹",
+      "glossary": "auger-recombination"
+    },
+    {
+      "id": "sym-vth",
+      "latex": "v_{th}",
+      "contexts": [
+        "*"
+      ],
+      "name": "thermal velocity",
+      "unit": "cm/s",
+      "typical": "≈ 10⁷ cm/s",
+      "glossary": "thermal-velocity"
+    },
+    {
+      "id": "sym-vd",
+      "latex": "v_d",
+      "contexts": [
+        "*"
+      ],
+      "name": "drift velocity",
+      "unit": "cm/s",
+      "glossary": "drift-velocity"
+    },
+    {
+      "id": "sym-vdn",
+      "latex": "v_{dn}",
+      "contexts": [
+        "*"
+      ],
+      "name": "electron drift velocity",
+      "unit": "cm/s",
+      "glossary": "drift-velocity"
+    },
+    {
+      "id": "sym-vdp",
+      "latex": "v_{dp}",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole drift velocity",
+      "unit": "cm/s",
+      "glossary": "drift-velocity"
+    },
+    {
+      "id": "sym-sigmap",
+      "latex": "\\sigma_p",
+      "contexts": [
+        "*"
+      ],
+      "name": "capture cross-section for holes",
+      "unit": "cm²",
+      "glossary": "srh-recombination"
+    },
+    {
+      "id": "sym-sigman",
+      "latex": "\\sigma_n",
+      "contexts": [
+        "*"
+      ],
+      "name": "capture cross-section for electrons",
+      "unit": "cm²",
+      "glossary": "srh-recombination"
+    },
+    {
+      "id": "sym-NT",
+      "latex": "N_T",
+      "contexts": [
+        "*"
+      ],
+      "name": "trap density",
+      "unit": "cm⁻³",
+      "glossary": "trap-state"
+    },
+    {
+      "id": "sym-NsT",
+      "latex": "N_{sT}",
+      "contexts": [
+        "*"
+      ],
+      "name": "surface trap density",
+      "unit": "cm⁻²",
+      "glossary": "surface-recombination"
+    },
+    {
+      "id": "sym-ps",
+      "latex": "p_s",
+      "contexts": [
+        "*"
+      ],
+      "name": "hole density at the surface",
+      "unit": "cm⁻³"
+    },
+    {
+      "id": "sym-ET",
+      "latex": "E_T",
+      "contexts": [
+        "*"
+      ],
+      "name": "trap energy level",
+      "unit": "eV",
+      "glossary": "trap-state"
+    },
+    {
+      "id": "sym-beta",
+      "latex": "\\beta",
+      "contexts": [
+        "transport",
+        "semiconductor"
+      ],
+      "name": "radiative recombination coefficient",
+      "unit": "cm³/s",
+      "glossary": "radiative-recombination"
+    },
+    {
+      "id": "sym-psi",
+      "latex": "\\psi",
+      "contexts": [
+        "transport",
+        "junction"
+      ],
+      "name": "electrostatic potential",
+      "unit": "V",
+      "glossary": "poisson-equation"
+    },
+    {
+      "id": "sym-epss",
+      "latex": "\\varepsilon_s",
+      "contexts": [
+        "*"
+      ],
+      "name": "permittivity of the semiconductor",
+      "unit": "F/cm",
+      "glossary": "poisson-equation"
+    },
+    {
+      "id": "sym-VOC",
+      "latex": "V_{OC}",
+      "contexts": [
+        "*"
+      ],
+      "name": "open-circuit voltage",
+      "unit": "V",
+      "glossary": "open-circuit-voltage"
+    }
+  ]
+}

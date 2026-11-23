@@ -1,0 +1,340 @@
+{
+  "week": 2,
+  "title": "Semiconductors & doping",
+  "subtitle": "Which charges can move in silicon, how many there are, how doping changes that, and what the Fermi level tells you.",
+  "lectureDate": "16 Nov 2026",
+  "chapters": "Ch. 6 (§6.1–6.4) + §7.6",
+  "status": "complete",
+  "files": {
+    "lecture": "Material/Week 2/2026_11_16_L2_Rudi_Semicon & doping_v2 (1).pdf",
+    "instruction": "Material/Week 2/instructions 2 (with answers) (1).pdf"
+  },
+  "prerequisites": {
+    "terms": [
+      "bandgap",
+      "electron-volt",
+      "photon-energy",
+      "electron-hole-pair",
+      "boltzmann-constant",
+      "kelvin",
+      "elementary-charge",
+      "exponential-function",
+      "natural-logarithm",
+      "log-scale",
+      "scientific-notation"
+    ],
+    "foundations": [
+      "atoms-electrons",
+      "exp-log",
+      "units"
+    ],
+    "skills": [
+      "Count atoms, electrons and protons: atomic number, valence electrons, neutral atoms",
+      "Work with densities in cm⁻³ and convert lengths m → cm before cubing",
+      "Compute $k_BT$ in eV at 300 K ($\\approx 0.0259$ eV) and evaluate $e^{-x}$ for large x",
+      "Solve $y = N e^{-E/kT}$ for E with a logarithm: $E = kT \\ln(N/y)$"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "si-crystal",
+      "title": "Semiconductors and the silicon crystal",
+      "summary": "A semiconductor conducts between a metal and an insulator, and doping controls how much. Silicon has 4 valence electrons and forms a diamond lattice with 5 × 10²² atoms per cm³.",
+      "context": "semiconductor",
+      "keywords": [
+        "conductivity",
+        "monocrystalline",
+        "polycrystalline",
+        "amorphous",
+        "valence electrons",
+        "covalent bond",
+        "unit cell",
+        "lattice constant"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 7–20"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2 Q1(a)(b)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.1–6.2 (p. 47–49)"
+        }
+      ]
+    },
+    {
+      "id": "electrons-holes",
+      "title": "Free electrons and holes",
+      "summary": "Thermal energy or a photon breaks a covalent bond: a free electron and a hole appear together. The hole behaves as a mobile positive charge. In intrinsic silicon n = p = nᵢ.",
+      "context": "semiconductor",
+      "keywords": [
+        "bonding model",
+        "broken bond",
+        "hole",
+        "mobile charge",
+        "intrinsic"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 21–30"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.2 (p. 49–50), Fig. 6.2"
+        }
+      ]
+    },
+    {
+      "id": "energy-bands",
+      "title": "Energy bands and the bandgap",
+      "summary": "Bonded electrons sit in the valence band, freed electrons in the conduction band. No states exist in between: the bandgap E_G = E_C − E_V. In an indirect semiconductor (Si) absorption also needs a phonon.",
+      "context": "semiconductor",
+      "keywords": [
+        "conduction band",
+        "valence band",
+        "band edge",
+        "direct",
+        "indirect",
+        "phonon"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 32–34"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.4.1 (p. 52), eq. 6.1; §7.1 (p. 66), Fig. 7.1"
+        }
+      ]
+    },
+    {
+      "id": "carrier-statistics",
+      "title": "Density of states and the Fermi–Dirac distribution",
+      "summary": "How many electrons sit at energy E = (number of states there) × (probability that a state is occupied). The Fermi level E_F is where that probability is ½.",
+      "context": "semiconductor",
+      "keywords": [
+        "thermal equilibrium",
+        "density of states",
+        "Fermi–Dirac",
+        "Fermi level",
+        "Boltzmann approximation",
+        "3kT"
+      ],
+      "diagrams": [
+        "fermi-dirac",
+        "carrier-statistics"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 36–47"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.4.1 (p. 52–54), eqs. 6.2–6.5, Figs. 6.5–6.6"
+        }
+      ]
+    },
+    {
+      "id": "carrier-density",
+      "title": "Carrier densities and the intrinsic density nᵢ",
+      "summary": "In a non-degenerate semiconductor n = N_C e^{(E_F−E_C)/kT} and p = N_V e^{(E_V−E_F)/kT}. Their product nᵢ² = N_C N_V e^{−E_G/kT} does not depend on E_F; for c-Si nᵢ ≈ 10¹⁰ cm⁻³ at 300 K.",
+      "context": "semiconductor",
+      "keywords": [
+        "effective density of states",
+        "intrinsic carrier density",
+        "intrinsic Fermi level",
+        "non-degenerate",
+        "temperature"
+      ],
+      "diagrams": [
+        "ni-temperature"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 48–52"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2 Q1(c)–(e)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.4.1 (p. 54–55), eqs. 6.6–6.11"
+        }
+      ]
+    },
+    {
+      "id": "doping",
+      "title": "Doping: n-type and p-type",
+      "summary": "Phosphorus (5 valence electrons) donates an electron, boron (3) accepts one. The material stays neutral; the majority carrier density ≈ the dopant density and the minority density follows from np = nᵢ².",
+      "context": "semiconductor",
+      "keywords": [
+        "donor",
+        "acceptor",
+        "phosphorus",
+        "boron",
+        "ionised",
+        "charge neutrality",
+        "law of mass action",
+        "majority",
+        "minority"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 55–62"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2 Q2(a)–(e)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.3 (p. 50–51), §6.4.2 (p. 55–56), eqs. 6.12–6.21"
+        }
+      ]
+    },
+    {
+      "id": "fermi-level-doped",
+      "title": "Where the Fermi level sits in doped silicon",
+      "summary": "n-type doping lifts E_F towards E_C: E_C − E_F = kT ln(N_C/N_D). p-type lowers it towards E_V: E_F − E_V = kT ln(N_V/N_A). Each factor 10 in doping moves E_F by kT ln 10 ≈ 60 meV.",
+      "context": "semiconductor",
+      "keywords": [
+        "Fermi level",
+        "donor level",
+        "acceptor level",
+        "band diagram",
+        "degenerate"
+      ],
+      "diagrams": [
+        "doping-explorer"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 62–64"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2 Q2(f)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.4.2 (p. 56–57), eq. 6.22 and example p. 57"
+        }
+      ]
+    },
+    {
+      "id": "quasi-fermi",
+      "title": "Under illumination: quasi-Fermi levels",
+      "summary": "Light adds equal numbers of electrons and holes, so np > nᵢ². One Fermi level can no longer describe both: E_Fn describes the electrons, E_Fp the holes. Their splitting is the energy a solar cell can deliver per electron.",
+      "context": "semiconductor",
+      "keywords": [
+        "non-equilibrium",
+        "excess carriers",
+        "quasi-Fermi level",
+        "splitting",
+        "low injection"
+      ],
+      "diagrams": [
+        "quasi-fermi"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L2 slides 66–72"
+        },
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 11–14 (recap)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §7.6 (p. 79–81), eqs. 7.51–7.52"
+        }
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "fermi-dirac",
+      "title": "The Fermi–Dirac distribution and the Boltzmann approximation",
+      "concept": "carrier-statistics",
+      "tryThis": "Slide the temperature from 0 K to 400 K and watch the step soften; then switch on the Boltzmann approximation and find where it stops agreeing."
+    },
+    {
+      "id": "carrier-statistics",
+      "title": "From states to carriers: n(E) = g(E) · f(E)",
+      "concept": "carrier-statistics",
+      "tryThis": "Move the Fermi level up towards the conduction band and watch n grow and p shrink, while their product stays fixed."
+    },
+    {
+      "id": "ni-temperature",
+      "title": "Intrinsic carrier density versus temperature",
+      "concept": "carrier-density",
+      "tryThis": "Find nᵢ at 300 K, then heat to 1000 K (book ex. 7.6) and see when nᵢ overtakes the doping level."
+    },
+    {
+      "id": "doping-explorer",
+      "title": "Doping, carrier densities and the Fermi level",
+      "concept": "fermi-level-doped",
+      "tryThis": "Dope with 10¹⁷ cm⁻³ phosphorus (instruction 2 Q2), then raise the temperature until the silicon becomes intrinsic again."
+    },
+    {
+      "id": "quasi-fermi",
+      "title": "Quasi-Fermi levels under illumination",
+      "concept": "quasi-fermi",
+      "tryThis": "Turn on the light for n-type silicon (lecture slide 69) and see which quasi-Fermi level moves and which hardly does."
+    }
+  ],
+  "notes": [
+    {
+      "type": "flag",
+      "text": "**Three values for nᵢ of c-Si at 300 K.** Lecture 2 slide 50: 9.09 × 10⁹ cm⁻³ (with $k_BT = 0.0258$ eV); instruction 2: 9.68 × 10⁹ cm⁻³ (with $k_B = 1.38 \\times 10^{-23}$, $e = 1.60 \\times 10^{-19}$); formula-sheet constants: 9.50 × 10⁹ cm⁻³. All three are ‘≈ 10¹⁰’. The exponential makes nᵢ very sensitive to rounding of $k_BT$. This site uses the sheet constants but accepts all three where nᵢ matters. The book text (p. 49, 57) uses an older value, 1.5 × 10¹⁰ cm⁻³."
+    },
+    {
+      "type": "erratum",
+      "text": "**Instruction 2 Q1(e)** writes $E_C - E_F = k_BT \\ln(N_C/N_D)$ for *intrinsic* silicon, but substitutes nᵢ: the formula should read $\\ln(N_C/n_i)$ (there is no $N_D$ in intrinsic material). The numbers and the answer 0.57 eV are correct."
+    },
+    {
+      "type": "erratum",
+      "text": "**Book eq. 6.2b and lecture 2 slide 39** print $g_V(E) \\propto \\sqrt{E - E_V}$. Inside the valence band $E < E_V$, so the root must be $\\sqrt{E_V - E}$ (states grow downwards into the band, as Fig. 6.5b shows). Only the shape matters for the exam."
+    },
+    {
+      "type": "flag",
+      "text": "**Lecture 2 slide 62** gives $E_C - E_F = 0.04$ eV for $N_D = 10^{20}$ cm⁻³. With the formula $E_C - E_F = k_BT\\ln(N_C/N_D)$ you get $0.0259 \\ln(3.22 \\times 10^{19}/10^{20}) = -0.03$ eV: $E_F$ lies about 0.03 eV **above** $E_C$, because $N_D > N_C$ (degenerate doping, book p. 57). The non-degenerate formulas are not valid there anyway. Ask the lecturer if this comes up; for exam doping levels (≤ 10¹⁹) the formula works."
+    },
+    {
+      "type": "difference",
+      "text": "**Complex refractive index sign.** The book's chapters 6–7 write ñ = n − ik; the formula sheet (eq. 4.21) and week 1 use ñ = n + iκ. Only the sign convention differs; α = 4πk/λ is the same."
+    },
+    {
+      "type": "difference",
+      "text": "**Lecture vs book notation.** The lecture writes k or K for Boltzmann's constant in eV/K ($8.6 \\times 10^{-5}$ eV/K); the book and sheet write $k_B$ in J/K. The lecture (slide 52) writes $E_g$, the sheet $E_G$."
+    },
+    {
+      "type": "flag",
+      "text": "**Slide numbers** on this page are PDF page numbers. From slide 32 on, the number printed on the slide is one higher (the slide titled ‘Energy of electrons’ is PDF page 32 but shows ‘33’)."
+    },
+    {
+      "type": "difference",
+      "text": "**Instruction 2 also contains book exercises 6.14 and 7.5.** They use drift/diffusion and generation, which lecture 3 covers, so they are worked out in week 3 (with the official answers from the answer book)."
+    },
+    {
+      "type": "flag",
+      "text": "**What is on the formula sheet:** eqs. 6.1, 6.6a/b and 7.51a/b, plus $N_C$, $N_V$, $E_G$ of c-Si. **Not** on the sheet: $n_i^2 = N_CN_V e^{-E_G/k_BT}$ (6.9), the law of mass action, charge neutrality, the Fermi–Dirac function (6.3), $E_{Fi}$ (6.11) and $E_C - E_F = k_BT\\ln(N_C/N_D)$ (6.22). Each of these follows from 6.6 in one or two lines; practise deriving them."
+    },
+    {
+      "type": "external",
+      "text": "The temperature dependence in the nᵢ(T) diagram assumes $N_C, N_V \\propto T^{3/2}$ (eq. 6.7 with constant effective masses, as in book ex. 7.6) and a **constant** bandgap. In reality $E_G$ of c-Si drops slightly with temperature; that is beyond this course. Use the curve for trends, not for exact high-temperature values."
+    }
+  ]
+}

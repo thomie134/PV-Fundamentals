@@ -1,0 +1,1458 @@
+[
+ {
+  "id": "w2-free-carriers",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Free carriers",
+  "concept": "electrons-holes",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 6.2",
+  "prompt": "What are the ‘free’ (mobile) charge carriers in a semiconductor?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Electrons in the conduction band and holes in the valence band.",
+    "feedback": "Right: a freed electron moves through the conduction band; the hole it leaves moves through the valence band.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Holes in the conduction band and electrons in the valence band.",
+    "feedback": "Swapped. Holes are missing *bond* electrons, so they live in the valence band."
+   },
+   {
+    "id": "c",
+    "text": "Electrons and holes, both in the conduction band, when a field is applied.",
+    "feedback": "Holes are vacancies in the bonds (valence band), with or without a field."
+   },
+   {
+    "id": "d",
+    "text": "Electrons and holes, both in the valence band, when a field is applied.",
+    "feedback": "A free electron has left its bond: it is in the conduction band. A field is not needed for carriers to exist."
+   }
+  ],
+  "hints": [
+   "Where does an electron go when it is freed from a bond?",
+   "Conduction band = energies of freed electrons; valence band = energies of bonded electrons.",
+   "The empty spot in a bond is the hole."
+  ],
+  "solution": [
+   "A freed electron has an energy in the conduction band and is mobile there.",
+   "The empty bond it leaves is a hole, a vacancy in the valence band that moves like a positive charge. (Book ex. 6.2, answer A.)"
+  ]
+ },
+ {
+  "id": "w2-not-true-dark",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Bands at room temperature",
+  "concept": "energy-bands",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 6.1",
+  "prompt": "Which statement is **not** true for a semiconductor at room temperature in the dark?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Its bandgap lies roughly between 0.5 and 3 eV.",
+    "feedback": "This is true: that is the typical range for semiconductors."
+   },
+   {
+    "id": "b",
+    "text": "Only a few electrons occupy the conduction band.",
+    "feedback": "True: in c-Si about 10¹⁰ cm⁻³ of the ~10¹⁹ cm⁻³ effective states."
+   },
+   {
+    "id": "c",
+    "text": "Electrons almost completely fill the valence band.",
+    "feedback": "True: *almost* completely, a few are missing (the holes)."
+   },
+   {
+    "id": "d",
+    "text": "The valence band is completely filled with electrons.",
+    "feedback": "Correct choice: this is false. Thermal energy at 300 K breaks some bonds, so a few states in the valence band are empty (holes).",
+    "correct": true
+   }
+  ],
+  "hints": [
+   "Look for the statement with an absolute word.",
+   "At T > 0 K thermal energy frees a few electrons from the valence band.",
+   "Each freed electron leaves an empty state behind."
+  ],
+  "solution": [
+   "At room temperature some bonds are always broken by thermal energy.",
+   "Each freed electron leaves a hole, so the valence band is *almost* full, never completely. (Book ex. 6.1, answer D.)"
+  ]
+ },
+ {
+  "id": "w2-p-donor",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Donors and acceptors",
+  "concept": "doping",
+  "difficulty": 1,
+  "prerequisites": [
+   "atoms-electrons"
+  ],
+  "source": "Instruction 2 Q2(a)",
+  "prompt": "Phosphorus (atomic number 15) replaces silicon atoms in a crystal. What is phosphorus, and what type does the silicon become?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A donor; the silicon becomes n-type.",
+    "feedback": "Right: P has 5 valence electrons. Four form bonds, the fifth is freed easily: extra free electrons, n-type.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "An acceptor; the silicon becomes p-type.",
+    "feedback": "That is boron (3 valence electrons). Phosphorus has one electron *more* than Si."
+   },
+   {
+    "id": "c",
+    "text": "A donor; the silicon becomes p-type.",
+    "feedback": "Donors add electrons, which makes electrons the majority: n-type."
+   },
+   {
+    "id": "d",
+    "text": "Neither: it has the same number of valence electrons as Si.",
+    "feedback": "That would be carbon or germanium (group 14). P is in group 15: 5 valence electrons."
+   }
+  ],
+  "hints": [
+   "Count the valence electrons of P: 15 − 2 − 8.",
+   "Silicon needs 4 electrons for its 4 bonds.",
+   "What happens to an electron that has no bond to sit in?"
+  ],
+  "solution": [
+   "P: 15 electrons = 2 + 8 + **5** valence electrons.",
+   "Four form bonds with the Si neighbours; the fifth is weakly bound and freed by thermal energy. P donates an electron: it is a donor and makes the silicon n-type (instruction 2 Q2a)."
+  ]
+ },
+ {
+  "id": "w2-neutral",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Charge neutrality",
+  "concept": "doping",
+  "difficulty": 2,
+  "prerequisites": [
+   "atoms-electrons"
+  ],
+  "source": "Instruction 2 Q2(c)",
+  "prompt": "A 1 cm³ block of c-Si is doped with 10¹⁷ phosphorus atoms, which all ionise and release 10¹⁷ free electrons. What net charge did the block receive?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Zero: each P atom added one electron but also one proton.",
+    "feedback": "Right. A neutral P atom replaced a neutral Si atom. The free electron is balanced by the fixed P⁺ ion.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "−1.6 × 10⁻² C: 10¹⁷ extra electrons.",
+    "feedback": "The electrons came with 10¹⁷ extra protons in the P nuclei. Count both."
+   },
+   {
+    "id": "c",
+    "text": "+1.6 × 10⁻² C: 10¹⁷ positive P ions.",
+    "feedback": "The ions are balanced by exactly as many free electrons."
+   },
+   {
+    "id": "d",
+    "text": "It depends on the temperature.",
+    "feedback": "Ionisation only separates charges that were already there; the total stays zero at any temperature."
+   }
+  ],
+  "hints": [
+   "Compare the number of protons and electrons of a P atom with those of a Si atom.",
+   "Atoms are neutral before and after the swap.",
+   "Ionisation moves an electron; it does not create charge."
+  ],
+  "solution": [
+   "Compared with Si, P has one extra electron **and** one extra proton.",
+   "Neutral atoms replaced neutral atoms: no net charge. After ionisation every free electron is balanced by a fixed P⁺ ion (instruction 2 Q2c; book ex. 6.11)."
+  ]
+ },
+ {
+  "id": "w2-acceptor-level",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Dopant levels",
+  "concept": "fermi-level-doped",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book exercise 6.5",
+  "prompt": "Where is the energy level of an acceptor (e.g. boron) in silicon?",
+  "options": [
+   {
+    "id": "a",
+    "text": "In the bandgap, close to the conduction band.",
+    "feedback": "That is where donor levels sit ($E_D$)."
+   },
+   {
+    "id": "b",
+    "text": "In the bandgap, close to the valence band.",
+    "feedback": "Right: $E_A$ lies just above $E_V$, so a valence electron easily jumps onto it, leaving a hole.",
+    "correct": true
+   },
+   {
+    "id": "c",
+    "text": "Inside the valence band.",
+    "feedback": "If it were in the band it would not trap an electron: it must be in the gap."
+   },
+   {
+    "id": "d",
+    "text": "Inside the conduction band.",
+    "feedback": "An acceptor accepts a *valence* electron, which needs a level close to the valence band."
+   }
+  ],
+  "hints": [
+   "An acceptor takes an electron from a neighbouring bond.",
+   "Bond electrons live in the valence band.",
+   "A small energy step is enough at room temperature."
+  ],
+  "solution": [
+   "The acceptor state traps a valence electron, so it must be in the gap.",
+   "To be filled easily by thermal energy it lies just above $E_V$. (Book ex. 6.5, answer C; book Fig. 6.7.)"
+  ]
+ },
+ {
+  "id": "w2-n-dopant",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Choosing a dopant",
+  "concept": "doping",
+  "difficulty": 1,
+  "prerequisites": [
+   "atoms-electrons"
+  ],
+  "source": "Book exercise 6.6",
+  "prompt": "Which element can make silicon n-type?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Ge",
+    "feedback": "Germanium has 4 valence electrons, like Si: no extra carriers."
+   },
+   {
+    "id": "b",
+    "text": "In",
+    "feedback": "Indium has 3 valence electrons: an acceptor, so p-type."
+   },
+   {
+    "id": "c",
+    "text": "Ga",
+    "feedback": "Gallium has 3 valence electrons: an acceptor, so p-type."
+   },
+   {
+    "id": "d",
+    "text": "As",
+    "feedback": "Right: arsenic has 5 valence electrons, like phosphorus: a donor.",
+    "correct": true
+   }
+  ],
+  "hints": [
+   "n-type needs extra free electrons.",
+   "Which element has one valence electron more than Si?",
+   "Group 15 of the periodic table."
+  ],
+  "solution": [
+   "n-type doping needs atoms with 5 valence electrons.",
+   "Of the options only arsenic (group 15) has 5. Ga and In (group 13) are acceptors, Ge (group 14) is neutral. (Book ex. 6.6, answer D.)"
+  ]
+ },
+ {
+  "id": "w2-indirect",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Direct vs indirect",
+  "concept": "energy-bands",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 2 slide 34",
+  "prompt": "Why does crystalline silicon absorb near-bandgap light much more weakly than GaAs?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Silicon has an indirect bandgap: an electron also needs momentum from a phonon to cross the gap.",
+    "feedback": "Right. Needing a photon and a phonon at once makes the transition much less likely, so α is small near $E_G$.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Silicon has a larger bandgap than GaAs.",
+    "feedback": "The opposite: Si 1.12 eV, GaAs 1.42 eV. A smaller gap absorbs *more* of the spectrum."
+   },
+   {
+    "id": "c",
+    "text": "Silicon reflects more light.",
+    "feedback": "Reflection happens before absorption and does not change α."
+   },
+   {
+    "id": "d",
+    "text": "Silicon has fewer valence electrons.",
+    "feedback": "Both have on average 4 valence electrons per atom."
+   }
+  ],
+  "hints": [
+   "Think of the energy–momentum (dispersion) diagram.",
+   "In a direct material the band edges line up in momentum.",
+   "Where does the extra momentum come from in Si?"
+  ],
+  "solution": [
+   "In an indirect semiconductor the top of the VB and the bottom of the CB sit at different crystal momentum.",
+   "A photon carries almost no momentum, so a lattice vibration (phonon) must supply it. Two-particle events are less likely, so absorption near $E_G$ is weak (lecture 2 slide 34; book §7.1)."
+  ]
+ },
+ {
+  "id": "w2-fermi-half",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Fermi–Dirac",
+  "concept": "carrier-statistics",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Lecture 2 slides 40–44",
+  "prompt": "At T = 600 K, what is the occupation probability of a state exactly at the Fermi level?",
+  "options": [
+   {
+    "id": "a",
+    "text": "½",
+    "feedback": "Right: $f(E_F) = 1/(1 + e^0) = \\tfrac12$ at every temperature.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "1",
+    "feedback": "At 0 K the step makes states just below $E_F$ full, but exactly at $E_F$ the formula always gives ½."
+   },
+   {
+    "id": "c",
+    "text": "It depends on the bandgap.",
+    "feedback": "$f(E)$ only depends on $E - E_F$ and $T$."
+   },
+   {
+    "id": "d",
+    "text": "$e^{-1}$",
+    "feedback": "That would be at $E - E_F = k_BT$ in the Boltzmann approximation, not at $E_F$."
+   }
+  ],
+  "hints": [
+   "Substitute $E = E_F$ into the Fermi–Dirac function.",
+   "$e^0 = 1$.",
+   "$1/(1+1)$."
+  ],
+  "solution": [
+   "$f(E_F) = \\dfrac{1}{1 + \\exp(0)} = \\dfrac{1}{2}$, independent of temperature. That is the definition of the Fermi level (lecture 2 slides 40–44)."
+  ]
+ },
+ {
+  "id": "w2-mass-action",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Law of mass action",
+  "concept": "doping",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 2 slide 61",
+  "prompt": "An n-type wafer has $N_D = 10^{16}$ cm⁻³. You increase the doping to $N_D = 10^{17}$ cm⁻³. What happens to the hole density at 300 K?",
+  "options": [
+   {
+    "id": "a",
+    "text": "It drops by a factor 10.",
+    "feedback": "Right: $p = n_i^2/N_D$. Ten times more electrons, ten times fewer holes.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "It stays the same: donors do not affect holes.",
+    "feedback": "The product $np$ is fixed. More electrons means holes recombine faster: $p$ drops."
+   },
+   {
+    "id": "c",
+    "text": "It rises by a factor 10.",
+    "feedback": "That is what happens to $n$, not $p$."
+   },
+   {
+    "id": "d",
+    "text": "It drops by a factor 100.",
+    "feedback": "$p \\propto 1/N_D$, not $1/N_D^2$."
+   }
+  ],
+  "hints": [
+   "Which product stays constant in equilibrium?",
+   "$np = n_i^2$, with $n \\approx N_D$.",
+   "Write $p = n_i^2/N_D$ for both cases."
+  ],
+  "solution": [
+   "$p = n_i^2/N_D$ (law of mass action with $n \\approx N_D$).",
+   "Multiplying $N_D$ by 10 divides $p$ by 10. Instruction 2 Q2e explains it physically: holes are generated at the same thermal rate but recombine faster with more electrons around."
+  ]
+ },
+ {
+  "id": "w2-ni-depends",
+  "type": "mcq",
+  "week": 2,
+  "topic": "What sets nᵢ",
+  "concept": "carrier-density",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book eq. 6.9",
+  "prompt": "On which of these does the intrinsic carrier density $n_i$ of a material **not** depend?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The doping concentration",
+    "feedback": "Right: $n_i^2 = N_CN_Ve^{-E_G/k_BT}$ contains no doping. That is why $np = n_i^2$ also holds in doped material.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "The temperature",
+    "feedback": "$T$ appears in the exponent and in $N_C$, $N_V$: $n_i$ depends strongly on it."
+   },
+   {
+    "id": "c",
+    "text": "The bandgap",
+    "feedback": "$E_G$ sits in the exponent: the most important dependence."
+   },
+   {
+    "id": "d",
+    "text": "The effective densities of states",
+    "feedback": "$n_i = \\sqrt{N_CN_V}\\,e^{-E_G/2k_BT}$."
+   }
+  ],
+  "hints": [
+   "Write down the formula for $n_i$.",
+   "$n_i^2 = N_CN_V\\exp(-E_G/k_BT)$",
+   "Which quantity in the list is absent from it?"
+  ],
+  "solution": [
+   "$n_i^2 = N_C N_V\\exp(-E_G/k_BT)$ (eq. 6.9) depends on the material ($E_G$, $N_C$, $N_V$) and on $T$ only.",
+   "Doping changes $n$ and $p$ individually, never their product."
+  ]
+ },
+ {
+  "id": "w2-fermi-p",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Fermi level position",
+  "concept": "fermi-level-doped",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Lecture 2 slide 63",
+  "prompt": "Silicon is doped with boron. Compared with intrinsic silicon, the Fermi level…",
+  "options": [
+   {
+    "id": "a",
+    "text": "…moves down towards the valence band.",
+    "feedback": "Right: more holes means $E_F$ closer to $E_V$: $E_F - E_V = k_BT\\ln(N_V/N_A)$.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "…moves up towards the conduction band.",
+    "feedback": "That happens with donors (n-type)."
+   },
+   {
+    "id": "c",
+    "text": "…stays at midgap; only the carrier densities change.",
+    "feedback": "The carrier densities are set *by* the Fermi-level position: if $p$ changes, $E_F$ moves."
+   },
+   {
+    "id": "d",
+    "text": "…moves into the valence band.",
+    "feedback": "Only for extremely heavy (degenerate) doping. Normally it stays in the gap."
+   }
+  ],
+  "hints": [
+   "Is boron a donor or an acceptor?",
+   "$p = N_V e^{(E_V-E_F)/k_BT}$: what must $E_F$ do for $p$ to increase?",
+   "More holes ↔ $E_F$ closer to $E_V$."
+  ],
+  "solution": [
+   "Boron is an acceptor: the silicon becomes p-type with $p \\approx N_A$.",
+   "From $p = N_Ve^{(E_V-E_F)/k_BT}$, a larger $p$ needs a smaller $E_F - E_V$: the Fermi level moves down (book Fig. 6.7c)."
+  ]
+ },
+ {
+  "id": "w2-qfl-moves",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Quasi-Fermi levels",
+  "concept": "quasi-fermi",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 2 slide 69",
+  "prompt": "A heavily doped n-type wafer ($N_D = 10^{18}$ cm⁻³) is illuminated, generating $\\Delta n = \\Delta p = 10^{15}$ cm⁻³. Which statement is right?",
+  "options": [
+   {
+    "id": "a",
+    "text": "$E_{Fn}$ hardly moves; $E_{Fp}$ moves far towards the valence band.",
+    "feedback": "Right: $n$ grows by only 0.1 %, but $p$ grows from ~10² to 10¹⁵ cm⁻³ (lecture 2 slide 69).",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "$E_{Fn}$ moves far towards the conduction band; $E_{Fp}$ hardly moves.",
+    "feedback": "The electrons were already $10^{18}$; adding $10^{15}$ changes almost nothing. The holes change enormously."
+   },
+   {
+    "id": "c",
+    "text": "Both move by the same amount, because $\\Delta n = \\Delta p$.",
+    "feedback": "Equal *absolute* changes, but the *relative* changes differ by orders of magnitude, and the levels follow the logarithm."
+   },
+   {
+    "id": "d",
+    "text": "Neither moves: the Fermi level is fixed by the doping.",
+    "feedback": "That is only true in equilibrium. Under light $np > n_i^2$ and two quasi-Fermi levels are needed."
+   }
+  ],
+  "hints": [
+   "Compare $\\Delta n$ with the dark densities $n_0$ and $p_0$.",
+   "The levels depend on $\\ln n$ and $\\ln p$: relative changes matter.",
+   "$p_0 = n_i^2/N_D \\approx 10^2$ cm⁻³."
+  ],
+  "solution": [
+   "Dark: $n_0 = 10^{18}$, $p_0 \\approx 10^2$ cm⁻³.",
+   "Light: $n = 1.001 \\times 10^{18}$ (no visible change, $E_C - E_{Fn}$ stays 0.09 eV), $p = 10^{15}$ (×10¹³!), so $E_{Fp} - E_V$ drops to 0.25 eV.",
+   "Under low injection only the minority quasi-Fermi level moves."
+  ]
+ },
+ {
+  "id": "w2-conductivity-0k",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Conductivity and temperature",
+  "concept": "electrons-holes",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 6.13",
+  "prompt": "Assume no light. The conductivity of an intrinsic semiconductor…",
+  "options": [
+   {
+    "id": "a",
+    "text": "…decreases when the temperature increases.",
+    "feedback": "More thermal energy breaks more bonds: more carriers, *higher* conductivity."
+   },
+   {
+    "id": "b",
+    "text": "…is zero at T = 0 K.",
+    "feedback": "Right: at 0 K every electron is in a bond, so there are no free carriers.",
+    "correct": true
+   },
+   {
+    "id": "c",
+    "text": "…is generally lower than that of an insulator.",
+    "feedback": "Semiconductors lie between insulators and conductors."
+   },
+   {
+    "id": "d",
+    "text": "…is not affected by doping.",
+    "feedback": "Controlling conductivity by doping is the key property of semiconductors."
+   }
+  ],
+  "hints": [
+   "Who carries current in a semiconductor?",
+   "Where are all electrons at 0 K?",
+   "No free carriers, no current."
+  ],
+  "solution": [
+   "At 0 K all valence electrons sit in covalent bonds: the conduction band is empty and the valence band full.",
+   "Without free electrons or holes nothing can carry current: $\\sigma = 0$. (Book ex. 6.13, answer B.)"
+  ]
+ },
+ {
+  "id": "w2-boltzmann",
+  "type": "mcq",
+  "week": 2,
+  "topic": "Boltzmann approximation",
+  "concept": "carrier-statistics",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 2 slide 47; book eq. 6.6",
+  "prompt": "When may the Fermi–Dirac function be replaced by $e^{-(E-E_F)/k_BT}$?",
+  "options": [
+   {
+    "id": "a",
+    "text": "When $E - E_F \\geq 3k_BT$ (≈ 0.077 eV at 300 K).",
+    "feedback": "Right (lecture 2 slide 47). Then the exponential is ≥ 20 and the 1 in the denominator hardly matters.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "When $E$ lies below $E_F$.",
+    "feedback": "There the approximation fails badly: it exceeds 1."
+   },
+   {
+    "id": "c",
+    "text": "Only at T = 0 K.",
+    "feedback": "At 0 K the Boltzmann form is meaningless (infinite exponent). It works for energies several $k_BT$ above $E_F$ at any $T$."
+   },
+   {
+    "id": "d",
+    "text": "Whenever the semiconductor is doped.",
+    "feedback": "Doping is irrelevant; what matters is the distance between $E$ and $E_F$."
+   }
+  ],
+  "hints": [
+   "When can you neglect the 1 in $1/(1 + e^x)$?",
+   "$e^x$ must be much larger than 1.",
+   "$e^3 \\approx 20$."
+  ],
+  "solution": [
+   "$f = 1/(1 + e^{x})$ with $x = (E-E_F)/k_BT$. For $x \\geq 3$, $e^x \\geq 20$, so $f \\approx e^{-x}$ to within about 5 %.",
+   "At 300 K, $3k_BT = 0.077$ eV. This is why eq. 6.6 requires $E_C - E_F \\geq 3k_BT$ (non-degenerate semiconductor)."
+  ]
+ },
+ {
+  "id": "w2-atoms-cm3",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Atom density",
+  "concept": "si-crystal",
+  "difficulty": 1,
+  "prerequisites": [
+   "units",
+   "atoms-electrons"
+  ],
+  "source": "Instruction 2 Q1(b)",
+  "prompt": "The diamond unit cell of c-Si contains 8 atoms and has a lattice constant $a = 5.43 \\times 10^{-10}$ m. How many Si atoms are there in 1 cm³?",
+  "answer": {
+   "value": 4.997e+22,
+   "unit": "cm⁻³",
+   "tolerance": 0.01,
+   "errors": [
+    {
+     "value": 4.997e+28,
+     "feedback": "That is the density per **m³**. Convert $a$ to cm ($5.43 \\times 10^{-8}$ cm) before cubing, or divide by $10^6$."
+    },
+    {
+     "value": 2.498e+22,
+     "feedback": "You used 4 atoms per cell. Count again: 8 corners × 1/8 + 6 faces × 1/2 + 4 inside = 8."
+    }
+   ]
+  },
+  "hints": [
+   "Atoms per volume = atoms per cell / volume of a cell.",
+   "$N_{\\mathrm{Si}} = 8/a^3$",
+   "$a = 5.43 \\times 10^{-8}$ cm."
+  ],
+  "solution": [
+   "Cell volume: $a^3 = (5.43 \\times 10^{-8}\\,\\mathrm{cm})^3 = 1.60 \\times 10^{-22}$ cm³.",
+   "$N_{\\mathrm{Si}} = 8/1.60 \\times 10^{-22} = 5.00 \\times 10^{22}$ cm⁻³ (instruction 2 Q1b)."
+  ]
+ },
+ {
+  "id": "w2-kt",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Thermal energy",
+  "concept": "carrier-statistics",
+  "difficulty": 1,
+  "prerequisites": [
+   "units"
+  ],
+  "source": "Lecture 2 slide 50",
+  "prompt": "Calculate the thermal energy $k_BT$ at 300 K, in eV.",
+  "answer": {
+   "value": 0.02585,
+   "unit": "eV",
+   "tolerance": 0.01
+  },
+  "hints": [
+   "$k_B$ is on the formula sheet in J/K.",
+   "$k_BT$ in J, then divide by $q$ to get eV.",
+   "$1.381 \\times 10^{-23} \\times 300$."
+  ],
+  "solution": [
+   "$k_BT = 1.380649 \\times 10^{-23} \\times 300 = 4.142 \\times 10^{-21}$ J.",
+   "In eV: $4.142 \\times 10^{-21}/1.602 \\times 10^{-19} = 0.02585$ eV. The lecture rounds to 0.0258 eV."
+  ]
+ },
+ {
+  "id": "w2-ni-300",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Intrinsic carrier density",
+  "concept": "carrier-density",
+  "difficulty": 2,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Instruction 2 Q1(c); lecture 2 slide 50",
+  "prompt": "Calculate the intrinsic carrier density $n_i$ of c-Si at 300 K, using the formula-sheet values $E_G = 1.12$ eV, $N_C = 3.22 \\times 10^{19}$ cm⁻³ and $N_V = 1.83 \\times 10^{19}$ cm⁻³.",
+  "answer": {
+   "value": 9497000000.0,
+   "unit": "cm⁻³",
+   "tolerance": 0.05,
+   "errors": [
+    {
+     "value": 3.715,
+     "feedback": "You used $e^{-E_G/k_BT}$ under the square root sign incorrectly: $n_i = \\sqrt{N_CN_V}\\,e^{-E_G/(2k_BT)}$. The square root also halves the exponent."
+    },
+    {
+     "value": 9.018e+19,
+     "feedback": "That is $n_i^2$ (in cm⁻⁶). Take the square root."
+    }
+   ]
+  },
+  "hints": [
+   "Start from $np = n_i^2$ with eq. 6.6.",
+   "$n_i^2 = N_CN_V\\exp(-E_G/k_BT)$",
+   "$k_BT = 0.02585$ eV, so $E_G/k_BT = 43.3$."
+  ],
+  "solution": [
+   "$n_i = \\sqrt{N_CN_V}\\exp\\left(-\\frac{E_G}{2k_BT}\\right) = \\sqrt{3.22 \\times 10^{19} \\cdot 1.83 \\times 10^{19}}\\;\\exp\\left(-\\frac{1.12}{2 \\times 0.02585}\\right)$",
+   "$= 2.43 \\times 10^{19} \\times 3.91 \\times 10^{-10} = 9.50 \\times 10^9$ cm⁻³.",
+   "Answers between 9.09 × 10⁹ (lecture, $k_BT = 0.0258$ eV) and 9.68 × 10⁹ (instruction 2 constants) are accepted: the exponential amplifies rounding."
+  ]
+ },
+ {
+  "id": "w2-ecef-intrinsic",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Intrinsic Fermi level",
+  "concept": "carrier-density",
+  "difficulty": 2,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Instruction 2 Q1(e); lecture 2 slide 52",
+  "prompt": "How far below the conduction band edge lies the Fermi level of intrinsic c-Si at 300 K? Give $E_C - E_{Fi}$ in eV.",
+  "answer": {
+   "value": 0.5673,
+   "unit": "eV",
+   "tolerance": 0.01,
+   "errors": [
+    {
+     "value": 0.56,
+     "feedback": "That is exactly midgap. The term $\\frac{k_BT}{2}\\ln(N_V/N_C) = -0.007$ eV shifts $E_{Fi}$ slightly down, because $N_V < N_C$."
+    },
+    {
+     "value": 0.5527,
+     "feedback": "That is $E_{Fi} - E_V$, the distance to the **valence** band."
+    }
+   ]
+  },
+  "hints": [
+   "Use $n = n_i$ in eq. 6.6a, or the formula for $E_{Fi}$.",
+   "$E_C - E_{Fi} = k_BT\\ln(N_C/n_i)$, or $\\frac{E_G}{2} - \\frac{k_BT}{2}\\ln\\frac{N_V}{N_C}$",
+   "$\\ln(N_V/N_C) = \\ln(0.568) = -0.565$."
+  ],
+  "solution": [
+   "$E_C - E_{Fi} = \\frac{E_G}{2} - \\frac{k_BT}{2}\\ln\\left(\\frac{N_V}{N_C}\\right) = 0.560 + 0.0073 = 0.567$ eV.",
+   "Check with eq. 6.6a: $k_BT\\ln(N_C/n_i) = 0.02585 \\ln(3.22 \\times 10^{19}/9.50 \\times 10^{9}) = 0.567$ eV (instruction 2 Q1e: 0.57 eV)."
+  ]
+ },
+ {
+  "id": "w2-minority-p",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Minority carriers",
+  "concept": "doping",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Instruction 2 Q2(e)",
+  "prompt": "c-Si is doped with $N_D = 10^{17}$ cm⁻³ phosphorus, all ionised. Using $n_i = 9.68 \\times 10^9$ cm⁻³ (as in instruction 2), what is the hole density?",
+  "answer": {
+   "value": 937.0,
+   "unit": "cm⁻³",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 9.68e-08,
+     "feedback": "You divided $n_i$ by $N_D$. The law of mass action needs $n_i^2$: $p = n_i^2/n$."
+    },
+    {
+     "value": 9680000000.0,
+     "feedback": "That is the intrinsic density. Doping changes $p$: the product $np$ stays $n_i^2$, so $p$ drops."
+    }
+   ]
+  },
+  "hints": [
+   "Which product stays constant in equilibrium?",
+   "$p = n_i^2/n$ with $n \\approx N_D$.",
+   "$(9.68 \\times 10^9)^2 = 9.37 \\times 10^{19}$."
+  ],
+  "solution": [
+   "$n \\approx N_D = 10^{17}$ cm⁻³ (the 9.68 × 10⁹ intrinsic electrons are negligible).",
+   "$p = \\dfrac{n_i^2}{n} = \\dfrac{(9.68 \\times 10^9)^2}{10^{17}} = 937$ cm⁻³."
+  ]
+ },
+ {
+  "id": "w2-ecef-1e17",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Fermi level in n-type",
+  "concept": "fermi-level-doped",
+  "difficulty": 2,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Instruction 2 Q2(f)",
+  "prompt": "For c-Si with $N_D = 10^{17}$ cm⁻³ at 300 K, calculate $E_C - E_F$ in eV.",
+  "answer": {
+   "value": 0.1493,
+   "unit": "eV",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 0.9707,
+     "feedback": "That is $E_F - E_V$. The question asks for the distance to the conduction band."
+    },
+    {
+     "value": 0.06483,
+     "feedback": "You used $\\log_{10}$. The formula needs the natural logarithm, ln."
+    }
+   ]
+  },
+  "hints": [
+   "Solve eq. 6.6a for the energy, with $n = N_D$.",
+   "$E_C - E_F = k_BT\\ln(N_C/N_D)$",
+   "$N_C/N_D = 322$."
+  ],
+  "solution": [
+   "$E_C - E_F = k_BT\\ln\\left(\\frac{N_C}{N_D}\\right) = 0.02585 \\times \\ln(322) = 0.02585 \\times 5.77 = 0.149$ eV.",
+   "$E_F$ lies 0.15 eV below $E_C$: 0.42 eV higher than in intrinsic silicon (instruction 2 Q2f)."
+  ]
+ },
+ {
+  "id": "w2-book-6-8",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Minority carriers",
+  "concept": "doping",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 6.8",
+  "prompt": "Silicon is doped with $10^{16}$ arsenic atoms per cm³. Take $n_i = 1.5 \\times 10^{10}$ cm⁻³ (as the book does). What is the minority carrier density at 300 K?",
+  "answer": {
+   "value": 22500,
+   "unit": "cm⁻³",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 1.5e-06,
+     "feedback": "Square $n_i$ first: $p = n_i^2/N_D$."
+    }
+   ]
+  },
+  "hints": [
+   "Is As a donor or an acceptor? Which carriers are the minority?",
+   "$p = n_i^2/N_D$",
+   "$(1.5 \\times 10^{10})^2 = 2.25 \\times 10^{20}$."
+  ],
+  "solution": [
+   "As has 5 valence electrons: donor, n-type, $n \\approx 10^{16}$ cm⁻³. The minority carriers are holes.",
+   "$p = \\dfrac{(1.5 \\times 10^{10})^2}{10^{16}} = 2.25 \\times 10^4$ cm⁻³ (book ex. 6.8, official answer)."
+  ]
+ },
+ {
+  "id": "w2-fermi-shift",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Fermi level vs doping",
+  "concept": "fermi-level-doped",
+  "difficulty": 2,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Lecture 2 slides 62–63",
+  "prompt": "By how much (in eV) does the Fermi level of n-type c-Si rise when the donor density is increased from $10^{15}$ to $10^{17}$ cm⁻³ at 300 K?",
+  "answer": {
+   "value": 0.119,
+   "unit": "eV",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 0.0517,
+     "feedback": "You used the ratio of exponents (2) instead of $\\ln(100) = 4.61$. The shift is $k_BT$ times the natural log of the doping ratio."
+    }
+   ]
+  },
+  "hints": [
+   "Write $E_C - E_F$ for both doping levels and subtract.",
+   "$\\Delta E_F = k_BT\\ln(10^{17}/10^{15})$: $N_C$ cancels.",
+   "$\\ln 100 = 4.61$."
+  ],
+  "solution": [
+   "$\\Delta E_F = k_BT\\ln\\left(\\frac{N_C}{10^{15}}\\right) - k_BT\\ln\\left(\\frac{N_C}{10^{17}}\\right) = k_BT\\ln(100)$.",
+   "$= 0.02585 \\times 4.605 = 0.119$ eV: about 60 meV per factor 10."
+  ]
+ },
+ {
+  "id": "w2-atoms-per-electron",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Doping ratio",
+  "concept": "doping",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Instruction 2 Q2(d)",
+  "prompt": "In c-Si ($5.0 \\times 10^{22}$ atoms/cm³) doped with $10^{17}$ cm⁻³ phosphorus, how many Si atoms are there for every free electron?",
+  "answer": {
+   "value": 500000.0,
+   "unit": "atoms",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 5165000000000.0,
+     "feedback": "That is the ratio for *intrinsic* silicon ($n_i = 9.68 \\times 10^9$). After doping $n \\approx 10^{17}$."
+    }
+   ]
+  },
+  "hints": [
+   "How many free electrons are there after doping?",
+   "$n \\approx N_D$",
+   "Divide the atom density by $n$."
+  ],
+  "solution": [
+   "$n \\approx N_D = 10^{17}$ cm⁻³.",
+   "$5.0 \\times 10^{22}/10^{17} = 5.0 \\times 10^5$: one free electron per half a million atoms, against one per $5 \\times 10^{12}$ in intrinsic Si (instruction 2 Q1d, Q2d)."
+  ]
+ },
+ {
+  "id": "w2-ef-ev-p",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Fermi level in p-type",
+  "concept": "fermi-level-doped",
+  "difficulty": 2,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Lecture 2 slide 70",
+  "prompt": "c-Si is doped with $N_A = 10^{16}$ cm⁻³ boron. Calculate $E_F - E_V$ at 300 K.",
+  "answer": {
+   "value": 0.1942,
+   "unit": "eV",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 0.9258,
+     "feedback": "That is $E_C - E_F$. For p-type, measure from the valence band: $E_F - E_V = k_BT\\ln(N_V/N_A)$."
+    }
+   ]
+  },
+  "hints": [
+   "p-type: use eq. 6.6b with $p = N_A$.",
+   "$E_F - E_V = k_BT\\ln(N_V/N_A)$",
+   "Use $N_V$, not $N_C$: $N_V/N_A = 1830$."
+  ],
+  "solution": [
+   "$E_F - E_V = k_BT\\ln\\left(\\frac{N_V}{N_A}\\right) = 0.02585 \\ln(1830) = 0.194$ eV (lecture 2 slide 70: 0.19 eV)."
+  ]
+ },
+ {
+  "id": "w2-qfl-split",
+  "type": "numeric",
+  "week": 2,
+  "topic": "Quasi-Fermi splitting",
+  "concept": "quasi-fermi",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Lecture 2 slide 70",
+  "prompt": "A p-type c-Si wafer ($N_A = 10^{16}$ cm⁻³) is illuminated so that $\\Delta n = \\Delta p = 10^{15}$ cm⁻³ (lecture 2 slide 70). Calculate the quasi-Fermi level splitting $E_{Fn} - E_{Fp}$ at 300 K.",
+  "answer": {
+   "value": 0.6599,
+   "unit": "eV",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 0.9258,
+     "feedback": "That is $E_C - E_F$ in the **dark**. Under light, use the illuminated densities $n = 10^{15}$ and $p = 1.1 \\times 10^{16}$ in eq. 7.51."
+    }
+   ]
+  },
+  "hints": [
+   "Find $n$ and $p$ under illumination first.",
+   "$E_C - E_{Fn} = k_BT\\ln(N_C/n)$, $E_{Fp} - E_V = k_BT\\ln(N_V/p)$; splitting = $E_G$ minus both.",
+   "$n = 10^{15}$ (the dark $10^4$ is negligible), $p = 1.1 \\times 10^{16}$."
+  ],
+  "solution": [
+   "Illuminated: $n = 10^4 + 10^{15} \\approx 10^{15}$ cm⁻³, $p = 10^{16} + 10^{15} = 1.1 \\times 10^{16}$ cm⁻³.",
+   "$E_C - E_{Fn} = 0.02585\\ln(3.22 \\times 10^{19}/10^{15}) = 0.268$ eV; $E_{Fp} - E_V = 0.02585\\ln(1.83 \\times 10^{19}/1.1 \\times 10^{16}) = 0.192$ eV.",
+   "$E_{Fn} - E_{Fp} = 1.12 - 0.268 - 0.192 = 0.66$ eV. Same as $k_BT\\ln(np/n_i^2)$."
+  ]
+ },
+ {
+  "id": "w2-exam-boron",
+  "type": "multi",
+  "week": 2,
+  "topic": "Doping c-Si with boron",
+  "concept": "doping",
+  "difficulty": 2,
+  "prerequisites": [],
+  "points": 14,
+  "source": "Modelled on instruction 2 Q2 (with boron instead of phosphorus)",
+  "prompt": "In a 1 cm³ block of c-Si, $10^{16}$ Si atoms are replaced by boron (B) atoms. Use $N_C = 3.22 \\times 10^{19}$ cm⁻³, $N_V = 1.83 \\times 10^{19}$ cm⁻³, $E_G = 1.12$ eV, $n_i = 9.68 \\times 10^9$ cm⁻³ and $T = 300$ K.",
+  "hints": [
+   "Boron has 3 valence electrons.",
+   "Majority ≈ dopant density; minority from $np = n_i^2$.",
+   "Fermi level for p-type: $E_F - E_V = k_BT\\ln(N_V/N_A)$."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "mcq",
+    "prompt": "Is B a donor or an acceptor, and what type does the silicon become?",
+    "points": 2,
+    "options": [
+     {
+      "id": "a",
+      "text": "Acceptor; p-type",
+      "feedback": "Right: B has 3 valence electrons; it accepts an electron from a bond and creates a hole.",
+      "correct": true
+     },
+     {
+      "id": "b",
+      "text": "Donor; n-type",
+      "feedback": "That would be P or As (5 valence electrons)."
+     },
+     {
+      "id": "c",
+      "text": "Acceptor; n-type",
+      "feedback": "Acceptors create holes: p-type."
+     },
+     {
+      "id": "d",
+      "text": "Donor; p-type",
+      "feedback": "Donors add electrons, which gives n-type."
+     }
+    ],
+    "solution": [
+     "Boron (Z = 5) has 3 valence electrons: one bond stays incomplete, it accepts an electron and leaves a hole. Acceptor, p-type."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Assuming every B atom is ionised, what is the hole density?",
+    "points": 2,
+    "answer": {
+     "value": 1e+16,
+     "unit": "cm⁻³",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "Each B atom creates one hole: $p \\approx N_A = 10^{16}$ cm⁻³ (the $\\sim 10^{10}$ intrinsic holes are negligible)."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "What is the electron density after doping?",
+    "points": 3,
+    "answer": {
+     "value": 9370,
+     "unit": "cm⁻³",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 9680000000.0,
+       "feedback": "That is the intrinsic value; doping lowers the minority density: $n = n_i^2/p$."
+      }
+     ]
+    },
+    "solution": [
+     "Law of mass action: $n = \\dfrac{n_i^2}{p} = \\dfrac{(9.68 \\times 10^9)^2}{10^{16}} = 9.37 \\times 10^3$ cm⁻³."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "Calculate the position of the Fermi level relative to the valence band, $E_F - E_V$.",
+    "points": 3,
+    "answer": {
+     "value": 0.1942,
+     "unit": "eV",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 0.9258,
+       "feedback": "That is $E_C - E_F$. Measure from $E_V$ for p-type."
+      }
+     ]
+    },
+    "solution": [
+     "$E_F - E_V = k_BT\\ln(N_V/N_A) = 0.02585\\ln(1.83 \\times 10^{19}/10^{16}) = 0.194$ eV."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "numeric",
+    "prompt": "By how much has the Fermi level moved compared with intrinsic c-Si ($E_{Fi} - E_F$)?",
+    "points": 2,
+    "answer": {
+     "value": 0.3585,
+     "unit": "eV",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "Intrinsic: $E_{Fi} - E_V = E_G - 0.567 = 0.553$ eV.",
+     "Shift: $0.553 - 0.194 = 0.359$ eV **down**, towards the valence band."
+    ]
+   },
+   {
+    "id": "f",
+    "label": "(f)",
+    "kind": "open",
+    "prompt": "Sketch the band diagram with $E_{Fi}$ and $E_F$, and the Fermi–Dirac distribution next to it. What changed compared with intrinsic c-Si?",
+    "points": 2,
+    "solution": [
+     "Band diagram: $E_C$ at the top, $E_V$ at the bottom, $E_{Fi}$ just below midgap, $E_F$ 0.19 eV above $E_V$ (dashed). An acceptor level $E_A$ just above $E_V$.",
+     "The Fermi–Dirac step is centred on the lower $E_F$: the probability that a valence-band state is empty ($1 - f$) is much larger (more holes), and the occupation of conduction-band states is much smaller (fewer electrons)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "w2-exam-x",
+  "type": "multi",
+  "week": 2,
+  "topic": "A new semiconductor",
+  "concept": "carrier-density",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log",
+   "units"
+  ],
+  "points": 14,
+  "source": "Modelled on instruction 2 Q1–Q2 (new material data)",
+  "prompt": "A (fictional) semiconductor X has a cubic unit cell with 8 atoms and lattice constant $a = 5.65 \\times 10^{-10}$ m, bandgap $E_G = 1.40$ eV, $N_C = 4.0 \\times 10^{18}$ cm⁻³ and $N_V = 1.0 \\times 10^{19}$ cm⁻³. $T = 300$ K; use the formula-sheet constants.",
+  "hints": [
+   "Same steps as instruction 2 Q1 and Q2, with other material data.",
+   "$n_i = \\sqrt{N_CN_V}e^{-E_G/2k_BT}$; $E_{Fi}$ from eq. 6.11.",
+   "Minority density from $np = n_i^2$."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "How many atoms are there per cm³?",
+    "points": 2,
+    "answer": {
+     "value": 4.4355e+22,
+     "unit": "cm⁻³",
+     "tolerance": 0.01
+    },
+    "solution": [
+     "$N = 8/a^3 = 8/(5.65 \\times 10^{-8}\\,\\mathrm{cm})^3 = 4.44 \\times 10^{22}$ cm⁻³."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Calculate the intrinsic carrier density.",
+    "points": 4,
+    "answer": {
+     "value": 11004000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.05
+    },
+    "solution": [
+     "$n_i = \\sqrt{N_CN_V}\\,e^{-E_G/2k_BT} = \\sqrt{4.0 \\times 10^{18} \\cdot 1.0 \\times 10^{19}}\\;e^{-1.40/(2 \\times 0.02585)}$",
+     "$= 6.32 \\times 10^{18} \\times 1.74 \\times 10^{-12} = 1.10 \\times 10^7$ cm⁻³: nearly 1000 times less than silicon, because of the larger gap."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "Where is the intrinsic Fermi level? Give $E_C - E_{Fi}$.",
+    "points": 3,
+    "answer": {
+     "value": 0.6882,
+     "unit": "eV",
+     "tolerance": 0.01,
+     "errors": [
+      {
+       "value": 0.7,
+       "feedback": "That is midgap. Here $N_V > N_C$, so $E_{Fi}$ shifts **up** by $\\frac{k_BT}{2}\\ln(N_V/N_C) = 0.012$ eV."
+      }
+     ]
+    },
+    "solution": [
+     "$E_C - E_{Fi} = \\frac{E_G}{2} - \\frac{k_BT}{2}\\ln\\left(\\frac{N_V}{N_C}\\right) = 0.700 - 0.01293 \\times \\ln(2.5) = 0.700 - 0.012 = 0.688$ eV.",
+     "Unlike Si, $N_V > N_C$ here, so the intrinsic level lies slightly **above** midgap."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "X is doped with $N_A = 10^{16}$ cm⁻³ acceptors. What is the electron density?",
+    "points": 3,
+    "answer": {
+     "value": 0.012108,
+     "unit": "cm⁻³",
+     "tolerance": 0.06
+    },
+    "solution": [
+     "$n = n_i^2/N_A = (1.10 \\times 10^7)^2/10^{16} = 0.012$ cm⁻³.",
+     "Less than one free electron per cubic centimetre on average: in a wide-gap material the minority density in the dark is tiny."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "numeric",
+    "prompt": "Calculate $E_F - E_V$ for the doped material.",
+    "points": 2,
+    "answer": {
+     "value": 0.1786,
+     "unit": "eV",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$E_F - E_V = k_BT\\ln(N_V/N_A) = 0.02585\\ln(10^{19}/10^{16}) = 0.02585 \\times 6.91 = 0.179$ eV."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "w2-exam-hot",
+  "type": "multi",
+  "week": 2,
+  "topic": "Doped silicon at high temperature",
+  "concept": "carrier-density",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "points": 12,
+  "source": "Modelled on book ex. 7.6 (instruction 3) and lecture 2 slide 51",
+  "prompt": "An n-type c-Si wafer has $N_D = 10^{15}$ cm⁻³. Assume $N_C$ and $N_V$ scale as $T^{3/2}$ from their 300 K sheet values, the bandgap stays 1.12 eV, and all donors are ionised.",
+  "hints": [
+   "$N_C(T) = N_C(300)\\,(T/300)^{3/2}$.",
+   "Recompute $k_BT$ at 500 K.",
+   "Exact $n$ from the quadratic: neutrality $n = N_D + p$ with $p = n_i^2/n$."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "Calculate $n_i$ at 300 K.",
+    "points": 2,
+    "answer": {
+     "value": 9496500000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.05
+    },
+    "solution": [
+     "$n_i = \\sqrt{N_CN_V}\\,e^{-E_G/2k_BT} = 9.50 \\times 10^9$ cm⁻³ (see the earlier question)."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Calculate $n_i$ at 500 K.",
+    "points": 4,
+    "answer": {
+     "value": 118410000000000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.04,
+     "errors": [
+      {
+       "value": 55030000000000.0,
+       "feedback": "You kept $N_C$ and $N_V$ at their 300 K values. Both grow as $T^{3/2}$: multiply each by $(500/300)^{1.5} = 2.15$."
+      }
+     ]
+    },
+    "solution": [
+     "$N_C(500) = 3.22 \\times 10^{19} \\times (500/300)^{3/2} = 6.93 \\times 10^{19}$, $N_V(500) = 3.94 \\times 10^{19}$ cm⁻³.",
+     "$k_BT = 0.04309$ eV, so $n_i = \\sqrt{6.93 \\times 10^{19} \\cdot 3.94 \\times 10^{19}}\\;e^{-1.12/(2 \\times 0.04309)} = 1.18 \\times 10^{14}$ cm⁻³."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "What is the electron density at 500 K? Use charge neutrality together with $np = n_i^2$.",
+    "points": 3,
+    "answer": {
+     "value": 1013800000000000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.03
+    },
+    "solution": [
+     "$n = \\frac{N_D}{2} + \\sqrt{\\left(\\frac{N_D}{2}\\right)^2 + n_i^2} = 5 \\times 10^{14} + \\sqrt{2.5 \\times 10^{29} + 1.40 \\times 10^{28}} = 1.014 \\times 10^{15}$ cm⁻³.",
+     "Still ≈ $N_D$: the donors dominate, but the intrinsic contribution is now visible (1.4 %)."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "What is the hole density at 500 K?",
+    "points": 2,
+    "answer": {
+     "value": 13829000000000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.03
+    },
+    "solution": [
+     "$p = n_i^2/n = (1.18 \\times 10^{14})^2/1.014 \\times 10^{15} = 1.38 \\times 10^{13}$ cm⁻³: about 10⁸ times more than at 300 K ($n_i^2/N_D \\approx 9 \\times 10^4$ cm⁻³)."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "open",
+    "prompt": "What happens if you keep heating the wafer? Explain where the extra carriers come from.",
+    "points": 1,
+    "solution": [
+     "$n_i$ keeps growing steeply. Once $n_i$ exceeds $N_D$ (around 590 K for this doping level, see the nᵢ(T) diagram), thermally broken bonds supply most carriers: $n \\approx p \\approx n_i$ and the wafer behaves as intrinsic. $E_F$ moves back towards $E_{Fi}$. The extra electrons and holes come in pairs from broken Si–Si bonds, not from the dopants (compare book ex. 7.6)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "w2-exam-light",
+  "type": "multi",
+  "week": 2,
+  "topic": "Quasi-Fermi levels in an illuminated wafer",
+  "concept": "quasi-fermi",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "points": 12,
+  "source": "Modelled on lecture 2 slides 69–70",
+  "prompt": "An n-type c-Si wafer with $N_D = 5 \\times 10^{16}$ cm⁻³ is illuminated, which creates $\\Delta n = \\Delta p = 10^{14}$ cm⁻³ (low injection). Use $n_i = 9.5 \\times 10^9$ cm⁻³, $T = 300$ K and the sheet values for $N_C$, $N_V$ and $E_G$.",
+  "hints": [
+   "Dark minority density from $np = n_i^2$.",
+   "Under light: $n = n_0 + \\Delta n$, $p = p_0 + \\Delta p$; then eq. 7.51.",
+   "Splitting = $E_G$ minus the two distances to the band edges."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "What is the hole density in the dark?",
+    "points": 2,
+    "answer": {
+     "value": 1805,
+     "unit": "cm⁻³",
+     "tolerance": 0.03
+    },
+    "solution": [
+     "$p_0 = n_i^2/N_D = (9.5 \\times 10^9)^2/5 \\times 10^{16} = 1.8 \\times 10^3$ cm⁻³."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Under illumination, calculate $E_C - E_{Fn}$.",
+    "points": 3,
+    "answer": {
+     "value": 0.1672,
+     "unit": "eV",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$n = 5 \\times 10^{16} + 10^{14} = 5.01 \\times 10^{16}$ cm⁻³ (hardly changed).",
+     "$E_C - E_{Fn} = k_BT\\ln(N_C/n) = 0.02585\\ln(3.22 \\times 10^{19}/5.01 \\times 10^{16}) = 0.167$ eV: the same as $E_C - E_F$ in the dark."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "Calculate $E_{Fp} - E_V$ under illumination.",
+    "points": 3,
+    "answer": {
+     "value": 0.3133,
+     "unit": "eV",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 0.9528,
+       "feedback": "That is the dark value (with $p_0 = 1.8 \\times 10^3$). Under light $p = p_0 + \\Delta p \\approx 10^{14}$ cm⁻³."
+      }
+     ]
+    },
+    "solution": [
+     "$p = 1.8 \\times 10^3 + 10^{14} \\approx 10^{14}$ cm⁻³.",
+     "$E_{Fp} - E_V = k_BT\\ln(N_V/p) = 0.02585\\ln(1.83 \\times 10^{19}/10^{14}) = 0.313$ eV, compared with 0.95 eV in the dark."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "What is the quasi-Fermi level splitting $E_{Fn} - E_{Fp}$?",
+    "points": 2,
+    "answer": {
+     "value": 0.6396,
+     "unit": "eV",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$E_{Fn} - E_{Fp} = E_G - (E_C - E_{Fn}) - (E_{Fp} - E_V) = 1.12 - 0.167 - 0.313 = 0.64$ eV."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "mcq",
+    "prompt": "Which quasi-Fermi level moved most compared with the dark Fermi level, and why?",
+    "points": 2,
+    "options": [
+     {
+      "id": "a",
+      "text": "$E_{Fp}$, because the hole (minority) density increased by many orders of magnitude.",
+      "feedback": "Right: $p$ went from ~10³ to 10¹⁴ cm⁻³; $n$ changed by only 0.2 %.",
+      "correct": true
+     },
+     {
+      "id": "b",
+      "text": "$E_{Fn}$, because the electrons are the majority carriers.",
+      "feedback": "Being the majority is exactly why $n$, and hence $E_{Fn}$, hardly changes."
+     },
+     {
+      "id": "c",
+      "text": "Both moved equally, because $\\Delta n = \\Delta p$.",
+      "feedback": "The levels follow the *logarithm* of the densities: relative changes matter."
+     },
+     {
+      "id": "d",
+      "text": "Neither: light does not change the Fermi level.",
+      "feedback": "Light creates excess carriers, so $np > n_i^2$ and the single Fermi level splits."
+     }
+    ],
+    "solution": [
+     "$E_{Fp}$ moved from 0.95 eV to 0.31 eV above $E_V$, while $E_{Fn}$ stayed at 0.167 eV below $E_C$. Under low injection only the minority density (and its quasi-Fermi level) changes significantly."
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,361 @@
+[
+  {
+    "id": "w1-energy-flow", "type": "mcq", "week": 1, "topic": "Energy flow", "concept": "energy-power", "difficulty": 1, "prerequisites": [],
+    "source": "Lecture 1 §1.3 (discussion question, slides 45–50)",
+    "prompt": "Lecture 1 asks: *is energy consumed by a solar cell?* Which statement is correct?",
+    "options": [
+      { "id": "a", "text": "Yes: the cell uses up the energy of the sunlight it absorbs.", "feedback": "Energy is never used up; it is converted. ‘Consumed’ is everyday language for ‘converted into a less useful form’." },
+      { "id": "b", "text": "No: it converts part of the radiation flowing from the hot Sun to cold space into electrical energy; the rest becomes heat or is reflected.", "correct": true, "feedback": "Right. Like a water wheel in a stream, the cell extracts work from an energy *flow*. Energy is conserved throughout." },
+      { "id": "c", "text": "No: a solar cell stores the energy of light, like a battery.", "feedback": "A solar cell has no storage: it converts light into electricity only while light shines on it." },
+      { "id": "d", "text": "Yes, but only the photons below the bandgap are consumed.", "feedback": "Photons below the bandgap are not absorbed at all; they pass through. And absorbed energy is converted, not consumed." }
+    ],
+    "hints": ["Think about the law of conservation of energy.", "The lecture compares a solar cell with a water wheel. Is water ‘consumed’ by a water wheel?", "Work can be extracted from a *flow* from high to low: water downhill, heat from hot to cold, radiation from the Sun to space."],
+    "solution": ["Energy is conserved: it can only change form.", "The solar cell sits in the radiative energy flow from the ~6000 K Sun to ~3 K space and diverts part of it into electrical energy, just as a water wheel extracts work from water flowing downhill.", "What is not converted ends up as heat in the cell or is reflected. Nothing is ‘consumed’."]
+  },
+  {
+    "id": "w1-irradiation-mj", "type": "numeric", "week": 1, "topic": "Units of energy", "concept": "energy-power", "difficulty": 1, "prerequisites": ["units"],
+    "source": "Lecture 1 slides 32 and 60",
+    "prompt": "The yearly solar irradiation in the Netherlands is about 1050 kWh/m². Express this in MJ/m².",
+    "answer": { "value": 3780, "unit": "MJ/m²", "tolerance": 0.01 },
+    "hints": ["1 kWh is the energy of 1 kW running for one hour.", "$1\\,\\mathrm{kWh} = 1000\\,\\mathrm{W} \\times 3600\\,\\mathrm{s} = 3.6 \\times 10^6\\,\\mathrm{J} = 3.6\\,\\mathrm{MJ}$", "Multiply 1050 by 3.6 MJ."],
+    "solution": ["$1\\,\\mathrm{kWh} = 10^3\\,\\mathrm{J/s} \\times 3600\\,\\mathrm{s} = 3.6 \\times 10^6\\,\\mathrm{J} = 3.6\\,\\mathrm{MJ}$.", "$1050\\,\\mathrm{kWh/m^2} \\times 3.6\\,\\mathrm{MJ/kWh} = 3780\\,\\mathrm{MJ/m^2}$ (= 3.78 GJ/m²)."]
+  },
+  {
+    "id": "w1-photon-energy-compare", "type": "mcq", "week": 1, "topic": "Photon energy", "concept": "photons", "difficulty": 1, "prerequisites": ["waves-photons"],
+    "source": "Lecture 1 slide 54",
+    "prompt": "Compare a blue photon (λ = 450 nm) with an infrared photon (λ = 900 nm). Which statement is correct?",
+    "options": [
+      { "id": "a", "text": "The blue photon carries twice the energy of the infrared photon.", "correct": true, "feedback": "Correct: $E = hc/\\lambda$, so halving the wavelength doubles the energy (2.76 eV vs 1.38 eV)." },
+      { "id": "b", "text": "The infrared photon carries twice the energy, because its wave is longer.", "feedback": "Energy is *inversely* proportional to wavelength: $E = hc/\\lambda$. Longer wavelength means less energy per photon." },
+      { "id": "c", "text": "Both carry the same energy; only their colour differs.", "feedback": "Colour (wavelength) *is* the energy: $E = hc/\\lambda$ differs by a factor 2 here." },
+      { "id": "d", "text": "It depends on the brightness of the two light sources.", "feedback": "Brightness changes the *number* of photons, not the energy per photon. The energy of one photon depends only on λ." }
+    ],
+    "hints": ["Which formula links photon energy to wavelength?", "$E_{\\mathrm{ph}} = \\frac{hc}{\\lambda}$", "450 nm is half of 900 nm; what does halving λ do to E?"],
+    "solution": ["$E_{\\mathrm{ph}} = hc/\\lambda$: energy is inversely proportional to wavelength.", "$E(450\\,\\mathrm{nm}) = 1240/450 = 2.76$ eV; $E(900\\,\\mathrm{nm}) = 1240/900 = 1.38$ eV: exactly a factor 2."]
+  },
+  {
+    "id": "w1-red-photon-ev", "type": "numeric", "week": 1, "topic": "Photon energy", "concept": "photons", "difficulty": 1, "prerequisites": ["waves-photons", "units"],
+    "source": "Lecture 1 slide 54",
+    "prompt": "What is the energy of a photon of red light with λ = 700 nm? Give your answer in eV.",
+    "answer": { "value": 1.771, "unit": "eV", "tolerance": 0.02 },
+    "hints": ["First compute the energy in joules, then convert.", "$E = \\frac{hc}{\\lambda}$ with λ in metres; $1\\,\\mathrm{eV} = 1.602 \\times 10^{-19}\\,\\mathrm{J}$.", "$E = \\frac{6.626 \\times 10^{-34} \\times 2.998 \\times 10^{8}}{700 \\times 10^{-9}}$ J."],
+    "solution": ["$E = \\frac{hc}{\\lambda} = \\frac{(6.626 \\times 10^{-34})(2.998 \\times 10^{8})}{700 \\times 10^{-9}} = 2.84 \\times 10^{-19}$ J.", "In eV: $2.84 \\times 10^{-19} / 1.602 \\times 10^{-19} = 1.77$ eV.", "Shortcut: $1240/700 = 1.77$ eV."]
+  },
+  {
+    "id": "w1-stefan", "type": "mcq", "week": 1, "topic": "Stefan–Boltzmann law", "concept": "blackbody", "difficulty": 1, "prerequisites": ["units"],
+    "source": "Book §5.3, eq. 5.19",
+    "prompt": "A blackbody is heated from 300 K to 600 K. By what factor does the total power it radiates per m² increase?",
+    "options": [
+      { "id": "a", "text": "× 2", "feedback": "That would be true if power were proportional to T. The Stefan–Boltzmann law has T to the **fourth** power." },
+      { "id": "b", "text": "× 4", "feedback": "That is T², not T⁴. Check the exponent in eq. 5.19." },
+      { "id": "c", "text": "× 16", "correct": true, "feedback": "Correct: $M = \\sigma T^4$, so doubling T multiplies M by $2^4 = 16$." },
+      { "id": "d", "text": "× 8", "feedback": "That is T³. The Stefan–Boltzmann law is $M = \\sigma T^4$." }
+    ],
+    "hints": ["Which law gives the total power radiated by a blackbody?", "$M_e^{BB}(T) = \\sigma T^4$", "Take the ratio $M(600)/M(300)$: σ cancels."],
+    "solution": ["$\\frac{M(600\\,\\mathrm{K})}{M(300\\,\\mathrm{K})} = \\left(\\frac{600}{300}\\right)^4 = 2^4 = 16$."]
+  },
+  {
+    "id": "w1-wien-sun", "type": "numeric", "week": 1, "topic": "Wien’s law", "concept": "blackbody", "difficulty": 1, "prerequisites": ["units"],
+    "source": "Book §5.3, eq. 5.21",
+    "prompt": "At which wavelength does a blackbody at 5800 K (roughly the Sun’s surface) emit the most? Answer in nm.",
+    "answer": { "value": 499.7, "unit": "nm", "tolerance": 0.01 },
+    "hints": ["One formula on the sheet links the peak wavelength to temperature.", "$\\lambda_{\\max} T = 2.898 \\times 10^{-3}\\,\\mathrm{m\\,K}$", "$\\lambda_{\\max} = 2.898 \\times 10^{-3}/5800$ m; then convert to nm."],
+    "solution": ["$\\lambda_{\\max} = \\frac{2.898 \\times 10^{-3}\\,\\mathrm{m\\,K}}{5800\\,\\mathrm{K}} = 5.00 \\times 10^{-7}$ m = 500 nm.", "That is green-blue, in the middle of the visible range."]
+  },
+  {
+    "id": "w1-sun-temperature", "type": "numeric", "week": 1, "topic": "Stefan–Boltzmann law", "concept": "blackbody", "difficulty": 3, "prerequisites": ["units"],
+    "source": "Book exercise 5.1 (answer book)",
+    "prompt": "The radius of the Sun is $6.96 \\times 10^8$ m and the Sun–Earth distance $1.50 \\times 10^{11}$ m. Assume the Sun is a perfect blackbody sphere and that the irradiance arriving at the Earth (AM0) is 1350 W/m². Calculate the temperature of the Sun’s surface.",
+    "answer": { "value": 5767, "unit": "K", "tolerance": 0.02, "errors": [
+      { "value": 392.8, "feedback": "You set σT⁴ = 1350 W/m². But 1350 W/m² arrives at the Earth, after spreading over a sphere of radius 1.5 × 10¹¹ m. At the Sun’s surface the power per m² is much larger." },
+      { "value": 1505, "feedback": "You scaled by $d/R$ instead of $(d/R)^2$. Power spreads over a sphere’s **area**, which grows with the radius squared." }
+    ] },
+    "hints": ["The total power leaving the Sun’s surface equals the total power crossing a sphere at the Earth’s distance.", "$\\sigma T^4 \\cdot 4\\pi R_S^2 = I_e \\cdot 4\\pi d^2$", "So $\\sigma T^4 = I_e (d/R_S)^2$; compute $(d/R_S)^2$ first."],
+    "solution": ["Energy conservation: everything emitted by the Sun’s surface passes through a sphere of radius $d$: $\\sigma T^4 \\cdot 4\\pi R_S^2 = I_e \\cdot 4\\pi d^2$.", "$\\sigma T^4 = I_e \\left(\\frac{d}{R_S}\\right)^2 = 1350 \\times \\left(\\frac{1.50 \\times 10^{11}}{6.96 \\times 10^{8}}\\right)^2 = 1350 \\times 4.64 \\times 10^4 = 6.27 \\times 10^7$ W/m².", "$T = \\left(\\frac{6.27 \\times 10^7}{5.670 \\times 10^{-8}}\\right)^{1/4} = 5.77 \\times 10^3$ K."]
+  },
+  {
+    "id": "w1-airmass", "type": "mcq", "week": 1, "topic": "Air mass", "concept": "solar-spectrum", "difficulty": 1, "prerequisites": ["trigonometry"],
+    "source": "Book §5.5, eq. 5.26",
+    "prompt": "The Sun stands 60° away from the zenith (i.e. 30° above the horizon). Which spectrum reaches the ground?",
+    "options": [
+      { "id": "a", "text": "AM2", "correct": true, "feedback": "Correct: $\\mathit{AM} = 1/\\cos 60° = 1/0.5 = 2$." },
+      { "id": "b", "text": "AM1.15", "feedback": "That is $1/\\cos 30°$: you used the elevation above the horizon. θ in $\\mathit{AM} = 1/\\cos\\theta$ is measured from the **zenith**." },
+      { "id": "c", "text": "AM0.5", "feedback": "You multiplied by cos θ instead of dividing. A slanted path through the atmosphere is *longer*, so AM ≥ 1." },
+      { "id": "d", "text": "AM1.5", "feedback": "AM1.5 is the standard test spectrum, corresponding to θ ≈ 48°. Here θ = 60°." }
+    ],
+    "hints": ["Air mass compares the actual path length through the atmosphere with the shortest path (Sun overhead).", "$\\mathit{AM} = \\frac{1}{\\cos\\theta}$, θ from the zenith.", "cos 60° = 0.5."],
+    "solution": ["$\\mathit{AM} = 1/\\cos\\theta$ with θ the angle from the zenith.", "θ = 60°: $\\mathit{AM} = 1/0.5 = 2$. The light crosses twice as much atmosphere as at noon on the equator."]
+  },
+  {
+    "id": "w1-flux-density-unit", "type": "mcq", "week": 1, "topic": "Radiometric quantities", "concept": "solar-spectrum", "difficulty": 1, "prerequisites": ["units"],
+    "source": "Lecture 1 slides 58–59; Book §5.2",
+    "prompt": "Which unit belongs to the (total) photon flux density?",
+    "options": [
+      { "id": "a", "text": "m⁻² s⁻¹", "correct": true, "feedback": "Correct: number of photons per m² per second." },
+      { "id": "b", "text": "W m⁻²", "feedback": "That is the irradiance (power per area), not a number of photons." },
+      { "id": "c", "text": "s⁻¹", "feedback": "That is a photon *flow* (photons per second) without the per-area part. ‘Density’ adds m⁻²." },
+      { "id": "d", "text": "W m⁻² nm⁻¹", "feedback": "That is the spectral irradiance (power per area per wavelength)." }
+    ],
+    "hints": ["‘Flux density’: how many photons, through how much area, in how much time?", "Photons are counted, so there are no watts or joules in the unit.", "Per area → m⁻², per time → s⁻¹."],
+    "solution": ["Photon flux density = number of photons per unit area per unit time: m⁻² s⁻¹.", "Per wavelength (spectral photon flux) it becomes m⁻² s⁻¹ m⁻¹ (or nm⁻¹)."]
+  },
+  {
+    "id": "w1-equal-irradiance-photons", "type": "mcq", "week": 1, "topic": "Photon flux", "concept": "solar-spectrum", "difficulty": 2, "prerequisites": ["waves-photons"],
+    "source": "Instruction 1 Q2(a) (concept)",
+    "prompt": "Two monochromatic lamps give the same irradiance, 100 W/m²: one at 400 nm, one at 800 nm. Which statement is correct?",
+    "options": [
+      { "id": "a", "text": "The 800 nm lamp delivers twice as many photons per second per m².", "correct": true, "feedback": "Correct: $\\Phi = I\\lambda/(hc)$. Same power, each photon carries half the energy, so twice as many photons." },
+      { "id": "b", "text": "The 400 nm lamp delivers twice as many photons, because its photons are more energetic.", "feedback": "More energetic photons means *fewer* photons for the same power: $\\Phi = I/E_{\\mathrm{ph}}$." },
+      { "id": "c", "text": "Both deliver the same number of photons, since the irradiance is equal.", "feedback": "Equal power does not mean equal photon numbers; the energy per photon differs by a factor 2." },
+      { "id": "d", "text": "This cannot be determined without knowing the area of the lamps.", "feedback": "Irradiance is already per m², and so is the photon flux density. $\\Phi = I\\lambda/(hc)$ needs nothing else." }
+    ],
+    "hints": ["Photon flux = power ÷ energy per photon.", "$\\Phi = \\frac{I}{E_{\\mathrm{ph}}} = \\frac{I\\lambda}{hc}$", "At equal I, Φ is proportional to λ."],
+    "solution": ["$\\Phi = I\\lambda/(hc)$: at equal irradiance the photon flux is proportional to λ.", "800 nm photons carry half the energy of 400 nm photons, so the 800 nm lamp delivers twice as many."]
+  },
+  {
+    "id": "w1-photon-count-flux", "type": "numeric", "week": 1, "topic": "Photon flux", "concept": "solar-spectrum", "difficulty": 1, "prerequisites": ["units"],
+    "source": "Book exercise 5.3",
+    "prompt": "In 1 second, $4 \\times 10^{18}$ photons from a 500 nm source hit a surface of 20 cm². Calculate the photon flux in m⁻² s⁻¹.",
+    "answer": { "value": 2.0e21, "unit": "m⁻² s⁻¹", "tolerance": 0.01, "errors": [
+      { "value": 2.0e19, "feedback": "You used 20 cm² = 0.2 m². But 1 cm² = 10⁻⁴ m², so 20 cm² = 2 × 10⁻³ m². Area conversions square the length factor." }
+    ] },
+    "hints": ["The wavelength is a distractor: you already have a photon count.", "Photon flux = number of photons / (area × time).", "Convert 20 cm² to m² first: 1 cm = 10⁻² m, so 1 cm² = 10⁻⁴ m²."],
+    "solution": ["$A = 20\\,\\mathrm{cm^2} = 20 \\times 10^{-4}\\,\\mathrm{m^2} = 2 \\times 10^{-3}\\,\\mathrm{m^2}$.", "$\\Phi = \\frac{4 \\times 10^{18}}{2 \\times 10^{-3}\\,\\mathrm{m^2} \\times 1\\,\\mathrm{s}} = 2 \\times 10^{21}$ m⁻² s⁻¹.", "The wavelength is not needed: you would only need it to convert between photons and watts."]
+  },
+  {
+    "id": "w1-flux-mono", "type": "numeric", "week": 1, "topic": "Photon flux", "concept": "solar-spectrum", "difficulty": 1, "prerequisites": ["waves-photons", "units"],
+    "source": "Modelled on instruction 1 Q2(a)",
+    "prompt": "A red LED emits monochromatic light at 600 nm and produces an irradiance of 250 W/m² on a solar cell. Calculate the photon flux density.",
+    "answer": { "value": 7.551e20, "unit": "m⁻² s⁻¹", "errors": [
+      { "value": 121.0, "feedback": "You divided by the photon energy in **eV** (2.07 eV). W/m² divided by J gives photons per m² per s, so the photon energy must be in joules: $3.31 \\times 10^{-19}$ J." }
+    ] },
+    "hints": ["How many photons make up 250 joules per second?", "$\\Phi = \\frac{I}{E_{\\mathrm{ph}}} = \\frac{I\\lambda}{hc}$", "$E_{\\mathrm{ph}} = hc/\\lambda = (6.626 \\times 10^{-34})(2.998 \\times 10^8)/(600 \\times 10^{-9})$ J."],
+    "solution": ["$E_{\\mathrm{ph}} = \\frac{hc}{\\lambda} = \\frac{1.986 \\times 10^{-25}}{600 \\times 10^{-9}} = 3.31 \\times 10^{-19}$ J.", "$\\Phi = \\frac{I}{E_{\\mathrm{ph}}} = \\frac{250}{3.31 \\times 10^{-19}} = 7.55 \\times 10^{20}$ m⁻² s⁻¹."]
+  },
+  {
+    "id": "w1-above-gap", "type": "mcq", "week": 1, "topic": "Bandgap and absorption", "concept": "solar-spectrum", "difficulty": 1, "prerequisites": [],
+    "source": "Instruction 1 Q2(c) (concept); your week-1 summary, trap 16",
+    "prompt": "A 500 nm photon (2.48 eV) is absorbed in crystalline silicon ($E_G$ = 1.12 eV). What happens?",
+    "options": [
+      { "id": "a", "text": "It creates one electron–hole pair; the excess 1.36 eV is lost as heat.", "correct": true, "feedback": "Correct. One photon → one pair. The energy above the gap is lost by thermalisation within picoseconds." },
+      { "id": "b", "text": "It creates two electron–hole pairs, because 2.48 eV > 2 × 1.12 eV.", "feedback": "A tempting idea, but in a normal solar cell one absorbed photon creates exactly one electron–hole pair. The excess energy becomes heat." },
+      { "id": "c", "text": "It creates one electron–hole pair with a higher voltage than a 1.12 eV photon would.", "feedback": "The extra energy is lost as heat almost immediately (thermalisation); the carriers relax to the band edges." },
+      { "id": "d", "text": "It is not absorbed, because its energy does not match the bandgap exactly.", "feedback": "Absorption requires $E_{\\mathrm{ph}} \\geq E_G$, not $E_{\\mathrm{ph}} = E_G$. Every photon above the gap can be absorbed." }
+    ],
+    "hints": ["Compare the photon energy with the bandgap first.", "Absorption requires $E_{\\mathrm{ph}} \\geq E_G$.", "How many electrons can one photon free in a normal solar cell?"],
+    "solution": ["$E_{\\mathrm{ph}} = 2.48\\,\\mathrm{eV} > E_G = 1.12\\,\\mathrm{eV}$: the photon can be absorbed.", "It creates one electron–hole pair. The excess $2.48 - 1.12 = 1.36$ eV is passed to the lattice as heat (thermalisation)."]
+  },
+  {
+    "id": "w1-snell-direction", "type": "mcq", "week": 1, "topic": "Snell’s law", "concept": "refraction-reflection", "difficulty": 1, "prerequisites": ["trigonometry"],
+    "source": "Book §4.3, eq. 4.11",
+    "prompt": "Light travels from air ($n$ = 1.0) into glass ($n$ = 1.5) at an angle of incidence of 40°. What happens to the transmitted ray?",
+    "options": [
+      { "id": "a", "text": "It bends towards the normal: θₜ ≈ 25°.", "correct": true, "feedback": "Correct: $\\sin\\theta_t = \\sin 40°/1.5 = 0.43$, θₜ = 25.4°. Entering a denser medium, light bends towards the normal." },
+      { "id": "b", "text": "It bends away from the normal: θₜ ≈ 75°.", "feedback": "Bending away happens when going from dense to less dense. Here $n_2 > n_1$, so $\\sin\\theta_t < \\sin\\theta_i$." },
+      { "id": "c", "text": "It continues in a straight line: θₜ = 40°.", "feedback": "Only at normal incidence (0°) or when $n_1 = n_2$ does the ray go straight on." },
+      { "id": "d", "text": "It is totally reflected, because glass is denser than air.", "feedback": "Total internal reflection only happens going from the denser to the less dense medium (glass → air), beyond the critical angle." }
+    ],
+    "hints": ["$n\\sin\\theta$ is the same on both sides.", "$n_1\\sin\\theta_i = n_2\\sin\\theta_t$", "$\\sin\\theta_t = (1.0/1.5)\\sin 40°$."],
+    "solution": ["$\\sin\\theta_t = \\frac{1.0}{1.5}\\sin 40° = 0.429$, so $\\theta_t = 25.4°$.", "$\\theta_t < \\theta_i$: the ray bends towards the normal."]
+  },
+  {
+    "id": "w1-r-normal-glass", "type": "numeric", "week": 1, "topic": "Reflectance", "concept": "refraction-reflection", "difficulty": 1, "prerequisites": [],
+    "source": "Book exercise 4.1(a)",
+    "prompt": "Sunlight (unpolarised) hits the glass cover of a module ($n$ = 1.5) at normal incidence from air. What percentage is reflected?",
+    "answer": { "value": 4.0, "unit": "%", "tolerance": 0.02, "errors": [
+      { "value": 20.0, "feedback": "That is the amplitude ratio $(n_1 - n_2)/(n_1 + n_2) = 0.2$. Reflectance is a power ratio: square it." }
+    ] },
+    "hints": ["At normal incidence, s and p polarisation behave the same.", "$R = \\left(\\frac{n_1 - n_2}{n_1 + n_2}\\right)^2$", "$(1 - 1.5)/(1 + 1.5) = -0.2$."],
+    "solution": ["$R = \\left(\\frac{1.0 - 1.5}{1.0 + 1.5}\\right)^2 = (-0.2)^2 = 0.04 = 4\\,\\%$."]
+  },
+  {
+    "id": "w1-r-30-glass", "type": "numeric", "week": 1, "topic": "Fresnel equations", "concept": "refraction-reflection", "difficulty": 2, "prerequisites": ["trigonometry"],
+    "source": "Book exercise 4.1(b)",
+    "prompt": "Now the sunlight hits the glass ($n$ = 1.5) at an angle of incidence of 30°. Calculate the reflectance of the unpolarised light, in %.",
+    "answer": { "value": 4.152, "unit": "%", "tolerance": 0.02, "errors": [
+      { "value": 4.0, "feedback": "That is the normal-incidence value. At 30° you need the full Fresnel equations with θₜ from Snell’s law." },
+      { "value": 5.78, "feedback": "That is $R_s = r_s^2$ only. Sunlight is unpolarised: average $r_s^2$ and $r_p^2$." }
+    ] },
+    "hints": ["Two steps: refraction angle first, then the Fresnel equations.", "$\\sin\\theta_t = \\sin 30°/1.5$; then $r_s$, $r_p$ from eq. 4.12b/4.13b, and $R = \\frac{1}{2}(r_s^2 + r_p^2)$.", "θₜ = 19.47°; $\\cos 30° = 0.866$, $\\cos 19.47° = 0.943$."],
+    "solution": ["Snell: $\\sin\\theta_t = 0.5/1.5 = 0.333$, θₜ = 19.47°.", "$r_s = \\frac{1.0 \\times 0.866 - 1.5 \\times 0.943}{1.0 \\times 0.866 + 1.5 \\times 0.943} = -0.240$, so $r_s^2 = 5.78\\,\\%$.", "$r_p = \\frac{1.0 \\times 0.943 - 1.5 \\times 0.866}{1.0 \\times 0.943 + 1.5 \\times 0.866} = -0.159$, so $r_p^2 = 2.52\\,\\%$.", "$R = \\frac{1}{2}(5.78 + 2.52) = 4.15\\,\\%$: barely more than at normal incidence."]
+  },
+  {
+    "id": "w1-critical-si-glass", "type": "numeric", "week": 1, "topic": "Critical angle", "concept": "refraction-reflection", "difficulty": 2, "prerequisites": ["trigonometry"],
+    "source": "Modelled on instruction 1 Q1(d); Book §4.3",
+    "prompt": "A c-Si solar cell ($n$ = 3.57) is encapsulated under glass ($n$ = 1.5). What is the critical angle for light inside the silicon at the Si/glass interface? Answer in degrees.",
+    "answer": { "value": 24.85, "unit": "°", "tolerance": 0.005, "absTolerance": 0.2, "errors": [
+      { "value": 16.27, "feedback": "That is the critical angle for c-Si/**air**. Here the silicon borders glass (n = 1.5)." },
+      { "value": 0.4336, "feedback": "That is the right angle in **radians**. Switch your calculator to degrees: 0.434 rad = 24.8°." }
+    ] },
+    "hints": ["Total internal reflection: light going from the higher to the lower index.", "$\\sin\\theta_{\\mathrm{crit}} = \\frac{n_{\\mathrm{low}}}{n_{\\mathrm{high}}}$ (sheet eq. 4.19)", "$\\sin\\theta_{\\mathrm{crit}} = 1.5/3.57 = 0.420$."],
+    "solution": ["$\\sin\\theta_{\\mathrm{crit}} = \\frac{1.5}{3.57} = 0.420$.", "$\\theta_{\\mathrm{crit}} = \\arcsin(0.420) = 24.8°$: larger than for Si/air (16.3°), so glass lets more light escape from the silicon."]
+  },
+  {
+    "id": "w1-coating-threshold", "type": "mcq", "week": 1, "topic": "Total internal reflection", "concept": "refraction-reflection", "difficulty": 2, "prerequisites": ["trigonometry"],
+    "source": "Instruction 1 Q1(g)",
+    "prompt": "A c-Si cell ($n$ = 3.57) has a back reflector that sends light up at a fixed angle $\\theta_{\\mathrm{BR}}$. Without a coating, TIR at the front needs $\\theta_{\\mathrm{BR}} > 16.3°$. A transparent ITO coating ($n$ = 1.87) is now added on the front. What is the new threshold?",
+    "options": [
+      { "id": "a", "text": "Still 16.3°: the coating index cancels out.", "correct": true, "feedback": "Correct. $n_{\\mathrm{Si}}\\sin\\theta_{\\mathrm{BR}} = n_c\\sin\\theta_c = n_{\\mathrm{air}}\\sin 90°$: only the silicon and the air set the threshold." },
+      { "id": "b", "text": "Larger: arcsin(1.87/3.57) = 31.6°.", "feedback": "That is the critical angle at the Si/ITO interface. But light reaching the ITO at a smaller angle can still be totally reflected at the ITO/air surface. What matters is whether it can escape into air." },
+      { "id": "c", "text": "Smaller: the coating makes it easier to trap light.", "feedback": "The coating bends the ray, but it shifts the coating/air critical angle by exactly the same amount. Net effect: none." },
+      { "id": "d", "text": "TIR becomes impossible, because the coating is anti-reflective.", "feedback": "The ARC reduces reflection for light coming in near normal incidence. It cannot stop total internal reflection of steep rays." }
+    ],
+    "hints": ["Write Snell’s law at both interfaces.", "Through parallel layers $n\\sin\\theta$ stays constant: $n_{\\mathrm{Si}}\\sin\\theta_{\\mathrm{BR}} = n_c\\sin\\theta_c = n_{\\mathrm{air}}\\sin\\theta_{\\mathrm{air}}$.", "Light just escapes when $\\theta_{\\mathrm{air}} = 90°$."],
+    "solution": ["Escape requires a real angle in air: $n_{\\mathrm{air}}\\sin\\theta_{\\mathrm{air}} \\leq 1$.", "Snell’s law through both interfaces: $3.57\\sin\\theta_{\\mathrm{BR}} = 1.87\\sin\\theta_c = 1.0\\sin\\theta_{\\mathrm{air}}$.", "Threshold at $\\theta_{\\mathrm{air}} = 90°$: $\\sin\\theta_{\\mathrm{BR}} = 1/3.57$, so 16.3°, independent of the coating."]
+  },
+  {
+    "id": "w1-best-arc-index", "type": "mcq", "week": 1, "topic": "Anti-reflective coatings", "concept": "anti-reflection", "difficulty": 2, "prerequisites": [],
+    "source": "Book eq. 10.32; Instruction 1 Q1(f)",
+    "prompt": "Ignoring interference, which single-layer coating index minimises the reflection of a c-Si surface ($n_s$ = 3.57) in air?",
+    "options": [
+      { "id": "a", "text": "$n_c = \\sqrt{1.0 \\times 3.57} = 1.89$", "correct": true, "feedback": "Correct: the geometric mean makes the two index steps equally large (eq. 10.32)." },
+      { "id": "b", "text": "$n_c = (1.0 + 3.57)/2 = 2.29$", "feedback": "The arithmetic mean is a natural guess, but the reflectance depends on index *ratios*. The optimum is the geometric mean √(n₀nₛ)." },
+      { "id": "c", "text": "$n_c = 3.57$, matching the silicon", "feedback": "Then $R_2 = 0$ but $R_1$ equals the bare-silicon reflectance (31.6 %). Nothing is gained." },
+      { "id": "d", "text": "$n_c = 1.0$, matching the air", "feedback": "Then $R_1 = 0$ but $R_2$ is the bare-silicon reflectance. Nothing is gained." }
+    ],
+    "hints": ["A coating splits one big index step into two smaller ones.", "$n_1 = \\sqrt{n_0 n_s}$ (eq. 10.32)", "With $n_0 = 1.0$: $n_c = \\sqrt{3.57}$."],
+    "solution": ["The total reflectance $R_1 + R_2$ is smallest when both steps are equally large in *ratio*: $n_c/n_0 = n_s/n_c$.", "That gives $n_c = \\sqrt{n_0 n_s} = \\sqrt{3.57} = 1.89$; ITO (1.87) is closest in instruction 1."]
+  },
+  {
+    "id": "w1-quarter-wave", "type": "numeric", "week": 1, "topic": "Anti-reflective coatings", "concept": "anti-reflection", "difficulty": 1, "prerequisites": ["waves-photons"],
+    "source": "Book eq. 10.38; Lecture 1 slides 71–77",
+    "prompt": "A Si₃N₄ coating ($n$ = 2.0) must give minimum reflection at λ₀ = 600 nm. What thickness is needed (thinnest solution)?",
+    "answer": { "value": 75, "unit": "nm", "tolerance": 0.02, "errors": [
+      { "value": 150, "feedback": "You computed λ₀/4 (or λ₀/(2n)). The optical thickness $n_c d$ must equal λ₀/4, so $d = \\lambda_0/(4n_c)$." }
+    ] },
+    "hints": ["The two reflections must be half a wavelength out of step after the round trip through the coating.", "$n_c d = \\frac{\\lambda_0}{4}$", "$d = 600/(4 \\times 2.0)$ nm."],
+    "solution": ["Round trip $2n_c d = \\lambda_0/2$, i.e. $n_c d = \\lambda_0/4$ (eq. 10.38).", "$d = \\frac{600\\,\\mathrm{nm}}{4 \\times 2.0} = 75$ nm."]
+  },
+  {
+    "id": "w1-alpha-kappa", "type": "numeric", "week": 1, "topic": "Absorption coefficient", "concept": "absorption", "difficulty": 1, "prerequisites": ["units"],
+    "source": "Book eq. 4.26; ex. 7.5(a) style",
+    "prompt": "At λ₀ = 1000 nm, c-Si has an extinction coefficient κ = 5.09 × 10⁻⁴. Calculate the absorption coefficient α in cm⁻¹.",
+    "answer": { "value": 63.96, "unit": "cm⁻¹", "errors": [
+      { "value": 5.09, "feedback": "You computed κ/λ₀ and forgot the factor 4π: $\\alpha = 4\\pi\\kappa/\\lambda_0$." }
+    ] },
+    "hints": ["One formula on the sheet links α and κ.", "$\\alpha = \\frac{4\\pi\\kappa}{\\lambda_0}$", "Use λ₀ = 1000 nm = 1.000 × 10⁻⁴ cm to get α directly in cm⁻¹."],
+    "solution": ["$\\alpha = \\frac{4\\pi\\kappa}{\\lambda_0} = \\frac{4\\pi \\times 5.09 \\times 10^{-4}}{1.000 \\times 10^{-6}\\,\\mathrm{m}} = 6.40 \\times 10^3$ m⁻¹.", "In cm⁻¹: divide by 100 → 64.0 cm⁻¹ (penetration depth 1/α = 156 µm)."]
+  },
+  {
+    "id": "w1-absorptance-100um", "type": "numeric", "week": 1, "topic": "Lambert–Beer law", "concept": "absorption", "difficulty": 2, "prerequisites": ["exp-log", "units"],
+    "source": "Lecture 1 slide 83; instruction 1 Q1 setting",
+    "prompt": "Light of 1000 nm enters a 100 µm thick c-Si layer (α = 64 cm⁻¹). Ignoring reflection, what percentage is absorbed in a single pass?",
+    "answer": { "value": 47.27, "unit": "%", "errors": [
+      { "value": 64.0, "feedback": "You computed α·t = 0.64 and treated it as the absorbed fraction. Absorption is exponential: $A = 1 - e^{-\\alpha t}$." },
+      { "value": 52.73, "feedback": "That is the fraction that is **transmitted**, $e^{-\\alpha t}$. The absorbed fraction is $1 - e^{-\\alpha t}$." }
+    ] },
+    "hints": ["The intensity decays exponentially with depth.", "$A = 1 - e^{-\\alpha t}$", "Convert first: α = 64 cm⁻¹, t = 100 µm = 0.01 cm, so αt = 0.64."],
+    "solution": ["$\\alpha t = 64\\,\\mathrm{cm^{-1}} \\times 0.0100\\,\\mathrm{cm} = 0.64$.", "$A = 1 - e^{-0.64} = 1 - 0.527 = 0.473 = 47.3\\,\\%$."]
+  },
+  {
+    "id": "w1-absorptance-double", "type": "mcq", "week": 1, "topic": "Lambert–Beer law", "concept": "absorption", "difficulty": 2, "prerequisites": ["exp-log"],
+    "source": "Lambert–Beer (concept)",
+    "prompt": "A layer absorbs 50 % of the light at some wavelength in one pass. A perfect back reflector is added, so the light passes twice. What fraction is now absorbed?",
+    "options": [
+      { "id": "a", "text": "75 %", "correct": true, "feedback": "Correct: the second pass absorbs 50 % of the remaining 50 %. $A = 1 - 0.5^2 = 0.75$." },
+      { "id": "b", "text": "100 %", "feedback": "Absorption is exponential: each pass absorbs a *fraction* of what is left, so you never reach 100 %." },
+      { "id": "c", "text": "50 %", "feedback": "The reflected light makes a second pass and is partly absorbed, so the total increases." },
+      { "id": "d", "text": "70.7 %", "feedback": "That is $1/\\sqrt{2}$, a mix-up. Two passes: transmitted fraction squared, $0.5^2 = 0.25$, so 75 % absorbed." }
+    ],
+    "hints": ["What fraction is still left after the first pass?", "Transmission through two passes: $e^{-2\\alpha t} = (e^{-\\alpha t})^2$.", "$e^{-\\alpha t} = 0.5$."],
+    "solution": ["After one pass $e^{-\\alpha t} = 0.5$ remains.", "After two passes $(0.5)^2 = 0.25$ remains, so $1 - 0.25 = 75\\,\\%$ is absorbed."]
+  },
+
+  {
+    "id": "w1-exam-spectrum", "type": "multi", "week": 1, "topic": "Spectrum, photon flux and current", "concept": "solar-spectrum", "difficulty": 2, "prerequisites": ["integrals", "units"], "points": 12,
+    "source": "Modelled on book ex. 5.6/5.7 (instruction 1)",
+    "prompt": "A lamp for testing solar cells has a stepwise spectrum:\n\n- $I_{e\\lambda} = 1.20$ W m⁻² nm⁻¹ for 300 nm < λ < 700 nm\n- $I_{e\\lambda} = 0.80$ W m⁻² nm⁻¹ for 700 nm < λ < 1100 nm\n- $I_{e\\lambda} = 0.15$ W m⁻² nm⁻¹ for 1100 nm < λ < 2000 nm\n\nA solar cell absorbs every photon with λ < 1100 nm and none above.",
+    "hints": ["Treat each band as a rectangle.", "Irradiance: height × width per band. Photon flux per band: $\\frac{P}{2hc}(\\lambda_2^2 - \\lambda_1^2)$.", "Use SI units in the photon flux: P in W m⁻³ (× 10⁹) and λ in m."],
+    "solution": ["See the solution under each part."],
+    "parts": [
+      { "id": "a", "label": "(a)", "kind": "numeric", "points": 2, "prompt": "Calculate the irradiance of the lamp.", "answer": { "value": 935, "unit": "W/m²", "tolerance": 0.01 }, "solution": ["$I_e = 1.20 \\times 400 + 0.80 \\times 400 + 0.15 \\times 900 = 480 + 320 + 135 = 935$ W/m²."] },
+      { "id": "b", "label": "(b)", "kind": "numeric", "points": 4, "prompt": "Calculate the total photon flux of the lamp.", "answer": { "value": 3.711e21, "unit": "m⁻² s⁻¹" }, "hints": ["$\\Phi = \\sum \\frac{P}{2hc}(\\lambda_2^2 - \\lambda_1^2)$ with $hc = 1.986 \\times 10^{-25}$ J m."], "solution": ["Band 1: $\\frac{1.20 \\times 10^9 \\left[(700^2 - 300^2) \\times 10^{-18}\\right]}{2 \\times 1.986 \\times 10^{-25}} = 1.21 \\times 10^{21}$ m⁻² s⁻¹.", "Band 2: $\\frac{0.80 \\times 10^9 \\left[(1100^2 - 700^2) \\times 10^{-18}\\right]}{2 \\times 1.986 \\times 10^{-25}} = 1.45 \\times 10^{21}$ m⁻² s⁻¹.", "Band 3: $\\frac{0.15 \\times 10^9 \\left[(2000^2 - 1100^2) \\times 10^{-18}\\right]}{2 \\times 1.986 \\times 10^{-25}} = 1.05 \\times 10^{21}$ m⁻² s⁻¹.", "Total: $3.71 \\times 10^{21}$ m⁻² s⁻¹."] },
+      { "id": "c", "label": "(c)", "kind": "numeric", "points": 4, "prompt": "Calculate the maximum photocurrent density of the cell in mA/cm², assuming every absorbed photon delivers one electron.", "answer": { "value": 42.59, "unit": "mA/cm²", "errors": [
+        { "value": 425.9, "feedback": "That is the right number in **A/m²**. 1 A/m² = 0.1 mA/cm² (1 m² = 10⁴ cm², 1 A = 10³ mA)." },
+        { "value": 59.46, "feedback": "You included the 1100–2000 nm band. Those photons are below the bandgap and are not absorbed." }
+      ] }, "hints": ["Only bands 1 and 2 are absorbed.", "$J = q(\\Phi_1 + \\Phi_2)$, then convert A/m² to mA/cm²."], "solution": ["Absorbed: $\\Phi_1 + \\Phi_2 = 2.66 \\times 10^{21}$ m⁻² s⁻¹.", "$J = 1.602 \\times 10^{-19} \\times 2.66 \\times 10^{21} = 426$ A/m² = 42.6 mA/cm²."] },
+      { "id": "d", "label": "(d)", "kind": "numeric", "points": 2, "prompt": "What percentage of the incident power is carried by photons the cell can absorb?", "answer": { "value": 85.56, "unit": "%", "tolerance": 0.01 }, "solution": ["Power in bands 1 and 2: 480 + 320 = 800 W/m².", "800/935 = 85.6 %. (Not all of that becomes electricity: the energy above the bandgap is lost as heat.)"] }
+    ]
+  },
+  {
+    "id": "w1-exam-trapping", "type": "multi", "week": 1, "topic": "Optics of a c-Si wafer", "concept": "refraction-reflection", "difficulty": 2, "prerequisites": ["trigonometry"], "points": 14,
+    "source": "Modelled on instruction 1 Q1",
+    "prompt": "A 180 µm thick c-Si wafer has a flat front and a rear reflector. Consider light of 950 nm, where $n$ = 3.59 (ignore κ). In the morning the light arrives at an angle of incidence of 75°.",
+    "hints": ["Snell first, then Fresnel; the path uses the internal angle.", "Normal-incidence shortcut only at 0°.", "For (e), compute $R_1 + R_2$ for each coating."],
+    "solution": ["See the solution under each part."],
+    "parts": [
+      { "id": "a", "label": "(a)", "kind": "numeric", "points": 2, "prompt": "Calculate the angle of refraction θₜ inside the silicon.", "answer": { "value": 15.61, "unit": "°", "tolerance": 0.005, "absTolerance": 0.15, "errors": [
+        { "value": 20.89, "feedback": "You divided the angle by n (75°/3.59). Snell’s law divides the **sine**: $\\sin\\theta_t = \\sin\\theta_i/n$." }
+      ] }, "solution": ["$\\sin\\theta_t = \\sin 75°/3.59 = 0.9659/3.59 = 0.2691$, so θₜ = 15.6°."] },
+      { "id": "b", "label": "(b)", "kind": "numeric", "points": 3, "prompt": "Calculate the reflectance of the (unpolarised) light at the front surface, in %.", "answer": { "value": 37.06, "unit": "%", "errors": [
+        { "value": 31.84, "feedback": "That is the normal-incidence value. At 75° you need the full Fresnel equations." },
+        { "value": 74.08, "feedback": "That is $r_s^2$ only. Average $r_s^2$ and $r_p^2$ for unpolarised light." }
+      ] }, "solution": ["$\\cos 75° = 0.2588$, $\\cos 15.61° = 0.9631$.", "$r_s = \\frac{0.2588 - 3.59 \\times 0.9631}{0.2588 + 3.59 \\times 0.9631} = -0.861$ → $r_s^2 = 74.1\\,\\%$.", "$r_p = \\frac{0.9631 - 3.59 \\times 0.2588}{0.9631 + 3.59 \\times 0.2588} = 0.018$ → $r_p^2 = 0.03\\,\\%$ (75° is close to Brewster’s angle).", "$R = \\frac{1}{2}(74.1 + 0.03) = 37.1\\,\\%$."] },
+      { "id": "c", "label": "(c)", "kind": "numeric", "points": 2, "prompt": "How far does the light travel inside the silicon before it reaches the rear reflector (in µm)?", "answer": { "value": 186.9, "unit": "µm", "tolerance": 0.01, "errors": [
+        { "value": 695.5, "feedback": "You used the angle in air (75°). Inside the silicon the ray travels at θₜ = 15.6°." }
+      ] }, "solution": ["$d = t/\\cos\\theta_t = 180/\\cos 15.61° = 180/0.9631 = 187$ µm."] },
+      { "id": "d", "label": "(d)", "kind": "numeric", "points": 2, "prompt": "Above which angle θ_BR must the rear reflector send the light so that it is totally internally reflected at the front (c-Si/air)?", "answer": { "value": 16.17, "unit": "°", "tolerance": 0.005, "absTolerance": 0.15 }, "solution": ["$\\sin\\theta_{\\mathrm{crit}} = 1/3.59 = 0.2786$, so θ_crit = 16.2°. The reflector must send light up at θ_BR > 16.2°."] },
+      { "id": "e", "label": "(e)", "kind": "mcq", "points": 2, "prompt": "Which coating gives the lowest $R_{\\mathrm{tot}} = R_1 + R_2$ at normal incidence (no interference)?", "options": [
+        { "id": "a", "text": "SiO₂ ($n$ = 1.46)", "feedback": "$R_1 = 3.5\\,\\%$ but $R_2 = 17.8\\,\\%$: total 21.3 %. The index is too low." },
+        { "id": "b", "text": "Si₃N₄ ($n$ = 2.0)", "correct": true, "feedback": "Correct: $R_1 = 11.1\\,\\%$, $R_2 = 8.1\\,\\%$, total 19.2 %. Its index is closest to √3.59 = 1.89." },
+        { "id": "c", "text": "TiO₂ ($n$ = 2.4)", "feedback": "$R_1 = 17.0\\,\\%$ and $R_2 = 3.9\\,\\%$: total 20.9 %. The index is too high." }
+      ], "solution": ["SiO₂: 3.5 + 17.8 = 21.3 %. Si₃N₄: 11.1 + 8.1 = 19.2 %. TiO₂: 17.0 + 3.9 = 20.9 %.", "Si₃N₄ wins: its index is closest to $\\sqrt{n_0 n_s} = 1.89$."] },
+      { "id": "f", "label": "(f)", "kind": "numeric", "points": 2, "prompt": "What thickness of the best coating gives minimum reflection at 950 nm (thinnest solution)?", "answer": { "value": 118.75, "unit": "nm", "tolerance": 0.01, "errors": [
+        { "value": 237.5, "feedback": "That is λ₀/4. The *optical* thickness $n_c d$ must be λ₀/4, so divide by $n_c$ too." }
+      ] }, "solution": ["$d = \\frac{\\lambda_0}{4 n_c} = \\frac{950}{4 \\times 2.0} = 119$ nm."] },
+      { "id": "g", "label": "(g)", "kind": "open", "points": 1, "prompt": "Does adding the coating change your answer to (d)? Explain in one or two sentences.", "solution": ["No. Through parallel layers $n\\sin\\theta$ is conserved: $n_{\\mathrm{Si}}\\sin\\theta_{\\mathrm{BR}} = n_c\\sin\\theta_c = n_{\\mathrm{air}}\\sin\\theta_{\\mathrm{air}}$. The coating index cancels, so only silicon and air set the threshold (16.2°)."] }
+    ]
+  },
+  {
+    "id": "w1-exam-tandem", "type": "multi", "week": 1, "topic": "LEDs, reflection and photocurrent", "concept": "solar-spectrum", "difficulty": 3, "prerequisites": ["waves-photons", "units"], "points": 25,
+    "source": "Modelled on instruction 1 Q2 (25 points)",
+    "prompt": "You test solar cells with three LEDs, each monochromatic:\n\n- LED P: 450 nm, 300 W/m²\n- LED Q: 850 nm, 350 W/m²\n- LED S: 1250 nm, 200 W/m²\n\nCell A: $E_G$ = 1.85 eV, $n$ = 3.0. Cell B: $E_G$ = 1.12 eV, $n$ = 3.6. In the tandem, A is glued on top of B with a transparent glue of $n$ = 1.5. Interfaces: R₁ air/A, R₂ air/B, R₃ A/glue, R₄ glue/B. All LEDs are on; normal incidence; ignore κ. Cells absorb all photons above their bandgap and none below.",
+    "hints": ["(a) Monochromatic: Φ = I/E_ph.", "(b) Normal-incidence reflectance at each interface.", "(c) First decide which LED each cell absorbs (compare E_ph with E_G), then list the interfaces each photon crosses."],
+    "solution": ["Photon energies: P 2.76 eV (absorbed by A, and by B if it reaches it), Q 1.46 eV (only B), S 0.99 eV (neither)."],
+    "parts": [
+      { "id": "a1", "label": "(a) P", "kind": "numeric", "points": 2, "prompt": "Photon flux density of LED P.", "answer": { "value": 6.796e20, "unit": "m⁻² s⁻¹", "errors": [
+        { "value": 108.9, "feedback": "You divided by the photon energy in eV. Use joules: $E = hc/\\lambda = 4.41 \\times 10^{-19}$ J." }
+      ] }, "solution": ["$E_P = hc/\\lambda = 1.986 \\times 10^{-25}/450 \\times 10^{-9} = 4.41 \\times 10^{-19}$ J (2.76 eV).", "$\\Phi_P = 300/4.41 \\times 10^{-19} = 6.80 \\times 10^{20}$ m⁻² s⁻¹."] },
+      { "id": "a2", "label": "(a) Q", "kind": "numeric", "points": 2, "prompt": "Photon flux density of LED Q.", "answer": { "value": 1.498e21, "unit": "m⁻² s⁻¹" }, "solution": ["$E_Q = 2.34 \\times 10^{-19}$ J (1.46 eV); $\\Phi_Q = 350/2.34 \\times 10^{-19} = 1.50 \\times 10^{21}$ m⁻² s⁻¹."] },
+      { "id": "a3", "label": "(a) S", "kind": "numeric", "points": 1, "prompt": "Photon flux density of LED S.", "answer": { "value": 1.259e21, "unit": "m⁻² s⁻¹" }, "solution": ["$E_S = 1.59 \\times 10^{-19}$ J (0.99 eV); $\\Phi_S = 200/1.59 \\times 10^{-19} = 1.26 \\times 10^{21}$ m⁻² s⁻¹."] },
+      { "id": "b1", "label": "(b) R₁", "kind": "numeric", "points": 1, "prompt": "Reflectance R₁ (air/cell A), in %.", "answer": { "value": 25.0, "unit": "%", "tolerance": 0.01 }, "solution": ["$R_1 = \\left(\\frac{1.0 - 3.0}{1.0 + 3.0}\\right)^2 = 0.25 = 25.0\\,\\%$."] },
+      { "id": "b2", "label": "(b) R₂", "kind": "numeric", "points": 1, "prompt": "Reflectance R₂ (air/cell B), in %.", "answer": { "value": 31.95, "unit": "%", "tolerance": 0.01 }, "solution": ["$R_2 = (2.6/4.6)^2 = 31.9\\,\\%$."] },
+      { "id": "b3", "label": "(b) R₃", "kind": "numeric", "points": 1, "prompt": "Reflectance R₃ (cell A/glue), in %.", "answer": { "value": 11.11, "unit": "%", "tolerance": 0.01 }, "solution": ["$R_3 = (1.5/4.5)^2 = 11.1\\,\\%$."] },
+      { "id": "b4", "label": "(b) R₄", "kind": "numeric", "points": 1, "prompt": "Reflectance R₄ (glue/cell B), in %.", "answer": { "value": 16.96, "unit": "%", "tolerance": 0.01, "errors": [
+        { "value": 41.18, "feedback": "You forgot to square: $(n_1 - n_2)/(n_1 + n_2)$ is an amplitude ratio." }
+      ] }, "solution": ["$R_4 = (2.1/5.1)^2 = 17.0\\,\\%$."] },
+      { "id": "c1", "label": "(c) 1", "kind": "numeric", "points": 2, "prompt": "Experiment 1: only cell A is illuminated. Calculate its photocurrent density (A/m²).", "answer": { "value": 81.66, "unit": "A/m²", "errors": [
+        { "value": 108.9, "feedback": "You forgot the reflection loss at the front: only $(1 - R_1) = 75\\,\\%$ of the photons enter." },
+        { "value": 261.6, "feedback": "You included LED Q. Its photons (1.46 eV) are below cell A’s 1.85 eV gap." }
+      ] }, "solution": ["Only P is above 1.85 eV.", "$J_A = q(1 - R_1)\\Phi_P = 1.602 \\times 10^{-19} \\times 0.75 \\times 6.80 \\times 10^{20} = 81.7$ A/m²."] },
+      { "id": "c2", "label": "(c) 2", "kind": "numeric", "points": 2, "prompt": "Experiment 2: only cell B is illuminated. Calculate its photocurrent density (A/m²).", "answer": { "value": 237.4, "unit": "A/m²", "errors": [
+        { "value": 374.6, "feedback": "You included LED S. Its photons (0.99 eV) are below cell B’s 1.12 eV gap." },
+        { "value": 348.8, "feedback": "You forgot the reflection loss $R_2$ at the air/B interface." }
+      ] }, "solution": ["P and Q are above 1.12 eV.", "$J_B = q(1 - R_2)(\\Phi_P + \\Phi_Q) = 1.602 \\times 10^{-19} \\times 0.681 \\times 2.18 \\times 10^{21} = 237$ A/m²."] },
+      { "id": "c3", "label": "(c) 3", "kind": "numeric", "points": 3, "prompt": "Experiment 3: the tandem is illuminated. Calculate the photocurrent density of the bottom cell B (A/m²).", "answer": { "value": 132.8, "unit": "A/m²", "errors": [
+        { "value": 108.9, "feedback": "You multiplied by (1 − R₂). R₂ is air/B, which does not exist in the tandem: B is reached through R₁, R₃ and R₄." },
+        { "value": 180.0, "feedback": "You only included R₁. Q also crosses the A/glue (R₃) and glue/B (R₄) interfaces." },
+        { "value": 193.1, "feedback": "You included LED P. Its photons are absorbed in the top cell A and never reach B." }
+      ] }, "solution": ["P is absorbed in A; only Q reaches B.", "Q crosses R₁, R₃ and R₄: $(1 - R_1)(1 - R_3)(1 - R_4) = 0.75 \\times 0.889 \\times 0.830 = 0.554$.", "$J_B = 1.602 \\times 10^{-19} \\times 0.554 \\times 1.50 \\times 10^{21} = 133$ A/m². (Top cell A: still 81.7 A/m².)"] },
+      { "id": "d", "label": "(d)", "kind": "open", "points": 2, "prompt": "Explain why LED S does not contribute to any of the currents, and what would be needed to use it.", "solution": ["Its photon energy, $1240/1250 = 0.99$ eV, is below both bandgaps (1.85 and 1.12 eV), so neither cell can absorb it: the photons pass through.", "Using it would require an absorber with $E_G \\leq 0.99$ eV (e.g. a third, low-bandgap cell at the bottom of the stack)."] }
+    ]
+  },
+  {
+    "id": "w1-exam-absorber", "type": "multi", "week": 1, "topic": "Absorber thickness", "concept": "absorption", "difficulty": 2, "prerequisites": ["exp-log", "units"], "points": 10,
+    "source": "Modelled on book ex. 7.5(a–c) and instruction 1 Q1",
+    "prompt": "At λ₀ = 900 nm, crystalline silicon has $\\tilde n = 3.61 + i\\,2.17 \\times 10^{-3}$.",
+    "hints": ["α from κ, then Lambert–Beer.", "Solve $1 - e^{-\\alpha t} = 0.9$ for t with a logarithm.", "A back reflector doubles the path."],
+    "solution": ["See the solution under each part."],
+    "parts": [
+      { "id": "a", "label": "(a)", "kind": "numeric", "points": 2, "prompt": "Calculate the absorption coefficient in cm⁻¹.", "answer": { "value": 303.0, "unit": "cm⁻¹" }, "solution": ["$\\alpha = \\frac{4\\pi\\kappa}{\\lambda_0} = \\frac{4\\pi \\times 2.17 \\times 10^{-3}}{900 \\times 10^{-7}\\,\\mathrm{cm}} = 303$ cm⁻¹."] },
+      { "id": "b", "label": "(b)", "kind": "numeric", "points": 1, "prompt": "Calculate the penetration depth in µm.", "answer": { "value": 33.0, "unit": "µm" }, "solution": ["$\\delta_p = 1/\\alpha = 1/303\\,\\mathrm{cm^{-1}} = 3.30 \\times 10^{-3}$ cm = 33.0 µm."] },
+      { "id": "c", "label": "(c)", "kind": "numeric", "points": 3, "prompt": "What thickness is needed to absorb 90 % of the light entering the wafer in a single pass (in µm)?", "answer": { "value": 76.0, "unit": "µm", "errors": [
+        { "value": 29.7, "feedback": "You set αt = 0.9 (linear). Absorption is exponential: $e^{-\\alpha t} = 0.1$, so $t = \\ln(10)/\\alpha$." }
+      ] }, "hints": ["$1 - e^{-\\alpha t} = 0.9 \\Rightarrow e^{-\\alpha t} = 0.1$"], "solution": ["$e^{-\\alpha t} = 0.1 \\Rightarrow t = \\frac{\\ln 10}{\\alpha} = \\frac{2.303}{303\\,\\mathrm{cm^{-1}}} = 7.60 \\times 10^{-3}$ cm = 76 µm."] },
+      { "id": "d", "label": "(d)", "kind": "numeric", "points": 2, "prompt": "Same question, but now the wafer has a perfect back reflector (two passes).", "answer": { "value": 38.0, "unit": "µm" }, "solution": ["Two passes: $e^{-2\\alpha t} = 0.1 \\Rightarrow t = \\frac{\\ln 10}{2\\alpha} = 38$ µm: exactly half."] },
+      { "id": "e", "label": "(e)", "kind": "numeric", "points": 2, "prompt": "A bare (uncoated) 180 µm wafer without back reflector is illuminated at normal incidence. What percentage of the *incident* light is absorbed? Ignore κ for the reflection.", "answer": { "value": 67.66, "unit": "%", "errors": [
+        { "value": 99.57, "feedback": "That is the fraction of the light that *enters* which is absorbed. First (1 − R) = 68 % gets in." }
+      ] }, "solution": ["Front reflection: $R = (2.61/4.61)^2 = 32.1\\,\\%$.", "Absorbed in 180 µm: $1 - e^{-303 \\times 0.018} = 1 - e^{-5.45} = 99.6\\,\\%$ of what enters.", "Of the incident light: $(1 - 0.321) \\times 0.996 = 67.7\\,\\%$. Here reflection, not absorption, is the bottleneck."] }
+    ]
+  }
+]

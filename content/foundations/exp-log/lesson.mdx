@@ -1,0 +1,43 @@
+## The exponential function
+
+The <Term id="exponential-function" /> $e^x$ (also written $\exp x$, with $e \approx 2.718$) has one defining property: equal steps in $x$ multiply the result by the same factor. In this course it almost always appears as **exponential decay**:
+
+$$
+y = e^{-x/L}
+$$
+
+After a distance $L$ only $1/e \approx 37\,\%$ is left; after $2L$, 13.5 %; after $2.3L$, 10 %; after $4.6L$, 1 %. Each step $L$ removes the same *fraction* of what is left, not the same amount.
+
+You will meet it every week:
+
+- Week 1: light absorption, <Ctx c="optics">$I(z) = I_0\,e^{-\alpha z}$ (decay length $1/\alpha$)</Ctx>.
+- Week 2: carrier densities, <Ctx c="semiconductor">$n = N_C\,e^{(E_F - E_C)/k_BT}$</Ctx>.
+- Week 3: diffusion profiles, $e^{-x/L}$ with $L$ the diffusion length.
+
+<Diagram id="exp-decay" />
+
+## The natural logarithm undoes it
+
+The <Term id="natural-logarithm" /> is the inverse: $\ln(e^x) = x$. Use it whenever the unknown sits in an exponent. Rules that cover nearly every case:
+
+$$
+\ln(ab) = \ln a + \ln b, \qquad \ln\frac{a}{b} = \ln a - \ln b, \qquad \ln 1 = 0, \qquad \ln 10 \approx 2.303
+$$
+
+**Example.** How thick must a layer be to absorb 90 % of the light? Then 10 % is left:
+
+<Ctx c="optics">
+
+$$
+e^{-\alpha t} = 0.1 \;\Rightarrow\; -\alpha t = \ln 0.1 = -2.303 \;\Rightarrow\; t = \frac{2.303}{\alpha}
+$$
+
+</Ctx>
+
+## Logarithmic axes
+
+When values span many orders of magnitude (absorption coefficients from 1 to 10⁶ cm⁻¹, carrier densities from 10² to 10²⁰ cm⁻³), plots use a <Term id="log-scale" />: every gridline is a factor 10. On a log axis an exponential becomes a **straight line**, because $\ln y = -x/L$ is linear in $x$. That makes exponential behaviour easy to spot, and its slope gives the decay length.
+
+<KeyIdea>
+Exponential decay: same fraction lost per step. Logarithm: the tool to get a variable out of an exponent. Log axis: makes exponentials straight.
+</KeyIdea>

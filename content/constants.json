@@ -1,0 +1,29 @@
+{
+  "constants": [
+    { "id": "c0", "latex": "c_0", "name": "Speed of light in vacuum", "value": 2.997925e8, "unit": "m s⁻¹", "display": "2.997 925 × 10⁸ m s⁻¹", "onSheet": true, "note": "Instruction answers often round to 3.00 × 10⁸." },
+    { "id": "eps0", "latex": "\\epsilon_0", "name": "Vacuum permittivity", "value": 8.854187e-12, "unit": "A s V⁻¹ m⁻¹", "display": "8.854 187 × 10⁻¹² A s V⁻¹ m⁻¹", "onSheet": true },
+    { "id": "h", "latex": "h", "name": "Planck constant", "value": 6.626069e-34, "unit": "J s", "display": "6.626 069 × 10⁻³⁴ J s", "onSheet": true, "note": "Instruction answers often round to 6.63 × 10⁻³⁴." },
+    { "id": "kB", "latex": "k_B", "name": "Boltzmann constant", "value": 1.380649e-23, "unit": "J K⁻¹", "display": "1.380 649 × 10⁻²³ J K⁻¹", "onSheet": true, "note": "In eV: k_B = 8.617 × 10⁻⁵ eV K⁻¹ (lecture rounds to 8.6 × 10⁻⁵). At 300 K, k_BT = 0.02585 eV (lecture uses 0.0258 eV)." },
+    { "id": "q", "latex": "q", "name": "Elementary charge", "value": 1.602177e-19, "unit": "C", "display": "1.602 177 × 10⁻¹⁹ C", "onSheet": true, "note": "Also the J-per-eV conversion: 1 eV = 1.602 × 10⁻¹⁹ J. Instruction answers often round to 1.60 × 10⁻¹⁹." },
+    { "id": "sigma", "latex": "\\sigma", "name": "Stefan–Boltzmann constant", "value": 5.670373e-8, "unit": "W m⁻² K⁻⁴", "display": "5.670 373 × 10⁻⁸ W m⁻² K⁻⁴", "onSheet": true },
+    { "id": "b", "latex": "b", "name": "Wien displacement constant", "value": 2.898e-3, "unit": "m K", "display": "2.898 × 10⁻³ m K", "onSheet": true, "note": "Appears inside eq. (5.21) on the sheet." }
+  ],
+  "materials": [
+    {
+      "id": "c-Si-300K",
+      "name": "Properties of c-Si at 300 K",
+      "onSheet": true,
+      "properties": [
+        { "id": "EG-Si", "latex": "E_G", "name": "Bandgap", "value": 1.12, "unit": "eV", "display": "1.12 eV" },
+        { "id": "NC-Si", "latex": "N_C", "name": "Effective density of states, conduction band", "value": 3.22e19, "unit": "cm⁻³", "display": "3.22 × 10¹⁹ cm⁻³" },
+        { "id": "NV-Si", "latex": "N_V", "name": "Effective density of states, valence band", "value": 1.83e19, "unit": "cm⁻³", "display": "1.83 × 10¹⁹ cm⁻³" },
+        { "id": "mun-Si", "latex": "\\mu_n", "name": "Electron mobility", "value": 1360, "unit": "cm² V⁻¹ s⁻¹", "display": "1 360 cm² V⁻¹ s⁻¹" },
+        { "id": "mup-Si", "latex": "\\mu_p", "name": "Hole mobility", "value": 450, "unit": "cm² V⁻¹ s⁻¹", "display": "450 cm² V⁻¹ s⁻¹" }
+      ]
+    }
+  ],
+  "derived": [
+    { "id": "hc-eVnm", "latex": "hc", "name": "hc in handy units", "value": 1239.84, "unit": "eV nm", "display": "≈ 1240 eV nm", "onSheet": false, "note": "E[eV] ≈ 1240 / λ[nm]. Not on the sheet: derive it from h, c and q." },
+    { "id": "kT300", "latex": "k_BT", "name": "Thermal energy at 300 K", "value": 0.025852, "unit": "eV", "display": "0.02585 eV", "onSheet": false, "note": "Lecture uses 0.0258 eV." }
+  ]
+}

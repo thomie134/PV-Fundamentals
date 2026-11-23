@@ -1,0 +1,82 @@
+[
+ {
+  "id": "m3-random-current",
+  "wrong": "Because carriers move at 10⁷ cm/s, there is always a large current in a semiconductor.",
+  "right": "Thermal motion is **random**: it gives no net current. Only a field (drift) or a gradient (diffusion) produces a net flow.",
+  "concept": "drift"
+ },
+ {
+  "id": "m3-electron-current-dir",
+  "wrong": "Electron current flows in the direction the electrons move.",
+  "right": "Current is defined for positive charge. Electrons moving to the right are a current to the left; that is why drift electrons (against ξ) still give current along ξ.",
+  "concept": "drift"
+ },
+ {
+  "id": "m3-diffusion-needs-field",
+  "wrong": "Diffusion needs an electric field to push the carriers.",
+  "right": "Diffusion needs only a **concentration gradient**; it comes from random thermal motion. Neutral particles diffuse too.",
+  "concept": "diffusion"
+ },
+ {
+  "id": "m3-diffusion-density",
+  "wrong": "A high carrier density gives a large diffusion current.",
+  "right": "Diffusion current depends on the **gradient** $\\mathrm{d}n/\\mathrm{d}x$, not on $n$ itself. A high but uniform density gives zero diffusion current.",
+  "concept": "diffusion",
+  "foundation": "derivatives-odes"
+ },
+ {
+  "id": "m3-um-cm",
+  "wrong": "Gradient = (density difference) / (distance in µm).",
+  "right": "With densities in cm⁻³ and D in cm²/s, the distance must be in **cm**: 2 µm = 2 × 10⁻⁴ cm. Otherwise J is off by 10⁴.",
+  "concept": "diffusion",
+  "foundation": "units"
+ },
+ {
+  "id": "m3-lifetime-average",
+  "wrong": "Two lifetimes of 10 µs and 50 µs combine to 30 µs (the average).",
+  "right": "Rates add: $1/\\tau = 1/10 + 1/50$, so τ = 8.3 µs. The effective lifetime is always shorter than the shortest one.",
+  "concept": "lifetime"
+ },
+ {
+  "id": "m3-L-tau",
+  "wrong": "Doubling the lifetime doubles the diffusion length.",
+  "right": "$L = \\sqrt{D\\tau}$: doubling τ increases L by √2 ≈ 1.41. A hundred times better lifetime gives ten times longer L.",
+  "concept": "lifetime"
+ },
+ {
+  "id": "m3-radiative-si",
+  "wrong": "Radiative recombination dominates in silicon because it is the ‘simplest’ process.",
+  "right": "Silicon is indirect: radiative recombination needs a phonon and is slow. SRH (defects) dominates in normal Si, Auger at high doping.",
+  "concept": "recombination"
+ },
+ {
+  "id": "m3-majority-lifetime",
+  "wrong": "The lifetime describes how long majority carriers survive.",
+  "right": "Under low injection τ is the **minority**-carrier lifetime: recombination is limited by the scarce carrier type, since the majority carriers are plentiful.",
+  "concept": "lifetime"
+ },
+ {
+  "id": "m3-g-units",
+  "wrong": "The generation rate G is a photon flux (per m² per s).",
+  "right": "G is pairs per **volume** per second (m⁻³s⁻¹ or cm⁻³s⁻¹): $G = \\alpha\\Phi$, flux (per area) times α (per length).",
+  "concept": "generation"
+ },
+ {
+  "id": "m3-reflection-g",
+  "wrong": "G(x) = Φ₀ α e^{−αx} with the incident flux Φ₀.",
+  "right": "Only the light that gets in can generate carriers: use $(1 - R)\\Phi_0$ when reflection matters (book ex. 7.5, example p. 69).",
+  "concept": "generation"
+ },
+ {
+  "id": "m3-S-zero",
+  "wrong": "S = 0 means every carrier at the surface recombines.",
+  "right": "S = 0 is a **perfect** surface: no surface recombination, zero slope of Δn. A very large S removes all carriers: Δn = 0 at the surface.",
+  "concept": "continuity"
+ },
+ {
+  "id": "m3-ni-approx-hot",
+  "wrong": "In n-type silicon n = N_D at any temperature.",
+  "right": "Only while $n_i \\ll N_D$. When heating makes nᵢ comparable with N_D, solve neutrality exactly: at 1000 K the slab of ex. 7.6 is effectively intrinsic.",
+  "concept": "drift"
+ }
+]

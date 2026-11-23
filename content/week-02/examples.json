@@ -1,0 +1,132 @@
+[
+ {
+  "id": "ex-i2-q1",
+  "title": "Intrinsic crystalline silicon: atoms, carriers and the Fermi level",
+  "source": "Instruction 2 · Question 1",
+  "concept": "carrier-density",
+  "context": "semiconductor",
+  "prompt": "The diamond unit cell of c-Si has lattice constant $5.43 \\times 10^{-10}$ m. Given $E_G = 1.12$ eV, $N_C = 3.22 \\times 10^{19}$ cm⁻³, $N_V = 1.83 \\times 10^{19}$ cm⁻³, $k_B = 1.38 \\times 10^{-23}$ J/K, $e = 1.60 \\times 10^{-19}$ C, $T = 300$ K.\n\n(a) Show that the unit cell contains 8 atoms. (b) How many Si atoms are in 1 cm³? (c) How many free electrons and holes are in 1 cm³ of intrinsic c-Si? (d) How many Si atoms are there per free electron? (e) Where is the Fermi level relative to the conduction band?",
+  "steps": [
+   {
+    "title": "(a) Count shared atoms",
+    "body": "4 atoms lie completely inside (count 1 each), 6 sit in the centre of a face (shared by 2 cells: ½ each), 8 sit on corners (shared by 8 cells: ⅛ each):\n\n$$4 \\times 1 + 6 \\times \\tfrac12 + 8 \\times \\tfrac18 = 4 + 3 + 1 = 8$$",
+    "why": "Stacking cells must not count an atom twice. A corner atom is touched by 8 cubes, so each cube owns 1/8 of it."
+   },
+   {
+    "title": "(b) Atoms per cm³",
+    "body": "Cell volume $V_u = (5.43 \\times 10^{-10}\\,\\mathrm{m})^3 = 1.60 \\times 10^{-28}$ m³. Cells in 1 cm³ $= 10^{-6}\\,\\mathrm{m^3}/V_u = 6.25 \\times 10^{21}$. Atoms: $8 \\times 6.25 \\times 10^{21} = 5.00 \\times 10^{22}$ cm⁻³.",
+    "why": "1 cm³ = (0.01 m)³ = 10⁻⁶ m³. Mixing m and cm here is the classic slip: it gives an answer 10⁶ too large."
+   },
+   {
+    "title": "(c) Intrinsic carrier density",
+    "body": "In intrinsic material $n = p = n_i$ with\n\n$$n_i = \\sqrt{N_CN_V}\\exp\\left(-\\frac{E_G}{2k_BT}\\right)$$\n\nHere $k_BT = 1.38 \\times 10^{-23} \\times 300/1.60 \\times 10^{-19} = 0.025875$ eV, so $n_i = 2.43 \\times 10^{19} \\times e^{-21.64} = 9.68 \\times 10^9$ cm⁻³.",
+    "why": "Every broken bond gives one electron and one hole, so in pure silicon their numbers are equal. The product formula $np = n_i^2$ comes from multiplying eq. 6.6a and 6.6b."
+   },
+   {
+    "title": "(d) Atoms per free electron",
+    "body": "$N_{\\mathrm{Si}}/n_i = 5.00 \\times 10^{22}/9.68 \\times 10^9 = 5.16 \\times 10^{12}$.",
+    "why": "This shows how rarely bonds break at room temperature: one in five trillion atoms has lost an electron."
+   },
+   {
+    "title": "(e) Fermi level",
+    "body": "Solve eq. 6.6a for the energy with $n = n_i$:\n\n$$E_C - E_F = k_BT\\ln\\left(\\frac{N_C}{n_i}\\right) = 0.025875 \\times \\ln\\left(\\frac{3.22 \\times 10^{19}}{9.68 \\times 10^9}\\right) = 0.57\\ \\mathrm{eV}$$",
+    "why": "Close to midgap (0.56 eV): the intrinsic Fermi level sits in the middle because there are as many electrons as holes."
+   }
+  ],
+  "answer": "(a) 8 atoms; (b) $5.00 \\times 10^{22}$ cm⁻³; (c) $n = p = 9.68 \\times 10^9$ cm⁻³; (d) $5.16 \\times 10^{12}$; (e) $E_F$ lies 0.57 eV below $E_C$.",
+  "note": "The official answer to (e) writes the formula as $k_BT\\ln(N_C/N_D)$ but substitutes $n_i$: it should read $\\ln(N_C/n_i)$. With the formula-sheet constants $n_i = 9.50 \\times 10^9$ cm⁻³; the lecture (slide 50) gets $9.09 \\times 10^9$. All are fine."
+ },
+ {
+  "id": "ex-i2-q2",
+  "title": "Doping silicon with phosphorus",
+  "source": "Instruction 2 · Question 2",
+  "concept": "doping",
+  "context": "semiconductor",
+  "prompt": "In a 1 cm³ block of c-Si, $10^{17}$ Si atoms are replaced by phosphorus atoms (same data as question 1).\n\n(a) Donor or acceptor; n- or p-type? (b) How many free electrons were added, and what is the total? (c) What net charge did the block receive? (d) Si atoms per free electron? (e) Hole density after doping, and why is it different from Q1c? (f) Position of the Fermi level relative to $E_C$; what changed?",
+  "steps": [
+   {
+    "title": "(a) Type",
+    "body": "P (Z = 15) has 5 valence electrons: a **donor**, which makes c-Si **n-type**.",
+    "why": "Four electrons fill the four bonds; the fifth has no bond and is set free by thermal energy."
+   },
+   {
+    "title": "(b) Electrons",
+    "body": "Each P atom donates one electron: $10^{17}$ added. Already present: $9.68 \\times 10^9$. Total: $10^{17} + 9.68 \\times 10^9 \\approx 10^{17}$ cm⁻³.",
+    "why": "The intrinsic electrons are 10 million times fewer, so they do not show in three significant figures."
+   },
+   {
+    "title": "(c) Charge",
+    "body": "Zero. A neutral P atom replaced a neutral Si atom: one extra electron, but also one extra proton in the nucleus.",
+    "why": "After ionisation the free electron and the fixed P⁺ ion still balance: charge neutrality, eq. 6.15."
+   },
+   {
+    "title": "(d) Atoms per electron",
+    "body": "$5.00 \\times 10^{22}/10^{17} = 5.00 \\times 10^5$.",
+    "why": "Compare with $5 \\times 10^{12}$ in intrinsic Si: doping a few ppm changes the electron density by a factor $10^7$."
+   },
+   {
+    "title": "(e) Holes",
+    "body": "$p = \\dfrac{n_i^2}{n} = \\dfrac{(9.68 \\times 10^9)^2}{10^{17}} = 937$ cm⁻³.",
+    "why": "Holes are still generated at the same thermal rate, but there are $10^7$ times more electrons to recombine with, so a hole lives $10^7$ times shorter and the hole density is $10^7$ times lower. Mathematically: the law of mass action."
+   },
+   {
+    "title": "(f) Fermi level",
+    "body": "$E_C - E_F = k_BT\\ln\\left(\\frac{N_C}{N_D}\\right) = 0.025875 \\times \\ln\\left(\\frac{3.22 \\times 10^{19}}{10^{17}}\\right) = 0.15$ eV.\n\nCompared with intrinsic c-Si (0.57 eV below $E_C$), $E_F$ moved $0.57 - 0.15 = 0.42$ eV **up**.",
+    "why": "Higher $E_F$ means the Fermi–Dirac step sits closer to the conduction band: more of its states are filled (more electrons) and fewer valence-band states are empty (fewer holes)."
+   }
+  ],
+  "answer": "(a) Donor, n-type; (b) $10^{17}$ added, total ≈ $10^{17}$ cm⁻³; (c) zero; (d) $5.00 \\times 10^5$; (e) $p = 937$ cm⁻³; (f) $E_F$ is 0.15 eV below $E_C$, 0.42 eV higher than intrinsic."
+ },
+ {
+  "id": "ex-lecture-qfl",
+  "title": "Quasi-Fermi levels in illuminated n- and p-type silicon",
+  "source": "Lecture 2 · slides 69–70",
+  "concept": "quasi-fermi",
+  "context": "semiconductor",
+  "prompt": "Light generates $\\Delta n = \\Delta p = 10^{15}$ cm⁻³ in (i) n-type c-Si with $N_D = 10^{18}$ cm⁻³ and (ii) p-type c-Si with $N_A = 10^{16}$ cm⁻³. Take $n_i = 10^{10}$ cm⁻³ (as the lecture does). Find the carrier densities and the quasi-Fermi levels.",
+  "steps": [
+   {
+    "title": "Dark densities",
+    "body": "(i) $n_0 = 10^{18}$, $p_0 = n_i^2/n_0 = 10^{2}$ cm⁻³; $E_C - E_F = k_BT\\ln(N_C/10^{18}) = 0.09$ eV.\n\n(ii) $p_0 = 10^{16}$, $n_0 = 10^{4}$ cm⁻³; $E_F - E_V = k_BT\\ln(N_V/10^{16}) = 0.19$ eV.",
+    "why": "Majority from the doping, minority from the law of mass action."
+   },
+   {
+    "title": "Add the light",
+    "body": "(i) $n = 10^{18} + 10^{15} \\approx 10^{18}$, $p = 10^2 + 10^{15} \\approx 10^{15}$ cm⁻³.\n\n(ii) $n = 10^4 + 10^{15} \\approx 10^{15}$, $p = 10^{16} + 10^{15} = 1.1 \\times 10^{16}$ cm⁻³.",
+    "why": "Light adds the same number of electrons and holes. Relative to the dark values that is negligible for the majority carriers and enormous for the minority carriers (low injection)."
+   },
+   {
+    "title": "Quasi-Fermi levels",
+    "body": "Use eq. 7.51 with the illuminated densities:\n\n(i) $E_C - E_{Fn} = 0.0259\\ln(3.22 \\times 10^{19}/10^{18}) = 0.09$ eV; $E_{Fp} - E_V = 0.0259\\ln(1.83 \\times 10^{19}/10^{15}) = 0.25$ eV.\n\n(ii) $E_C - E_{Fn} = 0.0259\\ln(3.22 \\times 10^{19}/10^{15}) = 0.27$ eV; $E_{Fp} - E_V = 0.0259\\ln(1.83 \\times 10^{19}/1.1 \\times 10^{16}) = 0.19$ eV.",
+    "why": "In equilibrium both levels coincide with $E_F$. Under light, the majority level stays put and the minority level moves towards its band."
+   },
+   {
+    "title": "Splitting",
+    "body": "(i) $E_{Fn} - E_{Fp} = 1.12 - 0.09 - 0.25 = 0.78$ eV. (ii) $1.12 - 0.27 - 0.19 = 0.66$ eV.",
+    "why": "The splitting is the electrochemical energy per electron–hole pair (book §7.6): the upper limit for the voltage a cell made of this material can deliver at this light level."
+   }
+  ],
+  "answer": "(i) n-type: $E_C - E_{Fn} = 0.09$ eV, $E_{Fp} - E_V = 0.25$ eV, splitting 0.78 eV. (ii) p-type: $E_C - E_{Fn} = 0.27$ eV, $E_{Fp} - E_V = 0.19$ eV, splitting 0.66 eV."
+ },
+ {
+  "id": "ex-book-6-7",
+  "title": "Bandgap from photon energy and thermalisation",
+  "source": "Book exercise 6.7 (official answer)",
+  "concept": "energy-bands",
+  "context": "semiconductor",
+  "prompt": "A photon with $E_{\\mathrm{ph}} = 1.35$ eV is absorbed and creates one electron–hole pair. The electron and hole together lose 0.27 eV by thermal relaxation. What is the bandgap?",
+  "steps": [
+   {
+    "title": "Where does the energy go?",
+    "body": "The photon lifts an electron from somewhere in the valence band to somewhere in the conduction band. Then electron and hole relax to the band edges, losing the excess as heat.",
+    "why": "After thermalisation the electron sits at $E_C$ and the hole at $E_V$: the energy they still hold together is exactly $E_G$."
+   },
+   {
+    "title": "Energy balance",
+    "body": "$E_G = E_{\\mathrm{ph}} - E_{\\mathrm{relaxation}} = 1.35 - 0.27 = 1.08$ eV.",
+    "why": "This is the thermalisation loss of week 1 seen in the band diagram."
+   }
+  ],
+  "answer": "$E_G = 1.08$ eV."
+ }
+]

@@ -1,0 +1,172 @@
+[
+ {
+  "id": "ex-6-14",
+  "title": "Diffusion current and the field that cancels it",
+  "source": "Instruction 2 · Book exercises 6.14 and 6.15 (official answers)",
+  "concept": "diffusion",
+  "context": "transport",
+  "prompt": "$D_n = 36$ cm²/s. In a silicon layer the electron density drops linearly from $2.7 \\times 10^{16}$ cm⁻³ to $10^{15}$ cm⁻³ over 2 µm.\n\n(6.14) What electron diffusion current density does this gradient cause? (6.15) What field over the 2 µm would make the electron drift flux cancel the diffusion flux ($\\mu_n = 1350$ cm²/Vs)?",
+  "steps": [
+   {
+    "title": "Gradient in consistent units",
+    "body": "$\\dfrac{\\mathrm{d}n}{\\mathrm{d}x} = \\dfrac{10^{15} - 2.7 \\times 10^{16}}{2 \\times 10^{-4}\\ \\mathrm{cm}} = -1.3 \\times 10^{20}\\ \\mathrm{cm^{-4}}$",
+    "why": "Densities are in cm⁻³ and D in cm²/s, so the distance must be in cm. 2 µm = 2 × 10⁻⁴ cm."
+   },
+   {
+    "title": "Diffusion current",
+    "body": "$J_{n,\\mathrm{diff}} = qD_n\\frac{\\mathrm{d}n}{\\mathrm{d}x}$, magnitude $1.60 \\times 10^{-19} \\times 36 \\times 1.3 \\times 10^{20} = 749$ A/cm².",
+    "why": "Units: C × cm²/s × cm⁻⁴ = C s⁻¹ cm⁻² = A/cm². The sign is negative: electrons diffuse in +x, so the current points in −x."
+   },
+   {
+    "title": "Drift that balances it",
+    "body": "Set $qn\\mu_n\\xi = J_{n,\\mathrm{diff}}$: $\\xi = \\dfrac{749}{1.60 \\times 10^{-19} \\times 10^{15} \\times 1350} = 3468$ V/cm.",
+    "why": "The answer book uses $n = 10^{15}$ cm⁻³. Because n varies across the layer, the balancing field is not uniform: at $2.7 \\times 10^{16}$ cm⁻³ it would be 128 V/cm."
+   }
+  ],
+  "answer": "(6.14) $|J_{n,\\mathrm{diff}}| = 749$ A/cm² (750 with q = 1.602 × 10⁻¹⁹ C). (6.15) $\\xi = 3468$ V/cm, directed from low to high density.",
+  "note": "See the flag on page: ex. 6.15 is ambiguous about which density to use; the official answer takes the lowest value."
+ },
+ {
+  "id": "ex-7-5",
+  "title": "From irradiance to excess carriers in a wafer",
+  "source": "Instruction 2 · Book exercise 7.5 (official answers)",
+  "concept": "generation",
+  "context": "transport",
+  "prompt": "A 100 µm p-type c-Si wafer is illuminated with 650 nm light, 1000 W/m². $\\tilde n = 3.84 - 0.015i$, $\\alpha = 4\\pi k/\\lambda$, $D_n = 29$ cm²/s, $L_n = 60$ µm. Steady state, low injection, uniform illumination, no current. Find (a) α, (b) R, (c) Φ at x = 0 and 50 µm, (d) $G_L$ at 50 µm, (e) Δn at 50 µm.",
+  "steps": [
+   {
+    "title": "(a) Absorption coefficient",
+    "body": "$\\alpha = \\dfrac{4\\pi \\times 0.015}{650 \\times 10^{-9}\\ \\mathrm{m}} = 2.9 \\times 10^5$ m⁻¹.",
+    "why": "Only the imaginary part k determines absorption; the sign convention (n − ik here, n + iκ on the sheet) does not matter."
+   },
+   {
+    "title": "(b) Reflectance",
+    "body": "$R = \\left|\\dfrac{1 - (3.84 - 0.015i)}{1 + (3.84 - 0.015i)}\\right|^2 = \\dfrac{2.84^2 + 0.015^2}{4.84^2 + 0.015^2} = 0.34$.",
+    "why": "Week 1: normal-incidence Fresnel reflectance. The tiny k hardly changes R."
+   },
+   {
+    "title": "(c) Photon flux",
+    "body": "$\\Phi_0 = \\dfrac{I\\lambda}{hc} = \\dfrac{1000 \\times 650 \\times 10^{-9}}{1.986 \\times 10^{-25}} = 3.3 \\times 10^{21}$ m⁻²s⁻¹. Inside: $\\Phi(0) = (1 - R)\\Phi_0 = 2.15 \\times 10^{21}$ m⁻²s⁻¹. At 50 µm: $\\Phi = 2.15 \\times 10^{21}\\,e^{-14.5} = 1.08 \\times 10^{15}$ m⁻²s⁻¹.",
+    "why": "Lambert–Beer for photons. $\\alpha x = 2.9 \\times 10^5 \\times 5 \\times 10^{-5} = 14.5$: only one photon in two million survives to 50 µm."
+   },
+   {
+    "title": "(d) Generation rate",
+    "body": "$G_L(50\\ \\mathrm{µm}) = \\alpha\\,\\Phi(50\\ \\mathrm{µm}) = 2.9 \\times 10^5 \\times 1.08 \\times 10^{15} = 3.1 \\times 10^{20}$ m⁻³s⁻¹.",
+    "why": "Each absorbed photon makes one pair. The number absorbed per unit depth is $-\\mathrm{d}\\Phi/\\mathrm{d}x = \\alpha\\Phi$."
+   },
+   {
+    "title": "(e) Excess minority carriers",
+    "body": "With no current and steady state, the continuity equation reduces to $0 = G_L - \\Delta n/\\tau_n$. Lifetime: $\\tau_n = L_n^2/D_n = (60 \\times 10^{-4})^2/29 = 1.24$ µs. So $\\Delta n = G_L\\tau_n = 3.9 \\times 10^{14}$ m⁻³ $= 3.9 \\times 10^8$ cm⁻³.",
+    "why": "Low injection: the recombination rate of the minority electrons is $\\Delta n/\\tau_n$. No diffusion and no drift terms, because no current flows."
+   }
+  ],
+  "answer": "(a) 2.9 × 10⁵ m⁻¹; (b) 0.34; (c) 2.15 × 10²¹ and 1.08 × 10¹⁵ m⁻²s⁻¹; (d) 3.1 × 10²⁰ m⁻³s⁻¹; (e) 3.9 × 10¹⁴ m⁻³.",
+  "note": "The answer book gives Φ(50 µm) = 1.14 × 10¹⁵ m⁻²s⁻¹, G = 3.3 × 10²⁰ m⁻³s⁻¹ and Δn = 4.1 × 10¹⁴ m⁻³: it uses $e^{-14.5} = 5.3 \\times 10^{-7}$ instead of 5.0 × 10⁻⁷. It also remarks that $L_n$ and $D_n$ ‘should have been given’; instruction 2 does give them."
+ },
+ {
+  "id": "ex-7-6",
+  "title": "Doped silicon at room temperature and at 727 °C",
+  "source": "Instruction 3 · Book exercise 7.6 (self-derived)",
+  "concept": "drift",
+  "context": "semiconductor",
+  "prompt": "A 10 × 10 × 10 cm³ c-Si slab contains $1.5 \\times 10^{19}$ P atoms. $N_C \\approx 6.2 \\times 10^{15}T^{3/2}$, $N_V \\approx 3.5 \\times 10^{15}T^{3/2}$ cm⁻³, $E_G = 1.1$ eV, $5 \\times 10^{22}$ atoms/cm³. (a) P density and ppm; (b) n, p, nᵢ; (c) $E_C - E_F$; (d) type; (e) the same at 727 °C; (f) why the difference; (g) band diagrams; (h) doping for $J_{drift} = 110$ A/cm² in p-type Si with $\\mu_p = 470$ cm²/Vs, ξ = 25 V/cm.",
+  "steps": [
+   {
+    "title": "(a) Density",
+    "body": "$N_D = 1.5 \\times 10^{19}/1000\\ \\mathrm{cm^3} = 1.5 \\times 10^{16}$ cm⁻³; per million Si atoms: $1.5 \\times 10^{16}/5 \\times 10^{22} \\times 10^6 = 0.3$ ppm.",
+    "why": "Doping is a tiny fraction: 3 phosphorus atoms per 10 million silicon atoms."
+   },
+   {
+    "title": "(b) Carriers at 300 K",
+    "body": "$N_C = 3.22 \\times 10^{19}$, $N_V = 1.82 \\times 10^{19}$ cm⁻³, $k_BT = 0.02585$ eV. $n_i = \\sqrt{N_CN_V}\\,e^{-E_G/2k_BT} = 1.39 \\times 10^{10}$ cm⁻³. $n = N_D = 1.5 \\times 10^{16}$ cm⁻³, $p = n_i^2/n = 1.3 \\times 10^4$ cm⁻³.",
+    "why": "$E_G = 1.1$ eV (not 1.12) is why $n_i$ is a bit higher than the usual 10¹⁰."
+   },
+   {
+    "title": "(c), (d) Fermi level and type",
+    "body": "$E_C - E_F = k_BT\\ln(N_C/n) = 0.02585\\ln(3.22 \\times 10^{19}/1.5 \\times 10^{16}) = 0.20$ eV. n-type; electrons are the majority carriers.",
+    "why": "Intrinsic level: 0.557 eV below $E_C$. $E_F$ lies 0.36 eV above it."
+   },
+   {
+    "title": "(e) At 727 °C = 1000 K",
+    "body": "$N_C = 1.96 \\times 10^{20}$, $N_V = 1.11 \\times 10^{20}$ cm⁻³, $k_BT = 0.0862$ eV: $n_i = 2.5 \\times 10^{17}$ cm⁻³, larger than $N_D$! Exact neutrality: $n = \\frac{N_D}{2} + \\sqrt{(N_D/2)^2 + n_i^2} = 2.57 \\times 10^{17}$, $p = 2.42 \\times 10^{17}$ cm⁻³. $E_C - E_F = 0.0862\\ln(1.96 \\times 10^{20}/2.57 \\times 10^{17}) = 0.57$ eV.",
+    "why": "Now n ≈ p: the slab is effectively intrinsic (very slightly n-type). Don't use n ≈ N_D when nᵢ is not small compared with N_D."
+   },
+   {
+    "title": "(f), (g) Interpretation",
+    "body": "At 1000 K thermal energy breaks so many Si–Si bonds that the thermally generated electron–hole pairs (2.5 × 10¹⁷ cm⁻³) outnumber the donor electrons (1.5 × 10¹⁶). Band diagrams: at 300 K $E_F$ (dashed) close to $E_C$ (0.20 eV below); at 1000 K $E_F$ at the intrinsic level, 0.57 eV below $E_C$, near midgap.",
+    "why": "This is why semiconductor devices stop working when they get too hot."
+   },
+   {
+    "title": "(h) Doping for a drift current",
+    "body": "$J = qp\\mu_p\\xi$ → $N_A \\approx p = \\dfrac{110}{1.602 \\times 10^{-19} \\times 470 \\times 25} = 5.8 \\times 10^{16}$ cm⁻³.",
+    "why": "In p-type material only the holes contribute noticeably."
+   }
+  ],
+  "answer": "(a) 1.5 × 10¹⁶ cm⁻³, 0.3 ppm; (b) $n_i = 1.4 \\times 10^{10}$, $n = 1.5 \\times 10^{16}$, $p = 1.3 \\times 10^4$ cm⁻³; (c) 0.20 eV; (d) n-type, electrons; (e) $n_i = 2.5 \\times 10^{17}$, $n = 2.6 \\times 10^{17}$, $p = 2.4 \\times 10^{17}$ cm⁻³, $E_C - E_F = 0.57$ eV, intrinsic; (h) $N_A = 5.8 \\times 10^{16}$ cm⁻³.",
+  "note": "Self-derived, not official: instruction 3 has no official answers yet. Computed and cross-checked with scripts (the profiles also with a numerical solver); compare with the official answers when they are published."
+ },
+ {
+  "id": "ex-7-7",
+  "title": "Illuminated strip, infinite lifetime",
+  "source": "Instruction 3 · Book exercise 7.7 (self-derived)",
+  "concept": "continuity",
+  "context": "transport",
+  "prompt": "n-type semiconductor; constant excess generation $G_0$ for $-L < x < L$, none outside. Infinite minority-carrier lifetime, $\\Delta p = 0$ at $x = \\pm 3L$, low injection, no field. Find the steady-state $\\Delta p(x)$.",
+  "steps": [
+   {
+    "title": "Equation per region",
+    "body": "Steady state, no field, τ → ∞: $D_p\\Delta p'' + G(x) = 0$. Inside: $\\Delta p'' = -G_0/D_p$. Outside: $\\Delta p'' = 0$.",
+    "why": "With infinite lifetime the recombination term $\\Delta p/\\tau$ vanishes; only diffusion and generation remain."
+   },
+   {
+    "title": "General solutions",
+    "body": "Inside: $\\Delta p = -\\frac{G_0}{2D_p}x^2 + C$ (symmetric, so no linear term). Outside ($x > 0$): $\\Delta p = A(3L - x)$, already zero at $3L$.",
+    "why": "The problem is symmetric about $x = 0$, so the slope at the centre is zero."
+   },
+   {
+    "title": "Match at x = L",
+    "body": "Slope: $-G_0L/D_p = -A$ → $A = G_0L/D_p$. Value: $-\\frac{G_0L^2}{2D_p} + C = 2AL$ → $C = \\frac{5G_0L^2}{2D_p}$.",
+    "why": "The density and the diffusion flux (∝ slope) must be continuous: no carriers appear or vanish at the boundary."
+   },
+   {
+    "title": "Result",
+    "body": "$\\Delta p(x) = \\frac{G_0}{2D_p}(5L^2 - x^2)$ for $|x| \\leq L$, and $\\frac{G_0L}{D_p}(3L - |x|)$ for $L \\leq |x| \\leq 3L$. Maximum $2.5\\,G_0L^2/D_p$ at $x = 0$.",
+    "why": "Check: total generation $2G_0L$ per unit area must leave through both ends: flux $D_p \\times G_0L/D_p = G_0L$ at each end. ✓"
+   }
+  ],
+  "answer": "$\\Delta p(x) = \\dfrac{G_0}{2D_p}(5L^2 - x^2)$ for $|x| \\leq L$; $\\Delta p(x) = \\dfrac{G_0L}{D_p}(3L - |x|)$ for $L \\leq |x| \\leq 3L$.",
+  "note": "Self-derived, not official: instruction 3 has no official answers yet. Computed and cross-checked with scripts (the profiles also with a numerical solver); compare with the official answers when they are published."
+ },
+ {
+  "id": "ex-7-8",
+  "title": "Uniform generation in a bar with surface recombination",
+  "source": "Instruction 3 · Book exercise 7.8 (self-derived)",
+  "concept": "continuity",
+  "context": "transport",
+  "prompt": "p-type c-Si bar of width W, uniform generation $G_L$, minority diffusion constant $D_n$, equilibrium density $n_0$. Steady state, no field, $n(0) = 0$, surface recombination velocity S at $x = W$. (a) Δn(x) for τ = ∞ and S = 0; (b) for τ = ∞ and S > 0; (c) sketch both.",
+  "steps": [
+   {
+    "title": "Equation and general solution",
+    "body": "$D_n\\Delta n'' = -G_L$ → $\\Delta n(x) = -\\frac{G_L}{2D_n}x^2 + C_1x + C_0$. At $x = 0$: $n = 0$, so $\\Delta n(0) = -n_0$ and $C_0 = -n_0$.",
+    "why": "$n_0$ is tiny in p-type silicon, so $\\Delta n(0) \\approx 0$; many textbook versions simply use $\\Delta n(0) = 0$."
+   },
+   {
+    "title": "(a) S = 0",
+    "body": "No surface recombination means no flow into the surface: $\\Delta n'(W) = 0$ → $C_1 = G_LW/D_n$: $\\Delta n(x) = \\frac{G_L}{D_n}\\left(Wx - \\frac{x^2}{2}\\right) - n_0$.",
+    "why": "A parabola with its top at the wall: all generated carriers diffuse back to $x = 0$."
+   },
+   {
+    "title": "(b) S > 0",
+    "body": "Flux into the surface equals surface recombination: $-D_n\\Delta n'(W) = S\\,\\Delta n(W)$. Substituting: $C_1 = \\dfrac{G_LW(1 + \\frac{SW}{2D_n}) + Sn_0}{D_n + SW}$.",
+    "why": "Checks: $S \\to 0$ gives (a); $S \\to \\infty$ gives $\\Delta n(W) = 0$, as at a contact."
+   },
+   {
+    "title": "(c) Sketch",
+    "body": "Both start at ≈ 0. (a) rises to its maximum $G_LW^2/2D_n$ at $x = W$ with zero slope. (b) lies below (a) everywhere, peaks inside the bar at $x^* = C_1D_n/G_L$ and drops towards $x = W$.",
+    "why": "The larger $SW/D_n$, the more the right end is pulled down; the diagram on this page shows it live."
+   }
+  ],
+  "answer": "(a) $\\Delta n = \\frac{G_L}{D_n}(Wx - \\frac{x^2}{2}) - n_0$. (b) $\\Delta n = -\\frac{G_L}{2D_n}x^2 + C_1x - n_0$ with $C_1 = \\frac{G_LW(1 + SW/2D_n) + Sn_0}{D_n + SW}$.",
+  "note": "Self-derived, not official: instruction 3 has no official answers yet. Computed and cross-checked with scripts (the profiles also with a numerical solver); compare with the official answers when they are published. The boundary condition at x = 0 is read as n(0) = 0 (Δn(0) = −n₀), see the flag on this page."
+ }
+]

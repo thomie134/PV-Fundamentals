@@ -1,0 +1,199 @@
+/*
+ * Design tokens: the single source of truth for colour, type, spacing and motion.
+ * Every component and every diagram reads these variables; never hard-code a colour.
+ * The style guide page (/style-guide) renders these tokens live.
+ *
+ * Diagram roles follow the lecture's conventions: electrons red (−), holes blue (+),
+ * photons/light yellow, conduction band warm wash, valence band cool wash.
+ * Role colours were checked with the dataviz palette validator (all-pairs, light + dark).
+ * Red↔yellow is weak for deuteranopia in dark mode, so electrons/holes/photons ALWAYS
+ * also differ by shape (circle with −/+, wavy arrow) and carry a direct label.
+ */
+:root {
+  color-scheme: light;
+
+  /* ---- Type ---- */
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-xs: 0.75rem;     /* 12px: tick labels, captions */
+  --text-sm: 0.875rem;    /* 14px: UI, readouts, popovers */
+  --text-base: 1rem;      /* 16px: body */
+  --text-md: 1.0625rem;   /* 17px: long-form prose */
+  --text-lg: 1.25rem;     /* 20px: h3 */
+  --text-xl: 1.5rem;      /* 24px: h2 */
+  --text-2xl: 2rem;       /* 32px: page title */
+  --text-3xl: 2.5rem;     /* 40px: hero */
+  --leading-tight: 1.25;
+  --leading-snug: 1.4;
+  --leading-normal: 1.65;
+  --weight-regular: 400;
+  --weight-medium: 520;
+  --weight-semibold: 620;
+  --weight-bold: 700;
+
+  /* ---- Spacing (4px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* ---- Layout ---- */
+  --prose-width: 44rem;
+  --wide-width: 68rem;
+  --header-height: 3.5rem;
+
+  /* ---- Shape ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+
+  /* ---- Colour: surfaces & ink (light) ---- */
+  --bg: #f6f5f2;
+  --surface-1: #fcfcfb;
+  --surface-2: #f0efec;
+  --surface-3: #e8e6e1;
+  --border: #e3e1dc;
+  --border-strong: #cdcac2;
+  --text-primary: #1b1b19;
+  --text-secondary: #52514e;
+  --text-muted: #6f6d67;
+
+  /* ---- Colour: the one accent (blue ramp) ---- */
+  --accent: #2a78d6;
+  --accent-strong: #1c5cab;  /* links / text on light surfaces (≥ 4.5:1) */
+  --term-ink: #2466bf;       /* glossary terms in running text (≥ 4.5:1 on bg) */
+  --accent-soft: #e5effb;    /* washes, selected states */
+  --accent-ring: rgba(42, 120, 214, 0.45);
+  --on-accent: #ffffff;
+
+  /* ---- Colour: status (always paired with icon + label) ---- */
+  --good: #0a7d0a;
+  --good-soft: #e3f3e3;
+  --bad: #c0392b;
+  --bad-soft: #fbe9e7;
+  --warn: #9a6400;
+  --warn-soft: #fbf1dc;
+
+  /* ---- Diagram tokens ---- */
+  --dg-surface: var(--surface-1);
+  --dg-ink: var(--text-primary);
+  --dg-ink-2: var(--text-secondary);
+  --dg-grid: #ebe9e4;
+  --dg-axis: #9b988f;
+  --dg-accent: #2a78d6;      /* series 1 / primary curve / holes */
+  --dg-hole: #2a78d6;
+  --dg-electron: #e34948;
+  --dg-photon: #eda100;
+  --dg-aux: #1baf7a;         /* secondary comparison series */
+  --dg-series-1: #2a78d6;
+  --dg-series-2: #eda100;
+  --dg-series-3: #1baf7a;
+  --dg-series-4: #e34948;
+  --dg-cb-fill: rgba(237, 161, 0, 0.13);
+  --dg-vb-fill: rgba(42, 120, 214, 0.12);
+  --dg-wash: rgba(42, 120, 214, 0.1);   /* area fills: series hue at ~10% */
+  --dg-wash-photon: rgba(237, 161, 0, 0.16);
+  --dg-line: 2px;
+  --dg-line-thin: 1px;
+  --dg-line-bold: 2.5px;
+  --dg-marker-r: 5px;
+
+  --shadow-pop: 0 1px 2px rgba(20, 20, 18, 0.06), 0 8px 28px rgba(20, 20, 18, 0.12);
+  --shadow-card: 0 1px 2px rgba(20, 20, 18, 0.04);
+}
+
+/* Dark theme: selected steps from the same ramps, validated against the dark surface. */
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) {
+    color-scheme: dark;
+    --bg: #121211;
+    --surface-1: #1a1a19;
+    --surface-2: #232321;
+    --surface-3: #2c2c29;
+    --border: #2f2f2c;
+    --border-strong: #45453f;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #9a998f;
+    --accent: #3987e5;
+    --accent-strong: #7fb1ee;
+    --term-ink: #8bb8ef;
+    --accent-soft: rgba(57, 135, 229, 0.16);
+    --accent-ring: rgba(57, 135, 229, 0.55);
+    --good: #4cc24c;
+    --good-soft: rgba(12, 163, 12, 0.16);
+    --bad: #f07a6e;
+    --bad-soft: rgba(208, 59, 59, 0.18);
+    --warn: #e2a740;
+    --warn-soft: rgba(250, 178, 25, 0.14);
+    --dg-grid: #2a2a28;
+    --dg-axis: #6f6e68;
+    --dg-accent: #3987e5;
+    --dg-hole: #3987e5;
+    --dg-electron: #e5605f;
+    --dg-photon: #b88a00;
+    --dg-aux: #199e70;
+    --dg-series-1: #3987e5;
+    --dg-series-2: #b88a00;
+    --dg-series-3: #199e70;
+    --dg-series-4: #e5605f;
+    --dg-cb-fill: rgba(184, 138, 0, 0.16);
+    --dg-vb-fill: rgba(57, 135, 229, 0.16);
+    --dg-wash: rgba(57, 135, 229, 0.14);
+    --dg-wash-photon: rgba(184, 138, 0, 0.2);
+    --shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #121211;
+  --surface-1: #1a1a19;
+  --surface-2: #232321;
+  --surface-3: #2c2c29;
+  --border: #2f2f2c;
+  --border-strong: #45453f;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #9a998f;
+  --accent: #3987e5;
+  --accent-strong: #7fb1ee;
+  --term-ink: #8bb8ef;
+  --accent-soft: rgba(57, 135, 229, 0.16);
+  --accent-ring: rgba(57, 135, 229, 0.55);
+  --good: #4cc24c;
+  --good-soft: rgba(12, 163, 12, 0.16);
+  --bad: #f07a6e;
+  --bad-soft: rgba(208, 59, 59, 0.18);
+  --warn: #e2a740;
+  --warn-soft: rgba(250, 178, 25, 0.14);
+  --dg-grid: #2a2a28;
+  --dg-axis: #6f6e68;
+  --dg-accent: #3987e5;
+  --dg-hole: #3987e5;
+  --dg-electron: #e5605f;
+  --dg-photon: #b88a00;
+  --dg-aux: #199e70;
+  --dg-series-1: #3987e5;
+  --dg-series-2: #b88a00;
+  --dg-series-3: #199e70;
+  --dg-series-4: #e5605f;
+  --dg-cb-fill: rgba(184, 138, 0, 0.16);
+  --dg-vb-fill: rgba(57, 135, 229, 0.16);
+  --dg-wash: rgba(57, 135, 229, 0.14);
+  --dg-wash-photon: rgba(184, 138, 0, 0.2);
+  --shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.45);
+}

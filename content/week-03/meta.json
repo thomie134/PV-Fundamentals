@@ -1,0 +1,327 @@
+{
+  "week": 3,
+  "title": "Charge transport, generation & recombination",
+  "subtitle": "How electrons and holes move (drift and diffusion), how light creates them, how they disappear again, and how far they get before they do.",
+  "lectureDate": "23 Nov 2026",
+  "chapters": "§6.5 + Ch. 7",
+  "status": "complete",
+  "files": {
+    "lecture": "Material/Week 3/2026_11_23_L3_Rudi_Charge transport.pdf",
+    "instruction": "Material/Week 3/instructions 3.pdf"
+  },
+  "prerequisites": {
+    "terms": [
+      "free-electron",
+      "hole",
+      "n-type",
+      "p-type",
+      "majority-carrier",
+      "minority-carrier",
+      "intrinsic-carrier-density",
+      "excess-carriers",
+      "quasi-fermi-level",
+      "electric-field",
+      "absorption-coefficient",
+      "lambert-beer",
+      "photon-flux"
+    ],
+    "foundations": [
+      "derivatives-odes",
+      "exp-log",
+      "units"
+    ],
+    "skills": [
+      "Read a slope: $\\mathrm{d}n/\\mathrm{d}x$ of a straight line is (change in n) / (distance), in cm⁻⁴",
+      "Keep every length in **cm** when densities are in cm⁻³ and D in cm²/s",
+      "Use Lambert–Beer from week 1: $\\Phi(x) = \\Phi_0 e^{-\\alpha x}$",
+      "Solve $y'' = -c$ (a parabola) and $y'' = y/L^2$ (exponentials) with two boundary conditions"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "drift",
+      "title": "Drift: carriers pushed by an electric field",
+      "summary": "Carriers always move randomly; an electric field adds a net drift velocity v = μξ. The drift current J = q(nμₙ + pμₚ)ξ, and the conductivity σ = q(nμₙ + pμₚ).",
+      "context": "transport",
+      "keywords": [
+        "random thermal motion",
+        "drift velocity",
+        "mobility",
+        "conductivity",
+        "resistivity",
+        "electric field"
+      ],
+      "diagrams": [
+        "drift-conductivity"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 16–17, 23–25"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 3, book ex. 7.6(h)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.5.1 (p. 58–59), eqs. 6.23–6.25"
+        }
+      ]
+    },
+    {
+      "id": "diffusion",
+      "title": "Diffusion: from crowded to empty",
+      "summary": "Random motion alone moves carriers from high to low concentration. The diffusion current is proportional to the gradient: Jₙ = qDₙ dn/dx, Jₚ = −qDₚ dp/dx. The Einstein relation links D and μ: D = μk_BT/q.",
+      "context": "transport",
+      "keywords": [
+        "concentration gradient",
+        "diffusion coefficient",
+        "Einstein relation",
+        "random walk"
+      ],
+      "diagrams": [
+        "diffusion-current"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 18–22"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2, book ex. 6.14"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.5.2 (p. 59–60), eqs. 6.26–6.29"
+        },
+        {
+          "kind": "answers",
+          "ref": "Answer book ex. 6.14, 6.15"
+        }
+      ]
+    },
+    {
+      "id": "generation",
+      "title": "Generation: light creates electron–hole pairs",
+      "summary": "A photon with E ≥ E_G creates one electron–hole pair; the excess energy thermalises. The generation rate follows the absorption profile: G(x) = (1 − R)Φ₀α e^{−αx}.",
+      "context": "transport",
+      "keywords": [
+        "photogeneration",
+        "thermalisation",
+        "non-absorption",
+        "generation rate",
+        "Lambert–Beer"
+      ],
+      "diagrams": [
+        "generation-profile"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 27–28"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2, book ex. 7.5(a)–(d)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §7.2.1 (p. 67–69), eqs. 7.2–7.8 and example p. 68–69"
+        },
+        {
+          "kind": "answers",
+          "ref": "Answer book ex. 7.5"
+        }
+      ]
+    },
+    {
+      "id": "recombination",
+      "title": "Recombination: how carriers disappear",
+      "summary": "Electron and hole annihilate and give their energy away: as a photon (radiative), to a third carrier (Auger), via a defect level in the gap (Shockley–Read–Hall) or via surface defects (surface recombination). Passivation reduces surface recombination.",
+      "context": "transport",
+      "keywords": [
+        "radiative",
+        "Auger",
+        "Shockley–Read–Hall",
+        "trap",
+        "surface recombination",
+        "dangling bonds",
+        "passivation"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 27–38"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §7.2.2 (p. 69–71), §7.3–7.5 (p. 72–79), eqs. 7.11–7.50"
+        }
+      ]
+    },
+    {
+      "id": "lifetime",
+      "title": "Lifetime and diffusion length",
+      "summary": "Under low injection every mechanism gives R = Δ/τ. Rates add, so 1/τ = Σ 1/τᵢ. A minority carrier diffuses a distance L = √(Dτ) before it recombines; L must be large compared with the cell for good collection.",
+      "context": "transport",
+      "keywords": [
+        "minority-carrier lifetime",
+        "low injection",
+        "diffusion length",
+        "lifetime tester",
+        "effective lifetime"
+      ],
+      "diagrams": [
+        "lifetime-explorer"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 35, 39–41"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 2, book ex. 7.5(e)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §7.2.2 (p. 70–72), eqs. 7.18–7.28; eqs. 7.39–7.48"
+        },
+        {
+          "kind": "answers",
+          "ref": "Answer book ex. 7.2, 7.3"
+        },
+        {
+          "kind": "external",
+          "ref": "Auger and radiative coefficients of c-Si: Dziewior & Schmid (1977); Trupke et al. (2003)",
+          "note": "Only used in the lifetime diagram."
+        }
+      ]
+    },
+    {
+      "id": "continuity",
+      "title": "The continuity equation: bookkeeping for carriers",
+      "summary": "The carrier density at a point changes by what flows in, what is generated and what recombines. In steady state without a field this becomes D Δ'' − Δ/τ + G = 0, which gives the carrier profiles of book ex. 7.5, 7.7 and 7.8.",
+      "context": "transport",
+      "keywords": [
+        "continuity equation",
+        "steady state",
+        "boundary conditions",
+        "surface recombination velocity",
+        "Poisson equation"
+      ],
+      "diagrams": [
+        "steady-state-profiles"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slide 42"
+        },
+        {
+          "kind": "instruction",
+          "ref": "Instruction 3, book ex. 7.7 and 7.8 (self-derived)"
+        },
+        {
+          "kind": "book",
+          "ref": "Book §6.5.3 (p. 61), eqs. 6.30–6.34; §7.5 (p. 79), eq. 7.50"
+        }
+      ]
+    },
+    {
+      "id": "pv-operation",
+      "title": "Putting it together: how a solar cell works",
+      "summary": "Absorption and generation, transport without recombination, separation at the junction, collection at the electrodes. Week 3 supplies the middle steps; weeks 4–5 add the junction.",
+      "context": "cell",
+      "keywords": [
+        "photovoltaic effect",
+        "separation",
+        "collection",
+        "p-n junction",
+        "load"
+      ],
+      "sources": [
+        {
+          "kind": "lecture",
+          "ref": "L3 slides 43–53"
+        },
+        {
+          "kind": "book",
+          "ref": "Book Ch. 7 introduction (p. 65)"
+        }
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "drift-conductivity",
+      "title": "Drift current and conductivity versus doping",
+      "concept": "drift",
+      "tryThis": "Compare 10¹⁶ cm⁻³ phosphorus with 10¹⁶ cm⁻³ boron: same number of carriers, different conductivity. Then find the doping of book ex. 7.6(h)."
+    },
+    {
+      "id": "diffusion-current",
+      "title": "A concentration gradient drives a diffusion current",
+      "concept": "diffusion",
+      "tryThis": "Load book ex. 6.14, then make the gradient twice as steep and watch the current double; flip to holes and see the sign change."
+    },
+    {
+      "id": "generation-profile",
+      "title": "Where light generates carriers",
+      "concept": "generation",
+      "tryThis": "Compare 450 nm with 1000 nm: blue light generates almost everything in the first micrometre, infrared light deep in the wafer. Then load book ex. 7.5."
+    },
+    {
+      "id": "lifetime-explorer",
+      "title": "Recombination mechanisms and the effective lifetime",
+      "concept": "lifetime",
+      "tryThis": "Start with a clean wafer (SRH lifetime 1 ms) and raise the doping: find where Auger recombination takes over. Then add defects."
+    },
+    {
+      "id": "steady-state-profiles",
+      "title": "Steady-state carrier profiles from the continuity equation",
+      "concept": "continuity",
+      "tryThis": "In book ex. 7.8, slide the surface recombination velocity from 0 to very large and watch the right end of the profile drop to zero."
+    }
+  ],
+  "notes": [
+    {
+      "type": "flag",
+      "text": "**Instruction 3 has no official answers yet.** All solutions to book ex. 7.6, 7.7 and 7.8 on this page are **self-derived, not official**. They are checked by independent computations (and the profiles of 7.7 and 7.8 by a numerical solver), but compare with the official answers when they appear."
+    },
+    {
+      "type": "difference",
+      "text": "**Book ex. 6.14 and 7.5 come from instruction 2** (week 2), but use lecture 3 material, so they are worked out here. Their official answers are in the answer book (ex. 6–7.5)."
+    },
+    {
+      "type": "erratum",
+      "text": "**Answer book ex. 7.5(c)–(e)** uses $e^{-\\alpha x} = 5.3 \\times 10^{-7}$ at 50 µm. With $\\alpha = 2.90 \\times 10^5$ m⁻¹: $e^{-14.5} = 5.0 \\times 10^{-7}$. Their Φ(50 µm) = 1.14 × 10¹⁵ m⁻²s⁻¹, G = 3.3 × 10²⁰ m⁻³s⁻¹ and Δn = 4.1 × 10¹⁴ m⁻³ are therefore about 5 % high; consistent values are 1.08 × 10¹⁵, 3.1 × 10²⁰ and 3.9 × 10¹⁴. Both are accepted in the questions."
+    },
+    {
+      "type": "flag",
+      "text": "**Answer book ex. 6.15** computes the field from n = 10¹⁵ cm⁻³, the *lowest* density in the gradient. The electron density changes across the 2 µm, so the field that cancels diffusion is not uniform: at n = 2.7 × 10¹⁶ cm⁻³ it would be only 128 V/cm. The question is ambiguous; know where the 3468 V/cm comes from."
+    },
+    {
+      "type": "flag",
+      "text": "**Book ex. 7.8: boundary condition at x = 0.** The text says the minority carrier *concentration* is zero, n(0) = 0, so Δn(0) = −n₀. Many textbook versions say the *excess* concentration is zero, Δn(0) = 0. Because n₀ is tiny in p-type silicon (≈ 10⁴ cm⁻³), the two give practically the same profile. The self-derived solution keeps −n₀ in and shows both."
+    },
+    {
+      "type": "difference",
+      "text": "**Notation.** The lecture (slide 35) writes $R_{\\mathrm{SRH}} = C_pN_T(p - p_0)$ with a capital C; the sheet (eq. 7.39) writes $c_pN_T(p-p_0)$, and keeps capital $C_n$, $C_p$ for the Auger coefficients (eq. 7.43). The lecture writes the continuity equation with $G_L + G_{th} - R_n$; the sheet (eq. 6.34) uses the *net* thermal rate $R_n$ and the external generation $G_n$. Same physics."
+    },
+    {
+      "type": "flag",
+      "text": "**Book p. 76** says lifetimes in c-Si solar cells ‘should be in range of tens of milliseconds’, just after calling 1 µs typical and ~1 ms the value for very pure material. That sentence looks inconsistent; don't memorise it. The lecture gives no target value."
+    },
+    {
+      "type": "external",
+      "text": "**Lifetime diagram data (not in the course material):** Auger coefficients of c-Si $C_n = 2.8 \\times 10^{-31}$ cm⁶/s and $C_p = 9.9 \\times 10^{-32}$ cm⁶/s (Dziewior & Schmid, 1977), radiative coefficient $B = 4.73 \\times 10^{-15}$ cm³/s (Trupke et al., 2003). They only serve to show trends; exam questions will give you any coefficient you need."
+    },
+    {
+      "type": "flag",
+      "text": "**Mobility is kept constant** at the sheet values (1360 and 450 cm²/Vs) in all diagrams. In reality it drops at high doping and high temperature (book p. 59); exercises give their own values (e.g. 1350 in ex. 6.15, 470 in ex. 7.6h, 1250 in the book example on p. 72)."
+    }
+  ]
+}

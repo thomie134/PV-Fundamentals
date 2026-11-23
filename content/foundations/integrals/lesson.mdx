@@ -1,0 +1,45 @@
+## An integral adds up slices
+
+An <Term id="integral" /> is the area under a curve. Picture cutting the area into thin vertical slices of width $\mathrm{d}x$ and height $f(x)$; each slice has area $f(x)\,\mathrm{d}x$, and the integral adds them all up:
+
+$$
+\int_a^b f(x)\,\mathrm{d}x
+$$
+
+<Ctx c="radiation">
+
+The unit of the result is (unit of $f$) × (unit of $x$). That is the whole reason integrals appear in week 1: a spectrum gives power **per nanometre**, so to get the total power you add up all the nanometre-wide slices.
+
+## The spectrum example
+
+The <Term id="spectral-irradiance" /> $I_{e\lambda}$ is in W m⁻² nm⁻¹. Integrating over wavelength (nm) gives W m⁻², the <Term id="irradiance" />:
+
+$$
+I_e = \int I_{e\lambda}\,\mathrm{d}\lambda
+$$
+
+For the <Term id="photon-flux" /> you integrate the photons per nanometre instead, $I_{e\lambda}\lambda/(hc)$, because each slice has its own photon energy.
+
+<Diagram id="riemann-spectrum" />
+
+## Two integrals you need by heart
+
+**A constant** is a rectangle: height × width.
+
+$$
+\int_{\lambda_1}^{\lambda_2} P\,\mathrm{d}\lambda = P\,(\lambda_2 - \lambda_1)
+$$
+
+**The variable itself** gives a trapezoid; its antiderivative is $x^2/2$:
+
+$$
+\int_{\lambda_1}^{\lambda_2} \lambda\,\mathrm{d}\lambda = \frac{1}{2}\left(\lambda_2^2 - \lambda_1^2\right)
+$$
+
+That second one is exactly where the factor 2 in book exercise 5.6(b) comes from: $\Phi = \frac{P}{2hc}(\lambda_2^2 - \lambda_1^2)$ for a band of constant spectral irradiance.
+
+<KeyIdea>
+Integral = sum of (height × width) slices. Check its unit: y-unit × x-unit. For real spectra the computer adds up thousands of thin slices; on paper the exam gives you rectangles or triangles.
+</KeyIdea>
+
+</Ctx>

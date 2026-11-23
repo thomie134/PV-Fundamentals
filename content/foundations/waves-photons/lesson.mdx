@@ -1,0 +1,40 @@
+<Ctx c="radiation">
+
+## Waves
+
+A wave is a repeating disturbance that travels. Two numbers describe it: the <Term id="wavelength" /> λ (distance from crest to crest) and the <Term id="frequency" /> ν (crests passing per second, in Hz). Their product is the speed: in one second, ν crests of length λ pass by, so
+
+$$
+c = \lambda\nu
+$$
+
+Light is an <Term id="electromagnetic-wave" />: oscillating electric and magnetic fields travelling at the <Term id="speed-of-light" /> $c = 2.998 \times 10^8$ m/s. In a material with refractive index $n$ it slows down to $c/n$. The frequency is fixed by the source, so the wavelength inside the material shrinks to $\lambda_0/n$ (book eq. 4.6: $\lambda = c/(n\nu)$).
+
+The size of the oscillation is the <Term id="amplitude" />; the intensity (power) goes with the amplitude **squared**. That is why reflectance is $r^2$ in the Fresnel equations.
+
+## Photons
+
+When light is absorbed or emitted, it behaves as separate packets: <Term id="photon">photons</Term>. Each carries an energy set by its frequency:
+
+$$
+E_{\mathrm{ph}} = h\nu = \frac{hc}{\lambda}
+$$
+
+with the <Term id="planck-constant" /> $h = 6.626 \times 10^{-34}$ J s. Because $h$ is tiny, one photon carries only ~10⁻¹⁹ J, which is why we use electron-volts: $E[\mathrm{eV}] \approx 1240/\lambda[\mathrm{nm}]$.
+
+<Diagram id="photon-calculator" />
+
+## Brighter is not bluer
+
+Two different things can change about light:
+
+- its **colour** (wavelength), which sets the energy *per photon*;
+- its **brightness** (irradiance), which sets *how many* photons arrive per second.
+
+A dim blue lamp sends fewer photons than a bright red one, but each blue photon carries more energy. For a solar cell this distinction is everything: the number of photons sets the current, the energy per photon decides whether they can be absorbed at all.
+
+<KeyIdea>
+Power = (number of photons per second) × (energy per photon). So the photon flux is $\Phi = I/E_{\mathrm{ph}} = I\lambda/(hc)$.
+</KeyIdea>
+
+</Ctx>

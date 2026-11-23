@@ -1,0 +1,117 @@
+{
+  "id": "exp-log",
+  "title": "Exponentials and logarithms",
+  "summary": "Exponential decay loses the same fraction per step; ln undoes exp; log axes turn exponentials into straight lines. Used in absorption (week 1), carrier densities (week 2) and diffusion (week 3).",
+  "order": 4,
+  "context": "optics",
+  "weeks": [
+    1,
+    2,
+    3
+  ],
+  "terms": [
+    "exponential-function",
+    "natural-logarithm",
+    "log-scale",
+    "lambert-beer",
+    "penetration-depth"
+  ],
+  "diagrams": [
+    {
+      "id": "exp-decay",
+      "title": "Exponential decay, linear and log axis",
+      "tryThis": "Change the decay length and watch where the curve crosses 37 % and 10 %; then switch to a log axis and see the curve become a straight line."
+    }
+  ],
+  "checks": [
+    {
+      "id": "fe-thickness-90",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Solving with ln",
+      "concept": "absorption",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "A material has α = 100 cm⁻¹. How thick (in µm) must a layer be to absorb 90 % of the light in one pass?",
+      "answer": {
+        "value": 230.3,
+        "unit": "µm",
+        "tolerance": 0.01
+      },
+      "hints": [
+        "90 % absorbed means 10 % left.",
+        "$e^{-\\alpha t} = 0.1 \\Rightarrow t = \\ln(10)/\\alpha$",
+        "ln 10 = 2.303; then convert cm to µm."
+      ],
+      "solution": [
+        "$e^{-\\alpha t} = 0.1$, take ln: $-\\alpha t = \\ln 0.1 = -2.303$.",
+        "$t = 2.303/100\\,\\mathrm{cm^{-1}} = 0.0230$ cm = 230 µm."
+      ]
+    },
+    {
+      "id": "fe-two-depths",
+      "type": "numeric",
+      "week": 0,
+      "topic": "e^-x",
+      "concept": "absorption",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "What percentage of the light is left after two penetration depths ($z = 2/\\alpha$)?",
+      "answer": {
+        "value": 13.53,
+        "unit": "%",
+        "tolerance": 0.01
+      },
+      "hints": [
+        "One penetration depth leaves 1/e.",
+        "$I/I_0 = e^{-\\alpha z} = e^{-2}$",
+        "e ≈ 2.718."
+      ],
+      "solution": [
+        "$I/I_0 = e^{-2} = 0.135 = 13.5\\,\\%$ (and $e^{-1} = 37\\,\\%$ after one depth)."
+      ]
+    },
+    {
+      "id": "fe-log-axis",
+      "type": "mcq",
+      "week": 0,
+      "topic": "Log scales",
+      "concept": "absorption",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "You plot $y = e^{-x/L}$ with a logarithmic y-axis and a linear x-axis. What does the curve look like?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A straight line going down",
+          "correct": true,
+          "feedback": "Correct: $\\ln y = -x/L$ is linear in x, and a log axis plots ln y (up to a constant factor)."
+        },
+        {
+          "id": "b",
+          "text": "A curve that flattens out towards zero",
+          "feedback": "That is what you see on a *linear* y-axis. On a log axis the curve never reaches zero; every equal step in x drops it by the same factor."
+        },
+        {
+          "id": "c",
+          "text": "A parabola",
+          "feedback": "No squares are involved: $\\ln y = -x/L$ is a straight line."
+        },
+        {
+          "id": "d",
+          "text": "A horizontal line",
+          "feedback": "That would mean y is constant. y keeps falling by a fixed factor per step."
+        }
+      ],
+      "hints": [
+        "Take the logarithm of both sides.",
+        "$\\ln y = -x/L$",
+        "What kind of graph is ‘something = constant × x’?"
+      ],
+      "solution": [
+        "$\\ln(e^{-x/L}) = -x/L$: linear in x.",
+        "On a log y-axis this is a straight line with slope −1/L (per factor e). This is why absorption coefficients and carrier densities are always plotted on log axes."
+      ]
+    }
+  ]
+}

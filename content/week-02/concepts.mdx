@@ -1,0 +1,327 @@
+<Concept id="si-crystal">
+
+A <Term id="semiconductor" /> is defined by its <Term id="conductivity" /> $\sigma$ (lecture 2 slide 12):
+
+- conductors: $\sigma$ above $10^4$ Ω⁻¹cm⁻¹,
+- semiconductors: between $10^{-8}$ and $10^4$ Ω⁻¹cm⁻¹,
+- insulators: below $10^{-8}$ Ω⁻¹cm⁻¹.
+
+What makes semiconductors special is not the value itself but that it can be **controlled** over many orders of magnitude, by doping, temperature and light. Most solar cells (about 85 % of 2021 production, slide 7) are made of crystalline silicon.
+
+Solid silicon comes in three forms: <Term id="monocrystalline" /> (one unbroken lattice, no grain boundaries), <Term id="polycrystalline" /> (many crystal grains, grain boundaries in between) and <Term id="amorphous" /> (no long-range order).
+
+### The silicon atom
+
+Silicon has <Term id="atomic-number" /> 14: configuration $1s^2\,2s^2 2p^6\,3s^2 3p^2$. The two inner shells are full; the outer shell holds only **4** of the 8 possible electrons. These 4 <Term id="valence-electron">valence electrons</Term> each form a <Term id="covalent-bond" /> with a neighbour, so every Si atom has 4 neighbours, at bond angles of 109.5°.
+
+<Hint title="Atoms refresher">
+If shells, valence electrons and atomic numbers feel rusty, the Foundations lesson [Atoms, shells and valence electrons](/foundations/atoms-electrons) covers exactly what week 2 needs.
+</Hint>
+
+### Counting atoms: the unit cell
+
+The repeating block of the crystal is the diamond-lattice <Term id="unit-cell" />, a cube with edge $a = 5.43 \times 10^{-10}$ m (the <Term id="lattice-constant" />). Atoms on corners and faces are shared with neighbouring cells:
+
+$$
+\underbrace{8 \times \tfrac{1}{8}}_{\text{corners}} + \underbrace{6 \times \tfrac{1}{2}}_{\text{faces}} + \underbrace{4 \times 1}_{\text{inside}} = 8 \text{ atoms per cell}
+$$
+
+So the atom density is
+
+$$
+N_{\mathrm{Si}} = \frac{8}{a^3} = \frac{8}{(5.43 \times 10^{-8}\,\mathrm{cm})^3} = 5.0 \times 10^{22}\,\mathrm{cm^{-3}}
+$$
+
+<KeyIdea>
+c-Si: 4 valence electrons, 4 covalent bonds per atom, 5 × 10²² atoms per cm³. Remember the last number: every “how many atoms per carrier” question uses it.
+</KeyIdea>
+
+</Concept>
+
+<Concept id="electrons-holes">
+
+The lecture uses the **bonding model**: circles are atom cores, and each line between them is one shared electron (two lines per bond).
+
+At 0 K every valence electron sits in a bond and nothing can move: silicon is an insulator. At higher temperature, thermal vibrations occasionally break a bond. The freed electron is mobile: a <Term id="free-electron" />. The empty place in the bond is a <Term id="hole" />. A neighbouring bond electron can jump into it, which moves the empty place the other way. A hole therefore behaves as a mobile **positive** charge, $+q$.
+
+<KeyIdea>
+Breaking one bond always creates **two** carriers: one electron and one hole, an <Term id="electron-hole-pair" />. That is why an undoped (<Term id="intrinsic-semiconductor">intrinsic</Term>) semiconductor has exactly as many electrons as holes: $n = p = n_i$.
+</KeyIdea>
+
+A photon with enough energy breaks a bond in exactly the same way (slides 27–30). Absorption is the first step of the photovoltaic effect; the electron and the hole are the two charges a solar cell must keep apart and collect.
+
+How many bonds are broken at 300 K? About $10^{10}$ per cm³ (more precisely 9.5 × 10⁹, see below). With 5 × 10²² atoms per cm³ that is one free electron per $5 \times 10^{12}$ atoms (instruction 2 Q1d).
+
+</Concept>
+
+<Concept id="energy-bands">
+
+Instead of drawing positions, we draw the **energy** of the electrons. In a single atom electrons can only have discrete energies; in a crystal those levels spread into bands:
+
+- the <Term id="valence-band" /> (VB): energies of electrons that sit in bonds; its top is $E_V$;
+- the <Term id="conduction-band" /> (CB): energies of electrons freed from the bonds; its bottom is $E_C$;
+- in between, no allowed states: the <Term id="bandgap" />,
+
+$$
+E_G = E_C - E_V
+$$
+
+(eq. 6.1, on the sheet). For c-Si at 300 K, $E_G = 1.12$ eV. A free electron is drawn as a dot in the CB, a hole as an empty circle in the VB. Freeing an electron means lifting it across the gap, which costs at least $E_G$.
+
+### Direct and indirect bandgaps
+
+Electrons also have a crystal momentum. In a <Term id="direct-bandgap" /> material (GaAs) the top of the VB and the bottom of the CB sit at the same momentum, so a photon alone can lift an electron. In an <Term id="indirect-bandgap" /> material like silicon they don't: the electron also needs momentum, which comes from a lattice vibration, a <Term id="phonon" />.
+
+<KeyIdea>
+Because absorption in silicon needs a photon *and* a phonon, silicon absorbs weakly near its bandgap (small α in the infrared, week 1). That is why c-Si wafers are much thicker than GaAs layers, and why light trapping matters.
+</KeyIdea>
+
+<GoDeeper title="Book: the same idea for recombination" kind="book">
+Book §7.1 (p. 66, Fig. 7.1) shows the energy–momentum (dispersion) diagram. The reverse process, an electron falling back while emitting a photon, also needs a phonon in silicon. Radiative recombination is therefore rare in c-Si and common in GaAs. Week 3 picks this up.
+</GoDeeper>
+
+</Concept>
+
+<Concept id="carrier-statistics">
+
+How many electrons are in the conduction band? The book and lecture answer it in three steps (slide 64, book Fig. 6.5), always in <Term id="thermal-equilibrium" />: no light, no voltage.
+
+**1. Where can electrons be?** The <Term id="density-of-states" /> $g(E)$ counts the allowed states per volume and per energy. Near the band edges it grows like a square root (eq. 6.2):
+
+$$
+g_C(E) = 4\pi\left(\frac{2m_n^*}{h^2}\right)^{3/2}\sqrt{E - E_C}, \qquad g_V(E) = 4\pi\left(\frac{2m_p^*}{h^2}\right)^{3/2}\sqrt{E_V - E}
+$$
+
+with the effective masses $m_n^*$ and $m_p^*$. You will not need to evaluate these; know the shape: zero at the band edge, growing into the band, zero in the gap.
+
+<Flag title="Typo in the book">
+Book eq. 6.2b prints $\sqrt{E - E_V}$, which is not real for energies inside the valence band. Lecture 2 slide 39 prints the same. The square root must be $\sqrt{E_V - E}$ (the states grow *downwards* into the valence band).
+</Flag>
+
+**2. Which states are filled?** The <Term id="fermi-dirac" /> distribution gives the probability that a state at energy $E$ holds an electron (eq. 6.3):
+
+$$
+f(E) = \frac{1}{1 + \exp\left(\frac{E - E_F}{k_BT}\right)}
+$$
+
+The <Term id="fermi-level" /> $E_F$ is the energy where $f = \tfrac12$. At 0 K, $f$ is a step: everything below $E_F$ full, everything above empty. At higher temperature the step softens over a few times the <Term id="thermal-energy" /> $k_BT$ (0.0259 eV at 300 K).
+
+<Diagram id="fermi-dirac" />
+
+**3. Multiply and add up.** The electron density at energy $E$ is (states) × (probability filled); for holes use the probability that a state is *empty*, $1 - f$ (eq. 6.4–6.5):
+
+$$
+n = \int_{E_C}^{E_{\mathrm{top}}} g_C(E)\,f(E)\,\mathrm{d}E, \qquad p = \int_{E_{\mathrm{bottom}}}^{E_V} g_V(E)\,\left[1 - f(E)\right]\mathrm{d}E
+$$
+
+<Diagram id="carrier-statistics" />
+
+### The Boltzmann approximation
+
+In the conduction band of a normal semiconductor, $E - E_F$ is many $k_BT$. Then the exponential dominates the denominator, and the 1 can be dropped (slide 47):
+
+$$
+f(E) \approx \exp\left(-\frac{E - E_F}{k_BT}\right) \quad \text{for } E - E_F \geq 3k_BT \approx 0.077\ \mathrm{eV}
+$$
+
+This <Term id="boltzmann-approximation" /> is what turns the integral into the simple formulas of the next concept. At exactly $3k_BT$ the two differ by about 5 %; further away the difference vanishes.
+
+<Hint title="What does 3kT mean in numbers?">
+$k_BT = 1.381 \times 10^{-23} \times 300 = 4.14 \times 10^{-21}$ J $= 0.0259$ eV. Three times that is 0.078 eV. Compared with the 1.12 eV gap this is tiny, so in c-Si the condition almost always holds.
+</Hint>
+
+</Concept>
+
+<Concept id="carrier-density">
+
+Doing the integrals with the Boltzmann approximation gives the two most-used equations of the week (eq. 6.6, **on the sheet**):
+
+$$
+n = N_C \exp\left(\frac{E_F - E_C}{k_BT}\right), \qquad p = N_V \exp\left(\frac{E_V - E_F}{k_BT}\right)
+$$
+
+$N_C$ and $N_V$ are the <Term id="effective-density-of-states">effective densities of states</Term>: the whole band acts as if it had $N_C$ states sitting right at its edge. For c-Si at 300 K, $N_C = 3.22 \times 10^{19}$ cm⁻³ and $N_V = 1.83 \times 10^{19}$ cm⁻³ (on the sheet). Read eq. 6.6 as: *every $k_BT$ that $E_F$ lies below $E_C$ divides $n$ by $e$.*
+
+These formulas hold when $E_F$ is at least $3k_BT$ away from both band edges: a <Term id="non-degenerate" /> semiconductor.
+
+### The intrinsic carrier density
+
+Multiply the two equations. $E_F$ drops out (eq. 6.9):
+
+$$
+np = n_i^2 = N_C N_V \exp\left(-\frac{E_G}{k_BT}\right)
+$$
+
+For intrinsic material $n = p = n_i$, the <Term id="intrinsic-carrier-density" />. Lecture 2's example (slide 50) for c-Si:
+
+$$
+n_i = \sqrt{3.22 \times 10^{19} \times 1.83 \times 10^{19}}\;\exp\left(-\frac{1.12}{2 \times 0.0258}\right) = 9.09 \times 10^9\ \mathrm{cm^{-3}} \approx 10^{10}\ \mathrm{cm^{-3}}
+$$
+
+<Flag title="Three answers for the same nᵢ">
+Lecture: 9.09 × 10⁹ cm⁻³ ($k_BT = 0.0258$ eV). Instruction 2: 9.68 × 10⁹ cm⁻³ ($k_B = 1.38 \times 10^{-23}$, $e = 1.60 \times 10^{-19}$). Formula-sheet constants: 9.50 × 10⁹ cm⁻³. The exponent is about 22, so a 0.3 % change in $k_BT$ moves nᵢ by about 6 %. All three are correct for their inputs; the questions on this site accept all three. The book text uses 1.5 × 10¹⁰ cm⁻³ (an older value).
+</Flag>
+
+<KeyIdea>
+$n_i$ depends only on the material ($E_G$, $N_C$, $N_V$) and the temperature, and very strongly on both: the bandgap sits in the exponent. With the same $N_C$ and $N_V$, a 0.66 eV gap (like germanium) gives thousands of times more intrinsic carriers than silicon, and a 1.42 eV gap (like GaAs) hundreds of times fewer.
+</KeyIdea>
+
+<Diagram id="ni-temperature" />
+
+### The intrinsic Fermi level
+
+Setting $n = p$ and solving for $E_F$ gives the intrinsic Fermi level (eq. 6.11, slide 52):
+
+$$
+E_{Fi} = \frac{E_C + E_V}{2} + \frac{k_BT}{2}\ln\left(\frac{N_V}{N_C}\right) = E_C - \frac{E_G}{2} + \frac{k_BT}{2}\ln\left(\frac{N_V}{N_C}\right)
+$$
+
+With $E_C = 0$: $E_{Fi} = -0.56 - 0.007 = -0.567$ eV. It sits just below midgap, because the valence band has fewer effective states than the conduction band. Instruction 2 Q1(e) finds the same from $E_C - E_F = k_BT\ln(N_C/n_i) = 0.57$ eV.
+
+<GoDeeper title="Derivation: E_Fi in three lines" kind="derivation">
+
+Start from $n = p$ with eq. 6.6:
+
+$$
+N_C\,e^{(E_{Fi}-E_C)/k_BT} = N_V\,e^{(E_V-E_{Fi})/k_BT}
+$$
+
+Take the logarithm of both sides:
+
+$$
+\ln N_C + \frac{E_{Fi}-E_C}{k_BT} = \ln N_V + \frac{E_V-E_{Fi}}{k_BT}
+$$
+
+Collect $E_{Fi}$: $2E_{Fi} = E_C + E_V + k_BT\ln(N_V/N_C)$. Divide by 2. Not on the sheet, but quick to derive in the exam.
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="doping">
+
+<Term id="doping">Doping</Term> replaces a few Si atoms by atoms with one valence electron more or less (slides 55–58, book Fig. 6.3):
+
+- **Phosphorus** (5 valence electrons): four form bonds, the fifth is only weakly bound and is freed by thermal energy at room temperature. P is a <Term id="donor" />: it adds a free electron and becomes a fixed positive ion $N_D^+$. The material becomes <Term id="n-type" />.
+- **Boron** (3 valence electrons): one bond stays incomplete. It grabs an electron from a neighbouring bond, which leaves a hole. B is an <Term id="acceptor" />: it adds a hole and becomes a fixed negative ion $N_A^-$. The material becomes <Term id="p-type" />.
+
+Typical doping is $10^{14}$ to $10^{20}$ cm⁻³ (slide 60, book Fig. 6.4): still at most one dopant per 500 Si atoms.
+
+### Charge neutrality
+
+The local charge density is (eq. 6.12, slide 59)
+
+$$
+\rho = q\left(p + N_D^+ - n - N_A^-\right)
+$$
+
+A uniformly doped semiconductor in equilibrium is neutral everywhere, $\rho = 0$. With all dopants ionised ($N_D^+ \approx N_D$, $N_A^- \approx N_A$), this is the <Term id="charge-neutrality" /> equation (eq. 6.15):
+
+$$
+p + N_D - n - N_A = 0
+$$
+
+<KeyIdea>
+Doping does **not** charge the crystal. A phosphorus atom brings one extra electron *and* one extra proton (instruction 2 Q2c). The free electron and the fixed P⁺ ion balance each other.
+</KeyIdea>
+
+### The law of mass action
+
+Because $np = n_i^2$ does not depend on $E_F$, it holds in doped material too: the <Term id="law-of-mass-action" /> (slide 61). In n-type material ($N_A = 0$, $N_D \gg n_i$) neutrality gives $n \approx N_D$, and then (eq. 6.18)
+
+$$
+p = \frac{n_i^2}{n} \approx \frac{n_i^2}{N_D}
+$$
+
+The dopant-supplied carriers are the <Term id="majority-carrier">majority carriers</Term>; the other type are the <Term id="minority-carrier">minority carriers</Term>.
+
+**Instruction 2 Q2.** $10^{17}$ cm⁻³ phosphorus: $n = 10^{17} + 9.68 \times 10^9 \approx 10^{17}$ cm⁻³, and
+
+$$
+p = \frac{(9.68 \times 10^9)^2}{10^{17}} = 937\ \mathrm{cm^{-3}}
+$$
+
+Doping raised $n$ ten-million-fold and *lowered* $p$ by the same factor. The instruction answer explains why: holes are still created at the same thermal rate, but with $10^7$ times more electrons around they recombine $10^7$ times faster.
+
+<GoDeeper title="When is n ≈ N_D not good enough?">
+
+Neutrality plus mass action is a quadratic equation for $n$. Its exact solution (for $N_A = 0$) is
+
+$$
+n = \frac{N_D}{2} + \sqrt{\left(\frac{N_D}{2}\right)^2 + n_i^2}
+$$
+
+For $N_D \gg n_i$ this is $N_D$; for $N_D \ll n_i$ it is $n_i$. The approximation fails only when $n_i$ comes close to $N_D$: at high temperature (book ex. 7.6 at 727 °C) or for very light doping. The doping explorer below uses the exact formula.
+
+</GoDeeper>
+
+<Flag title="Not on the formula sheet">
+Charge neutrality, the law of mass action and $n_i^2 = N_CN_Ve^{-E_G/k_BT}$ are **not** on the equation sheet. Learn them; they are short.
+</Flag>
+
+</Concept>
+
+<Concept id="fermi-level-doped">
+
+Doping moves the Fermi level. Put $n = N_D$ into eq. 6.6a (and $p = N_A$ into 6.6b) and solve for the energy (eq. 6.22):
+
+$$
+E_C - E_F = k_BT\ln\left(\frac{N_C}{N_D}\right) \quad \text{(n-type)}, \qquad E_F - E_V = k_BT\ln\left(\frac{N_V}{N_A}\right) \quad \text{(p-type)}
+$$
+
+**Instruction 2 Q2(f) / book example p. 57.** $N_D = 10^{17}$ cm⁻³:
+
+$$
+E_C - E_F = 0.0259 \times \ln\left(\frac{3.22 \times 10^{19}}{10^{17}}\right) = 0.149\ \mathrm{eV}
+$$
+
+$E_F$ moved from 0.567 eV below $E_C$ (intrinsic) to 0.149 eV below: **0.42 eV up**. More electrons in the CB, fewer holes in the VB.
+
+<KeyIdea>
+Each factor 10 more doping moves $E_F$ by $k_BT\ln 10 \approx 0.060$ eV closer to the band edge. n-type: $E_F$ above $E_{Fi}$, towards $E_C$. p-type: below, towards $E_V$.
+</KeyIdea>
+
+The dopants also add allowed levels inside the gap (book Fig. 6.7, slide 64): <Term id="dopant-level">donor levels</Term> $E_D$ just below $E_C$ and acceptor levels $E_A$ just above $E_V$. They are drawn dashed because those states are localised at the dopant atoms. Because they sit so close to the band edges, room-temperature thermal energy ionises almost all dopants.
+
+<Diagram id="doping-explorer" />
+
+<Flag title="Lecture 2 slide 62: N_D = 10²⁰ cm⁻³">
+The slide gives $E_C - E_F = 0.04$ eV for $N_D = 10^{20}$ cm⁻³. The formula gives $0.0259\ln(3.22 \times 10^{19}/10^{20}) = -0.03$ eV: the Fermi level lies **inside** the conduction band, because $N_D > N_C$. The book notes this on p. 57. Such a heavily doped semiconductor is *degenerate*, and eq. 6.22 is not valid there. The p-type example on the same slide ($N_A = 10^{17}$, $E_F - E_V = 0.14$ eV) is correct.
+</Flag>
+
+</Concept>
+
+<Concept id="quasi-fermi">
+
+Illumination creates extra electron–hole pairs, $\Delta n = \Delta p$: <Term id="excess-carriers" />. The semiconductor is no longer in equilibrium, and $np > n_i^2$. One Fermi level can no longer describe both carrier types. Instead each gets its own <Term id="quasi-fermi-level" /> (eq. 7.51, **on the sheet**):
+
+$$
+n = N_C\exp\left(\frac{E_{Fn} - E_C}{k_BT}\right), \qquad p = N_V\exp\left(\frac{E_V - E_{Fp}}{k_BT}\right)
+$$
+
+Multiplying gives (eq. 7.52, slide 71)
+
+$$
+np = n_i^2\exp\left(\frac{E_{Fn} - E_{Fp}}{k_BT}\right)
+$$
+
+In the dark $E_{Fn} = E_{Fp} = E_F$ and this is the law of mass action again.
+
+**Lecture example (slide 69).** n-type, $N_D = 10^{18}$ cm⁻³, light generates $\Delta n = \Delta p = 10^{15}$ cm⁻³:
+
+- electrons: $n = 10^{18} + 10^{15} \approx 10^{18}$, so $E_C - E_{Fn} = 0.09$ eV: the same as in the dark;
+- holes: $p$ goes from $10^2$ to $10^{15}$ cm⁻³, so $E_{Fp} - E_V = 0.0259\ln(1.83 \times 10^{19}/10^{15}) = 0.25$ eV: a huge move from about 1.03 eV in the dark.
+
+<KeyIdea>
+Under normal light only the **minority** carrier density changes much, so only the minority quasi-Fermi level moves. The splitting $E_{Fn} - E_{Fp}$ (here 0.78 eV) is the energy available per electron–hole pair: it is what a solar cell can turn into voltage (week 5).
+</KeyIdea>
+
+<Diagram id="quasi-fermi" />
+
+The lecture's water analogy (slide 72): electrons in the conduction band are a mountain lake, electrons in the valence band the ocean. The difference in water level, not the height of the mountain, is what a water wheel (the solar cell) can use.
+
+<GoDeeper title="Quasi-Fermi levels and current (book §7.6)" kind="book">
+Book eq. 7.53: $J_N = n\mu_n \nabla E_{Fn}$ and $J_P = p\mu_p \nabla E_{Fp}$. A tilted quasi-Fermi level means a current flows; a flat one means no current. Mobility $\mu$ is a week 3 topic; these equations return in the junction weeks.
+</GoDeeper>
+
+</Concept>

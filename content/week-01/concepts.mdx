@@ -1,0 +1,410 @@
+<Concept id="energy-power">
+
+<Term id="energy">Energy</Term> is the capacity to do work, produce change or transfer heat, and it is **conserved**: it can only be converted from one form into another. Lecture 1 sorts the forms into *potential* (chemical, mechanical, nuclear, gravitational) and *kinetic* (motion, radiant, electrical, thermal). Photovoltaics is the direct conversion of one kinetic form, radiant energy, into another, electrical energy.
+
+Two quantities keep coming back:
+
+- **Work** (energy transferred) is force times distance: $W = F s$, in joule (1 J = 1 N m). Lifting a 0.1 kg tomato by 1 m against gravity costs $W = mgh = 0.1 \times 10 \times 1 = 1\,\mathrm{J}$.
+- <Term id="power">Power</Term> is energy per unit time, $P = \mathrm{d}E/\mathrm{d}t$, in watt (1 W = 1 J/s). A cyclist pushing against 15 N of drag at 10 m/s converts $P = F v = 150\,\mathrm{W}$.
+
+Energy has several everyday units: the <Term id="kilowatt-hour" /> (1 kWh = 3.6 × 10⁶ J) on electricity bills and for yearly sunshine, and the <Term id="electron-volt" /> (1 eV = 1.602 × 10⁻¹⁹ J) for single electrons and photons.
+
+<Hint title="Units refresher">
+Most week 1 mistakes are unit slips, not physics. If kWh, eV or nm feel shaky, the Foundations lesson [Units, prefixes and conversions](/foundations/units) takes ten minutes.
+</Hint>
+
+### Is energy consumed by a solar cell?
+
+No, and the lecture’s analogy explains why. A water wheel extracts work from water *flowing* from a mountain lake down to the sea; with both at the same level nothing flows and no work can be done. A heat engine works on heat flowing from hot coal to a cold ocean. In the same way, a plant or a solar cell sits in the <Term id="energy-flow">radiative energy flow</Term> from the Sun (≈ 6000 K) to cold empty space (≈ 3 K). In a solar cell, **the electrons play the role of the water**: light lifts them up, and they release that energy in the external circuit.
+
+<KeyIdea>
+A solar cell does not destroy energy; it diverts part of the energy flowing from the hot Sun to cold space into an electric current. What it does not convert ends up as heat or is reflected.
+</KeyIdea>
+
+The flow is enormous: the Sun radiates 3.8 × 10²⁶ W, and the Earth intercepts about 1.7 × 10¹⁷ W, roughly 8000 times humanity’s total energy use (2 × 10¹³ W).
+
+<GoDeeper title="Where does 1.7 × 10¹⁷ W come from?">
+
+The Earth catches sunlight on its cross-section, a disc of radius $R_E = 6.4 \times 10^6$ m, at the AM0 irradiance of about 1361 W/m²:
+
+$$
+P = 1361 \times \pi (6.4 \times 10^6)^2 \approx 1.75 \times 10^{17}\,\mathrm{W}
+$$
+
+<Flag title="Erratum in the book">The book’s Table 5.1 says 1.7 × 10¹⁸ W; the lecture’s 1.7 × 10¹⁷ W is the correct value.</Flag>
+
+</GoDeeper>
+
+### The photovoltaic effect in four steps
+
+Lecture 1 previews the whole course with a c-Si <Term id="solar-cell" />: a p-type wafer with a thin n-type layer on top (the junction), an <Term id="anti-reflective-coating" /> and two electrodes. The <Term id="photovoltaic-effect" /> then happens in four steps:
+
+1. **Absorption & generation**: a photon is absorbed and creates an <Term id="electron-hole-pair" /> (weeks 1–2).
+2. **Transport**: the carriers move through the material without recombining (week 3).
+3. **Separation**: the junction pushes electrons and holes to opposite sides (weeks 4–5).
+4. **Collection**: the electrodes deliver the current to a load.
+
+<GoDeeper title="Preview: the J–V curve (week 5)">
+
+The lecture already shows the current–voltage curve of an illuminated cell. At $V = 0$ it gives its <Term id="short-circuit-current" />; with no current flowing it shows the <Term id="open-circuit-voltage" />. Somewhere in between, $P = IV$ is maximal (the maximum power point). Two numbers summarise it: the <Term id="fill-factor" /> $\mathit{FF} = P_{\max}/(I_{sc} V_{oc})$ and the <Term id="efficiency" /> $\eta = P_{\max}/P_{\mathrm{in}}$. Both are on the formula sheet (eq. 9.2, 9.6) and treated in week 5.
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="photons">
+
+Light is an <Term id="electromagnetic-wave" />: an oscillating electric and magnetic field travelling at the <Term id="speed-of-light" /> $c = 2.998 \times 10^8$ m/s in vacuum. Like any wave it has a <Term id="wavelength" /> λ (distance between crests) and a <Term id="frequency" /> ν (crests per second). In a material with refractive index $n$ the wave slows down to $c/n$, so (eq. 4.6):
+
+$$
+\lambda = \frac{c}{n\nu}
+$$
+
+The frequency stays the same when light enters another material; the wavelength shrinks.
+
+But when light is absorbed or emitted, it behaves as a stream of particles: <Term id="photon">photons</Term>. Each photon carries a fixed amount of energy, set by its frequency or wavelength (eq. 3.1):
+
+$$
+E_{\mathrm{ph}} = h\nu = \frac{hc}{\lambda}
+$$
+
+with the <Term id="planck-constant" /> $h = 6.626 \times 10^{-34}$ J s. Shorter wavelength means more energy per photon.
+
+<KeyIdea>
+Blue photons carry more energy than red ones; infrared photons carry the least. The energy per photon depends only on λ, never on how bright the light is. Brightness is the *number* of photons.
+</KeyIdea>
+
+**Lecture example.** What is the energy of a red photon, λ = 700 nm? Convert to metres first:
+
+$$
+E_{\mathrm{ph}} = \frac{(6.626 \times 10^{-34})(2.998 \times 10^{8})}{700 \times 10^{-9}} = 2.84 \times 10^{-19}\,\mathrm{J}
+$$
+
+Dividing by $q = 1.602 \times 10^{-19}$ J/eV gives $E_{\mathrm{ph}} = 1.77\,\mathrm{eV}$.
+
+<Hint title="A shortcut worth knowing">
+$hc = 1240$ eV nm, so $E\,[\mathrm{eV}] \approx 1240/\lambda\,[\mathrm{nm}]$: 700 nm → 1.77 eV, 500 nm → 2.48 eV, 1000 nm → 1.24 eV. It is not on the formula sheet, but you can derive it from $h$, $c$ and $q$ in one line.
+</Hint>
+
+The <Term id="electromagnetic-spectrum" /> spans from gamma rays to radio waves. Visible light is only 350–750 nm; sunlight at the Earth’s surface runs from about 300 nm (UV) to 2500 nm (infrared), i.e. photon energies from about 4 eV down to 0.5 eV, which is exactly the range of semiconductor bandgaps.
+
+<GoDeeper title="Wave or particle?">
+
+This is <Term id="wave-particle-duality" />. Planck introduced $h$ in 1900 to fit the blackbody spectrum; Einstein realised in 1905 that it means light comes in quanta $E = h\nu$ (book §5.4). In practice: use **waves** for reflection, refraction and coatings (this week’s optics), and **photons** for absorption, generation and current.
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="blackbody">
+
+Every object emits <Term id="thermal-radiation" /> simply because it is warm: a person glows in the infrared, a flame red, a light bulb yellow-white, the Sun white. The idealised emitter is a <Term id="blackbody" />, which absorbs everything that falls on it and emits a spectrum that depends **only on its temperature**. The Sun’s surface behaves very nearly like a blackbody at about 5800–6000 K.
+
+The blackbody spectrum is given by <Term id="planck-law" />. The lecture writes it per frequency; the book (eq. 5.18a) per wavelength:
+
+$$
+L^{BB}_{e\lambda}(\lambda, T) = \frac{2hc^2}{\lambda^5}\,\frac{1}{\exp\left(\frac{hc}{\lambda k_B T}\right) - 1}
+$$
+
+You don’t need to evaluate Planck’s law in the exam; it is not on the formula sheet. Its two consequences are, and they are easy to use:
+
+- <Term id="wien-law" /> (eq. 5.21): the peak wavelength is inversely proportional to the temperature.
+
+$$
+\lambda_{\max} T \approx 2.898 \times 10^{-3}\,\mathrm{m\,K}
+$$
+
+- <Term id="stefan-boltzmann-law" /> (eq. 5.19): the total power emitted per square metre grows with the fourth power of the absolute temperature.
+
+$$
+M_e^{BB}(T) = \sigma T^4
+$$
+
+<Diagram id="blackbody-explorer" />
+
+<KeyIdea>
+Hotter means **bluer and much brighter**: doubling the absolute temperature halves the peak wavelength and multiplies the emitted power by 2⁴ = 16.
+</KeyIdea>
+
+<Hint title="Kelvin, always">
+Both laws need the temperature in <Term id="kelvin" />. 25 °C = 298 K. Using °C in σT⁴ is a classic way to lose all the points.
+</Hint>
+
+<GoDeeper title="From the Sun’s surface to the Earth (book ex. 5.1)">
+
+The Sun radiates $\sigma T^4$ from every m² of its surface (radius $R_S = 6.96 \times 10^8$ m). That power spreads over a sphere with the Earth–Sun distance $d = 1.50 \times 10^{11}$ m as radius, so the irradiance at the Earth is
+
+$$
+I_e = \sigma T^4 \left(\frac{R_S}{d}\right)^2
+$$
+
+With the AM0 value $I_e = 1350$ W/m² you can solve for the Sun’s temperature: $T = \left(I_e (d/R_S)^2/\sigma\right)^{1/4} \approx 5770$ K. This is practice question “Temperature of the Sun” below.
+
+The book does the same with the solid angle of the Sun, $\Omega_{\mathrm{Sun}} \approx 68$ µsr (eq. 5.23–5.25): spectral irradiance at Earth = spectral radiance × $\Omega_{\mathrm{Sun}}$. The blackbody curve in the next diagram is computed that way.
+
+</GoDeeper>
+
+<GoDeeper title="Wien and Rayleigh–Jeans: the two limits of Planck (book §5.3)">
+
+Before Planck, two approximations existed: Wien’s (works at short wavelengths) and Rayleigh–Jeans’ (works at long wavelengths, but predicts infinite power at short wavelengths: the ‘ultraviolet catastrophe’). Planck’s law contains both: for short λ the $-1$ in the denominator is negligible (Wien); for long λ, $e^x - 1 \approx x$ (Rayleigh–Jeans).
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="solar-spectrum">
+
+### AM0, AM1.5 and the air mass
+
+Outside the atmosphere the Sun delivers the **AM0** spectrum, about 1361 W/m² (the <Term id="solar-constant" />). On the way down, ozone removes the UV below ~300 nm and water vapour, O₂ and CO₂ cut absorption bands into the infrared. How much is filtered depends on the path length through the atmosphere, the <Term id="air-mass" /> (eq. 5.26):
+
+$$
+\mathit{AM} = \frac{1}{\cos\theta}
+$$
+
+with θ the angle between the Sun and the **zenith** (straight up). Sun overhead: AM1; 60° from the zenith: AM2. The standard for testing solar cells is **AM1.5**, normalised to 1000 W/m². Together with a cell temperature of 25 °C this makes the <Term id="standard-test-conditions" />; a module’s power under STC is its rating in <Term id="watt-peak" />.
+
+### Spectral irradiance and irradiance
+
+A spectrum plot shows the <Term id="spectral-irradiance" />: power per m² **per nanometre** of wavelength. The lecture calls it the spectral power density $P(\lambda)$; the book writes $I_{e\lambda}$. The total power per m², the <Term id="irradiance" />, is the **area under the curve** (lecture slide 59):
+
+$$
+I_e = \int P(\lambda)\,\mathrm{d}\lambda
+$$
+
+Integrated over time, irradiance becomes <Term id="irradiation" /> (energy per m²). The Netherlands receives about 1050 kWh/m² per year, i.e. 1050 <Term id="equivalent-sun-hours" /> of 1000 W/m² sunshine.
+
+<Flag title="Notation: lecture vs book">
+Lecture: $P(\lambda)$ and $\Phi(\lambda)$. Book and formula sheet: $I_{e\lambda}$ and $\Phi_{\mathrm{ph},\lambda}$. They are the same quantities; the exam can use either.
+</Flag>
+
+### From power to photons
+
+A solar cell counts photons, so we need the <Term id="photon-flux" />: the number of photons per m² per second. At each wavelength, divide the spectral power by the energy of one photon, $hc/\lambda$ (lecture slide 58; formula sheet eq. 7.3):
+
+$$
+\Phi(\lambda) = P(\lambda)\,\frac{\lambda}{hc}
+$$
+
+and integrate over λ for the total flux. For monochromatic light (an LED, a laser) there is nothing to integrate:
+
+$$
+\Phi = \frac{I}{E_{\mathrm{ph}}} = \frac{I\lambda}{hc}
+$$
+
+The λ sits on top: at longer wavelengths each photon carries less energy, so the same power contains more photons.
+
+### Which photons can a cell use?
+
+A semiconductor absorbs a photon only if $E_{\mathrm{ph}} \geq E_G$, its <Term id="bandgap" />. In wavelength terms: only $\lambda \leq \lambda_g = hc/E_G$, about 1107 nm for c-Si. Photons below the gap pass straight through. Photons above it create **one** electron–hole pair each; the excess energy is lost as heat (<Term id="thermalisation" />).
+
+If every absorbed photon delivers one electron of charge $q$ to the circuit, the <Term id="photocurrent-density" /> is
+
+$$
+J_{\mathrm{ph}} = q\,\Phi_{\mathrm{abs}}
+$$
+
+This is how instruction 1, Q2 computes currents (the full story follows in week 5).
+
+<Diagram id="spectrum-explorer" />
+
+<KeyIdea>
+Irradiance (W/m²) tells you how much power arrives; photon flux (m⁻² s⁻¹) tells you how much current a cell could make. The bandgap decides which part of the spectrum counts.
+</KeyIdea>
+
+<GoDeeper title="The unit trap in exercise 5.6(b)">
+
+For a band with constant spectral irradiance $P$ between $\lambda_1$ and $\lambda_2$, the integral of $\lambda$ gives
+
+$$
+\Phi = \int_{\lambda_1}^{\lambda_2} \frac{P\lambda}{hc}\,\mathrm{d}\lambda = \frac{P}{2hc}\left(\lambda_2^2 - \lambda_1^2\right)
+$$
+
+In part (a) the nm cancel by themselves (W m⁻² nm⁻¹ × nm). In part (b) $hc$ is in J **m**, so either convert $P$ to W m⁻³ (× 10⁹) **and** λ² to m² (× 10⁻¹⁸), or use $hc = 1.986 \times 10^{-16}$ J nm and stay in nm. Mixing them gives an answer that is off by exactly 10⁹. See the worked example below.
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="refraction-reflection">
+
+When light reaches the boundary between two materials, part of it is reflected and the rest enters the second material, changing direction. Both effects depend on the <Term id="refractive-index" /> $n$ of the two materials: air ≈ 1.0, glass ≈ 1.5, c-Si ≈ 3.6 in the near infrared (3.57 at 1000 nm, larger at shorter wavelengths). All angles are measured from the <Term id="surface-normal" />.
+
+### Refraction: Snell’s law
+
+The reflected ray leaves at the same angle it arrived. The transmitted ray obeys <Term id="snells-law" /> (eq. 4.11):
+
+$$
+n_1 \sin\theta_i = n_2 \sin\theta_t
+$$
+
+Going into a denser material ($n_2 > n_1$) the ray bends **towards** the normal. Because c-Si has such a high index, even light arriving at grazing incidence (90°) travels inside at most $\arcsin(1/3.57) = 16.3°$ from the normal.
+
+<Hint title="Which angle goes with which n?">
+The subscripts only say on which side of the interface the ray is: pair each $n$ with the angle **in that same material**. If your angle comes out as 0.43, your calculator is in radians (0.43 rad = 24.8°).
+</Hint>
+
+### Reflection: the Fresnel equations
+
+How much is reflected follows from the <Term id="fresnel-equations" /> (eq. 4.12b, 4.13b), separately for the two <Term id="polarisation" /> directions:
+
+$$
+r_s = \frac{n_1\cos\theta_i - n_2\cos\theta_t}{n_1\cos\theta_i + n_2\cos\theta_t}
+\qquad
+r_p = \frac{n_1\cos\theta_t - n_2\cos\theta_i}{n_1\cos\theta_t + n_2\cos\theta_i}
+$$
+
+These are ratios of field **amplitudes**. Power goes with amplitude squared, and sunlight is unpolarised (half s, half p), so the <Term id="reflectance" /> is (eq. 4.14):
+
+$$
+R = \frac{1}{2}\left(r_s^2 + r_p^2\right)
+$$
+
+At normal incidence ($\theta_i = 0$) all cosines are 1 and both polarisations give the same result (eq. 4.15):
+
+$$
+R = \left(\frac{n_1 - n_2}{n_1 + n_2}\right)^2
+$$
+
+Bare c-Si: $R = (2.57/4.57)^2 = 31.6\,\%$. A third of the light is lost before anything else happens. Use the short formula whenever the question says 0° or ‘normal incidence’; use the full Fresnel equations only for other angles.
+
+### Total internal reflection
+
+Going the other way, from dense to less dense ($n_1 > n_2$), Snell’s law can ask for $\sin\theta_t > 1$, which is impossible: no light is transmitted at all. This <Term id="total-internal-reflection" /> sets in beyond the <Term id="critical-angle" /> (eq. 4.19, with $n_1$ the *lower* index):
+
+$$
+\sin\theta_{\mathrm{crit}} = \frac{n_1}{n_2}
+$$
+
+For c-Si/air, $\theta_{\mathrm{crit}} = 16.3°$. Only rays inside this narrow ‘escape cone’ around the normal can leave the silicon; everything else is reflected back in. Solar cells exploit this to trap light (see Absorption below).
+
+<Diagram id="interface-optics" />
+
+<KeyIdea>
+Snell’s law keeps $n\sin\theta$ constant across every interface. Through a stack of parallel layers the product is passed on unchanged, so intermediate layers (like a coating) drop out: only the first and last medium decide whether light can escape.
+</KeyIdea>
+
+Two practical rules from instruction 1:
+
+- Inside a layer of thickness $d$, a ray at angle $\theta_t$ travels $d/\cos\theta_t$ before reaching the back (Q1c).
+- When light crosses several interfaces, the **transmitted** fractions multiply: $(1 - R_1)(1 - R_3)(1 - R_4)\ldots$ (Q2c). List the interfaces each photon actually crosses before multiplying.
+
+<GoDeeper title="Why does Rp drop to almost zero near 75° for silicon?">
+
+Look at the R–θ curve in the diagram: $R_p$ dips to zero at one angle, Brewster’s angle $\tan\theta_B = n_2/n_1$ (74.4° for n = 3.59). There the reflected and refracted rays are perpendicular and p-polarised light is not reflected at all. This is beyond the course, but it explains why $R_s$ and $R_p$ split so strongly at large angles, while their average barely changes until about 60°.
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="anti-reflection">
+
+Bare silicon reflects more than 30 % of the light, which is unacceptable. Lecture 1 shows two remedies: an <Term id="anti-reflective-coating" /> and a <Term id="surface-texture" />.
+
+### A coating as a stepping stone
+
+The reflectance depends on the *size* of the index step. Splitting one big step (air 1.0 → Si 3.57) into two smaller ones (air → coating → Si) reduces the total. Instruction 1 Q1(e–f) does it without interference: compute $R_1$ (air/coating) and $R_2$ (coating/Si) at normal incidence and add them,
+
+$$
+R_{\mathrm{tot}} = R_1 + R_2
+$$
+
+A low-index coating makes $R_1$ small but $R_2$ large, a high-index coating the opposite. The best compromise (book eq. 10.32) is the geometric mean:
+
+$$
+n_c = \sqrt{n_0 n_s}
+$$
+
+For c-Si that is $\sqrt{3.57} = 1.89$, which is why ITO (n = 1.87) wins in Q1: $R_{\mathrm{tot}} = 19.0\,\%$ instead of 31.6 %.
+
+<Flag>
+The instruction answer adds the reflectances ($R_1 + R_2$). The book (p. 143) quotes the loss as $1 - (1 - R_1)(1 - R_2)$, slightly smaller (22.9 % vs 24.4 % for its example). Both ignore interference. In exam questions phrased like Q1, follow the instruction method.
+</Flag>
+
+### Interference: the quarter-wave coating
+
+A thin coating does something much better: light reflected at its top surface and light reflected at its bottom surface overlap, and they can cancel by <Term id="interference" />. The second reflection travels an extra distance $2 n_c d$ through the coating. If that is half a wavelength, crest meets trough (lecture slide 72): $2 n_c d = \lambda/2$, the <Term id="quarter-wave-thickness" /> (formula sheet eq. 10.38):
+
+$$
+n_c d = \frac{\lambda_0}{4}
+$$
+
+The condition only holds for one wavelength. Other colours are still partly reflected, which is why coated cells look coloured: the Si₃N₄ (n ≈ 2) wafers on lecture 1 slide 70 are purple (40 nm), green (60 nm), dark blue (80 nm) and turquoise (100 nm). A good choice puts the reflection minimum around 600 nm, where the solar photon flux is high (d ≈ 75 nm); such cells look dark blue.
+
+<Diagram id="arc-coating" />
+
+### Surface texture
+
+Etching ~5 µm pyramids into the silicon helps in two ways (lecture slides 78–82): light reflected from one pyramid hits a neighbouring one and gets a **second chance** to enter, and the light that enters travels obliquely, so it is more likely to be totally internally reflected later: <Term id="light-trapping" />.
+
+<GoDeeper title="Where does the interference result come from? (beyond the formula sheet)">
+
+The diagram’s ‘Interference’ view uses the standard thin-film result: the two reflected waves have amplitudes $r_{01}$ and $r_{12}$ (Fresnel at each interface) and a phase difference $2\delta$ with $\delta = 2\pi n_c d/\lambda_0$:
+
+$$
+r = \frac{r_{01} + r_{12}e^{2i\delta}}{1 + r_{01}r_{12}e^{2i\delta}}, \qquad R = |r|^2
+$$
+
+At the quarter-wave thickness $e^{2i\delta} = -1$, and if moreover $n_c = \sqrt{n_0 n_s}$ then $r_{01} = r_{12}$ and $R = 0$. You don’t need this formula for the exam; eq. 10.32 and 10.38 are what you use. (Book §10, eq. 10.33–10.37, explains the phase argument.)
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="absorption">
+
+Light that gets into the cell still has to be absorbed. In an absorbing material the refractive index is complex, the <Term id="complex-refractive-index" /> (eq. 4.21):
+
+$$
+\tilde{n} = n + i\kappa
+$$
+
+The real part $n$ sets the speed and the reflection; the imaginary part, the <Term id="extinction-coefficient" /> κ, makes the wave fade away. The fading is captured by the <Term id="absorption-coefficient" /> (eq. 4.26):
+
+$$
+\alpha = \frac{4\pi\kappa}{\lambda_0}
+$$
+
+and the intensity decays exponentially with depth, the <Term id="lambert-beer" /> (eq. 4.25):
+
+$$
+I(z) = I_0 \exp(-\alpha z)
+$$
+
+The fraction absorbed in a layer of thickness $t$, its <Term id="absorptance" />, follows directly (lecture slide 83, ignoring reflection):
+
+$$
+A = 1 - \frac{I(t)}{I_0} = 1 - e^{-\alpha t}
+$$
+
+A useful length scale is the <Term id="penetration-depth" /> $\delta_p = 1/\alpha$ (eq. 4.27), where 63 % has been absorbed; after $2.3\,\delta_p$ it is 90 %.
+
+<KeyIdea>
+Each micrometre absorbs the same **fraction** of what is left, not the same amount. So doubling the thickness does not double the absorption: if one pass absorbs 50 %, two passes absorb 75 %.
+</KeyIdea>
+
+### Why the colour matters so much
+
+α changes by orders of magnitude with wavelength (lecture slide 83, plotted on a <Term id="log-scale" />). In c-Si, blue light is absorbed within a fraction of a micrometre, red light within a few micrometres, but light at 1000 nm needs about 150 µm and at 1100 nm several millimetres. GaAs absorbs far more strongly just above its bandgap than Si (direct vs indirect bandgap, week 2), so GaAs cells can be a few µm thick while c-Si wafers are 100–180 µm.
+
+<Diagram id="absorption-depth" />
+
+That is why <Term id="light-trapping" /> matters most for photons just above the bandgap. A back reflector doubles the path; a reflector that sends light back at an angle beyond the critical angle (instruction 1, Q1d) traps it by total internal reflection, so it makes many passes.
+
+<Note title="Instruction tip">
+In instruction 1 you may ‘ignore κ’ when computing reflection, because κ ≪ n (e.g. 0.015 vs 3.84). κ matters only for absorption.
+</Note>
+
+<GoDeeper title="Derivation: from a decaying wave to Lambert–Beer (book §4.4)">
+
+With a complex index the wave number becomes complex too: $\tilde k_z = \tilde n\omega/c = k'_z + ik''_z$. The field then contains a factor $e^{-k''_z z}$: it decays while it oscillates. Intensity goes as the field **squared**, so it decays as $e^{-2k''_z z}$, giving
+
+$$
+\alpha = 2k''_z = \frac{2\kappa\omega}{c} = \frac{4\pi\kappa}{\lambda_0}
+$$
+
+The factor 2 (hence 4π rather than 2π) comes from squaring the field.
+
+</GoDeeper>
+
+</Concept>

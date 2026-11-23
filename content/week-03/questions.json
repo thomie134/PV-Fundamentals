@@ -1,0 +1,1445 @@
+[
+ {
+  "id": "w3-random-motion",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Random thermal motion",
+  "concept": "drift",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Lecture 3 slides 16–17",
+  "prompt": "Electrons in a piece of uniformly doped silicon move at about $10^7$ cm/s. There is no electric field. What is the net electron current?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Zero: the motion is random, so as many electrons cross any plane in each direction.",
+    "feedback": "Right (lecture 3 slide 16). A net current needs a field (drift) or a gradient (diffusion).",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Very large, because the thermal velocity is so high.",
+    "feedback": "High speed but random direction: the contributions cancel on average."
+   },
+   {
+    "id": "c",
+    "text": "It flows from the hot to the cold side.",
+    "feedback": "There is no temperature difference mentioned; with uniform conditions nothing is preferred."
+   },
+   {
+    "id": "d",
+    "text": "It equals $qn v_{th}$.",
+    "feedback": "That would be true only if all electrons moved in the same direction."
+   }
+  ],
+  "hints": [
+   "Is any direction preferred?",
+   "What do drift and diffusion need?",
+   "Uniform density and no field."
+  ],
+  "solution": [
+   "Random thermal motion has no preferred direction: equal numbers cross each plane both ways, so the net current is zero.",
+   "A net current requires an electric field (drift) or a concentration gradient (diffusion) (slides 16–17)."
+  ]
+ },
+ {
+  "id": "w3-drift-false",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Drift",
+  "concept": "drift",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book exercise 6.10",
+  "prompt": "Which statement about drift is **false**?",
+  "options": [
+   {
+    "id": "a",
+    "text": "It is the dominant transport mechanism when an electric field is applied.",
+    "feedback": "True: the field adds a directed velocity."
+   },
+   {
+    "id": "b",
+    "text": "Holes move in the direction opposite to the applied field.",
+    "feedback": "Correct choice: this is false. Holes are positive and move **along** the field; electrons move against it.",
+    "correct": true
+   },
+   {
+    "id": "c",
+    "text": "Drift is characterised by the carrier mobilities.",
+    "feedback": "True: $v_d = \\mu\\xi$."
+   },
+   {
+    "id": "d",
+    "text": "During drift, electrons and holes move in opposite directions.",
+    "feedback": "True: opposite charges, opposite forces."
+   }
+  ],
+  "hints": [
+   "Which way does the force on a positive charge point?",
+   "$\\mathbf{F} = q\\boldsymbol{\\xi}$ for a hole.",
+   "Electrons: opposite."
+  ],
+  "solution": [
+   "A hole has charge $+q$: the force $q\\xi$ points along the field, so holes drift with the field. The statement says the opposite (book ex. 6.10, answer B).",
+   "Electrons drift against the field, but because their charge is negative their *current* also points along the field."
+  ]
+ },
+ {
+  "id": "w3-diffusion-false",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Diffusion",
+  "concept": "diffusion",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 6.9",
+  "prompt": "Which statement about diffusion of charge carriers is **false**?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Diffusion occurs only in the presence of an electric field.",
+    "feedback": "Correct choice: false. Diffusion needs only a concentration gradient; even neutral particles diffuse.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Net flow goes from high to low concentration.",
+    "feedback": "True."
+   },
+   {
+    "id": "c",
+    "text": "Over time carriers spread until the concentration is uniform.",
+    "feedback": "True: then the gradient and the diffusion current vanish."
+   },
+   {
+    "id": "d",
+    "text": "Diffusion is faster at higher temperature.",
+    "feedback": "True: D = μk_BT/q grows with T (for fixed μ), and thermal motion is faster."
+   }
+  ],
+  "hints": [
+   "What drives diffusion?",
+   "Think of ink spreading in still water.",
+   "A field drives drift, not diffusion."
+  ],
+  "solution": [
+   "Diffusion is driven by a concentration gradient through random thermal motion; no field is needed (book ex. 6.9, answer A)."
+  ]
+ },
+ {
+  "id": "w3-diffusion-sign",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Diffusion current direction",
+  "concept": "diffusion",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book eq. 6.26; lecture 3 slide 22",
+  "prompt": "Electrons diffuse from left to right (their density is higher on the left). In which direction does the resulting **current** flow?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Right to left",
+    "feedback": "Right: electrons carry charge −q, so electron flow to the right is a current to the left. In formula: $J_n = qD_n\\,\\mathrm{d}n/\\mathrm{d}x$ with $\\mathrm{d}n/\\mathrm{d}x < 0$.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Left to right",
+    "feedback": "That is the direction of the electron *flow*, not of the current."
+   },
+   {
+    "id": "c",
+    "text": "No current: diffusion does not carry charge.",
+    "feedback": "Moving charged particles always carry current, whatever drives them."
+   },
+   {
+    "id": "d",
+    "text": "It depends on the electric field.",
+    "feedback": "There is no field needed; the sign follows from the gradient alone."
+   }
+  ],
+  "hints": [
+   "Current direction is the direction positive charge would move.",
+   "Electrons are negative.",
+   "Check the sign of $\\mathrm{d}n/\\mathrm{d}x$ in $J_n = qD_n\\,\\mathrm{d}n/\\mathrm{d}x$."
+  ],
+  "solution": [
+   "Density higher on the left: $\\mathrm{d}n/\\mathrm{d}x < 0$, so $J_n = qD_n\\,\\mathrm{d}n/\\mathrm{d}x < 0$: the current points to the left (−x).",
+   "Holes diffusing to the right would give a current to the right: hence the minus sign in $J_p = -qD_p\\,\\mathrm{d}p/\\mathrm{d}x$."
+  ]
+ },
+ {
+  "id": "w3-srh",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Recombination types",
+  "concept": "recombination",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 7.1",
+  "prompt": "Which recombination mechanism goes via a defect state in the bandgap?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Radiative recombination",
+    "feedback": "Radiative is band-to-band, with a photon emitted."
+   },
+   {
+    "id": "b",
+    "text": "Auger recombination",
+    "feedback": "Auger hands the energy to a third carrier; no defect level is needed."
+   },
+   {
+    "id": "c",
+    "text": "Shockley–Read–Hall (SRH) recombination",
+    "feedback": "Right: an impurity or lattice defect creates a trap level $E_T$ in the gap.",
+    "correct": true
+   },
+   {
+    "id": "d",
+    "text": "All of the above",
+    "feedback": "Only SRH needs a defect state."
+   }
+  ],
+  "hints": [
+   "Which mechanism involves impurities?",
+   "Trap states sit inside the gap.",
+   "Named after Shockley, Read and Hall."
+  ],
+  "solution": [
+   "SRH recombination is facilitated by impurities or lattice defects that create energy levels (traps) inside the gap (book ex. 7.1, answer C; lecture 3 slide 34)."
+  ]
+ },
+ {
+  "id": "w3-auger",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Auger recombination",
+  "concept": "recombination",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 3 slides 31–33; book §7.4",
+  "prompt": "In Auger recombination, where does the energy released by the recombining electron–hole pair go?",
+  "options": [
+   {
+    "id": "a",
+    "text": "To a third carrier, which is excited deeper into its band and then thermalises.",
+    "feedback": "Right (slides 31–33). The energy ends up as heat.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Into an emitted photon with energy close to $E_G$.",
+    "feedback": "That is radiative recombination."
+   },
+   {
+    "id": "c",
+    "text": "Into a trap state in the bandgap.",
+    "feedback": "That is SRH."
+   },
+   {
+    "id": "d",
+    "text": "It is stored in the dopant atoms.",
+    "feedback": "Dopants do not store recombination energy."
+   }
+  ],
+  "hints": [
+   "How many particles are involved in Auger recombination?",
+   "Three: two of one kind, one of the other.",
+   "What does the extra one receive?"
+  ],
+  "solution": [
+   "Auger is a three-particle process: the electron–hole pair transfers its energy (and momentum) to another electron or hole.",
+   "That carrier is kicked high into its band and relaxes back by giving its energy to the lattice (thermalisation). Rate ∝ n²p or np², so it dominates at high doping."
+  ]
+ },
+ {
+  "id": "w3-radiative",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Radiative recombination",
+  "concept": "recombination",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 3 slide 30",
+  "prompt": "Why is radiative recombination important in GaAs but much less so in silicon?",
+  "options": [
+   {
+    "id": "a",
+    "text": "GaAs has a direct bandgap; in indirect silicon a phonon is also needed, which makes the process unlikely.",
+    "feedback": "Right: the same reason silicon absorbs weakly near its bandgap (book §7.1).",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "Silicon has a larger bandgap.",
+    "feedback": "GaAs has the larger gap (1.42 vs 1.12 eV)."
+   },
+   {
+    "id": "c",
+    "text": "Silicon has no holes.",
+    "feedback": "Silicon has plenty of holes; the issue is momentum conservation."
+   },
+   {
+    "id": "d",
+    "text": "GaAs has more defects.",
+    "feedback": "Defects cause SRH recombination, not radiative recombination."
+   }
+  ],
+  "hints": [
+   "Think of energy–momentum diagrams.",
+   "What extra partner does an indirect transition need?",
+   "Absorption and radiative recombination are each other’s reverse."
+  ],
+  "solution": [
+   "Radiative recombination is the reverse of absorption. In a direct semiconductor (GaAs) no momentum change is needed; in an indirect one (Si) a phonon must take part, so radiative recombination is slow and Auger/SRH dominate (lecture 3 slide 30; book p. 66–67)."
+  ]
+ },
+ {
+  "id": "w3-combine",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Combining lifetimes",
+  "concept": "lifetime",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book eq. 7.27",
+  "prompt": "A wafer has an SRH lifetime of 100 µs and an Auger lifetime of 1 ms. Its effective lifetime is…",
+  "options": [
+   {
+    "id": "a",
+    "text": "…a bit less than 100 µs.",
+    "feedback": "Right: $1/\\tau = 1/100 + 1/1000$ per µs gives 91 µs. The shortest lifetime dominates.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "…550 µs, the average.",
+    "feedback": "Lifetimes do not average: the recombination *rates* add."
+   },
+   {
+    "id": "c",
+    "text": "…1.1 ms, the sum.",
+    "feedback": "Adding lifetimes would mean more mechanisms make carriers live longer, the opposite of reality."
+   },
+   {
+    "id": "d",
+    "text": "…1 ms: the longest lifetime limits.",
+    "feedback": "The fastest recombination path, i.e. the shortest lifetime, limits."
+   }
+  ],
+  "hints": [
+   "Recombination rates add.",
+   "$R = \\Delta n/\\tau$ for each mechanism.",
+   "$1/\\tau_{tot} = \\sum 1/\\tau_i$."
+  ],
+  "solution": [
+   "$1/\\tau_{tot} = 1/100\\,\\mathrm{µs} + 1/1000\\,\\mathrm{µs} = 0.011$ µs⁻¹, so $\\tau_{tot} = 91$ µs (eq. 7.27)."
+  ]
+ },
+ {
+  "id": "w3-passivation",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Surface passivation",
+  "concept": "recombination",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Lecture 3 slides 36–38",
+  "prompt": "What does surface passivation do?",
+  "options": [
+   {
+    "id": "a",
+    "text": "It reduces the number of surface trap states (dangling bonds), so fewer carriers recombine at the surface.",
+    "feedback": "Right (slides 37–38; book §7.5). Result: a lower surface recombination velocity S.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "It increases the absorption of light at the surface.",
+    "feedback": "That is the job of an anti-reflection coating and texture, not passivation."
+   },
+   {
+    "id": "c",
+    "text": "It adds dopants to increase the conductivity.",
+    "feedback": "A heavily doped surface layer can help passivate, but by keeping minority carriers away, not by raising conductivity."
+   },
+   {
+    "id": "d",
+    "text": "It makes the surface reflect more infrared light.",
+    "feedback": "Passivation is about recombination, not optics."
+   }
+  ],
+  "hints": [
+   "What causes surface recombination?",
+   "Atoms at the surface miss bonding partners.",
+   "What happens if you give them a partner?"
+  ],
+  "solution": [
+   "Surface atoms have dangling bonds that create many trap states in the gap: strong SRH recombination at the surface.",
+   "Passivation (for example a thin dielectric layer) ties up those bonds and removes trap states, lowering S. Alternatively a doped layer keeps minority carriers away from the surface."
+  ]
+ },
+ {
+  "id": "w3-ge",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Absorption in Ge vs Si",
+  "concept": "generation",
+  "difficulty": 3,
+  "prerequisites": [],
+  "source": "Book exercise 7.4",
+  "prompt": "Both Si and Ge are indirect semiconductors, yet Ge absorbs much more strongly in the visible. Why?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Ge has more valence electrons than Si.",
+    "feedback": "Both have 4 valence electrons."
+   },
+   {
+    "id": "b",
+    "text": "Ge has a higher bandgap than Si.",
+    "feedback": "Ge has a *lower* gap (0.67 eV vs 1.12 eV)."
+   },
+   {
+    "id": "c",
+    "text": "Si has direct transitions in the visible.",
+    "feedback": "Silicon’s lowest direct transition is at about 3.4 eV (UV)."
+   },
+   {
+    "id": "d",
+    "text": "Ge has direct transitions in the visible part of the spectrum.",
+    "feedback": "Right (answer book ex. 7.4): indirect materials still have direct transitions at higher energies; for Ge those fall in the visible.",
+    "correct": true
+   }
+  ],
+  "hints": [
+   "Indirect materials can still have direct transitions at higher photon energies.",
+   "Where are those for Si and for Ge?",
+   "Si: about 3.4 eV (below 360 nm)."
+  ],
+  "solution": [
+   "Away from the band edges, indirect semiconductors also have direct (vertical) transitions. For Si these start at about 3.4 eV (UV), which is why Si absorbs strongly below ~360 nm.",
+   "For Ge they lie in the visible, so Ge absorbs strongly there (book ex. 7.4, answer D)."
+  ]
+ },
+ {
+  "id": "w3-L-collection",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Diffusion length and collection",
+  "concept": "lifetime",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 3 slide 39; book §7.2.2",
+  "prompt": "In a 180 µm p-type wafer the minority-carrier diffusion length is 50 µm. What happens to electrons generated by infrared light near the back of the wafer, far from the junction at the front?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Most recombine before they reach the junction.",
+    "feedback": "Right: they would have to diffuse ~3.6 diffusion lengths; the fraction that survives falls roughly as $e^{-x/L}$.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "They all reach the junction, because diffusion has no limit.",
+    "feedback": "Diffusion is random and slow; recombination stops most carriers after about one L."
+   },
+   {
+    "id": "c",
+    "text": "They drift to the junction in the electric field of the wafer.",
+    "feedback": "Outside the junction there is (almost) no field: transport is by diffusion."
+   },
+   {
+    "id": "d",
+    "text": "They are not generated at all: IR light is never absorbed in Si.",
+    "feedback": "Near-IR above the gap is absorbed, just weakly, so deep in the wafer."
+   }
+  ],
+  "hints": [
+   "What does the diffusion length tell you?",
+   "Compare 50 µm with the distance to the junction.",
+   "$e^{-180/50}$."
+  ],
+  "solution": [
+   "$L = \\sqrt{D\\tau}$ is the typical distance a minority carrier travels before recombining.",
+   "Carriers generated ~180 µm from the junction must cross 3.6 L: most recombine (roughly $e^{-3.6} \\approx 3\\,\\%$ make it). Good cells need $L$ larger than the wafer thickness."
+  ]
+ },
+ {
+  "id": "w3-steady-gtau",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Steady state",
+  "concept": "continuity",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book ex. 7.5(e); eq. 7.20",
+  "prompt": "A p-type wafer is uniformly illuminated (generation $G_L$ everywhere), no current flows, and the light has been on for a long time. What is the excess electron density?",
+  "options": [
+   {
+    "id": "a",
+    "text": "$\\Delta n = G_L\\tau_n$",
+    "feedback": "Right: steady state and no current, so generation balances recombination: $G_L = \\Delta n/\\tau_n$ (ex. 7.5e).",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "$\\Delta n = G_L/\\tau_n$",
+    "feedback": "Check units: G is cm⁻³s⁻¹, τ in s, so G/τ is cm⁻³s⁻²: not a density."
+   },
+   {
+    "id": "c",
+    "text": "$\\Delta n = G_L L_n$",
+    "feedback": "Units: cm⁻³s⁻¹ × cm is not a density."
+   },
+   {
+    "id": "d",
+    "text": "$\\Delta n = 0$: excess carriers recombine immediately.",
+    "feedback": "They recombine after an average time τ, so a steady excess $G\\tau$ builds up."
+   }
+  ],
+  "hints": [
+   "Write the continuity equation and drop the time and current terms.",
+   "Low injection: $R = \\Delta n/\\tau_n$.",
+   "Set $G - R = 0$."
+  ],
+  "solution": [
+   "Continuity: $\\partial n/\\partial t = \\frac{1}{q}\\nabla \\cdot J_n - R + G$. Steady state: left side 0; no current: divergence term 0.",
+   "So $G_L = R = \\Delta n/\\tau_n$, giving $\\Delta n = G_L\\tau_n$ (book eq. 7.20; ex. 7.5e)."
+  ]
+ },
+ {
+  "id": "w3-thermalisation",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Thermalisation",
+  "concept": "generation",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Lecture 3 slide 28",
+  "prompt": "A 2.0 eV photon is absorbed in c-Si ($E_G$ = 1.12 eV). What happens?",
+  "options": [
+   {
+    "id": "a",
+    "text": "One electron–hole pair is created; 0.88 eV is lost as heat.",
+    "feedback": "Right (slide 28): the carriers relax to the band edges within ~10⁻¹² s.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "One pair with 2.0 eV is kept as electrical energy.",
+    "feedback": "The excess above $E_G$ thermalises almost immediately."
+   },
+   {
+    "id": "c",
+    "text": "Two pairs are created, since 2.0 > 2 × 1.0.",
+    "feedback": "One photon gives one pair; you would need 2 × 1.12 = 2.24 eV even in principle, and Si does not do this."
+   },
+   {
+    "id": "d",
+    "text": "Nothing: the photon energy does not match the bandgap exactly.",
+    "feedback": "Any photon with $E \\geq E_G$ can be absorbed."
+   }
+  ],
+  "hints": [
+   "How many pairs per photon?",
+   "Where do electron and hole end up after a picosecond?",
+   "Excess energy = $E_{ph} - E_G$."
+  ],
+  "solution": [
+   "One photon creates one electron–hole pair.",
+   "Electron and hole quickly relax to $E_C$ and $E_V$: the excess $2.0 - 1.12 = 0.88$ eV becomes heat (thermalisation)."
+  ]
+ },
+ {
+  "id": "w3-S-infinite",
+  "type": "mcq",
+  "week": 3,
+  "topic": "Surface boundary condition",
+  "concept": "continuity",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book ex. 7.8; eq. 7.50",
+  "prompt": "At a surface with a very large surface recombination velocity ($S \\to \\infty$), what is the boundary condition for the excess minority density?",
+  "options": [
+   {
+    "id": "a",
+    "text": "$\\Delta n = 0$ at the surface",
+    "feedback": "Right: every minority carrier arriving is removed, like at an ohmic contact.",
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": "$\\mathrm{d}\\Delta n/\\mathrm{d}x = 0$ at the surface",
+    "feedback": "That is a perfectly passivated surface, $S = 0$ (no flow)."
+   },
+   {
+    "id": "c",
+    "text": "$\\Delta n = G\\tau$ at the surface",
+    "feedback": "That is the bulk value far from any surface, without diffusion."
+   },
+   {
+    "id": "d",
+    "text": "$\\Delta n$ becomes infinite",
+    "feedback": "Infinite S removes carriers; it cannot pile them up."
+   }
+  ],
+  "hints": [
+   "Boundary condition: $D\\,\\mathrm{d}\\Delta n/\\mathrm{d}x = -S\\Delta n$.",
+   "Divide by S and let $S \\to \\infty$.",
+   "The flux must stay finite."
+  ],
+  "solution": [
+   "$D\\,\\mathrm{d}\\Delta n/\\mathrm{d}x = -S\\,\\Delta n$. For a finite flux and $S \\to \\infty$, $\\Delta n(\\text{surface}) \\to 0$.",
+   "For $S = 0$ instead, the slope is zero: no carriers flow into the surface (ex. 7.8a)."
+  ]
+ },
+ {
+  "id": "w3-book-6-14",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Diffusion current",
+  "concept": "diffusion",
+  "difficulty": 2,
+  "prerequisites": [
+   "derivatives-odes",
+   "units"
+  ],
+  "source": "Book exercise 6.14 (instruction 2; official answer)",
+  "prompt": "The diffusion coefficient of electrons in silicon is $D_n = 36$ cm²/s. The electron density drops linearly from $2.7 \\times 10^{16}$ cm⁻³ to $10^{15}$ cm⁻³ over 2 µm. What is the magnitude of the electron diffusion current density?",
+  "answer": {
+   "value": 749.8,
+   "unit": "A/cm²",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 0.07498,
+     "feedback": "You divided by 2 instead of 2 µm = 2 × 10⁻⁴ cm. Convert the distance to cm."
+    }
+   ]
+  },
+  "hints": [
+   "Diffusion current is proportional to the gradient.",
+   "$J_{n,\\mathrm{diff}} = qD_n\\,\\mathrm{d}n/\\mathrm{d}x$",
+   "Gradient: $(2.7 \\times 10^{16} - 10^{15})/(2 \\times 10^{-4}\\ \\mathrm{cm})$."
+  ],
+  "solution": [
+   "$|\\mathrm{d}n/\\mathrm{d}x| = 2.6 \\times 10^{16}/2 \\times 10^{-4} = 1.3 \\times 10^{20}$ cm⁻⁴.",
+   "$|J| = 1.602 \\times 10^{-19} \\times 36 \\times 1.3 \\times 10^{20} = 750$ A/cm² (answer book: 749 A/cm² with q = 1.60 × 10⁻¹⁹ C)."
+  ]
+ },
+ {
+  "id": "w3-book-6-15",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Drift balancing diffusion",
+  "concept": "diffusion",
+  "difficulty": 3,
+  "prerequisites": [],
+  "source": "Book exercise 6.15 (official answer)",
+  "prompt": "For the situation of the previous question, what electric field would make the electron drift current cancel the diffusion current? Use $\\mu_n = 1350$ cm²/Vs and, like the answer book, $n = 10^{15}$ cm⁻³.",
+  "answer": {
+   "value": 3467,
+   "unit": "V/cm",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 128.4,
+     "feedback": "You used $n = 2.7 \\times 10^{16}$ cm⁻³. The question (and the answer book) uses the low density, $10^{15}$ cm⁻³. Note that the density varies, so the field needed differs across the region."
+    }
+   ]
+  },
+  "hints": [
+   "Set the drift current equal to the diffusion current.",
+   "$qn\\mu_n\\xi = J_{n,\\mathrm{diff}}$",
+   "$\\xi = J/(qn\\mu_n)$."
+  ],
+  "solution": [
+   "$\\xi = \\dfrac{J}{qn\\mu_n} = \\dfrac{750}{1.602 \\times 10^{-19} \\times 10^{15} \\times 1350} = 3.47 \\times 10^3$ V/cm (answer book: 3468 V/cm)."
+  ]
+ },
+ {
+  "id": "w3-einstein",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Einstein relation",
+  "concept": "diffusion",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book eq. 6.28; example p. 60",
+  "prompt": "Calculate the hole diffusion coefficient in c-Si at 300 K from the formula-sheet mobility.",
+  "answer": {
+   "value": 11.63,
+   "unit": "cm²/s",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 35.16,
+     "feedback": "That is the electron value ($\\mu_n = 1360$). For holes use $\\mu_p = 450$ cm²/Vs."
+    }
+   ]
+  },
+  "hints": [
+   "The Einstein relation links D and μ.",
+   "$D_p = \\mu_p k_BT/q$",
+   "$k_BT/q = 0.02585$ V at 300 K."
+  ],
+  "solution": [
+   "$D_p = \\mu_p\\frac{k_BT}{q} = 450 \\times 0.02585 = 11.6$ cm²/s."
+  ]
+ },
+ {
+  "id": "w3-sigma",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Conductivity",
+  "concept": "drift",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Lecture 3 slides 24–25",
+  "prompt": "Calculate the conductivity of c-Si doped with $10^{16}$ cm⁻³ phosphorus at 300 K (sheet mobilities).",
+  "answer": {
+   "value": 2.179,
+   "unit": "Ω⁻¹cm⁻¹",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 0.721,
+     "feedback": "You used the hole mobility. Phosphorus makes n-type silicon: the majority carriers are electrons, $\\mu_n = 1360$."
+    }
+   ]
+  },
+  "hints": [
+   "Which carriers dominate?",
+   "$\\sigma = q(n\\mu_n + p\\mu_p) \\approx qN_D\\mu_n$",
+   "$p = n_i^2/N_D \\approx 10^4$ is negligible."
+  ],
+  "solution": [
+   "n-type: $n \\approx 10^{16}$, $p \\approx 9 \\times 10^3$ cm⁻³ (negligible).",
+   "$\\sigma \\approx qn\\mu_n = 1.602 \\times 10^{-19} \\times 10^{16} \\times 1360 = 2.18$ Ω⁻¹cm⁻¹ (resistivity 0.46 Ω cm)."
+  ]
+ },
+ {
+  "id": "w3-book-7-6h",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Doping for a drift current",
+  "concept": "drift",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book exercise 7.6(h) (instruction 3; self-derived)",
+  "prompt": "A drift current density of 110 A/cm² is needed in p-type c-Si (hole mobility $\\mu_p \\approx 470$ cm²/Vs) with an applied field of 25 V/cm. What acceptor concentration is required? **Self-derived, not official** (instruction 3 has no official answers yet).",
+  "answer": {
+   "value": 5.843e+16,
+   "unit": "cm⁻³",
+   "tolerance": 0.02
+  },
+  "hints": [
+   "In p-type material the holes carry the drift current.",
+   "$J = qp\\mu_p\\xi$ with $p \\approx N_A$.",
+   "Solve for $p$."
+  ],
+  "solution": [
+   "$N_A \\approx p = \\dfrac{J}{q\\mu_p\\xi} = \\dfrac{110}{1.602 \\times 10^{-19} \\times 470 \\times 25} = 5.8 \\times 10^{16}$ cm⁻³.",
+   "(Electron contribution negligible.) Self-derived, not official."
+  ]
+ },
+ {
+  "id": "w3-book-7-2",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Diffusion length",
+  "concept": "lifetime",
+  "difficulty": 1,
+  "prerequisites": [
+   "units"
+  ],
+  "source": "Book exercise 7.2 (official answer)",
+  "prompt": "Calculate the diffusion length of a minority carrier with lifetime τ = 10 µs and diffusivity D = 25.6 cm²/s. Give the answer in µm.",
+  "answer": {
+   "value": 160,
+   "unit": "µm",
+   "tolerance": 0.01,
+   "errors": [
+    {
+     "value": 160000.0,
+     "feedback": "You used τ = 10 s. Convert: 10 µs = 10 × 10⁻⁶ s."
+    }
+   ]
+  },
+  "hints": [
+   "$L = \\sqrt{D\\tau}$",
+   "D in cm²/s and τ in s give L in cm.",
+   "$\\sqrt{25.6 \\times 10^{-5}}$."
+  ],
+  "solution": [
+   "$L = \\sqrt{25.6 \\times 10 \\times 10^{-6}} = \\sqrt{2.56 \\times 10^{-4}} = 0.016$ cm $= 160$ µm (official answer)."
+  ]
+ },
+ {
+  "id": "w3-book-7-3",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Lifetime from diffusion length",
+  "concept": "lifetime",
+  "difficulty": 1,
+  "prerequisites": [
+   "units"
+  ],
+  "source": "Book exercise 7.3 (official answer)",
+  "prompt": "A single-crystal cell has a diffusion length of 200 µm and minority-carrier diffusivity 27 cm²/s. What is the minority-carrier lifetime in µs?",
+  "answer": {
+   "value": 14.81,
+   "unit": "µs",
+   "tolerance": 0.01,
+   "errors": [
+    {
+     "value": 740.7,
+     "feedback": "You forgot to square L: $\\tau = L^2/D$."
+    }
+   ]
+  },
+  "hints": [
+   "Rearrange $L = \\sqrt{D\\tau}$.",
+   "$\\tau = L^2/D$",
+   "$L = 200$ µm $= 0.02$ cm."
+  ],
+  "solution": [
+   "$\\tau = \\dfrac{L^2}{D} = \\dfrac{(0.02)^2}{27} = 1.48 \\times 10^{-5}$ s $= 14.8$ µs (official answer)."
+  ]
+ },
+ {
+  "id": "w3-combined-tau",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Combining lifetimes",
+  "concept": "lifetime",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book eq. 7.27",
+  "prompt": "Two recombination mechanisms act in a wafer, with lifetimes 10 µs and 50 µs. What is the effective lifetime in µs?",
+  "answer": {
+   "value": 8.333,
+   "unit": "µs",
+   "tolerance": 0.01,
+   "errors": [
+    {
+     "value": 30,
+     "feedback": "Lifetimes do not average. The *rates* add: $1/\\tau = 1/\\tau_1 + 1/\\tau_2$."
+    },
+    {
+     "value": 60,
+     "feedback": "Adding lifetimes would mean extra recombination makes carriers live longer. Add the inverses."
+    }
+   ]
+  },
+  "hints": [
+   "Recombination rates add.",
+   "$1/\\tau_{tot} = 1/\\tau_1 + 1/\\tau_2$",
+   "$1/10 + 1/50 = 0.12$ µs⁻¹."
+  ],
+  "solution": [
+   "$\\dfrac{1}{\\tau} = \\dfrac{1}{10} + \\dfrac{1}{50} = 0.12$ µs⁻¹, so $\\tau = 8.33$ µs: shorter than either one."
+  ]
+ },
+ {
+  "id": "w3-alpha-75",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Absorption coefficient",
+  "concept": "generation",
+  "difficulty": 1,
+  "prerequisites": [],
+  "source": "Book exercise 7.5(a) (official answer)",
+  "prompt": "c-Si at 650 nm has $\\tilde n = 3.84 - 0.015i$. Calculate the absorption coefficient in m⁻¹.",
+  "answer": {
+   "value": 290000.0,
+   "unit": "m⁻¹",
+   "tolerance": 0.02,
+   "errors": [
+    {
+     "value": 2900,
+     "feedback": "2900 is the value in cm⁻¹. The question asks for m⁻¹ (1 cm⁻¹ = 100 m⁻¹)."
+    }
+   ]
+  },
+  "hints": [
+   "Use the imaginary part.",
+   "$\\alpha = 4\\pi k/\\lambda$",
+   "λ = 650 × 10⁻⁹ m."
+  ],
+  "solution": [
+   "$\\alpha = \\dfrac{4\\pi \\times 0.015}{650 \\times 10^{-9}} = 2.90 \\times 10^5$ m⁻¹ (= 2900 cm⁻¹; official answer)."
+  ]
+ },
+ {
+  "id": "w3-gen-75",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Generation rate",
+  "concept": "generation",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "source": "Book exercise 7.5(c)(d) (official answer, see erratum note)",
+  "prompt": "Light of 650 nm and 1000 W/m² falls on a c-Si wafer ($\\alpha = 2.90 \\times 10^5$ m⁻¹, $R = 0.344$). Calculate the generation rate at a depth of 50 µm, in m⁻³s⁻¹. Take reflection into account.",
+  "answer": {
+   "value": 3.139e+20,
+   "unit": "m⁻³ s⁻¹",
+   "tolerance": 0.06,
+   "errors": [
+    {
+     "value": 4.787e+20,
+     "feedback": "You forgot the reflection loss: multiply by $(1 - R) = 0.656$."
+    }
+   ]
+  },
+  "hints": [
+   "Photon flux first: $\\Phi_0 = I\\lambda/hc$.",
+   "$G(x) = (1 - R)\\Phi_0\\,\\alpha\\,e^{-\\alpha x}$",
+   "$\\alpha x = 2.9 \\times 10^5 \\times 50 \\times 10^{-6} = 14.5$."
+  ],
+  "solution": [
+   "$\\Phi_0 = \\dfrac{1000 \\times 650 \\times 10^{-9}}{6.626 \\times 10^{-34} \\times 2.998 \\times 10^8} = 3.27 \\times 10^{21}$ m⁻²s⁻¹.",
+   "$\\Phi(50\\ \\mathrm{µm}) = (1 - 0.344) \\times 3.27 \\times 10^{21} \\times e^{-14.5} = 1.08 \\times 10^{15}$ m⁻²s⁻¹.",
+   "$G = \\alpha\\Phi = 2.90 \\times 10^5 \\times 1.08 \\times 10^{15} = 3.1 \\times 10^{20}$ m⁻³s⁻¹. The answer book gets 3.3 × 10²⁰ (it rounds $e^{-14.5}$ to 5.3 × 10⁻⁷); both are accepted."
+  ]
+ },
+ {
+  "id": "w3-dn-75",
+  "type": "numeric",
+  "week": 3,
+  "topic": "Excess carriers from G and τ",
+  "concept": "lifetime",
+  "difficulty": 2,
+  "prerequisites": [],
+  "source": "Book exercise 7.5(e) (official answer)",
+  "prompt": "In the wafer of the previous question, $L_n = 60$ µm and $D_n = 29$ cm²/s. Uniform illumination, steady state, low injection and no current. What is the excess electron density at 50 µm, in m⁻³? Use $G = 3.14 \\times 10^{20}$ m⁻³s⁻¹.",
+  "answer": {
+   "value": 389700000000000.0,
+   "unit": "m⁻³",
+   "tolerance": 0.06,
+   "errors": [
+    {
+     "value": 6.495e+16,
+     "feedback": "Lifetime is $L^2/D$, not $L/D$."
+    }
+   ]
+  },
+  "hints": [
+   "Generation balances recombination: $\\Delta n = G\\tau_n$.",
+   "$\\tau_n = L_n^2/D_n$",
+   "$L_n = 60 \\times 10^{-4}$ cm."
+  ],
+  "solution": [
+   "$\\tau_n = \\dfrac{(60 \\times 10^{-4})^2}{29} = 1.24 \\times 10^{-6}$ s.",
+   "$\\Delta n = G\\tau_n = 3.14 \\times 10^{20} \\times 1.24 \\times 10^{-6} = 3.9 \\times 10^{14}$ m⁻³ $= 3.9 \\times 10^8$ cm⁻³ (answer book: 4.1 × 10¹⁴ with G = 3.3 × 10²⁰)."
+  ]
+ },
+ {
+  "id": "w3-exam-75",
+  "type": "multi",
+  "week": 3,
+  "topic": "Light, generation and excess carriers in a wafer",
+  "concept": "generation",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log",
+   "units"
+  ],
+  "points": 14,
+  "source": "Book exercise 7.5 (instruction 2; official answers)",
+  "prompt": "A 100 µm thick p-type c-Si wafer is illuminated with monochromatic light of 650 nm and irradiance 1000 W/m². At 650 nm $\\tilde n = 3.84 - 0.015i$ and $\\alpha = 4\\pi k/\\lambda$. Minority carriers: $D_n = 29$ cm²/s, $L_n = 60$ µm. Steady state, low injection, uniform illumination, no current.",
+  "hints": [
+   "Optics first (α, R), then photon flux, then Lambert–Beer.",
+   "$G = \\alpha\\Phi(x)$.",
+   "No current, steady state: $\\Delta n = G\\tau$, $\\tau = L^2/D$."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "Absorption coefficient at 650 nm (m⁻¹).",
+    "points": 2,
+    "answer": {
+     "value": 290000.0,
+     "unit": "m⁻¹",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$\\alpha = 4\\pi \\times 0.015/650 \\times 10^{-9} = 2.90 \\times 10^5$ m⁻¹."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Reflectance at the air/Si interface.",
+    "points": 2,
+    "answer": {
+     "value": 0.3443,
+     "unit": "",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$R = \\left|\\dfrac{1 - 3.84 + 0.015i}{1 + 3.84 - 0.015i}\\right|^2 = \\dfrac{2.84^2 + 0.015^2}{4.84^2 + 0.015^2} = 0.344$."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "Photon flux just below the surface, $\\Phi(0)$, in m⁻²s⁻¹.",
+    "points": 2,
+    "answer": {
+     "value": 2.1455e+21,
+     "unit": "m⁻² s⁻¹",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 3.272e+21,
+       "feedback": "That is the incident flux. Just below the surface, subtract the reflected part: × (1 − R)."
+      }
+     ]
+    },
+    "solution": [
+     "$\\Phi_0 = I\\lambda/hc = 3.27 \\times 10^{21}$ m⁻²s⁻¹; $\\Phi(0) = (1 - R)\\Phi_0 = 2.15 \\times 10^{21}$ m⁻²s⁻¹."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "Photon flux at $x = 50$ µm.",
+    "points": 2,
+    "answer": {
+     "value": 1082500000000000.0,
+     "unit": "m⁻² s⁻¹",
+     "tolerance": 0.06
+    },
+    "solution": [
+     "$\\Phi(50\\ \\mathrm{µm}) = 2.15 \\times 10^{21} \\times e^{-14.5} = 1.08 \\times 10^{15}$ m⁻²s⁻¹ (answer book: 1.14 × 10¹⁵, rounding; both accepted)."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "numeric",
+    "prompt": "Generation rate at $x = 50$ µm.",
+    "points": 3,
+    "answer": {
+     "value": 3.1391e+20,
+     "unit": "m⁻³ s⁻¹",
+     "tolerance": 0.06
+    },
+    "solution": [
+     "$G = \\alpha\\Phi(x) = 2.90 \\times 10^5 \\times 1.08 \\times 10^{15} = 3.1 \\times 10^{20}$ m⁻³s⁻¹ (answer book 3.3 × 10²⁰)."
+    ]
+   },
+   {
+    "id": "f",
+    "label": "(f)",
+    "kind": "numeric",
+    "prompt": "Excess minority-carrier density at $x = 50$ µm.",
+    "points": 3,
+    "answer": {
+     "value": 389680000000000.0,
+     "unit": "m⁻³",
+     "tolerance": 0.06
+    },
+    "solution": [
+     "No current and steady state: $G = \\Delta n/\\tau_n$ with $\\tau_n = L_n^2/D_n = 1.24$ µs.",
+     "$\\Delta n = G\\tau_n = 3.9 \\times 10^{14}$ m⁻³ (answer book 4.1 × 10¹⁴)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "w3-exam-76",
+  "type": "multi",
+  "week": 3,
+  "topic": "A phosphorus-doped slab, cold and hot",
+  "concept": "carrier-density",
+  "difficulty": 3,
+  "prerequisites": [
+   "exp-log"
+  ],
+  "points": 16,
+  "source": "Book exercise 7.6 (a)–(g) (instruction 3; self-derived, not official)",
+  "prompt": "A 10 cm × 10 cm × 10 cm slab of c-Si contains exactly $1.5 \\times 10^{19}$ phosphorus atoms, all ionised. $N_C \\approx 6.2 \\times 10^{15}\\,T^{3/2}$ cm⁻³, $N_V \\approx 3.5 \\times 10^{15}\\,T^{3/2}$ cm⁻³, $E_G = 1.1$ eV, $5 \\times 10^{22}$ Si atoms/cm³. **Self-derived, not official** (instruction 3 has no official answers yet).",
+  "hints": [
+   "Density = number / volume.",
+   "$n_i$ with $N_C(T)$, $N_V(T)$ and $k_BT$ at each temperature.",
+   "When $n_i$ is comparable with $N_D$, use the exact neutrality solution."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "Density of phosphorus atoms (cm⁻³).",
+    "points": 1,
+    "answer": {
+     "value": 1.5e+16,
+     "unit": "cm⁻³",
+     "tolerance": 0.01,
+     "errors": [
+      {
+       "value": 1.5e+19,
+       "feedback": "That is the total number. Divide by the volume, 1000 cm³."
+      }
+     ]
+    },
+    "solution": [
+     "Volume: 1000 cm³. $N_D = 1.5 \\times 10^{19}/1000 = 1.5 \\times 10^{16}$ cm⁻³."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Phosphorus atoms per million Si atoms (ppm).",
+    "points": 1,
+    "answer": {
+     "value": 0.3,
+     "unit": "ppm",
+     "tolerance": 0.01
+    },
+    "solution": [
+     "$1.5 \\times 10^{16}/5 \\times 10^{22} = 3 \\times 10^{-7}$ = 0.3 ppm."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "Intrinsic carrier density at room temperature (300 K).",
+    "points": 3,
+    "answer": {
+     "value": 13942000000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.05
+    },
+    "solution": [
+     "$N_C = 6.2 \\times 10^{15} \\times 300^{3/2} = 3.22 \\times 10^{19}$, $N_V = 1.82 \\times 10^{19}$ cm⁻³.",
+     "$n_i = \\sqrt{N_CN_V}\\,e^{-1.1/(2 \\times 0.02585)} = 1.39 \\times 10^{10}$ cm⁻³ (E_G = 1.1 eV here, hence higher than the usual 9.5 × 10⁹)."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "Hole density at 300 K.",
+    "points": 2,
+    "answer": {
+     "value": 12958,
+     "unit": "cm⁻³",
+     "tolerance": 0.05
+    },
+    "solution": [
+     "$n = N_D = 1.5 \\times 10^{16}$ cm⁻³; $p = n_i^2/n = (1.39 \\times 10^{10})^2/1.5 \\times 10^{16} = 1.3 \\times 10^4$ cm⁻³. n-type, electrons are the majority."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "numeric",
+    "prompt": "$E_C - E_F$ at 300 K.",
+    "points": 2,
+    "answer": {
+     "value": 0.1983,
+     "unit": "eV",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$E_C - E_F = k_BT\\ln(N_C/n) = 0.02585\\ln(3.22 \\times 10^{19}/1.5 \\times 10^{16}) = 0.198$ eV."
+    ]
+   },
+   {
+    "id": "f",
+    "label": "(f)",
+    "kind": "numeric",
+    "prompt": "Intrinsic carrier density at 727 °C (1000 K).",
+    "points": 3,
+    "answer": {
+     "value": 2.4909e+17,
+     "unit": "cm⁻³",
+     "tolerance": 0.05,
+     "errors": [
+      {
+       "value": 4.093e+16,
+       "feedback": "You kept $N_C$ and $N_V$ at their 300 K values. Evaluate $6.2 \\times 10^{15} \\times 1000^{3/2}$ etc."
+      }
+     ]
+    },
+    "solution": [
+     "$N_C = 1.96 \\times 10^{20}$, $N_V = 1.11 \\times 10^{20}$ cm⁻³, $k_BT = 0.0862$ eV.",
+     "$n_i = \\sqrt{N_CN_V}\\,e^{-1.1/(2 \\times 0.0862)} = 2.5 \\times 10^{17}$ cm⁻³: larger than $N_D$!"
+    ]
+   },
+   {
+    "id": "g",
+    "label": "(g)",
+    "kind": "numeric",
+    "prompt": "Electron density at 1000 K (charge neutrality + mass action).",
+    "points": 2,
+    "answer": {
+     "value": 2.567e+17,
+     "unit": "cm⁻³",
+     "tolerance": 0.04,
+     "errors": [
+      {
+       "value": 1.5e+16,
+       "feedback": "$n \\approx N_D$ only holds when $n_i \\ll N_D$. Here $n_i > N_D$: solve $n = N_D + n_i^2/n$."
+      }
+     ]
+    },
+    "solution": [
+     "$n = \\frac{N_D}{2} + \\sqrt{(N_D/2)^2 + n_i^2} = 2.57 \\times 10^{17}$ cm⁻³ and $p = n_i^2/n = 2.42 \\times 10^{17}$ cm⁻³: almost equal."
+    ]
+   },
+   {
+    "id": "h",
+    "label": "(h)",
+    "kind": "numeric",
+    "prompt": "$E_C - E_F$ at 1000 K.",
+    "points": 2,
+    "answer": {
+     "value": 0.572,
+     "unit": "eV",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$E_C - E_F = 0.0862\\ln(1.96 \\times 10^{20}/2.57 \\times 10^{17}) = 0.57$ eV: practically at the intrinsic level (0.575 eV below $E_C$).",
+     "The silicon behaves as **intrinsic**: n ≈ p. The extra carriers come from thermally broken Si–Si bonds (pairs), which outnumber the donor electrons. At 300 K $E_F$ lies 0.20 eV below $E_C$ (n-type), at 1000 K near midgap."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "w3-exam-L",
+  "type": "multi",
+  "week": 3,
+  "topic": "Lifetime and diffusion length in a solar wafer",
+  "concept": "lifetime",
+  "difficulty": 2,
+  "prerequisites": [],
+  "points": 12,
+  "source": "Modelled on book ex. 7.2/7.3 and the example on p. 72",
+  "prompt": "A 180 µm thick p-type c-Si wafer has an electron mobility of 1250 cm²/Vs (as in the book example on p. 72). The bulk lifetime of the electrons is 20 µs. $T = 300$ K.",
+  "hints": [
+   "Einstein relation for D.",
+   "$L = \\sqrt{D\\tau}$ with τ in seconds.",
+   "Combine lifetimes via inverse sums."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "Electron diffusion coefficient.",
+    "points": 2,
+    "answer": {
+     "value": 32.31,
+     "unit": "cm²/s",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$D_n = \\mu_nk_BT/q = 1250 \\times 0.02585 = 32.3$ cm²/s."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "Electron diffusion length in µm.",
+    "points": 3,
+    "answer": {
+     "value": 254.2,
+     "unit": "µm",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 254200.0,
+       "feedback": "Convert τ to seconds: 20 µs = 2 × 10⁻⁵ s."
+      }
+     ]
+    },
+    "solution": [
+     "$L_n = \\sqrt{32.3 \\times 20 \\times 10^{-6}} = 0.0254$ cm $= 254$ µm."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "mcq",
+    "prompt": "Is this good enough for efficient collection in this wafer?",
+    "points": 2,
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes: L is longer than the wafer thickness, so carriers generated anywhere can reach the junction.",
+      "feedback": "Right: 254 µm > 180 µm.",
+      "correct": true
+     },
+     {
+      "id": "b",
+      "text": "No: L must be at least 10 times the wafer thickness.",
+      "feedback": "There is no such rule; L larger than the thickness already gives good collection."
+     },
+     {
+      "id": "c",
+      "text": "No: L should be smaller than the thickness so carriers stay in the wafer.",
+      "feedback": "The opposite: carriers must survive long enough to reach the junction."
+     },
+     {
+      "id": "d",
+      "text": "It cannot be judged without the doping.",
+      "feedback": "The diffusion length already contains the relevant information."
+     }
+    ],
+    "solution": [
+     "$L = 254$ µm exceeds the 180 µm thickness: most minority carriers reach the junction before recombining."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "numeric",
+    "prompt": "Iron contamination adds an SRH lifetime of 5 µs. What is the new effective lifetime (µs)?",
+    "points": 3,
+    "answer": {
+     "value": 4.0,
+     "unit": "µs",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 12.5,
+       "feedback": "Lifetimes do not average; add the inverses."
+      }
+     ]
+    },
+    "solution": [
+     "$1/\\tau = 1/20 + 1/5 = 0.25$ µs⁻¹, $\\tau = 4.0$ µs."
+    ]
+   },
+   {
+    "id": "e",
+    "label": "(e)",
+    "kind": "numeric",
+    "prompt": "New diffusion length (µm).",
+    "points": 2,
+    "answer": {
+     "value": 113.7,
+     "unit": "µm",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "$L_n = \\sqrt{32.3 \\times 4 \\times 10^{-6}} = 0.0114$ cm $= 114$ µm: now shorter than the wafer; carriers generated near the back are largely lost."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "w3-exam-78",
+  "type": "multi",
+  "week": 3,
+  "topic": "Uniform generation in a bar with a surface",
+  "concept": "continuity",
+  "difficulty": 3,
+  "prerequisites": [
+   "derivatives-odes"
+  ],
+  "points": 12,
+  "source": "Modelled on book exercise 7.8 (instruction 3; self-derived, with numbers)",
+  "prompt": "A p-type c-Si bar of width $W = 200$ µm is uniformly illuminated: $G_L = 10^{19}$ cm⁻³s⁻¹. $D_n = 30$ cm²/s, infinite lifetime, no electric field, steady state. At $x = 0$ the excess electron density is zero; at $x = W$ the surface recombination velocity is $S$. **Self-derived, not official** (instruction 3 has no official answers yet).",
+  "hints": [
+   "Integrate $D_n\\Delta n'' = -G_L$ twice.",
+   "Use $\\Delta n(0) = 0$, then the condition at $x = W$.",
+   "$S = 0$ means zero slope; $S > 0$ means $D_n\\Delta n' = -S\\Delta n$."
+  ],
+  "solution": [
+   "See the solution under each part."
+  ],
+  "parts": [
+   {
+    "id": "a",
+    "label": "(a)",
+    "kind": "numeric",
+    "prompt": "For $S = 0$: what is $\\Delta n$ at $x = W$?",
+    "points": 4,
+    "answer": {
+     "value": 66670000000000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.02,
+     "errors": [
+      {
+       "value": 133300000000000.0,
+       "feedback": "You forgot the factor ½ from integrating twice: $\\Delta n(W) = G_LW^2/(2D_n)$."
+      }
+     ]
+    },
+    "solution": [
+     "$D_n\\Delta n'' = -G_L$ → $\\Delta n = -\\frac{G_L}{2D_n}x^2 + C_1x$ (using $\\Delta n(0) = 0$).",
+     "$S = 0$: $\\Delta n'(W) = 0$ → $C_1 = G_LW/D_n$, so $\\Delta n(W) = \\frac{G_LW^2}{2D_n} = \\frac{10^{19} \\times (0.02)^2}{60} = 6.67 \\times 10^{13}$ cm⁻³."
+    ]
+   },
+   {
+    "id": "b",
+    "label": "(b)",
+    "kind": "numeric",
+    "prompt": "For $S = 10^3$ cm/s: what is $\\Delta n$ at $x = W$?",
+    "points": 4,
+    "answer": {
+     "value": 40000000000000.0,
+     "unit": "cm⁻³",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "Boundary: $D_n\\Delta n'(W) = -S\\,\\Delta n(W)$ gives $C_1 = \\frac{G_LW(1 + SW/2D_n)}{D_n + SW}$.",
+     "$SW/D_n = 0.667$: $C_1 = \\frac{10^{19} \\times 0.02 \\times 1.333}{30 + 20} = 5.33 \\times 10^{15}$ cm⁻⁴.",
+     "$\\Delta n(W) = -\\frac{10^{19}}{60}(0.02)^2 + 5.33 \\times 10^{15} \\times 0.02 = 4.0 \\times 10^{13}$ cm⁻³."
+    ]
+   },
+   {
+    "id": "c",
+    "label": "(c)",
+    "kind": "numeric",
+    "prompt": "For $S = 10^3$ cm/s: at which position (µm) is $\\Delta n$ maximal?",
+    "points": 2,
+    "answer": {
+     "value": 160,
+     "unit": "µm",
+     "tolerance": 0.02
+    },
+    "solution": [
+     "Maximum where $\\Delta n' = 0$: $x^* = C_1D_n/G_L = 5.33 \\times 10^{15} \\times 30/10^{19} = 0.016$ cm = 160 µm, inside the bar (for S = 0 it would be at W)."
+    ]
+   },
+   {
+    "id": "d",
+    "label": "(d)",
+    "kind": "open",
+    "prompt": "Sketch both profiles in one plot.",
+    "points": 2,
+    "solution": [
+     "Both start at 0 at x = 0 and are downward parabolas. S = 0: rises to its maximum 6.7 × 10¹³ cm⁻³ with zero slope at x = W. S = 10³ cm/s: lies below, peaks at 160 µm and bends down to 4.0 × 10¹³ cm⁻³ at x = W, where carriers flow into the surface."
+    ]
+   }
+  ]
+ }
+]

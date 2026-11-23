@@ -1,0 +1,3470 @@
+{
+  "terms": [
+    {
+      "id": "energy",
+      "term": "Energy",
+      "aliases": [
+        "energies"
+      ],
+      "symbol": "E",
+      "unit": "J",
+      "short": "The capacity of a system to do work, produce change or transfer heat. It is conserved: it can change form but is never created or destroyed.",
+      "long": "Lecture 1 lists **potential** forms (chemical, mechanical, nuclear, gravitational) and **kinetic** forms (motion, radiant, electrical, thermal). A solar cell converts radiant energy (sunlight) directly into electrical energy.\n\nEnergy is measured in joules; the course also uses kWh (electricity bills) and eV (single electrons and photons).",
+      "example": "Lifting a 0.1 kg tomato by 1 m stores $W = mgh = 0.1 \\times 10 \\times 1 = 1\\,\\mathrm{J}$ (lecture 1, slide 29).",
+      "related": [
+        "power",
+        "work",
+        "joule",
+        "electron-volt",
+        "conservation-of-energy"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "foundation": "units",
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "work",
+      "term": "Work",
+      "aliases": [
+        "mechanical work"
+      ],
+      "symbol": "W = F \\cdot s",
+      "unit": "J",
+      "short": "Energy transferred by a force acting over a distance: work = force × distance.",
+      "long": "If a force $F$ (in newton) pushes something over a distance $s$ (in metre) along the force, the work done is $W = F s$ in joule (1 J = 1 N m). Force itself follows from Newton’s law $F = ma$.",
+      "example": "A cyclist pushing against 15 N of drag for 10 m does $W = 15 \\times 10 = 150\\,\\mathrm{J}$ of work.",
+      "related": [
+        "energy",
+        "power",
+        "joule"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "foundation": "units",
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "power",
+      "term": "Power",
+      "aliases": [
+        "powers"
+      ],
+      "symbol": "P = \\frac{\\mathrm{d}E}{\\mathrm{d}t}",
+      "unit": "W = J/s",
+      "short": "The rate at which energy is converted or transferred: energy per unit time.",
+      "long": "One watt is one joule per second. Power is what a solar module delivers at a given moment; energy (kWh) is power accumulated over time. For constant power, $E = P t$. For a constant force at constant speed, $P = F v$.",
+      "example": "A cyclist at 10 m/s against 15 N drag converts $P = F v = 15 \\times 10 = 150\\,\\mathrm{W}$ (lecture 1, slide 31).",
+      "related": [
+        "energy",
+        "watt",
+        "kilowatt-hour",
+        "irradiance"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "foundation": "units",
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "joule",
+      "term": "Joule",
+      "aliases": [
+        "joules"
+      ],
+      "symbol": "\\mathrm{J}",
+      "unit": "kg m² s⁻²",
+      "short": "The SI unit of energy: 1 J = 1 N × 1 m = 1 kg m² s⁻².",
+      "long": "All formulas on the equation sheet expect energies in joule unless they explicitly use eV. Photon energies in joule are tiny (≈ 10⁻¹⁹ J), which is why the electron-volt is handy.",
+      "example": "1 kWh = 3.6 × 10⁶ J; 1 cal = 4.18 J; 1 eV = 1.602 × 10⁻¹⁹ J.",
+      "related": [
+        "energy",
+        "electron-volt",
+        "kilowatt-hour"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "watt",
+      "term": "Watt",
+      "aliases": [
+        "W",
+        "watts"
+      ],
+      "symbol": "\\mathrm{W}",
+      "unit": "J s⁻¹",
+      "short": "The SI unit of power: one joule per second.",
+      "long": "Watch the letter W: it is both the unit watt and the symbol for work. Per area it becomes W/m² (irradiance); per area per wavelength W m⁻² nm⁻¹ (spectral irradiance).",
+      "example": "AM1.5 sunlight delivers 1000 W on every square metre facing the Sun.",
+      "related": [
+        "power",
+        "watt-peak",
+        "irradiance"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "kilowatt-hour",
+      "term": "Kilowatt-hour",
+      "aliases": [
+        "kWh"
+      ],
+      "symbol": "\\mathrm{kWh}",
+      "unit": "3.6 × 10⁶ J",
+      "short": "The energy a 1 kW appliance converts in one hour. Used on electricity bills and for yearly solar irradiation.",
+      "long": "$1\\,\\mathrm{kWh} = 1000\\,\\mathrm{W} \\times 3600\\,\\mathrm{s} = 3.6 \\times 10^6\\,\\mathrm{J}$. Yearly irradiation is quoted in kWh/m².",
+      "example": "1050 kWh/m² per year (NL, lecture 1) = 1050 × 3.6 MJ/m² = 3780 MJ/m².",
+      "related": [
+        "joule",
+        "irradiation",
+        "equivalent-sun-hours"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "electron-volt",
+      "term": "Electron-volt",
+      "aliases": [
+        "eV",
+        "electronvolt",
+        "electron volt"
+      ],
+      "symbol": "\\mathrm{eV}",
+      "unit": "1.602 × 10⁻¹⁹ J",
+      "short": "The energy an electron gains when it moves across a potential difference of 1 volt: 1 eV = 1.602 × 10⁻¹⁹ J.",
+      "long": "Because one electron carries charge $q = 1.602 \\times 10^{-19}$ C, crossing 1 V gives it $q \\times 1\\,\\mathrm{V} = 1.602 \\times 10^{-19}$ J. Converting: divide joules by $q$ to get eV, multiply eV by $q$ to get joules.\n\nBandgaps and photon energies are naturally a few eV, so this is the unit of choice in the course. The classic exam slip is mixing eV and J in one formula.",
+      "example": "A 700 nm photon has $E = 2.84 \\times 10^{-19}$ J; divided by $1.602 \\times 10^{-19}$ that is 1.77 eV.",
+      "related": [
+        "joule",
+        "photon-energy",
+        "elementary-charge",
+        "bandgap"
+      ],
+      "category": "prerequisite",
+      "topic": "energy & units",
+      "weeks": [
+        1,
+        2
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "si-prefixes",
+      "term": "SI prefixes",
+      "aliases": [
+        "prefix",
+        "prefixes",
+        "nano",
+        "micro",
+        "unit conversion",
+        "unit conversions"
+      ],
+      "short": "Powers of ten written as letters: n = 10⁻⁹, µ = 10⁻⁶, m = 10⁻³, c = 10⁻², k = 10³, M = 10⁶, G = 10⁹.",
+      "long": "Convert everything to base SI units (m, s, J, W, A) before you plug numbers into a formula. Squared and cubed units square and cube the factor: 1 cm² = 10⁻⁴ m², 1 cm⁻³ = 10⁶ m⁻³, 1 nm² = 10⁻¹⁸ m².\n\nAlmost every ‘my digits are right but the answer is off by 10ⁿ’ mistake is a prefix slip.",
+      "example": "500 nm = 500 × 10⁻⁹ m = 5 × 10⁻⁷ m. 20 cm² = 20 × 10⁻⁴ m² = 2 × 10⁻³ m².",
+      "related": [
+        "scientific-notation",
+        "joule",
+        "electron-volt"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "scientific-notation",
+      "term": "Scientific notation",
+      "aliases": [
+        "powers of ten",
+        "order of magnitude"
+      ],
+      "short": "Writing numbers as a × 10ⁿ with 1 ≤ a < 10, e.g. 4.2 × 10²¹.",
+      "long": "Multiply: multiply the mantissas, add the exponents. Divide: divide mantissas, subtract exponents. On a calculator or on this site you can type 4.2e21.",
+      "example": "$(6.63 \\times 10^{-34}) \\times (3.00 \\times 10^{8}) = 19.9 \\times 10^{-26} = 1.99 \\times 10^{-25}$.",
+      "related": [
+        "si-prefixes",
+        "log-scale"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "conservation-of-energy",
+      "term": "Conservation of energy",
+      "aliases": [
+        "energy conservation",
+        "energy is conserved"
+      ],
+      "short": "The total energy of a closed system stays constant; energy is only converted from one form into another.",
+      "long": "So a solar cell does not ‘consume’ sunlight’s energy: it diverts part of the energy flowing from the hot Sun to cold space and turns it into electrical energy. The rest ends up as heat or is reflected (lecture 1, section 1.3).",
+      "related": [
+        "energy",
+        "energy-flow"
+      ],
+      "category": "course",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "energy-flow",
+      "term": "Energy flow",
+      "aliases": [
+        "radiative heat flow",
+        "heat flow"
+      ],
+      "short": "Work can only be extracted from energy that flows from a high to a low level, like water from a mountain lake to the sea.",
+      "long": "Lecture 1 compares three ‘devices’: a water wheel (water flowing downhill), a heat engine (heat flowing from 1000 °C coal to a 10 °C ocean) and a solar cell or plant (radiation flowing from the ~6000 K Sun to ~3 K space). Without the flow (both sides at the same level) no work can be extracted. In the solar cell, electrons play the role of the water.",
+      "related": [
+        "conservation-of-energy",
+        "solar-cell",
+        "thermal-radiation"
+      ],
+      "category": "course",
+      "topic": "energy & units",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "electromagnetic-wave",
+      "term": "Electromagnetic wave",
+      "aliases": [
+        "EM wave",
+        "electromagnetic waves",
+        "light wave",
+        "EM-waves"
+      ],
+      "short": "An oscillating electric and magnetic field travelling through space at the speed of light. Light, radio and X-rays are all EM waves.",
+      "long": "The electric and magnetic fields are perpendicular to each other and to the travel direction (a transverse wave). In a medium with refractive index $n$ the wave slows to $c/n$ and its wavelength shrinks to $\\lambda_0/n$, but its frequency stays the same.",
+      "example": "Visible light: λ ≈ 350–750 nm, ν ≈ 4–9 × 10¹⁴ Hz.",
+      "related": [
+        "wavelength",
+        "frequency",
+        "photon",
+        "polarisation"
+      ],
+      "category": "prerequisite",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons",
+      "taughtIn": "week-01#photons"
+    },
+    {
+      "id": "wavelength",
+      "term": "Wavelength",
+      "aliases": [
+        "wavelengths",
+        "λ"
+      ],
+      "symbol": "\\lambda",
+      "unit": "m (often nm)",
+      "short": "The distance between two successive crests of a wave. For sunlight about 300–2500 nm.",
+      "long": "Wavelength, frequency and speed are linked: $\\lambda = c/(n\\nu)$ (eq. 4.6). Longer wavelength means lower photon energy ($E = hc/\\lambda$). Always convert nm to m before using $h$ and $c$ in SI units.",
+      "example": "Red light: 700 nm = 7.0 × 10⁻⁷ m. In c-Si (n = 3.57) the wavelength of 1000 nm light shrinks to 280 nm.",
+      "related": [
+        "frequency",
+        "photon-energy",
+        "electromagnetic-spectrum",
+        "refractive-index"
+      ],
+      "category": "prerequisite",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons",
+      "taughtIn": "week-01#photons"
+    },
+    {
+      "id": "frequency",
+      "term": "Frequency",
+      "aliases": [
+        "frequencies"
+      ],
+      "symbol": "\\nu",
+      "unit": "Hz = s⁻¹",
+      "short": "How many wave crests pass per second. The Greek letter ν (nu), not the letter v.",
+      "long": "Frequency does not change when light enters another material; wavelength and speed do. Photon energy is proportional to frequency: $E = h\\nu$ (eq. 3.1).",
+      "example": "ν = c/λ = (3.00 × 10⁸)/(5.00 × 10⁻⁷) = 6.0 × 10¹⁴ Hz for 500 nm light.",
+      "related": [
+        "wavelength",
+        "photon-energy"
+      ],
+      "category": "prerequisite",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons"
+    },
+    {
+      "id": "speed-of-light",
+      "term": "Speed of light",
+      "aliases": [
+        "c",
+        "c0"
+      ],
+      "symbol": "c_0",
+      "unit": "m s⁻¹",
+      "short": "2.998 × 10⁸ m/s in vacuum. In a material with refractive index n light travels at c/n.",
+      "long": "The formula sheet gives $c_0 = 2.997\\,925 \\times 10^8$ m/s. Instruction answers usually round to 3.00 × 10⁸; both are fine at exam precision.",
+      "related": [
+        "refractive-index",
+        "wavelength",
+        "planck-constant"
+      ],
+      "category": "prerequisite",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons"
+    },
+    {
+      "id": "photon",
+      "term": "Photon",
+      "aliases": [
+        "photons",
+        "light quantum",
+        "quanta"
+      ],
+      "short": "A packet (quantum) of light energy. Light is absorbed and emitted one photon at a time.",
+      "long": "Light behaves as a wave when it travels and reflects, but as a stream of particles when it is absorbed (wave–particle duality). Each photon carries $E = h\\nu = hc/\\lambda$. In a solar cell one absorbed photon (with enough energy) creates **one** electron–hole pair, no matter how much extra energy it carries.",
+      "example": "1000 W/m² of 500 nm light is 2.5 × 10²¹ photons per m² per second.",
+      "related": [
+        "photon-energy",
+        "photon-flux",
+        "wave-particle-duality",
+        "electron-hole-pair"
+      ],
+      "category": "course",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons",
+      "taughtIn": "week-01#photons"
+    },
+    {
+      "id": "photon-energy",
+      "term": "Photon energy",
+      "aliases": [
+        "energy of a photon",
+        "photon energies",
+        "Eph"
+      ],
+      "symbol": "E_{\\mathrm{ph}} = h\\nu = \\frac{hc}{\\lambda}",
+      "unit": "J or eV",
+      "short": "The energy of one photon: E = hν = hc/λ. Shorter wavelength → more energetic photon.",
+      "long": "With $hc = 1.986 \\times 10^{-25}$ J m you get joules from λ in metres. A handy shortcut (not on the sheet): $E\\,[\\mathrm{eV}] \\approx 1240/\\lambda\\,[\\mathrm{nm}]$.\n\nComparing photon energy with the **bandgap** decides whether a photon can be absorbed in a semiconductor.",
+      "example": "λ = 700 nm: $E = \\frac{6.626 \\times 10^{-34} \\times 2.998 \\times 10^{8}}{700 \\times 10^{-9}} = 2.84 \\times 10^{-19}$ J = 1.77 eV.",
+      "related": [
+        "photon",
+        "planck-constant",
+        "wavelength",
+        "electron-volt",
+        "bandgap"
+      ],
+      "category": "course",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons",
+      "taughtIn": "week-01#photons"
+    },
+    {
+      "id": "planck-constant",
+      "term": "Planck constant",
+      "aliases": [
+        "Planck's constant",
+        "h"
+      ],
+      "symbol": "h",
+      "unit": "J s",
+      "short": "The constant linking a photon’s energy to its frequency: h = 6.626 × 10⁻³⁴ J s.",
+      "long": "Appears in $E = h\\nu$ and Planck’s blackbody law. Its smallness is why individual photons carry so little energy in joules.",
+      "related": [
+        "photon-energy",
+        "planck-law",
+        "speed-of-light"
+      ],
+      "category": "prerequisite",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons"
+    },
+    {
+      "id": "electromagnetic-spectrum",
+      "term": "Electromagnetic spectrum",
+      "aliases": [
+        "EM spectrum",
+        "spectral range"
+      ],
+      "short": "All EM radiation ordered by wavelength: gamma, X-ray, UV, visible (≈ 350–750 nm), infrared, microwaves, radio.",
+      "long": "The solar spectrum covers UV, visible and near-infrared, roughly 300–2500 nm at the Earth’s surface. Photon energies there run from about 4 eV to 0.5 eV.",
+      "related": [
+        "wavelength",
+        "solar-spectrum",
+        "photon-energy"
+      ],
+      "category": "course",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#photons"
+    },
+    {
+      "id": "wave-particle-duality",
+      "term": "Wave–particle duality",
+      "aliases": [
+        "wave-particle duality",
+        "wave particle duality"
+      ],
+      "short": "Light behaves as a wave (interference, refraction) and as particles called photons (absorption, emission), depending on the situation.",
+      "long": "Einstein (1905) interpreted Planck’s constant as a sign that light comes in quanta $E = h\\nu$. For this course: use wave optics for reflection, refraction and coatings; use photons for absorption, generation and current.",
+      "related": [
+        "photon",
+        "electromagnetic-wave"
+      ],
+      "category": "course",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#photons"
+    },
+    {
+      "id": "amplitude",
+      "term": "Amplitude",
+      "aliases": [
+        "field amplitude",
+        "amplitudes"
+      ],
+      "short": "The maximum size of a wave’s oscillation. For light, the size of the electric field; intensity goes as amplitude squared.",
+      "long": "The Fresnel coefficients $r_s, r_p$ are ratios of amplitudes ($\\xi_{0r}/\\xi_{0i}$). Because power ∝ amplitude², reflectance is $R = r^2$.",
+      "related": [
+        "electromagnetic-wave",
+        "fresnel-equations",
+        "reflectance"
+      ],
+      "category": "prerequisite",
+      "topic": "light & photons",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons"
+    },
+    {
+      "id": "polarisation",
+      "term": "Polarisation",
+      "aliases": [
+        "polarization",
+        "s-polarised",
+        "p-polarised",
+        "unpolarised",
+        "unpolarized",
+        "polarised",
+        "polarized"
+      ],
+      "short": "The direction in which a light wave’s electric field oscillates. s: perpendicular to the plane of incidence; p: parallel to it.",
+      "long": "s comes from German *senkrecht* (perpendicular). The plane of incidence contains the incoming ray and the surface normal. Sunlight is **unpolarised**: an equal mix of s and p, so you average: $R = \\frac{1}{2}(r_s^2 + r_p^2)$ (eq. 4.14).",
+      "example": "Air → c-Si at 60°: $R_s = 55.9\\,\\%$, $R_p = 8.8\\,\\%$, unpolarised $R = 32.4\\,\\%$.",
+      "related": [
+        "fresnel-equations",
+        "reflectance"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "thermal-radiation",
+      "term": "Thermal radiation",
+      "aliases": [
+        "heat radiation"
+      ],
+      "short": "Electromagnetic radiation emitted by every object because of its temperature. Hotter objects emit more and at shorter wavelengths.",
+      "long": "Lecture 1 shows the progression: a person (infrared), flames, a light bulb, the Sun. The ideal emitter is the blackbody, described by Planck’s law.",
+      "related": [
+        "blackbody",
+        "planck-law",
+        "wien-law",
+        "stefan-boltzmann-law"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#blackbody"
+    },
+    {
+      "id": "blackbody",
+      "term": "Blackbody",
+      "aliases": [
+        "black body",
+        "black-body",
+        "blackbody radiation"
+      ],
+      "short": "An ideal object that absorbs all radiation falling on it and emits a spectrum that depends only on its temperature.",
+      "long": "A blackbody does not need to look black: the Sun is close to a 5800–6000 K blackbody. Its spectrum is given by Planck’s law; its peak by Wien’s law; its total emitted power by the Stefan–Boltzmann law.",
+      "related": [
+        "planck-law",
+        "wien-law",
+        "stefan-boltzmann-law",
+        "thermal-radiation"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#blackbody"
+    },
+    {
+      "id": "planck-law",
+      "term": "Planck’s law",
+      "aliases": [
+        "Planck law",
+        "Planck's law",
+        "black body radiation law",
+        "blackbody radiation law"
+      ],
+      "symbol": "L^{BB}_{e\\lambda}",
+      "unit": "W m⁻² sr⁻¹ m⁻¹",
+      "short": "The formula for the spectrum emitted by a blackbody at temperature T.",
+      "long": "Per wavelength (book eq. 5.18a): $L^{BB}_{e\\lambda} = \\frac{2hc^2}{\\lambda^5}\\frac{1}{\\exp\\left(\\frac{hc}{\\lambda k_B T}\\right) - 1}$. The lecture shows the per-frequency form $B(\\nu, T)$. It is **not** on the formula sheet; Wien’s and Stefan–Boltzmann’s laws (which follow from it) are.",
+      "related": [
+        "blackbody",
+        "wien-law",
+        "stefan-boltzmann-law"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#blackbody"
+    },
+    {
+      "id": "wien-law",
+      "term": "Wien’s displacement law",
+      "aliases": [
+        "Wien's law",
+        "Wien law",
+        "Wien's displacement law",
+        "Wien displacement"
+      ],
+      "symbol": "\\lambda_{\\max} T = b",
+      "unit": "b = 2.898 × 10⁻³ m K",
+      "short": "The peak wavelength of a blackbody is inversely proportional to its temperature: λmax·T ≈ 2.898 × 10⁻³ m K.",
+      "long": "Hotter → peak shifts to shorter (bluer) wavelengths. Eq. 5.21 on the formula sheet. Use T in kelvin and get λ in metres.",
+      "example": "T = 5800 K: $\\lambda_{\\max} = 2.898 \\times 10^{-3} / 5800 = 5.0 \\times 10^{-7}$ m = 500 nm.",
+      "related": [
+        "blackbody",
+        "planck-law",
+        "stefan-boltzmann-law"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#blackbody"
+    },
+    {
+      "id": "stefan-boltzmann-law",
+      "term": "Stefan–Boltzmann law",
+      "aliases": [
+        "Stefan-Boltzmann law",
+        "Stefan Boltzmann",
+        "radiant emittance"
+      ],
+      "symbol": "M_e^{BB} = \\sigma T^4",
+      "unit": "W m⁻²",
+      "short": "A blackbody emits a total power per area of σT⁴, with σ = 5.670 × 10⁻⁸ W m⁻² K⁻⁴.",
+      "long": "Because of the fourth power, doubling the absolute temperature gives 16 × the emitted power. Eq. 5.19 on the formula sheet.",
+      "example": "Sun’s surface at 5800 K: $\\sigma T^4 = 5.67 \\times 10^{-8} \\times 5800^4 = 6.4 \\times 10^7$ W/m².",
+      "related": [
+        "blackbody",
+        "wien-law",
+        "kelvin"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#blackbody"
+    },
+    {
+      "id": "spectral-irradiance",
+      "term": "Spectral irradiance",
+      "aliases": [
+        "spectral power density",
+        "spectral irradiance density",
+        "P(λ)",
+        "Ieλ",
+        "spectral power"
+      ],
+      "symbol": "I_{e\\lambda}",
+      "unit": "W m⁻² m⁻¹ (or W m⁻² nm⁻¹)",
+      "short": "Power per area per unit wavelength: the height of a spectrum curve.",
+      "long": "The lecture calls it spectral power density $P(\\lambda)$; the book writes $I_{e\\lambda}$. To get the irradiance in W/m², integrate it over wavelength (the area under the curve). Units: careful with W m⁻² nm⁻¹ vs W m⁻² m⁻¹ (a factor 10⁹).",
+      "example": "The simplified AM1.5 spectrum of exercise 5.6 is 1.00 W m⁻² nm⁻¹ = 1.00 × 10⁹ W m⁻² m⁻¹ between 250 and 1000 nm.",
+      "related": [
+        "irradiance",
+        "spectral-photon-flux",
+        "solar-spectrum",
+        "integral"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "foundation": "integrals",
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "irradiance",
+      "term": "Irradiance",
+      "aliases": [
+        "intensity",
+        "incident power density",
+        "light intensity"
+      ],
+      "symbol": "I_e",
+      "unit": "W m⁻²",
+      "short": "Total power of light arriving per square metre: the area under the spectral irradiance curve.",
+      "long": "$I_e = \\int I_{e\\lambda}\\,\\mathrm{d}\\lambda$. AM1.5 is defined as 1000 W/m². Lecture 1 (slide 59) writes ‘per unit wavelength’ in the irradiance definition; that belongs to *spectral* irradiance only.",
+      "example": "Book ex. 5.6: 1.00 × (1000 − 250) + 0.25 × (2000 − 1000) = 750 + 250 = 1000 W/m².",
+      "related": [
+        "spectral-irradiance",
+        "irradiation",
+        "photon-flux",
+        "power"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "foundation": "integrals",
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "irradiation",
+      "term": "Irradiation",
+      "aliases": [
+        "insolation",
+        "solar irradiation"
+      ],
+      "symbol": "E_{\\mathrm{rad}}",
+      "unit": "J m⁻² (or kWh m⁻²)",
+      "short": "Solar energy received per square metre over a period: irradiance integrated over time.",
+      "long": "$E_{\\mathrm{rad}} = \\int I_e(t)\\,\\mathrm{d}t$. Irradiance is a rate (W/m²); irradiation is an amount (J/m² or kWh/m²). The Netherlands receives roughly 1000–1050 kWh/m² per year, the Sahara about 2200.",
+      "example": "1050 kWh/m² ÷ 1 kW/m² = 1050 equivalent sun hours per year ≈ 2.9 h per day.",
+      "related": [
+        "irradiance",
+        "kilowatt-hour",
+        "equivalent-sun-hours"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "photon-flux",
+      "term": "Photon flux",
+      "aliases": [
+        "photon flux density",
+        "photon flux densities",
+        "Φph",
+        "number of photons"
+      ],
+      "symbol": "\\Phi_{\\mathrm{ph}}",
+      "unit": "m⁻² s⁻¹",
+      "short": "Number of photons arriving per square metre per second.",
+      "long": "For monochromatic light: $\\Phi = I/E_{\\mathrm{ph}} = I\\lambda/(hc)$. For a spectrum: integrate $I_{e\\lambda}\\lambda/(hc)$ over λ. Strictly, ‘flux’ is per second and ‘flux density’ also per m²; the course uses ‘photon flux’ loosely for the per-area quantity. Check the unit: m⁻² s⁻¹ means per area.",
+      "example": "380 W/m² at 500 nm: $\\Phi = 380 / (3.97 \\times 10^{-19}) = 9.57 \\times 10^{20}$ m⁻² s⁻¹.",
+      "related": [
+        "spectral-photon-flux",
+        "irradiance",
+        "photon-energy",
+        "photocurrent-density"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "spectral-photon-flux",
+      "term": "Spectral photon flux",
+      "aliases": [
+        "spectral photon flux density",
+        "photon flux per wavelength",
+        "Φ(λ)"
+      ],
+      "symbol": "\\Phi_{\\mathrm{ph},\\lambda} = I_{e\\lambda}\\frac{\\lambda}{hc}",
+      "unit": "m⁻² s⁻¹ m⁻¹",
+      "short": "Photons per area per second per unit wavelength: the spectral irradiance divided by the photon energy at each wavelength.",
+      "long": "Eq. 7.3 on the formula sheet. The λ is in the numerator: at longer wavelengths each photon carries less energy, so the same power means more photons. That is why the photon-flux spectrum is shifted to the red compared to the power spectrum.",
+      "related": [
+        "photon-flux",
+        "spectral-irradiance"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "solar-spectrum",
+      "term": "Solar spectrum",
+      "aliases": [
+        "AM1.5",
+        "AM1.5 spectrum",
+        "AM0",
+        "AM0 spectrum",
+        "AM1.5G",
+        "AM1.5 global",
+        "solar spectra",
+        "spectrum"
+      ],
+      "short": "The distribution of sunlight over wavelength. AM0: outside the atmosphere (≈ 1361 W/m²). AM1.5: the standard terrestrial spectrum (1000 W/m²).",
+      "long": "The atmosphere filters the spectrum: ozone removes UV below ~300 nm, water vapour, O₂ and CO₂ cut absorption bands in the infrared. AM1.5 (global, tilted 37°) is the reference for testing solar cells (IEC 60904-3 / ASTM G173). The site’s spectrum diagram uses the tabulated ASTM G173 data.",
+      "related": [
+        "air-mass",
+        "standard-test-conditions",
+        "spectral-irradiance",
+        "solar-constant"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "air-mass",
+      "term": "Air mass",
+      "aliases": [
+        "AM",
+        "optical air mass"
+      ],
+      "symbol": "\\mathit{AM} = \\frac{1}{\\cos\\theta}",
+      "unit": "–",
+      "short": "How many ‘atmosphere thicknesses’ sunlight crosses: AM = 1/cos θ, with θ the angle between the Sun and the zenith.",
+      "long": "Sun overhead: AM1. Sun 60° from the zenith (30° above the horizon): AM2. AM0 means no atmosphere at all. θ is measured from the zenith (straight up), not from the horizon.",
+      "example": "θ = 48.2° gives AM = 1/cos 48.2° = 1.5.",
+      "related": [
+        "solar-spectrum",
+        "standard-test-conditions"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry",
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "standard-test-conditions",
+      "term": "Standard test conditions",
+      "aliases": [
+        "STC"
+      ],
+      "short": "The agreed conditions for rating solar cells and modules: 1000 W/m², AM1.5 spectrum, cell temperature 25 °C.",
+      "long": "Because all labs use the same conditions, efficiencies and module ratings are comparable. A module’s power at STC is its rating in watt-peak (Wp).",
+      "related": [
+        "watt-peak",
+        "solar-spectrum",
+        "air-mass"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "watt-peak",
+      "term": "Watt-peak",
+      "aliases": [
+        "Wp",
+        "peak power"
+      ],
+      "unit": "Wp",
+      "short": "The power a PV module delivers under standard test conditions.",
+      "long": "A 250 Wp module of 2 m² receives 2000 W at STC, so its efficiency is 250/2000 = 12.5 % (book ex. 5.2).",
+      "related": [
+        "standard-test-conditions",
+        "efficiency"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "equivalent-sun-hours",
+      "term": "Equivalent sun hours",
+      "aliases": [
+        "ESH",
+        "sun hours"
+      ],
+      "short": "The yearly (or daily) irradiation expressed as hours of 1000 W/m² sunshine.",
+      "long": "Divide the irradiation in kWh/m² by 1 kW/m². It is a convenient way to estimate yearly energy yield: yield ≈ Wp × ESH × (system losses).",
+      "example": "1050 kWh/m² per year → 1050 ESH per year → 1050/365 ≈ 2.9 h per day.",
+      "related": [
+        "irradiation",
+        "watt-peak"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "solar-constant",
+      "term": "Solar constant",
+      "aliases": [
+        "AM0 irradiance"
+      ],
+      "unit": "W m⁻²",
+      "short": "The irradiance of sunlight just outside the Earth’s atmosphere: about 1361 W/m² (book).",
+      "long": "Lecture 1 quotes 1353 W/m² for AM0 (an older value); book exercise 5.1 uses 1350 W/m². Differences of this size don’t matter at exam precision; use the value the question gives.",
+      "related": [
+        "solar-spectrum",
+        "irradiance"
+      ],
+      "category": "course",
+      "topic": "solar radiation",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "refractive-index",
+      "term": "Refractive index",
+      "aliases": [
+        "index of refraction",
+        "refractive indices",
+        "refractive indexes"
+      ],
+      "symbol": "n",
+      "unit": "–",
+      "short": "How much a material slows light down: light travels at c/n. Air ≈ 1.0, glass ≈ 1.5, c-Si ≈ 3.6 in the near-IR.",
+      "long": "A bigger difference in $n$ between two materials means more reflection at their interface and stronger bending (refraction). $n$ depends on wavelength (c-Si: 3.84 at 650 nm, 3.57 at 1000 nm). For absorbing materials it becomes complex: $\\tilde n = n + i\\kappa$.",
+      "example": "Bare c-Si at normal incidence: $R = \\left(\\frac{1 - 3.57}{1 + 3.57}\\right)^2 = 31.6\\,\\%$.",
+      "related": [
+        "snells-law",
+        "reflectance",
+        "complex-refractive-index",
+        "speed-of-light"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "surface-normal",
+      "term": "Surface normal",
+      "aliases": [
+        "normal",
+        "the normal"
+      ],
+      "short": "The imaginary line perpendicular to a surface. All angles in optics are measured from the normal, never from the surface.",
+      "long": "A ray along the normal has angle 0° (normal incidence); a ray skimming the surface has 90° (grazing incidence).",
+      "related": [
+        "angle-of-incidence",
+        "snells-law"
+      ],
+      "category": "prerequisite",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry"
+    },
+    {
+      "id": "angle-of-incidence",
+      "term": "Angle of incidence",
+      "aliases": [
+        "angle of refraction",
+        "incidence angle",
+        "angle of reflection",
+        "refraction angle",
+        "θi",
+        "θt"
+      ],
+      "symbol": "\\theta_i, \\theta_t",
+      "unit": "°",
+      "short": "θᵢ: angle between the incoming ray and the surface normal. θₜ: angle of the transmitted (refracted) ray with the normal.",
+      "long": "The reflected ray leaves at $\\theta_r = \\theta_i$. Pair each angle with the refractive index of the material it is in when using Snell’s law.",
+      "related": [
+        "snells-law",
+        "surface-normal",
+        "critical-angle"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry",
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "snells-law",
+      "term": "Snell’s law",
+      "aliases": [
+        "Snell's law",
+        "Snell law",
+        "refraction",
+        "law of refraction"
+      ],
+      "symbol": "n_1 \\sin\\theta_i = n_2 \\sin\\theta_t",
+      "short": "When light crosses an interface, n·sinθ stays the same on both sides. Entering a denser medium, it bends towards the normal.",
+      "long": "Eq. 4.11. Physically: wave crests must line up along a flat boundary while the wavelength changes to $\\lambda_0/n$. Through a stack of parallel layers the product $n\\sin\\theta$ is passed on unchanged, so intermediate layers cancel out.",
+      "example": "Air → c-Si (3.57) at 30°: $\\sin\\theta_t = \\sin 30°/3.57 = 0.140$, $\\theta_t = 8.1°$.",
+      "related": [
+        "refractive-index",
+        "angle-of-incidence",
+        "critical-angle",
+        "total-internal-reflection"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry",
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "fresnel-equations",
+      "term": "Fresnel equations",
+      "aliases": [
+        "Fresnel equation",
+        "Fresnel coefficients",
+        "Fresnel"
+      ],
+      "symbol": "r_s, r_p",
+      "short": "Formulas for the fraction of the field amplitude reflected at an interface, separately for s- and p-polarised light.",
+      "long": "Eq. 4.12b and 4.13b. Steps: find $\\theta_t$ with Snell’s law, compute $r_s$ and $r_p$, square them, average for unpolarised light: $R = \\frac{1}{2}(r_s^2 + r_p^2)$. At normal incidence both collapse to $R = \\left(\\frac{n_1 - n_2}{n_1 + n_2}\\right)^2$.",
+      "related": [
+        "reflectance",
+        "polarisation",
+        "snells-law",
+        "amplitude"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "reflectance",
+      "term": "Reflectance",
+      "aliases": [
+        "reflectivity",
+        "reflection",
+        "reflection loss",
+        "reflection losses",
+        "transmittance"
+      ],
+      "symbol": "R",
+      "unit": "– (0–1)",
+      "short": "The fraction of incident light power that is reflected. 1 − R is transmitted (for non-absorbing media).",
+      "long": "Reflectance is a power ratio, so it is the **square** of the amplitude coefficient. It is between 0 and 1 (or 0–100 %). At an interface photons are either reflected or transmitted: $R + T = 1$ (eq. 4.16). When light crosses several interfaces, the transmitted fractions **multiply**.",
+      "example": "Air → glass: $R = (0.5/2.5)^2 = 0.04$; 96 % enters the glass.",
+      "related": [
+        "fresnel-equations",
+        "anti-reflective-coating",
+        "refractive-index"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "critical-angle",
+      "term": "Critical angle",
+      "aliases": [
+        "θcrit",
+        "escape cone"
+      ],
+      "symbol": "\\sin\\theta_{\\mathrm{crit}} = \\frac{n_1}{n_2}",
+      "unit": "°",
+      "short": "Inside the denser material (n₂ > n₁), rays hitting the surface at more than this angle cannot get out: they are totally reflected.",
+      "long": "Eq. 4.19. Only rays inside the ‘escape cone’ $\\theta < \\theta_{\\mathrm{crit}}$ can leave. The critical angle is about **leaving** a dense medium; light can always **enter** from air at any angle.",
+      "example": "c-Si/air: $\\theta_{\\mathrm{crit}} = \\arcsin(1/3.57) = 16.3°$. c-Si/glass: $\\arcsin(1.5/3.57) = 24.8°$.",
+      "related": [
+        "total-internal-reflection",
+        "snells-law",
+        "light-trapping"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry",
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "total-internal-reflection",
+      "term": "Total internal reflection",
+      "aliases": [
+        "TIR",
+        "total reflection"
+      ],
+      "short": "Complete reflection of light inside a dense medium when it hits the surface beyond the critical angle.",
+      "long": "Snell’s law would require $\\sin\\theta_t > 1$, which is impossible, so no light is transmitted and $R = 1$. Solar cells use it for light trapping: light scattered to steep angles inside the silicon stays inside.",
+      "related": [
+        "critical-angle",
+        "light-trapping",
+        "snells-law"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "anti-reflective-coating",
+      "term": "Anti-reflective coating",
+      "aliases": [
+        "ARC",
+        "anti-reflection coating",
+        "antireflective coating",
+        "anti-reflective coatings",
+        "coating",
+        "coatings"
+      ],
+      "short": "A thin transparent layer on the front of a cell that reduces reflection, both by splitting one big index step into two small ones and by interference.",
+      "long": "Without interference the best single layer has $n_c = \\sqrt{n_0 n_s}$ (eq. 10.32). With interference, a layer of thickness $d = \\lambda_0/(4 n_c)$ makes the two reflected waves cancel at $\\lambda_0$ (eq. 10.38). Silicon nitride (Si₃N₄, n ≈ 2) on c-Si gives the familiar blue colour.",
+      "example": "c-Si (n = 3.57): ideal $n_c = \\sqrt{3.57} = 1.89$; quarter-wave thickness at 600 nm for n = 2.0: 75 nm.",
+      "related": [
+        "interference",
+        "reflectance",
+        "quarter-wave-thickness",
+        "surface-texture"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#anti-reflection"
+    },
+    {
+      "id": "interference",
+      "term": "Interference",
+      "aliases": [
+        "constructive interference",
+        "destructive interference",
+        "thin-film interference"
+      ],
+      "short": "When two waves overlap, their amplitudes add: in phase they reinforce (constructive), half a wavelength out of phase they cancel (destructive).",
+      "long": "In a coating, light reflected from the top and from the bottom of the layer overlap. The extra path is $2 n d$; if that equals $\\lambda/2$, the two reflections cancel (lecture 1, slide 72). Because the condition depends on λ, coatings look coloured.",
+      "related": [
+        "anti-reflective-coating",
+        "quarter-wave-thickness",
+        "electromagnetic-wave"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "foundation": "waves-photons",
+      "taughtIn": "week-01#anti-reflection"
+    },
+    {
+      "id": "quarter-wave-thickness",
+      "term": "Quarter-wave thickness",
+      "aliases": [
+        "quarter-wave",
+        "quarter wave",
+        "λ/4 coating"
+      ],
+      "symbol": "n_c d = \\frac{\\lambda_0}{4}",
+      "unit": "nm",
+      "short": "The coating thickness at which reflections from its top and bottom cancel: d = λ₀/(4n_c).",
+      "long": "Optical thickness $n_c d$ equal to a quarter of the vacuum wavelength makes the round trip $2 n_c d = \\lambda_0/2$: half a wave of extra path, destructive interference.",
+      "example": "ITO (n = 1.87) for 1000 nm light: $d = 1000/(4 \\times 1.87) = 134$ nm.",
+      "related": [
+        "anti-reflective-coating",
+        "interference"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#anti-reflection"
+    },
+    {
+      "id": "surface-texture",
+      "term": "Surface texture",
+      "aliases": [
+        "texturing",
+        "pyramid texture",
+        "textured surface",
+        "textures"
+      ],
+      "short": "Micrometre-sized pyramids etched into the surface: reflected light gets a second chance to enter, and light inside travels at steep angles.",
+      "long": "c-Si pyramids are about 5 µm high (lecture 1, slides 78–82). Texture is both anti-reflective (a reflected ray hits a neighbouring pyramid) and light trapping (rays enter obliquely, so they travel further and are more likely to be totally internally reflected).",
+      "related": [
+        "light-trapping",
+        "anti-reflective-coating",
+        "total-internal-reflection"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#anti-reflection"
+    },
+    {
+      "id": "light-trapping",
+      "term": "Light trapping",
+      "aliases": [
+        "back reflector",
+        "light-trapping"
+      ],
+      "short": "Keeping weakly absorbed light inside the absorber for many passes, using reflectors, texture and total internal reflection.",
+      "long": "Matters most for photons just above the bandgap (e.g. 1000 nm in c-Si), which need hundreds of µm to be absorbed. A back reflector that sends light up at an angle beyond the critical angle keeps it in by TIR (instruction 1, Q1d).",
+      "related": [
+        "total-internal-reflection",
+        "surface-texture",
+        "absorption-coefficient"
+      ],
+      "category": "course",
+      "topic": "optics",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "complex-refractive-index",
+      "term": "Complex refractive index",
+      "aliases": [
+        "ñ",
+        "complex index"
+      ],
+      "symbol": "\\tilde{n} = n + i\\kappa",
+      "unit": "–",
+      "short": "The refractive index of an absorbing material: a real part n (speed, reflection) and an imaginary part κ (absorption).",
+      "long": "Eq. 4.21: $\\tilde n = \\sqrt{\\tilde\\epsilon} = n + i\\kappa$. The imaginary part makes the wave decay exponentially as it travels. Exercise 7.5 writes $\\tilde n = n - ik$ (another sign convention); the physics and the numbers for $R$ and $\\alpha$ are identical.",
+      "example": "c-Si at 650 nm: ñ = 3.84 + 0.015i.",
+      "related": [
+        "extinction-coefficient",
+        "absorption-coefficient",
+        "refractive-index",
+        "complex-number"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1
+      ],
+      "foundation": "complex-numbers",
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "extinction-coefficient",
+      "term": "Extinction coefficient",
+      "aliases": [
+        "κ",
+        "kappa",
+        "imaginary part of the refractive index"
+      ],
+      "symbol": "\\kappa",
+      "unit": "–",
+      "short": "The imaginary part of the complex refractive index. It sets how strongly a material absorbs: α = 4πκ/λ₀.",
+      "long": "Small numbers matter: κ = 0.015 already gives α ≈ 2900 cm⁻¹ at 650 nm. In the instruction questions you may ‘ignore κ’ for reflection because κ ≪ n.",
+      "related": [
+        "complex-refractive-index",
+        "absorption-coefficient"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "absorption-coefficient",
+      "term": "Absorption coefficient",
+      "aliases": [
+        "α",
+        "alpha",
+        "absorption coefficients"
+      ],
+      "symbol": "\\alpha = \\frac{4\\pi\\kappa}{\\lambda_0}",
+      "unit": "m⁻¹ (often cm⁻¹)",
+      "short": "How quickly light is absorbed in a material: intensity drops as exp(−αz). Larger α → absorbed closer to the surface.",
+      "long": "Eq. 4.26. α varies over orders of magnitude with wavelength: c-Si absorbs blue light within ~0.1 µm but needs millimetres for 1100 nm. That is why absorption plots use a logarithmic axis.",
+      "example": "κ = 0.015 at 650 nm: $\\alpha = 4\\pi \\times 0.015 / (650 \\times 10^{-9}) = 2.9 \\times 10^5$ m⁻¹ = 2900 cm⁻¹.",
+      "related": [
+        "lambert-beer",
+        "penetration-depth",
+        "extinction-coefficient",
+        "log-scale"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1,
+        2
+      ],
+      "foundation": "exp-log",
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "lambert-beer",
+      "term": "Lambert–Beer law",
+      "aliases": [
+        "Lambert-Beer law",
+        "Lambert-Beer",
+        "Beer-Lambert law",
+        "Beer–Lambert"
+      ],
+      "symbol": "I(z) = I_0 \\exp(-\\alpha z)",
+      "short": "Light intensity decays exponentially with depth in an absorbing material: I(z) = I₀ exp(−αz).",
+      "long": "Eq. 4.25. Every equal step in depth absorbs the same **fraction** of what is left, not the same amount. So doubling the thickness does not double the absorption.",
+      "example": "α = 64 cm⁻¹ (c-Si, 1000 nm), z = 100 µm: $I/I_0 = e^{-0.64} = 0.53$; 47 % absorbed.",
+      "related": [
+        "absorption-coefficient",
+        "absorptance",
+        "penetration-depth",
+        "exponential-function"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1,
+        2
+      ],
+      "foundation": "exp-log",
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "absorptance",
+      "term": "Absorptance",
+      "aliases": [
+        "absorbed fraction",
+        "absorptivity"
+      ],
+      "symbol": "A = 1 - \\frac{I(t)}{I_0}",
+      "unit": "– (0–1)",
+      "short": "The fraction of the light entering a layer that is absorbed in it: A = 1 − exp(−αt) for a single pass.",
+      "long": "Lecture 1 (slide 83) defines it ignoring reflection losses. With a perfect back reflector light passes twice: $A = 1 - e^{-2\\alpha t}$. To include front reflection, multiply by $(1 - R)$.",
+      "related": [
+        "lambert-beer",
+        "absorption-coefficient",
+        "reflectance"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1
+      ],
+      "foundation": "exp-log",
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "penetration-depth",
+      "term": "Penetration depth",
+      "aliases": [
+        "absorption depth",
+        "δp"
+      ],
+      "symbol": "\\delta_p = \\frac{1}{\\alpha}",
+      "unit": "m",
+      "short": "The depth at which the light intensity has dropped to 1/e ≈ 37 % of its initial value: δp = 1/α.",
+      "long": "Eq. 4.27. A quick feel for thickness: after one δp, 63 % is absorbed; after 2.3 δp, 90 %; after 4.6 δp, 99 %.",
+      "example": "c-Si at 1000 nm: α = 64 cm⁻¹ → δp = 156 µm, comparable to a whole wafer.",
+      "related": [
+        "absorption-coefficient",
+        "lambert-beer"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1
+      ],
+      "foundation": "exp-log",
+      "taughtIn": "week-01#absorption"
+    },
+    {
+      "id": "parasitic-absorption",
+      "term": "Parasitic absorption",
+      "aliases": [
+        "parasitic absorption loss"
+      ],
+      "short": "Light absorbed somewhere it cannot create useful charge carriers, e.g. in the glass cover, coating or contacts.",
+      "long": "Lecture 1 lists the optical loss mechanisms: reflection loss, parasitic absorption, and (the goal) useful absorption in the semiconductor.",
+      "related": [
+        "reflectance",
+        "absorptance"
+      ],
+      "category": "course",
+      "topic": "absorption",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#refraction-reflection"
+    },
+    {
+      "id": "solar-cell",
+      "term": "Solar cell",
+      "aliases": [
+        "solar cells",
+        "PV cell",
+        "photovoltaic cell",
+        "cell"
+      ],
+      "short": "A semiconductor device that converts light directly into electricity via the photovoltaic effect.",
+      "long": "A c-Si cell (lecture 1, slides 36–40): a p-type wafer with a thin n-type layer on top (the junction), an anti-reflective coating, a front grid electrode and a back electrode. Light creates electron–hole pairs; the junction separates them; the electrodes collect them.",
+      "related": [
+        "photovoltaic-effect",
+        "semiconductor",
+        "bandgap",
+        "anti-reflective-coating"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1
+      ],
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "photovoltaic-effect",
+      "term": "Photovoltaic effect",
+      "aliases": [
+        "PV effect",
+        "photovoltaics",
+        "PV"
+      ],
+      "short": "The direct conversion of light into electricity: absorption → generation of electron–hole pairs → separation → collection.",
+      "long": "The four steps recur throughout the course: optics (weeks 1), carriers (weeks 2–3), the p-n junction (weeks 4–5) and losses (week 6).",
+      "related": [
+        "solar-cell",
+        "electron-hole-pair",
+        "photon"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "taughtIn": "week-01#energy-power"
+    },
+    {
+      "id": "semiconductor",
+      "term": "Semiconductor",
+      "aliases": [
+        "semiconductors",
+        "semiconductor material"
+      ],
+      "short": "A solid whose electrical conductivity lies between that of conductors and insulators, and can be tuned by doping and light.",
+      "long": "Its electrons fill a **valence band**; a forbidden **bandgap** separates it from an almost empty **conduction band**. Thermal energy or light frees a few electrons across the gap, each leaving a hole. Doping sets the number of free carriers over many orders of magnitude, which is what makes semiconductors useful for diodes, transistors and solar cells.",
+      "related": [
+        "bandgap",
+        "solar-cell",
+        "electron-hole-pair"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        2
+      ],
+      "taughtIn": "week-02#si-crystal"
+    },
+    {
+      "id": "bandgap",
+      "term": "Bandgap",
+      "aliases": [
+        "band gap",
+        "bandgap energy",
+        "band gap energy",
+        "energy gap",
+        "Eg",
+        "EG"
+      ],
+      "symbol": "E_G",
+      "unit": "eV",
+      "short": "The minimum photon energy a semiconductor can absorb to free an electron. c-Si: 1.12 eV (absorbs λ < ≈ 1107 nm).",
+      "long": "Photons with $E_{\\mathrm{ph}} < E_G$ pass straight through (non-absorption loss). Photons with $E_{\\mathrm{ph}} \\geq E_G$ create **one** electron–hole pair each; the excess $E_{\\mathrm{ph}} - E_G$ is lost as heat (thermalisation). Week 2: $E_G = E_C - E_V$, the forbidden range between valence and conduction band.",
+      "example": "Cell with $E_G = 1.70$ eV absorbs only λ < 1240/1.70 ≈ 730 nm.",
+      "related": [
+        "photon-energy",
+        "semiconductor",
+        "electron-hole-pair",
+        "thermalisation"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "electron-hole-pair",
+      "term": "Electron–hole pair",
+      "aliases": [
+        "electron-hole pair",
+        "electron-hole pairs",
+        "electron–hole pairs",
+        "charge carriers",
+        "charge carrier"
+      ],
+      "short": "A free electron plus the vacancy (hole) it leaves behind, created when a semiconductor absorbs a photon.",
+      "long": "Both are mobile and carry charge (electron −q, hole +q). The solar cell must separate and collect them before they recombine (week 3).",
+      "related": [
+        "photon",
+        "bandgap",
+        "photocurrent-density"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "thermalisation",
+      "term": "Thermalisation",
+      "aliases": [
+        "thermalization",
+        "thermalisation loss",
+        "thermalization losses"
+      ],
+      "short": "The loss of a photon’s excess energy (above the bandgap) as heat, within picoseconds after absorption.",
+      "long": "Together with non-absorption of sub-bandgap photons, thermalisation is the largest loss in a single-junction cell (week 6). Tandem cells reduce it by giving high-energy photons to a high-bandgap top cell.",
+      "related": [
+        "bandgap",
+        "photon-energy"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "id": "photocurrent-density",
+      "term": "Photocurrent density",
+      "aliases": [
+        "photo-current density",
+        "photocurrent",
+        "Jph",
+        "photo-current"
+      ],
+      "symbol": "J_{\\mathrm{ph}} = q\\,\\Phi_{\\mathrm{abs}}",
+      "unit": "A m⁻² (often mA cm⁻²)",
+      "short": "Electric current per area generated by light: one elementary charge per absorbed (and collected) photon.",
+      "long": "Instruction 1 Q2 uses $J_{\\mathrm{ph}} = q \\times$ (absorbed photon flux), assuming every absorbed photon gives one collected electron. The full treatment comes in week 5 (Ch. 9). Conversion: 1 A/m² = 0.1 mA/cm².",
+      "example": "Absorbed flux 7.8 × 10²⁰ m⁻² s⁻¹: $J = 1.602 \\times 10^{-19} \\times 7.8 \\times 10^{20} = 125$ A/m² = 12.5 mA/cm².",
+      "related": [
+        "photon-flux",
+        "elementary-charge",
+        "current-density",
+        "electron-hole-pair"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        5
+      ],
+      "taughtIn": "week-01#solar-spectrum"
+    },
+    {
+      "id": "short-circuit-current",
+      "term": "Short-circuit current",
+      "aliases": [
+        "Isc",
+        "Jsc",
+        "short circuit current"
+      ],
+      "symbol": "I_{sc}",
+      "unit": "A",
+      "short": "The current of an illuminated solar cell when its terminals are connected directly (V = 0). The maximum current the cell can give.",
+      "long": "Previewed in lecture 1 (J–V curve, slides 41–42); treated in week 5.",
+      "related": [
+        "open-circuit-voltage",
+        "fill-factor",
+        "efficiency"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "open-circuit-voltage",
+      "term": "Open-circuit voltage",
+      "aliases": [
+        "Voc",
+        "open circuit voltage"
+      ],
+      "symbol": "V_{oc}",
+      "unit": "V",
+      "short": "The voltage of an illuminated solar cell with no current flowing. The maximum voltage the cell can give.",
+      "long": "Previewed in lecture 1 and in instruction 1 Q2 (where it is given but not needed). Treated in week 5.",
+      "related": [
+        "short-circuit-current",
+        "fill-factor",
+        "efficiency"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "fill-factor",
+      "term": "Fill factor",
+      "aliases": [
+        "FF"
+      ],
+      "symbol": "\\mathit{FF}",
+      "unit": "–",
+      "short": "How ‘square’ the J–V curve is: FF = P_max/(I_sc V_oc). Typical 0.75–0.85.",
+      "long": "Previewed in lecture 1 (slide 42); formula sheet eq. 9.2; treated in week 5.",
+      "related": [
+        "short-circuit-current",
+        "open-circuit-voltage",
+        "efficiency"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "efficiency",
+      "term": "Conversion efficiency",
+      "aliases": [
+        "efficiency",
+        "η",
+        "eta"
+      ],
+      "symbol": "\\eta = \\frac{P_{\\max}}{P_{\\mathrm{in}}}",
+      "unit": "–",
+      "short": "The fraction of incident light power converted into electrical power at the maximum power point.",
+      "long": "Previewed in lecture 1 (slide 42); formula sheet eq. 9.6; treated in week 5. Example: a 250 Wp module of 2 m² at STC: 250/2000 = 12.5 %.",
+      "related": [
+        "fill-factor",
+        "watt-peak",
+        "standard-test-conditions"
+      ],
+      "category": "course",
+      "topic": "solar cells",
+      "weeks": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "exponential-function",
+      "term": "Exponential function",
+      "aliases": [
+        "exponential",
+        "exp",
+        "exponential decay",
+        "e^x"
+      ],
+      "symbol": "e^x = \\exp(x)",
+      "short": "e^x with e ≈ 2.718. Exponential decay exp(−x/L) loses the same fraction for every step L.",
+      "long": "Key facts: $e^0 = 1$, $e^{-1} \\approx 0.37$, $e^{a+b} = e^a e^b$. In this course: Lambert–Beer absorption $e^{-\\alpha z}$ (week 1), carrier densities $e^{-(E_C - E_F)/k_BT}$ (week 2), diffusion profiles $e^{-x/L}$ (week 3).",
+      "example": "$e^{-2.3} \\approx 0.10$: after 2.3 penetration depths 90 % of the light is absorbed.",
+      "related": [
+        "natural-logarithm",
+        "log-scale",
+        "lambert-beer"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "foundation": "exp-log"
+    },
+    {
+      "id": "natural-logarithm",
+      "term": "Natural logarithm",
+      "aliases": [
+        "ln",
+        "logarithm",
+        "log"
+      ],
+      "symbol": "\\ln x",
+      "short": "The inverse of the exponential: ln(e^x) = x. Use it to solve for a variable stuck in an exponent.",
+      "long": "Rules: $\\ln(ab) = \\ln a + \\ln b$, $\\ln(a/b) = \\ln a - \\ln b$, $\\ln(e) = 1$, $\\ln 1 = 0$, $\\ln 10 \\approx 2.303$.",
+      "example": "Thickness for 90 % absorption: $e^{-\\alpha t} = 0.1 \\Rightarrow t = \\ln(10)/\\alpha = 2.303/\\alpha$.",
+      "related": [
+        "exponential-function",
+        "log-scale"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "foundation": "exp-log"
+    },
+    {
+      "id": "log-scale",
+      "term": "Logarithmic scale",
+      "aliases": [
+        "log scale",
+        "log axis",
+        "logarithmic axis",
+        "log-scale"
+      ],
+      "short": "An axis where every step is a factor of 10 instead of a fixed amount. Used when values span many orders of magnitude.",
+      "long": "On a log axis an exponential function becomes a straight line. Absorption coefficients (10⁰–10⁶ cm⁻¹) and carrier densities (10²–10²⁰ cm⁻³) are always plotted this way.",
+      "related": [
+        "exponential-function",
+        "scientific-notation",
+        "absorption-coefficient"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1,
+        2
+      ],
+      "foundation": "exp-log"
+    },
+    {
+      "id": "sine-cosine",
+      "term": "Sine and cosine",
+      "aliases": [
+        "sine",
+        "cosine",
+        "sin",
+        "cos",
+        "arcsine",
+        "arcsin",
+        "inverse sine",
+        "trigonometry"
+      ],
+      "symbol": "\\sin\\theta, \\cos\\theta",
+      "short": "For a right-angled triangle: sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse. arcsin undoes sin.",
+      "long": "sin runs from 0 (at 0°) to 1 (at 90°); cos from 1 to 0. $\\arcsin$ only accepts values between −1 and 1: if Snell’s law asks for $\\arcsin(1.3)$, there is no refracted ray (total internal reflection). Set your calculator to **degrees**.",
+      "example": "sin 30° = 0.5; cos 60° = 0.5; arcsin(1/3.57) = 16.3°.",
+      "related": [
+        "radian",
+        "snells-law",
+        "surface-normal"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry"
+    },
+    {
+      "id": "radian",
+      "term": "Radian",
+      "aliases": [
+        "radians",
+        "rad",
+        "degrees"
+      ],
+      "unit": "rad",
+      "short": "The natural unit of angle: a full circle is 2π rad = 360°, so 1 rad ≈ 57.3°.",
+      "long": "Computers and many calculators default to radians. If your Snell’s-law angle comes out as 0.43, you probably got radians: 0.43 rad × 57.3 = 24.8°.",
+      "related": [
+        "sine-cosine"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1
+      ],
+      "foundation": "trigonometry"
+    },
+    {
+      "id": "integral",
+      "term": "Integral",
+      "aliases": [
+        "integrate",
+        "integration",
+        "area under the curve",
+        "integrals"
+      ],
+      "symbol": "\\int_a^b f(x)\\,\\mathrm{d}x",
+      "short": "The area under a curve between two limits. Integrating a spectrum over wavelength adds up all its thin slices.",
+      "long": "If the curve is a constant $P$ between $\\lambda_1$ and $\\lambda_2$, the integral is a rectangle: $P(\\lambda_2 - \\lambda_1)$. Integrating $\\lambda$ itself gives $\\frac{1}{2}(\\lambda_2^2 - \\lambda_1^2)$: that is where the 2 in exercise 5.6(b) comes from.",
+      "example": "$\\int_{250}^{1000} 1.00\\,\\mathrm{d}\\lambda = 1.00 \\times 750 = 750$ W/m².",
+      "related": [
+        "spectral-irradiance",
+        "irradiance"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1,
+        5
+      ],
+      "foundation": "integrals"
+    },
+    {
+      "id": "complex-number",
+      "term": "Complex number",
+      "aliases": [
+        "complex numbers",
+        "imaginary unit",
+        "imaginary part",
+        "real part"
+      ],
+      "symbol": "a + ib",
+      "short": "A number with a real part and an imaginary part: a + ib, where i² = −1.",
+      "long": "In this course you only need it as notation: $\\tilde n = n + i\\kappa$ packs two real material properties into one number. The real part governs speed and reflection; the imaginary part absorption.",
+      "related": [
+        "complex-refractive-index"
+      ],
+      "category": "prerequisite",
+      "topic": "maths",
+      "weeks": [
+        1
+      ],
+      "foundation": "complex-numbers"
+    },
+    {
+      "id": "elementary-charge",
+      "term": "Elementary charge",
+      "aliases": [
+        "q",
+        "charge of an electron",
+        "electron charge"
+      ],
+      "symbol": "q",
+      "unit": "C",
+      "short": "The charge of one proton (+q) or electron (−q): q = 1.602 × 10⁻¹⁹ C. Also the conversion factor between eV and J.",
+      "long": "Current is charge per second, so one electron per absorbed photon gives a current density $J = q\\Phi$. Instruction answers sometimes write $e$ for the same constant.",
+      "related": [
+        "electron-volt",
+        "photocurrent-density",
+        "current-density"
+      ],
+      "category": "prerequisite",
+      "topic": "physics basics",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "current-density",
+      "term": "Current density",
+      "aliases": [
+        "current densities"
+      ],
+      "symbol": "J",
+      "unit": "A m⁻² (often mA cm⁻²)",
+      "short": "Electric current per unit area. Solar cell currents are quoted per area so cells of different size can be compared.",
+      "long": "1 A/m² = 0.1 mA/cm² (because 1 m² = 10⁴ cm² and 1 A = 10³ mA). A good c-Si cell gives about 40 mA/cm² = 400 A/m².",
+      "related": [
+        "photocurrent-density",
+        "elementary-charge"
+      ],
+      "category": "prerequisite",
+      "topic": "physics basics",
+      "weeks": [
+        1,
+        3,
+        5
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "kelvin",
+      "term": "Absolute temperature (kelvin)",
+      "aliases": [
+        "kelvin",
+        "K",
+        "absolute temperature",
+        "temperature"
+      ],
+      "symbol": "T",
+      "unit": "K",
+      "short": "Temperature measured from absolute zero: T[K] = T[°C] + 273.15. All physics formulas need kelvin.",
+      "long": "Room temperature ≈ 300 K; the Sun’s surface ≈ 5800 K. Using °C in σT⁴ or Wien’s law gives nonsense.",
+      "related": [
+        "stefan-boltzmann-law",
+        "boltzmann-constant"
+      ],
+      "category": "prerequisite",
+      "topic": "physics basics",
+      "weeks": [
+        1,
+        2
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "boltzmann-constant",
+      "term": "Boltzmann constant",
+      "aliases": [
+        "kB",
+        "k_B"
+      ],
+      "symbol": "k_B",
+      "unit": "J K⁻¹",
+      "short": "Links temperature to thermal energy: k_B = 1.381 × 10⁻²³ J/K = 8.617 × 10⁻⁵ eV/K. At 300 K, k_BT ≈ 0.0259 eV.",
+      "long": "Appears in Planck’s law (week 1) and everywhere in semiconductor statistics (week 2).",
+      "related": [
+        "kelvin",
+        "planck-law"
+      ],
+      "category": "prerequisite",
+      "topic": "physics basics",
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "foundation": "units"
+    },
+    {
+      "id": "electric-field",
+      "term": "Electric field",
+      "aliases": [
+        "field",
+        "electrical field",
+        "ξ"
+      ],
+      "symbol": "\\xi",
+      "unit": "V m⁻¹",
+      "short": "The force per unit charge at a point in space. The book and lecture write it as ξ (xi).",
+      "long": "Light is an oscillating electric (and magnetic) field (week 1). In semiconductors a static field makes carriers drift (week 3) and separates them in the p-n junction (week 4).",
+      "related": [
+        "electromagnetic-wave",
+        "amplitude"
+      ],
+      "category": "prerequisite",
+      "topic": "physics basics",
+      "weeks": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "atomic-number",
+      "term": "Atomic number",
+      "aliases": [],
+      "short": "The number of protons in an atom’s nucleus; a neutral atom has the same number of electrons. Si: 14, B: 5, P: 15.",
+      "long": "It fixes the element and its electron configuration. Si (14) = $1s^2 2s^2 2p^6 3s^2 3p^2$: 2 + 8 electrons in closed inner shells and **4 valence electrons**. Boron has 3 valence electrons, phosphorus 5, which is why they dope silicon.",
+      "related": [
+        "valence-electron",
+        "covalent-bond"
+      ],
+      "category": "prerequisite",
+      "topic": "background",
+      "weeks": [
+        2
+      ],
+      "foundation": "atoms-electrons"
+    },
+    {
+      "id": "valence-electron",
+      "term": "Valence electron",
+      "aliases": [
+        "valence electrons",
+        "outer-shell electrons"
+      ],
+      "short": "An electron in the outermost shell of an atom; only these take part in chemical bonds.",
+      "long": "Silicon has 4 valence electrons and bonds to 4 neighbours. Group-15 atoms (P, As) have 5: one is left over and becomes a free electron (donor). Group-13 atoms (B, Ga) have 3: one bond stays incomplete (acceptor).",
+      "related": [
+        "atomic-number",
+        "covalent-bond",
+        "donor",
+        "acceptor"
+      ],
+      "category": "prerequisite",
+      "topic": "background",
+      "weeks": [
+        2
+      ],
+      "foundation": "atoms-electrons"
+    },
+    {
+      "id": "covalent-bond",
+      "term": "Covalent bond",
+      "aliases": [
+        "covalent bonds",
+        "Si–Si bond"
+      ],
+      "short": "A bond in which two neighbouring atoms share a pair of electrons, one from each.",
+      "long": "In crystalline silicon every atom forms 4 covalent bonds, angles 109.5°. Breaking one bond (with heat or a photon) frees an electron and leaves a hole: an electron–hole pair.",
+      "related": [
+        "valence-electron",
+        "hole",
+        "free-electron"
+      ],
+      "category": "prerequisite",
+      "topic": "background",
+      "weeks": [
+        2
+      ],
+      "foundation": "atoms-electrons"
+    },
+    {
+      "id": "conductivity",
+      "term": "Electrical conductivity",
+      "aliases": [
+        "electrical conductivity"
+      ],
+      "short": "How easily a material conducts current; σ = q(nμₙ + pμₚ).",
+      "long": "Lecture 2 classifies materials by $\\sigma$: conductors above $10^4$ Ω⁻¹cm⁻¹, insulators below $10^{-8}$, semiconductors in between. In a semiconductor $\\sigma$ depends on how many carriers there are (doping, temperature, light) and how mobile they are (week 3).",
+      "related": [
+        "semiconductor",
+        "doping",
+        "mobility"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "\\sigma",
+      "unit": "Ω⁻¹ cm⁻¹ (S/cm)",
+      "taughtIn": "week-02#si-crystal"
+    },
+    {
+      "id": "monocrystalline",
+      "term": "Monocrystalline silicon",
+      "aliases": [
+        "mono-Si",
+        "single-crystal silicon",
+        "single crystal",
+        "c-Si",
+        "crystalline silicon"
+      ],
+      "short": "Silicon whose atoms form one continuous, unbroken lattice: long-range order and no grain boundaries.",
+      "long": "The material of most high-efficiency solar cells (c-Si). Polycrystalline silicon consists of many crystal grains separated by grain boundaries; amorphous silicon has no long-range order at all.",
+      "related": [
+        "polycrystalline",
+        "amorphous",
+        "unit-cell"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2
+      ],
+      "taughtIn": "week-02#si-crystal"
+    },
+    {
+      "id": "polycrystalline",
+      "term": "Polycrystalline silicon",
+      "aliases": [
+        "multicrystalline",
+        "poly-Si"
+      ],
+      "short": "Silicon made of many small crystals (grains) with grain boundaries between them.",
+      "long": "Each grain has long-range order, but the grain boundaries are defects. Cheaper to make than monocrystalline silicon.",
+      "related": [
+        "monocrystalline",
+        "amorphous"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2
+      ],
+      "taughtIn": "week-02#si-crystal"
+    },
+    {
+      "id": "amorphous",
+      "term": "Amorphous silicon",
+      "aliases": [
+        "a-Si",
+        "amorphous solid"
+      ],
+      "short": "Silicon without long-range order: bonds have varying lengths and angles, and some are missing.",
+      "long": "Used in thin-film cells. It is the third ‘solid state’ on lecture 2 slide 8, next to mono- and polycrystalline.",
+      "related": [
+        "monocrystalline",
+        "polycrystalline"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "id": "unit-cell",
+      "term": "Unit cell",
+      "aliases": [
+        "diamond lattice",
+        "diamond cubic"
+      ],
+      "short": "The smallest block of a crystal that rebuilds the whole lattice when stacked. For c-Si: a diamond-lattice cube with 8 atoms.",
+      "long": "Count atoms by sharing: an atom on a corner belongs to 8 cubes (1/8 each), on a face to 2 (1/2), inside to 1. Diamond lattice: $8 \\times \\tfrac18 + 6 \\times \\tfrac12 + 4 = 8$ atoms per cell.",
+      "related": [
+        "lattice-constant",
+        "monocrystalline"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2
+      ],
+      "example": "Atoms per cm³: $8/(5.43 \\times 10^{-8}\\,\\mathrm{cm})^3 = 5.0 \\times 10^{22}$ cm⁻³.",
+      "taughtIn": "week-02#si-crystal"
+    },
+    {
+      "id": "lattice-constant",
+      "term": "Lattice constant",
+      "aliases": [],
+      "short": "The edge length of the unit cell. c-Si: a = 0.543 nm (543.07 pm).",
+      "long": "With the number of atoms per cell it gives the atom density: $N = 8/a^3$. Convert $a$ to cm **before** cubing to get cm⁻³.",
+      "related": [
+        "unit-cell"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2
+      ],
+      "symbol": "a",
+      "unit": "m",
+      "taughtIn": "week-02#si-crystal"
+    },
+    {
+      "id": "free-electron",
+      "term": "Free electron",
+      "aliases": [
+        "free electrons",
+        "mobile electron",
+        "conduction electron"
+      ],
+      "short": "An electron released from a covalent bond that can move through the crystal; it sits in the conduction band.",
+      "long": "Usually just called ‘electron’ in semiconductor physics. It carries charge −q. Its density is $n$ (cm⁻³).",
+      "related": [
+        "hole",
+        "conduction-band",
+        "electron-hole-pair"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#electrons-holes"
+    },
+    {
+      "id": "hole",
+      "term": "Hole",
+      "aliases": [
+        "holes",
+        "mobile hole"
+      ],
+      "short": "The empty place of a missing electron in a bond. It moves when neighbouring bond electrons jump in, and behaves as a mobile positive charge +q.",
+      "long": "A hole is not a particle in the nucleus sense; it is the collective motion of valence electrons, described as one positive carrier in the valence band. Its density is $p$ (cm⁻³).",
+      "related": [
+        "free-electron",
+        "valence-band",
+        "electron-hole-pair"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#electrons-holes"
+    },
+    {
+      "id": "conduction-band",
+      "term": "Conduction band",
+      "aliases": [
+        "CB",
+        "conduction-band edge",
+        "E_C"
+      ],
+      "short": "The band of allowed energies for electrons freed from the covalent bonds. Its lowest energy is the band edge E_C.",
+      "long": "Electrons in the conduction band are mobile and carry current. In the dark at 300 K it is almost empty: only about $10^{10}$ of the $\\sim 10^{19}$ cm⁻³ available states are filled in intrinsic Si.",
+      "related": [
+        "valence-band",
+        "bandgap",
+        "free-electron"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "E_C",
+      "unit": "eV",
+      "taughtIn": "week-02#energy-bands"
+    },
+    {
+      "id": "valence-band",
+      "term": "Valence band",
+      "aliases": [
+        "VB",
+        "valence-band edge",
+        "E_V"
+      ],
+      "short": "The band of allowed energies for the bonding (valence) electrons. Its highest energy is the band edge E_V.",
+      "long": "It is almost completely filled. An empty state in it is a hole. $E_G = E_C - E_V$ (eq. 6.1).",
+      "related": [
+        "conduction-band",
+        "bandgap",
+        "hole"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "E_V",
+      "unit": "eV",
+      "taughtIn": "week-02#energy-bands"
+    },
+    {
+      "id": "direct-bandgap",
+      "term": "Direct bandgap",
+      "aliases": [
+        "direct band gap",
+        "direct semiconductor"
+      ],
+      "short": "The top of the valence band and the bottom of the conduction band sit at the same crystal momentum: a photon alone can excite an electron.",
+      "long": "Examples: GaAs. Absorption is strong (large α) and radiative recombination is likely.",
+      "related": [
+        "indirect-bandgap",
+        "phonon",
+        "absorption-coefficient"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#energy-bands"
+    },
+    {
+      "id": "indirect-bandgap",
+      "term": "Indirect bandgap",
+      "aliases": [
+        "indirect band gap",
+        "indirect semiconductor"
+      ],
+      "short": "The band edges sit at different crystal momenta: an electron needs a photon (energy) plus a phonon (momentum) to cross the gap.",
+      "long": "c-Si is indirect. Needing a phonon makes absorption near the bandgap weak, which is why silicon wafers must be ~100 µm thick, and makes radiative recombination unlikely (week 3).",
+      "related": [
+        "direct-bandgap",
+        "phonon",
+        "absorption-coefficient"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#energy-bands"
+    },
+    {
+      "id": "phonon",
+      "term": "Phonon",
+      "aliases": [
+        "phonons",
+        "lattice vibration"
+      ],
+      "short": "A quantum of lattice vibration. It can give or take crystal momentum (and a little energy) from an electron.",
+      "long": "Indirect transitions in silicon need a phonon in addition to a photon, just as light can be described as photons, lattice vibrations can be described as phonons.",
+      "related": [
+        "indirect-bandgap"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "thermal-equilibrium",
+      "term": "Thermal equilibrium",
+      "aliases": [
+        "equilibrium"
+      ],
+      "short": "The unperturbed state: no light, no applied voltage or field. The observable properties do not change in time.",
+      "long": "All week 2 dark formulas (one Fermi level, $np = n_i^2$) assume thermal equilibrium. Light or a voltage push the semiconductor out of equilibrium: then quasi-Fermi levels are needed.",
+      "related": [
+        "fermi-level",
+        "quasi-fermi-level",
+        "law-of-mass-action"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#carrier-statistics"
+    },
+    {
+      "id": "density-of-states",
+      "term": "Density of states",
+      "aliases": [
+        "DOS",
+        "DoS",
+        "density of energy states"
+      ],
+      "short": "The number of allowed electron states per unit volume and per unit energy, g(E). Near the band edges it grows as √(E − E_C) or √(E_V − E).",
+      "long": "It says where electrons *could* be. Multiplied by the occupation probability $f(E)$ it gives where they *are*: $n(E) = g_C(E) f(E)$ (eq. 6.4).",
+      "related": [
+        "fermi-dirac",
+        "effective-density-of-states"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "g(E)",
+      "unit": "cm⁻³ eV⁻¹",
+      "taughtIn": "week-02#carrier-statistics"
+    },
+    {
+      "id": "fermi-dirac",
+      "term": "Fermi–Dirac distribution",
+      "aliases": [
+        "Fermi-Dirac distribution",
+        "Fermi-Dirac function",
+        "occupation function",
+        "Fermi–Dirac function"
+      ],
+      "short": "The probability f(E) that a state at energy E is occupied by an electron: f = 1/(1 + e^{(E−E_F)/kT}).",
+      "long": "At 0 K it is a step (1 below $E_F$, 0 above). At higher T the step softens over a few $k_BT$. $f(E_F) = \\tfrac12$ always. $1 - f$ is the probability that the state is empty, i.e. holds a hole.",
+      "related": [
+        "fermi-level",
+        "boltzmann-approximation",
+        "density-of-states"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "f(E)",
+      "taughtIn": "week-02#carrier-statistics"
+    },
+    {
+      "id": "fermi-level",
+      "term": "Fermi level",
+      "aliases": [
+        "Fermi energy",
+        "E_F",
+        "EF"
+      ],
+      "short": "The energy where the occupation probability is exactly ½; physically the electrochemical potential of the electrons.",
+      "long": "Its position decides $n$ and $p$: closer to $E_C$ means more electrons, closer to $E_V$ more holes. In equilibrium one $E_F$ holds throughout a material (and a device). Lecture 2: think of it as a **water level**.",
+      "related": [
+        "fermi-dirac",
+        "intrinsic-fermi-level",
+        "quasi-fermi-level"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "E_F",
+      "unit": "eV",
+      "taughtIn": "week-02#carrier-statistics"
+    },
+    {
+      "id": "boltzmann-approximation",
+      "term": "Boltzmann approximation",
+      "aliases": [
+        "Boltzmann approximation",
+        "Maxwell–Boltzmann"
+      ],
+      "short": "For energies a few kT above E_F, f(E) ≈ e^{−(E−E_F)/kT}: the 1 in the denominator can be dropped.",
+      "long": "Valid when $E - E_F \\geq 3k_BT \\approx 0.077$ eV (lecture 2 slide 48). It turns the integral for $n$ into the simple $n = N_C e^{(E_F-E_C)/k_BT}$.",
+      "related": [
+        "fermi-dirac",
+        "non-degenerate"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#carrier-statistics"
+    },
+    {
+      "id": "thermal-energy",
+      "term": "Thermal energy k_BT",
+      "aliases": [
+        "kT",
+        "k_BT",
+        "kBT",
+        "thermal voltage"
+      ],
+      "short": "The typical energy of thermal motion: k_BT ≈ 0.0259 eV at 300 K (lecture: 0.0258 eV).",
+      "long": "It sets the scale of every exponential this week: each $k_BT$ step in energy changes a density by a factor $e$; each $k_BT\\ln 10 \\approx 60$ meV by a factor 10.",
+      "related": [
+        "boltzmann-constant",
+        "fermi-dirac"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "k_BT",
+      "unit": "eV or J",
+      "example": "$k_BT = 1.381 \\times 10^{-23} \\times 300 / 1.602 \\times 10^{-19} = 0.0259$ eV."
+    },
+    {
+      "id": "effective-density-of-states",
+      "term": "Effective density of states",
+      "aliases": [
+        "N_C",
+        "N_V",
+        "effective densities of states"
+      ],
+      "short": "N_C and N_V: the conduction (valence) band replaced by this many states at its edge. c-Si at 300 K: N_C = 3.22 × 10¹⁹, N_V = 1.83 × 10¹⁹ cm⁻³.",
+      "long": "They follow from integrating $g(E)f(E)$ (eq. 6.7) and grow as $T^{3/2}$. On the formula sheet under ‘Properties of c-Si’. A density can never exceed them in a non-degenerate semiconductor.",
+      "related": [
+        "density-of-states",
+        "intrinsic-carrier-density"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "N_C, N_V",
+      "unit": "cm⁻³",
+      "taughtIn": "week-02#carrier-density"
+    },
+    {
+      "id": "intrinsic-semiconductor",
+      "term": "Intrinsic semiconductor",
+      "aliases": [
+        "intrinsic",
+        "intrinsic silicon",
+        "undoped"
+      ],
+      "short": "A semiconductor without (significant) impurities: all free carriers come from broken bonds, so n = p = nᵢ.",
+      "long": "Opposite: an extrinsic (doped) semiconductor. Even a doped one becomes ‘intrinsic again’ at high temperature, when $n_i$ outgrows the doping (book ex. 7.6).",
+      "related": [
+        "intrinsic-carrier-density",
+        "doping"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#electrons-holes"
+    },
+    {
+      "id": "intrinsic-carrier-density",
+      "term": "Intrinsic carrier density",
+      "aliases": [
+        "intrinsic carrier concentration",
+        "n_i",
+        "ni",
+        "intrinsic concentration"
+      ],
+      "short": "nᵢ: the electron (and hole) density of an intrinsic semiconductor. c-Si at 300 K ≈ 10¹⁰ cm⁻³; nᵢ² = N_C N_V e^{−E_G/kT}.",
+      "long": "It depends only on the material and the temperature, not on doping, and grows extremely fast with $T$. Via the law of mass action it fixes the minority density in doped material.",
+      "related": [
+        "law-of-mass-action",
+        "intrinsic-semiconductor",
+        "effective-density-of-states"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "n_i",
+      "unit": "cm⁻³",
+      "example": "$\\sqrt{3.22 \\times 10^{19} \\cdot 1.83 \\times 10^{19}}\\,e^{-1.12/(2 \\cdot 0.02585)} = 9.5 \\times 10^9$ cm⁻³.",
+      "taughtIn": "week-02#carrier-density"
+    },
+    {
+      "id": "intrinsic-fermi-level",
+      "term": "Intrinsic Fermi level",
+      "aliases": [
+        "E_Fi",
+        "EFi",
+        "midgap"
+      ],
+      "short": "E_Fi: the Fermi level of intrinsic material, near midgap: E_Fi = E_C − E_G/2 + (kT/2) ln(N_V/N_C).",
+      "long": "For c-Si it lies 0.567 eV below $E_C$, slightly below midgap (0.56 eV) because $N_V < N_C$. Doped material is compared to it.",
+      "related": [
+        "fermi-level",
+        "intrinsic-semiconductor"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "E_{Fi}",
+      "unit": "eV",
+      "taughtIn": "week-02#carrier-density"
+    },
+    {
+      "id": "non-degenerate",
+      "term": "Non-degenerate semiconductor",
+      "aliases": [
+        "degenerate",
+        "degenerate semiconductor",
+        "non-degenerate"
+      ],
+      "short": "A semiconductor whose Fermi level lies more than 3kT inside the gap from both band edges, so the Boltzmann formulas for n and p hold.",
+      "long": "Very heavy doping (above ~$N_C$) pushes $E_F$ into a band: the material is **degenerate** and eqs. 6.6/6.22 no longer apply.",
+      "related": [
+        "boltzmann-approximation",
+        "fermi-level"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#carrier-density"
+    },
+    {
+      "id": "doping",
+      "term": "Doping",
+      "aliases": [
+        "doped",
+        "dopant",
+        "dopants",
+        "dopant atoms"
+      ],
+      "short": "Replacing a small fraction of Si atoms by atoms with one valence electron more (donors) or fewer (acceptors) to control the carrier densities.",
+      "long": "Typical doping: $10^{14}$–$10^{20}$ cm⁻³, i.e. 1 dopant per $10^3$–$10^8$ Si atoms ($5 \\times 10^{22}$ cm⁻³). It changes the electron or hole density by many orders of magnitude while the material stays neutral.",
+      "related": [
+        "donor",
+        "acceptor",
+        "n-type",
+        "p-type"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "donor",
+      "term": "Donor",
+      "aliases": [
+        "donors",
+        "donor atom",
+        "donor atoms",
+        "N_D"
+      ],
+      "short": "A dopant atom with 5 valence electrons (P, As) that gives a free electron to the crystal and becomes a fixed positive ion.",
+      "long": "Its loosely bound fifth electron sits at the donor level $E_D$, just below $E_C$; room-temperature thermal energy frees it. Donor density: $N_D$ (ionised: $N_D^+$).",
+      "related": [
+        "acceptor",
+        "n-type",
+        "dopant-level"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "N_D",
+      "unit": "cm⁻³",
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "acceptor",
+      "term": "Acceptor",
+      "aliases": [
+        "acceptors",
+        "acceptor atom",
+        "acceptor atoms",
+        "N_A"
+      ],
+      "short": "A dopant atom with 3 valence electrons (B, Ga, In) that takes an electron from a neighbouring bond, creating a hole, and becomes a fixed negative ion.",
+      "long": "Its empty state sits at the acceptor level $E_A$, just above $E_V$. Acceptor density: $N_A$ (ionised: $N_A^-$).",
+      "related": [
+        "donor",
+        "p-type",
+        "dopant-level"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "N_A",
+      "unit": "cm⁻³",
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "dopant-level",
+      "term": "Donor and acceptor levels",
+      "aliases": [
+        "donor level",
+        "acceptor level",
+        "E_D",
+        "E_A"
+      ],
+      "short": "Allowed energy levels that dopants add inside the gap: E_D just below E_C, E_A just above E_V.",
+      "long": "Drawn as dashed lines in the band diagram because the states are localised at the dopant atoms. Being close to the band edges is why dopants are (almost) fully ionised at 300 K.",
+      "related": [
+        "donor",
+        "acceptor",
+        "bandgap"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2
+      ],
+      "symbol": "E_D, E_A"
+    },
+    {
+      "id": "n-type",
+      "term": "n-type",
+      "aliases": [
+        "n-type silicon",
+        "n-doped",
+        "n type"
+      ],
+      "short": "Silicon doped with donors: electrons are the majority carriers, n ≈ N_D.",
+      "long": "The Fermi level moves up towards $E_C$. Still electrically neutral: every free electron is balanced by a positive donor ion.",
+      "related": [
+        "p-type",
+        "donor",
+        "majority-carrier"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3,
+        4
+      ],
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "p-type",
+      "term": "p-type",
+      "aliases": [
+        "p-type silicon",
+        "p-doped",
+        "p type"
+      ],
+      "short": "Silicon doped with acceptors: holes are the majority carriers, p ≈ N_A.",
+      "long": "The Fermi level moves down towards $E_V$. Neutral: every hole is balanced by a negative acceptor ion. Most c-Si solar cells use a p-type wafer with a thin n-type top layer.",
+      "related": [
+        "n-type",
+        "acceptor",
+        "majority-carrier"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3,
+        4
+      ],
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "charge-neutrality",
+      "term": "Charge neutrality",
+      "aliases": [
+        "charge-neutrality equation",
+        "neutrality"
+      ],
+      "short": "In a uniformly doped semiconductor in equilibrium the total charge is zero: p + N_D⁺ − n − N_A⁻ = 0 (eq. 6.13).",
+      "long": "Doping does not charge the material: each dopant brings its extra proton with its extra electron. With full ionisation, $p + N_D - n - N_A = 0$ (eq. 6.15). Not on the formula sheet.",
+      "related": [
+        "doping",
+        "law-of-mass-action"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "law-of-mass-action",
+      "term": "Law of mass action",
+      "aliases": [
+        "mass action law",
+        "np = ni²"
+      ],
+      "short": "np = nᵢ² in thermal equilibrium, whatever the doping.",
+      "long": "Raising $n$ by doping lowers $p$ by the same factor: extra electrons make holes recombine faster. Use it for the minority density: $p = n_i^2/N_D$ in n-type. Not valid under illumination ($np > n_i^2$). Not on the formula sheet.",
+      "related": [
+        "intrinsic-carrier-density",
+        "minority-carrier",
+        "thermal-equilibrium"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "example": "$N_D = 10^{17}$: $p = (9.68 \\times 10^9)^2/10^{17} = 937$ cm⁻³ (instruction 2 Q2e).",
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "majority-carrier",
+      "term": "Majority carrier",
+      "aliases": [
+        "majority carriers",
+        "majorities"
+      ],
+      "short": "The carrier type with the higher density: electrons in n-type, holes in p-type.",
+      "long": "Its density ≈ the dopant density and hardly changes under normal illumination.",
+      "related": [
+        "minority-carrier",
+        "n-type",
+        "p-type"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3,
+        4
+      ],
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "minority-carrier",
+      "term": "Minority carrier",
+      "aliases": [
+        "minority carriers",
+        "minorities"
+      ],
+      "short": "The carrier type with the lower density: holes in n-type, electrons in p-type.",
+      "long": "Tiny in the dark ($n_i^2/N$), but light can raise it by many orders of magnitude. Solar cells are about minority carriers: their lifetime and diffusion length (week 3) decide whether they reach the junction.",
+      "related": [
+        "majority-carrier",
+        "law-of-mass-action"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3,
+        4
+      ],
+      "taughtIn": "week-02#doping"
+    },
+    {
+      "id": "excess-carriers",
+      "term": "Excess carriers",
+      "aliases": [
+        "excess carrier",
+        "excess carrier concentration",
+        "non-equilibrium"
+      ],
+      "short": "Electrons and holes above the equilibrium densities: Δn = n − n₀, Δp = p − p₀. Light creates them in pairs, so Δn = Δp.",
+      "long": "Under illumination $np > n_i^2$. In **low injection** $\\Delta n$ is much smaller than the majority density: only the minority density changes noticeably.",
+      "related": [
+        "quasi-fermi-level",
+        "minority-carrier",
+        "electron-hole-pair",
+        "low-injection"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "\\Delta n",
+      "unit": "cm⁻³",
+      "taughtIn": "week-02#quasi-fermi"
+    },
+    {
+      "id": "quasi-fermi-level",
+      "term": "Quasi-Fermi level",
+      "aliases": [
+        "quasi-Fermi levels",
+        "quasi Fermi level",
+        "E_Fn",
+        "E_Fp",
+        "quasi-Fermi energy"
+      ],
+      "short": "Under illumination: E_Fn describes the electron density, E_Fp the hole density (n = N_C e^{(E_Fn−E_C)/kT}, eq. 7.51).",
+      "long": "In equilibrium they coincide with $E_F$. Light splits them: $np = n_i^2 e^{(E_{Fn}-E_{Fp})/k_BT}$. The splitting $E_{Fn} - E_{Fp}$ is the energy available per electron–hole pair and sets the maximum voltage of a solar cell (week 5).",
+      "related": [
+        "fermi-level",
+        "excess-carriers"
+      ],
+      "category": "course",
+      "topic": "semiconductors",
+      "weeks": [
+        2,
+        3
+      ],
+      "symbol": "E_{Fn}, E_{Fp}",
+      "unit": "eV",
+      "taughtIn": "week-02#quasi-fermi"
+    },
+    {
+      "id": "mobility",
+      "term": "Mobility",
+      "aliases": [
+        "mobilities",
+        "carrier mobility",
+        "electron mobility",
+        "hole mobility",
+        "μ"
+      ],
+      "symbol": "\\mu",
+      "unit": "cm² V⁻¹ s⁻¹",
+      "short": "How easily a carrier moves in an electric field: drift velocity per unit field, v = μξ. c-Si: μₙ = 1360, μₚ = 450 cm²/Vs.",
+      "long": "Carriers are accelerated by the field but keep colliding with vibrating lattice atoms and ionised dopants, so they reach an average drift velocity proportional to the field. More collisions (higher temperature, heavier doping) mean lower mobility. Electrons are about three times more mobile than holes in c-Si. Mobility links to diffusion through the Einstein relation $D = \\mu k_BT/q$.",
+      "example": "In a field of 10 V/cm an electron in c-Si drifts at $1360 \\times 10 = 1.36 \\times 10^4$ cm/s.",
+      "related": [
+        "conductivity",
+        "drift",
+        "diffusion-coefficient"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4
+      ],
+      "taughtIn": "week-03#drift"
+    },
+    {
+      "id": "derivative",
+      "term": "Derivative (slope)",
+      "aliases": [
+        "derivatives",
+        "slope",
+        "gradient",
+        "dn/dx"
+      ],
+      "short": "The rate of change of a function: the slope of its graph, dy/dx.",
+      "long": "For a straight line it is (change in y)/(change in x). Units: unit of y per unit of x, e.g. cm⁻³ per cm = cm⁻⁴ for a density gradient. Key results: the derivative of $e^{-x/L}$ is $-\\frac{1}{L}e^{-x/L}$, of $x^2$ is $2x$.",
+      "related": [
+        "differential-equation",
+        "diffusion"
+      ],
+      "category": "prerequisite",
+      "topic": "background",
+      "weeks": [
+        3
+      ],
+      "foundation": "derivatives-odes"
+    },
+    {
+      "id": "differential-equation",
+      "term": "Differential equation",
+      "aliases": [
+        "differential equations",
+        "ODE"
+      ],
+      "short": "An equation linking a function to its derivatives; its solution is a whole function, fixed by boundary conditions.",
+      "long": "Week 3 needs two: $y'' = -c$ (solution: a parabola) and $y'' = y/L^2$ (solutions $e^{\\pm x/L}$). They come from the steady-state continuity equation with only generation or only recombination.",
+      "related": [
+        "derivative",
+        "boundary-condition",
+        "continuity-equation"
+      ],
+      "category": "prerequisite",
+      "topic": "background",
+      "weeks": [
+        3
+      ],
+      "foundation": "derivatives-odes"
+    },
+    {
+      "id": "boundary-condition",
+      "term": "Boundary condition",
+      "aliases": [
+        "boundary conditions"
+      ],
+      "short": "A known value or slope of the solution at the edge of the region, used to fix the constants of a differential-equation solution.",
+      "long": "In week 3: Δ = 0 where carriers are removed (contact, junction, S → ∞); zero slope at a perfect surface (S = 0); $D\\,\\mathrm{d}\\Delta/\\mathrm{d}x = -S\\Delta$ at a real surface. Where two regions meet, value and slope must match.",
+      "related": [
+        "differential-equation",
+        "surface-recombination-velocity"
+      ],
+      "category": "prerequisite",
+      "topic": "background",
+      "weeks": [
+        3
+      ],
+      "foundation": "derivatives-odes"
+    },
+    {
+      "id": "drift",
+      "term": "Drift",
+      "aliases": [
+        "drift current",
+        "drifting"
+      ],
+      "short": "Net motion of charged carriers caused by an electric field: holes move along the field, electrons against it.",
+      "long": "Superimposed on the random thermal motion, the field adds an average drift velocity $v = \\mu\\xi$. Both carrier types give current along the field: $J_{\\mathrm{drift}} = q(p\\mu_p + n\\mu_n)\\xi$ (eq. 6.25).",
+      "related": [
+        "mobility",
+        "drift-velocity",
+        "diffusion",
+        "conductivity"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4
+      ],
+      "taughtIn": "week-03#drift"
+    },
+    {
+      "id": "drift-velocity",
+      "term": "Drift velocity",
+      "aliases": [
+        "drift velocities"
+      ],
+      "short": "The average velocity carriers gain in an electric field: v = μξ.",
+      "long": "At low fields proportional to the field (eq. 6.23). Typically far below the thermal velocity: 25 V/cm gives about 3 × 10⁴ cm/s for electrons in Si, against ~10⁷ cm/s random motion.",
+      "related": [
+        "mobility",
+        "drift",
+        "thermal-velocity"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "v_d",
+      "unit": "cm/s",
+      "taughtIn": "week-03#drift"
+    },
+    {
+      "id": "thermal-velocity",
+      "term": "Thermal velocity",
+      "aliases": [
+        "random thermal motion",
+        "thermal motion",
+        "random motion"
+      ],
+      "short": "The average speed of carriers due to random thermal motion, about 10⁷ cm/s in Si at room temperature.",
+      "long": "Follows from $\\frac12 m^*v_{th}^2 = \\frac32 k_BT$ (book eq. 7.29). Random directions mean no net current on its own.",
+      "related": [
+        "drift-velocity",
+        "diffusion"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "v_{th}",
+      "unit": "cm/s",
+      "taughtIn": "week-03#drift"
+    },
+    {
+      "id": "diffusion",
+      "term": "Diffusion",
+      "aliases": [
+        "diffuse",
+        "diffusion current",
+        "diffusing"
+      ],
+      "short": "Net flow of particles from high to low concentration, caused purely by random thermal motion.",
+      "long": "No field is needed. The current is proportional to the concentration gradient: $J_n = qD_n\\,\\mathrm{d}n/\\mathrm{d}x$, $J_p = -qD_p\\,\\mathrm{d}p/\\mathrm{d}x$ (eq. 6.26). In solar cells, minority carriers reach the junction mainly by diffusion.",
+      "related": [
+        "diffusion-coefficient",
+        "drift",
+        "diffusion-length"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4
+      ],
+      "taughtIn": "week-03#diffusion"
+    },
+    {
+      "id": "diffusion-coefficient",
+      "term": "Diffusion coefficient",
+      "aliases": [
+        "diffusivity",
+        "diffusion constant",
+        "D_n",
+        "D_p"
+      ],
+      "short": "D: how quickly carriers spread by diffusion; links current and gradient (J = qD dn/dx). c-Si: Dₙ ≈ 35, Dₚ ≈ 12 cm²/s.",
+      "long": "Linked to mobility by the Einstein relation $D = \\mu k_BT/q$ (eq. 6.28): the same collisions limit both drift and diffusion. Together with the lifetime it sets the diffusion length $L = \\sqrt{D\\tau}$.",
+      "related": [
+        "diffusion",
+        "mobility",
+        "einstein-relation",
+        "diffusion-length"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "D",
+      "unit": "cm²/s",
+      "taughtIn": "week-03#diffusion"
+    },
+    {
+      "id": "einstein-relation",
+      "term": "Einstein relation",
+      "aliases": [
+        "Einstein relationship"
+      ],
+      "short": "D/μ = k_BT/q: diffusion coefficient and mobility are proportional (eq. 6.28, on the sheet).",
+      "long": "At 300 K $k_BT/q = 0.0259$ V, so $D_n = 0.0259 \\times 1360 = 35$ cm²/s.",
+      "related": [
+        "diffusion-coefficient",
+        "mobility"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#diffusion"
+    },
+    {
+      "id": "generation",
+      "term": "Generation",
+      "aliases": [
+        "photogeneration",
+        "photo-generation",
+        "generated",
+        "carrier generation"
+      ],
+      "short": "A process that creates mobile electron–hole pairs: thermally (always) or by absorbing photons (photogeneration).",
+      "long": "A photon with $E \\geq E_G$ creates one pair; the excess energy thermalises. In equilibrium thermal generation and recombination balance; light adds generation on top.",
+      "related": [
+        "generation-rate",
+        "recombination",
+        "thermalisation"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4,
+        5
+      ],
+      "taughtIn": "week-03#generation"
+    },
+    {
+      "id": "generation-rate",
+      "term": "Generation rate",
+      "aliases": [
+        "G_L",
+        "optical generation rate"
+      ],
+      "short": "G: electron–hole pairs created per unit volume per second (cm⁻³s⁻¹ or m⁻³s⁻¹).",
+      "long": "For monochromatic light $G(x) = \\eta_g(1-R)\\Phi_0\\alpha e^{-\\alpha x}$ (eq. 7.4): flux times absorption coefficient. Highest at the surface, falling with the absorption length $1/\\alpha$.",
+      "related": [
+        "generation",
+        "absorption-coefficient",
+        "photon-flux"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "G_L",
+      "unit": "cm⁻³ s⁻¹",
+      "taughtIn": "week-03#generation"
+    },
+    {
+      "id": "recombination",
+      "term": "Recombination",
+      "aliases": [
+        "recombine",
+        "recombines",
+        "recombined",
+        "recombination rate"
+      ],
+      "short": "A free electron fills a hole: both carriers disappear and their energy goes to a photon, another carrier or the lattice.",
+      "long": "Four types in the course: radiative, Auger, Shockley–Read–Hall (via defects) and surface recombination. Recombination before collection is the main loss of photogenerated carriers.",
+      "related": [
+        "radiative-recombination",
+        "auger-recombination",
+        "srh-recombination",
+        "surface-recombination",
+        "minority-carrier-lifetime"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "radiative-recombination",
+      "term": "Radiative recombination",
+      "aliases": [
+        "direct recombination",
+        "band-to-band recombination"
+      ],
+      "short": "Band-to-band recombination in which the energy leaves as a photon of about E_G.",
+      "long": "Rate ∝ np (eq. 7.11). Efficient in direct semiconductors (GaAs, LEDs); slow in indirect silicon because a phonon is also needed.",
+      "related": [
+        "recombination",
+        "direct-bandgap",
+        "indirect-bandgap"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "auger-recombination",
+      "term": "Auger recombination",
+      "aliases": [
+        "Auger"
+      ],
+      "short": "The recombination energy is handed to a third carrier, which is kicked deep into its band and thermalises.",
+      "long": "A three-particle process: $R_{\\mathrm{Aug}} = C_nn^2p + C_pnp^2$ (eq. 7.43). Lifetime ∝ $1/N^2$, so it dominates in heavily doped silicon.",
+      "related": [
+        "recombination",
+        "minority-carrier-lifetime"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "srh-recombination",
+      "term": "Shockley–Read–Hall recombination",
+      "aliases": [
+        "SRH",
+        "SRH recombination",
+        "Shockley-Read-Hall",
+        "Shockley–Read–Hall",
+        "trap-assisted recombination"
+      ],
+      "short": "Recombination via a trap level inside the bandgap created by an impurity or crystal defect.",
+      "long": "The electron is captured by the trap, then a hole completes the recombination; energy goes to the lattice. Dominant in most real silicon. Low injection: $R = c_pN_T(p - p_0)$, lifetime $1/(c_pN_T)$ (eq. 7.39–7.41): fewer traps, longer lifetime.",
+      "related": [
+        "trap-state",
+        "recombination",
+        "minority-carrier-lifetime"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "trap-state",
+      "term": "Trap state",
+      "aliases": [
+        "trap",
+        "traps",
+        "trap states",
+        "defect level",
+        "recombination centre"
+      ],
+      "short": "An allowed energy level inside the bandgap, caused by an impurity, crystal defect or dangling bond, that can capture electrons and holes.",
+      "long": "Traps near midgap are the most effective recombination centres (book eq. 7.38). Their density $N_T$ (cm⁻³) sets the SRH lifetime.",
+      "related": [
+        "srh-recombination",
+        "dangling-bond"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "E_T",
+      "unit": "eV",
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "surface-recombination",
+      "term": "Surface recombination",
+      "aliases": [
+        "surface recombination losses"
+      ],
+      "short": "SRH recombination at a surface, where dangling bonds create many trap states.",
+      "long": "Described by the surface recombination velocity S. Reduced by passivation. Important for blue light, which is absorbed close to the front surface.",
+      "related": [
+        "surface-recombination-velocity",
+        "passivation",
+        "dangling-bond"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "surface-recombination-velocity",
+      "term": "Surface recombination velocity",
+      "aliases": [
+        "S",
+        "surface recombination velocity S"
+      ],
+      "short": "S (cm/s): how strongly a surface removes minority carriers. The flux into the surface is SΔn.",
+      "long": "$S = v_{th}\\sigma N_{sT}$ (eq. 7.50). Boundary condition $D\\,\\mathrm{d}\\Delta n/\\mathrm{d}x = -S\\Delta n$. S = 0: perfect surface; S → ∞: every carrier arriving recombines (Δn = 0, like a contact). Well-passivated Si: S of order 10 cm/s or less; bare surfaces 10⁵ cm/s or more.",
+      "related": [
+        "surface-recombination",
+        "passivation",
+        "boundary-condition"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "S",
+      "unit": "cm/s",
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "dangling-bond",
+      "term": "Dangling bond",
+      "aliases": [
+        "dangling bonds"
+      ],
+      "short": "An unsatisfied bond of a surface (or defect) atom that has no partner to bond with.",
+      "long": "Each dangling bond creates trap states in the gap, which makes surfaces strong recombination sites unless passivated.",
+      "related": [
+        "surface-recombination",
+        "passivation",
+        "trap-state"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "passivation",
+      "term": "Passivation",
+      "aliases": [
+        "surface passivation",
+        "passivated",
+        "passivating"
+      ],
+      "short": "Treating a surface so that fewer carriers recombine there, usually with a thin layer that ties up dangling bonds.",
+      "long": "Book §7.5: either reduce the surface trap density (a thin layer of a suitable material) or keep minority carriers away from the surface (a heavily doped layer underneath). Result: low S.",
+      "related": [
+        "surface-recombination",
+        "surface-recombination-velocity",
+        "dangling-bond"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        6
+      ],
+      "taughtIn": "week-03#recombination"
+    },
+    {
+      "id": "low-injection",
+      "term": "Low injection",
+      "aliases": [
+        "low-level injection",
+        "low injection level"
+      ],
+      "short": "The excess carrier density is much smaller than the majority-carrier density, so only the minority density changes noticeably.",
+      "long": "Under low injection all recombination rates simplify to (excess minority density)/τ, and the majority quasi-Fermi level stays put. Normal one-sun operation of a Si wafer is usually low injection.",
+      "related": [
+        "excess-carriers",
+        "minority-carrier-lifetime",
+        "quasi-fermi-level"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#lifetime"
+    },
+    {
+      "id": "minority-carrier-lifetime",
+      "term": "Minority-carrier lifetime",
+      "aliases": [
+        "lifetime",
+        "lifetimes",
+        "carrier lifetime",
+        "minority carrier lifetime",
+        "effective lifetime"
+      ],
+      "short": "τ: the average time an excess minority carrier survives before recombining. Typical c-Si: ~1 µs; very pure: ~1 ms.",
+      "long": "Low injection: $R = \\Delta n/\\tau$. After the light goes off the excess decays as $e^{-t/\\tau}$ (eq. 7.22); in steady state $\\Delta n = G\\tau$. Several mechanisms combine as $1/\\tau = \\sum 1/\\tau_i$ (eq. 7.27).",
+      "related": [
+        "diffusion-length",
+        "recombination",
+        "low-injection"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "symbol": "\\tau",
+      "unit": "s",
+      "taughtIn": "week-03#lifetime"
+    },
+    {
+      "id": "diffusion-length",
+      "term": "Diffusion length",
+      "aliases": [
+        "diffusion lengths",
+        "L_n",
+        "L_p",
+        "minority carrier diffusion length"
+      ],
+      "short": "L = √(Dτ): the typical distance a minority carrier diffuses before it recombines.",
+      "long": "Excess minority carriers decay as $e^{-x/L}$ away from where they are generated. For good collection L should exceed the distance to the junction (for a wafer: the wafer thickness).",
+      "related": [
+        "minority-carrier-lifetime",
+        "diffusion-coefficient",
+        "diffusion"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4,
+        5
+      ],
+      "symbol": "L",
+      "unit": "µm or cm",
+      "example": "$D = 25.6$ cm²/s, τ = 10 µs: $L = \\sqrt{2.56 \\times 10^{-4}}$ cm = 160 µm (book ex. 7.2).",
+      "taughtIn": "week-03#lifetime"
+    },
+    {
+      "id": "continuity-equation",
+      "term": "Continuity equation",
+      "aliases": [
+        "continuity equations"
+      ],
+      "short": "Carrier bookkeeping: ∂n/∂t = (1/q)∇·Jₙ − Rₙ + Gₙ (eq. 6.34, on the sheet).",
+      "long": "The density at a point changes by net inflow, generation and recombination. In steady state, 1-D, no field: $D\\Delta'' - \\Delta/\\tau + G = 0$, which gives all the carrier profiles of week 3.",
+      "related": [
+        "steady-state",
+        "diffusion-length",
+        "boundary-condition"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4
+      ],
+      "taughtIn": "week-03#continuity"
+    },
+    {
+      "id": "steady-state",
+      "term": "Steady state",
+      "aliases": [
+        "steady-state",
+        "stationary"
+      ],
+      "short": "Nothing changes with time any more (∂/∂t = 0), although carriers keep being generated, flowing and recombining.",
+      "long": "Different from equilibrium: under constant light the densities are constant (steady state) but $np > n_i^2$ (not equilibrium).",
+      "related": [
+        "continuity-equation",
+        "thermal-equilibrium"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3
+      ],
+      "taughtIn": "week-03#continuity"
+    },
+    {
+      "id": "poisson-equation",
+      "term": "Poisson equation",
+      "aliases": [
+        "Poisson’s equation"
+      ],
+      "short": "Links the electric field (and potential) to the charge density: dξ/dx = ρ/εₛ.",
+      "long": "Lecture 3 slide 42 lists it with the continuity and current equations as the basic semiconductor device equations. It becomes essential in the p-n junction (week 4).",
+      "related": [
+        "electric-field",
+        "charge-neutrality"
+      ],
+      "category": "course",
+      "topic": "transport",
+      "weeks": [
+        3,
+        4
+      ],
+      "taughtIn": "week-03#continuity"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "units",
+  "title": "Units, prefixes and conversions",
+  "summary": "SI prefixes, squared and cubed units, eV ↔ J, nm ↔ m, mA/cm² ↔ A/m²: the conversions behind most lost exam points.",
+  "order": 1,
+  "context": "general",
+  "weeks": [
+    1,
+    2,
+    3
+  ],
+  "terms": [
+    "si-prefixes",
+    "scientific-notation",
+    "electron-volt",
+    "joule",
+    "kilowatt-hour",
+    "kelvin",
+    "elementary-charge",
+    "current-density"
+  ],
+  "diagrams": [
+    {
+      "id": "unit-converter",
+      "title": "Unit converter with the reasoning shown",
+      "tryThis": "Convert 1 cm² to m², then 1 cm⁻³ to m⁻³: watch how the exponent of the prefix is multiplied by the power of the unit."
+    }
+  ],
+  "checks": [
+    {
+      "id": "fu-ev-to-j",
+      "type": "numeric",
+      "week": 0,
+      "topic": "eV ↔ J",
+      "concept": "photons",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "A photon has an energy of 2.5 eV. What is its energy in joules?",
+      "answer": {
+        "value": 4.005e-19,
+        "unit": "J",
+        "tolerance": 0.01
+      },
+      "hints": [
+        "1 eV is the energy one elementary charge gains across 1 V.",
+        "$1\\,\\mathrm{eV} = 1.602 \\times 10^{-19}\\,\\mathrm{J}$",
+        "Multiply 2.5 by $1.602 \\times 10^{-19}$."
+      ],
+      "solution": [
+        "$E = 2.5 \\times 1.602 \\times 10^{-19}\\,\\mathrm{J} = 4.01 \\times 10^{-19}\\,\\mathrm{J}$."
+      ]
+    },
+    {
+      "id": "fu-ma-cm2",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Current density units",
+      "concept": "solar-spectrum",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "A solar cell delivers 12 mA/cm². Express this in A/m².",
+      "answer": {
+        "value": 120,
+        "unit": "A/m²",
+        "tolerance": 0.01
+      },
+      "hints": [
+        "Convert the numerator and the denominator separately.",
+        "1 mA = 10⁻³ A and 1 cm² = (10⁻² m)² = 10⁻⁴ m².",
+        "$12 \\times 10^{-3}\\,\\mathrm{A} / 10^{-4}\\,\\mathrm{m^2}$"
+      ],
+      "solution": [
+        "$12\\,\\mathrm{mA/cm^2} = \\frac{12 \\times 10^{-3}\\,\\mathrm{A}}{10^{-4}\\,\\mathrm{m^2}} = 120\\,\\mathrm{A/m^2}$.",
+        "Rule of thumb: 1 mA/cm² = 10 A/m²."
+      ]
+    },
+    {
+      "id": "fu-cm3",
+      "type": "mcq",
+      "week": 0,
+      "topic": "Volume densities",
+      "concept": "photons",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "Carrier densities in week 2 are given per cm³. How many per m³ is $10^{16}\\ \\mathrm{cm^{-3}}$?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$10^{22}\\ \\mathrm{m^{-3}}$",
+          "correct": true,
+          "feedback": "Correct: 1 m³ = 10⁶ cm³, so a density per m³ is 10⁶ times larger."
+        },
+        {
+          "id": "b",
+          "text": "$10^{10}\\ \\mathrm{m^{-3}}$",
+          "feedback": "That divides by 10⁶. A cubic metre holds a million cubic centimetres, so it contains *more* particles."
+        },
+        {
+          "id": "c",
+          "text": "$10^{18}\\ \\mathrm{m^{-3}}$",
+          "feedback": "You used 10² (cm → m) without cubing it. Volumes cube the factor: (10²)³ = 10⁶."
+        },
+        {
+          "id": "d",
+          "text": "$10^{14}\\ \\mathrm{m^{-3}}$",
+          "feedback": "That divides by 10² instead of multiplying by 10⁶."
+        }
+      ],
+      "hints": [
+        "How many cm³ fit in one m³?",
+        "1 m = 10² cm, so 1 m³ = (10² cm)³.",
+        "A density is ‘per volume’: more volume → more particles."
+      ],
+      "solution": [
+        "1 m³ = (100 cm)³ = 10⁶ cm³.",
+        "$10^{16}\\ \\mathrm{cm^{-3}} \\times 10^6\\ \\mathrm{cm^3/m^3} = 10^{22}\\ \\mathrm{m^{-3}}$."
+      ]
+    }
+  ]
+}

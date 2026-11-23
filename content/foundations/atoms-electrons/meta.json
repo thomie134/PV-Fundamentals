@@ -1,0 +1,82 @@
+{
+  "id": "atoms-electrons",
+  "title": "Atoms, shells and valence electrons",
+  "summary": "Atomic number, electron shells, why silicon has four valence electrons and forms four bonds, and why boron and phosphorus are the dopants. Needed for week 2.",
+  "order": 7,
+  "context": "semiconductor",
+  "weeks": [2],
+  "terms": ["atomic-number", "valence-electron", "covalent-bond", "unit-cell"],
+  "diagrams": [
+    {
+      "id": "atom-shells",
+      "title": "Electron shells of the elements that matter for silicon",
+      "tryThis": "Compare Si with P and B: count the outer-shell electrons and see what each atom does when it replaces a Si atom in the crystal."
+    }
+  ],
+  "checks": [
+    {
+      "id": "fa-valence-as",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Valence electrons",
+      "concept": "doping",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "Arsenic has atomic number 33: shells hold 2, 8, 18 and then the rest. How many valence electrons does As have?",
+      "answer": { "value": 5, "unit": "electrons", "absTolerance": 0.1 },
+      "hints": [
+        "Valence electrons are the ones in the outermost, unfilled shell.",
+        "Fill the inner shells first: 2 + 8 + 18.",
+        "Subtract the filled shells from 33."
+      ],
+      "solution": [
+        "Inner shells: 2 + 8 + 18 = 28 electrons.",
+        "Outer shell: 33 − 28 = **5** valence electrons, like phosphorus. So As is a donor in silicon (book ex. 6.6)."
+      ]
+    },
+    {
+      "id": "fa-unit-cell",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Counting atoms in a cell",
+      "concept": "si-crystal",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "A simple cubic cell has one atom on each of its 8 corners and nothing else. How many atoms belong to one cell?",
+      "answer": { "value": 1, "unit": "atoms", "absTolerance": 0.01, "errors": [{ "value": 8, "feedback": "Each corner atom is shared by the 8 cubes that meet there, so only 1/8 of it belongs to this cell." }] },
+      "hints": [
+        "Neighbouring cells share atoms on corners and faces.",
+        "A corner is shared by 8 cubes, a face by 2.",
+        "8 corners × 1/8."
+      ],
+      "solution": [
+        "Every corner atom is shared by 8 cubes, so it counts for 1/8.",
+        "8 × 1/8 = **1** atom per cell. (The diamond cell of silicon adds 6 face atoms × ½ and 4 inside: 1 + 3 + 4 = 8.)"
+      ]
+    },
+    {
+      "id": "fa-neutral",
+      "type": "mcq",
+      "week": 0,
+      "topic": "Neutral atoms",
+      "concept": "doping",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "A phosphorus atom (atomic number 15) replaces a silicon atom (14). What is the net charge added to the crystal?",
+      "options": [
+        { "id": "a", "text": "Zero: P has one electron more but also one proton more.", "correct": true, "feedback": "Right: a neutral atom replaces a neutral atom. Only when the fifth electron leaves does the P atom become a fixed positive ion, balanced by that free electron." },
+        { "id": "b", "text": "−q: one extra electron was added.", "feedback": "The extra electron comes with an extra proton in the nucleus. Count both." },
+        { "id": "c", "text": "+q: phosphorus is a positive ion.", "feedback": "P is only an ion after donating its electron, and then the free electron balances it." },
+        { "id": "d", "text": "−5q: five valence electrons.", "feedback": "The other four valence electrons replace silicon's four; and all are balanced by protons." }
+      ],
+      "hints": [
+        "An atom with atomic number Z has Z protons and, if neutral, Z electrons.",
+        "Compare the number of protons and electrons of P with those of Si.",
+        "Both differ by one."
+      ],
+      "solution": [
+        "P: 15 protons, 15 electrons. Si: 14 and 14. Swapping them adds one proton **and** one electron: net charge zero (instruction 2 Q2c)."
+      ]
+    }
+  ]
+}

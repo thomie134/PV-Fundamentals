@@ -1,0 +1,117 @@
+{
+  "id": "trigonometry",
+  "title": "Angles, sine and cosine",
+  "summary": "What sin, cos and arcsin do, degrees vs radians, measuring from the normal, and why arcsin of a number above 1 means total internal reflection.",
+  "order": 3,
+  "context": "optics",
+  "weeks": [
+    1
+  ],
+  "terms": [
+    "sine-cosine",
+    "radian",
+    "surface-normal",
+    "angle-of-incidence",
+    "snells-law",
+    "critical-angle"
+  ],
+  "diagrams": [
+    {
+      "id": "unit-circle",
+      "title": "Sine and cosine on the unit circle",
+      "tryThis": "Drag the angle from 0° to 90° and watch sin grow from 0 to 1 while cos shrinks from 1 to 0; then try arcsin of 1.2."
+    }
+  ],
+  "checks": [
+    {
+      "id": "ft-arcsin",
+      "type": "numeric",
+      "week": 0,
+      "topic": "arcsin",
+      "concept": "refraction-reflection",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "Snell’s law gives $\\sin\\theta_t = 0.5$. What is θₜ in degrees?",
+      "answer": {
+        "value": 30,
+        "unit": "°",
+        "tolerance": 0.01,
+        "absTolerance": 0.1
+      },
+      "hints": [
+        "arcsin undoes sin.",
+        "$\\theta_t = \\arcsin(0.5)$",
+        "Make sure your calculator is in degree mode."
+      ],
+      "solution": [
+        "$\\theta_t = \\arcsin(0.5) = 30°$ (= 0.524 rad)."
+      ]
+    },
+    {
+      "id": "ft-path",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Path length",
+      "concept": "refraction-reflection",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "A ray crosses a 100 µm layer at 20° from the normal. How long is its path through the layer (in µm)?",
+      "answer": {
+        "value": 106.4,
+        "unit": "µm",
+        "tolerance": 0.005
+      },
+      "hints": [
+        "Draw the right-angled triangle: thickness is the side next to the angle.",
+        "cos θ = adjacent / hypotenuse, so hypotenuse = d / cos θ.",
+        "cos 20° = 0.940."
+      ],
+      "solution": [
+        "The thickness is adjacent to the angle; the path is the hypotenuse.",
+        "path = $d/\\cos\\theta = 100/\\cos 20° = 100/0.940 = 106.4$ µm."
+      ]
+    },
+    {
+      "id": "ft-tir",
+      "type": "mcq",
+      "week": 0,
+      "topic": "arcsin domain",
+      "concept": "refraction-reflection",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "Going from silicon into air, Snell’s law asks for $\\sin\\theta_t = 1.2$. What does that mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "There is no refracted ray: the light is totally internally reflected.",
+          "correct": true,
+          "feedback": "Correct: sin never exceeds 1, so no angle satisfies Snell’s law. All light is reflected."
+        },
+        {
+          "id": "b",
+          "text": "θₜ = 90°, the ray skims the surface.",
+          "feedback": "That happens exactly at sin θₜ = 1 (the critical angle). Beyond it there is no refracted ray at all."
+        },
+        {
+          "id": "c",
+          "text": "My calculator is in radians; switching to degrees will fix it.",
+          "feedback": "The unit mode doesn’t change the fact that sin cannot exceed 1."
+        },
+        {
+          "id": "d",
+          "text": "θₜ = arcsin(1.2) = 73.7°.",
+          "feedback": "arcsin(1.2) does not exist: sine values lie between −1 and 1."
+        }
+      ],
+      "hints": [
+        "What is the largest value sin θ can take?",
+        "Snell: $n_1\\sin\\theta_1 = n_2\\sin\\theta_2$.",
+        "If no angle fits, where does the light go?"
+      ],
+      "solution": [
+        "sin θ is always between −1 and 1, so no refracted ray exists.",
+        "The light is totally reflected back into the silicon: total internal reflection."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "complex-numbers",
+  "title": "Complex numbers (just enough for ñ)",
+  "summary": "A complex number packs two real numbers into one. In ñ = n + iκ the real part sets the speed of light in the material, the imaginary part how fast it fades.",
+  "order": 6,
+  "context": "optics",
+  "weeks": [
+    1
+  ],
+  "terms": [
+    "complex-number",
+    "complex-refractive-index",
+    "extinction-coefficient",
+    "absorption-coefficient"
+  ],
+  "diagrams": [
+    {
+      "id": "decaying-wave",
+      "title": "What n and κ do to a light wave",
+      "tryThis": "Raise n and watch the wave get shorter inside the material; then raise κ and watch it fade faster."
+    }
+  ],
+  "checks": [
+    {
+      "id": "fc-which-part",
+      "type": "mcq",
+      "week": 0,
+      "topic": "Real and imaginary parts",
+      "concept": "absorption",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "For c-Si at 650 nm, $\\tilde n = 3.84 + 0.015i$. Which number determines how strongly the light is absorbed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.015, the imaginary part κ",
+          "correct": true,
+          "feedback": "Correct: α = 4πκ/λ₀ depends only on κ."
+        },
+        {
+          "id": "b",
+          "text": "3.84, the real part n",
+          "feedback": "n sets the speed (and wavelength) inside the material and the reflection at its surface, not the absorption."
+        },
+        {
+          "id": "c",
+          "text": "The magnitude $\\sqrt{3.84^2 + 0.015^2}$",
+          "feedback": "The magnitude mixes the two effects; absorption depends on κ alone."
+        },
+        {
+          "id": "d",
+          "text": "The ratio 0.015/3.84",
+          "feedback": "The ratio has no direct physical meaning here; α = 4πκ/λ₀."
+        }
+      ],
+      "hints": [
+        "Which formula on the sheet contains κ?",
+        "$\\alpha = \\frac{4\\pi\\kappa}{\\lambda_0}$",
+        "κ is the imaginary part of ñ."
+      ],
+      "solution": [
+        "$\\tilde n = n + i\\kappa$: real part n = 3.84, imaginary part κ = 0.015.",
+        "Absorption: $\\alpha = 4\\pi\\kappa/\\lambda_0$, so κ decides."
+      ]
+    },
+    {
+      "id": "fc-alpha",
+      "type": "numeric",
+      "week": 0,
+      "topic": "From κ to α",
+      "concept": "absorption",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "Using $\\tilde n = 3.84 + 0.015i$ at λ₀ = 650 nm, calculate α in cm⁻¹ (book ex. 7.5a).",
+      "answer": {
+        "value": 2900,
+        "unit": "cm⁻¹",
+        "tolerance": 0.01
+      },
+      "hints": [
+        "Only κ is needed.",
+        "$\\alpha = 4\\pi\\kappa/\\lambda_0$",
+        "λ₀ = 650 nm = 6.50 × 10⁻⁵ cm."
+      ],
+      "solution": [
+        "$\\alpha = \\frac{4\\pi \\times 0.015}{6.50 \\times 10^{-5}\\,\\mathrm{cm}} = 2.90 \\times 10^3$ cm⁻¹ (= 2.9 × 10⁵ m⁻¹, as in the answer book)."
+      ]
+    }
+  ]
+}

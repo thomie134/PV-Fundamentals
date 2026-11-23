@@ -1,0 +1,62 @@
+{
+  "id": "derivatives-odes",
+  "title": "Slopes, derivatives and simple differential equations",
+  "summary": "A derivative is a slope; a gradient drives diffusion; and two equations, y'' = −c and y'' = y/L², produce every carrier profile in week 3.",
+  "order": 8,
+  "context": "math",
+  "weeks": [3, 4],
+  "terms": ["derivative", "differential-equation", "boundary-condition"],
+  "diagrams": [
+    {
+      "id": "slope-explorer",
+      "title": "Slope, curvature and the two profile shapes",
+      "tryThis": "Move the point along the exponential and watch the slope shrink with the curve itself; then switch to the parabola and see a constant curvature."
+    }
+  ],
+  "checks": [
+    {
+      "id": "fd-gradient",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Slope with units",
+      "concept": "diffusion",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "An electron density falls linearly from $5 \\times 10^{16}$ cm⁻³ to $1 \\times 10^{16}$ cm⁻³ over 4 µm. What is the size of the gradient |dn/dx| in cm⁻⁴?",
+      "answer": { "value": 1e20, "unit": "cm⁻⁴", "tolerance": 0.01, "errors": [{ "value": 1e16, "feedback": "You divided by 4 instead of by 4 µm = 4 × 10⁻⁴ cm. Convert the distance to cm first." }] },
+      "hints": ["Slope = change in n / distance.", "Distance in cm: 4 µm = 4 × 10⁻⁴ cm.", "$(5 - 1) \\times 10^{16} / 4 \\times 10^{-4}$"],
+      "solution": ["Change in density: $4 \\times 10^{16}$ cm⁻³. Distance: $4 \\times 10^{-4}$ cm.", "$|\\mathrm{d}n/\\mathrm{d}x| = 4 \\times 10^{16} / 4 \\times 10^{-4} = 1 \\times 10^{20}$ cm⁻⁴."]
+    },
+    {
+      "id": "fd-parabola",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Solving y'' = −c",
+      "concept": "continuity",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "Solve $y'' = -2$ with $y(0) = 0$ and $y(2) = 0$. What is $y(1)$?",
+      "answer": { "value": 1, "unit": "", "absTolerance": 0.01, "errors": [{ "value": -1, "feedback": "Check the sign: with $y'' = -2$ the curve is a hill (opening downwards), so it lies above zero between the two points." }] },
+      "hints": ["Integrate twice: $y = -x^2 + C_1 x + C_0$.", "$y(0) = 0$ gives $C_0 = 0$.", "$y(2) = 0$ gives $-4 + 2C_1 = 0$."],
+      "solution": ["Integrate twice: $y' = -2x + C_1$, $y = -x^2 + C_1x + C_0$.", "$y(0) = 0 \\Rightarrow C_0 = 0$; $y(2) = 0 \\Rightarrow C_1 = 2$.", "$y = 2x - x^2$, so $y(1) = 1$. This is the shape of a carrier profile with uniform generation and no recombination (book ex. 7.8)."]
+    },
+    {
+      "id": "fd-exp-solution",
+      "type": "mcq",
+      "week": 0,
+      "topic": "Solving y'' = y/L²",
+      "concept": "continuity",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "Which function satisfies $y'' = y/L^2$ and goes to zero for large x?",
+      "options": [
+        { "id": "a", "text": "$y = A\\,e^{-x/L}$", "correct": true, "feedback": "Right: differentiating twice gives $(1/L^2)\\,A e^{-x/L} = y/L^2$, and it decays. This is the minority-carrier profile with diffusion length L." },
+        { "id": "b", "text": "$y = A\\,e^{x/L}$", "feedback": "It does satisfy the equation, but it grows without limit. Physical profiles in a thick wafer must stay finite." },
+        { "id": "c", "text": "$y = A\\,\\sin(x/L)$", "feedback": "$\\sin'' = -\\sin/L^2$: the sign is wrong. Sines solve $y'' = -y/L^2$." },
+        { "id": "d", "text": "$y = A - x^2/L^2$", "feedback": "Its second derivative is the constant $-2/L^2$, not proportional to y." }
+      ],
+      "hints": ["Differentiate each candidate twice.", "Which ones give back a positive multiple of themselves?", "Of those, which one decays?"],
+      "solution": ["Both $e^{x/L}$ and $e^{-x/L}$ satisfy $y'' = y/L^2$.", "Only $e^{-x/L}$ stays finite for large x, so a semi-infinite profile is $A e^{-x/L}$."]
+    }
+  ]
+}

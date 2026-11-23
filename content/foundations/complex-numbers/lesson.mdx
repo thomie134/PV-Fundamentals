@@ -1,0 +1,26 @@
+## Two numbers in one
+
+A <Term id="complex-number" /> has a real part and an imaginary part: $a + ib$, where $i$ is a number with $i^2 = -1$. For this course you don’t need to calculate with complex numbers; you only need to read one:
+
+<Ctx c="optics">
+
+$$
+\tilde{n} = n + i\kappa
+$$
+
+The <Term id="complex-refractive-index" /> packs two separate material properties into a single symbol:
+
+- the **real part** $n$ (e.g. 3.84 for c-Si at 650 nm) sets the speed of light in the material ($c/n$), the wavelength inside it ($\lambda_0/n$) and how much is reflected at its surface;
+- the **imaginary part** κ, the <Term id="extinction-coefficient" /> (e.g. 0.015), sets how fast the light fades: the <Term id="absorption-coefficient" /> is $\alpha = 4\pi\kappa/\lambda_0$.
+
+<Diagram id="decaying-wave" />
+
+## Why physicists write it this way
+
+A light wave is an oscillation, and complex numbers describe oscillations compactly. With a real refractive index the wave just oscillates; when $n$ gets an imaginary part, the same formula automatically produces an oscillation whose amplitude decays: exactly the absorbing wave in the diagram above. That is all the ‘i’ is doing here.
+
+<Note title="Sign conventions">
+The book writes $\tilde n = n + i\kappa$; book exercise 7.5 writes $\tilde n = n - ik$. Different authors pick different signs for the same physics. In both, the reflectance and $\alpha = 4\pi\kappa/\lambda_0$ come out the same.
+</Note>
+
+</Ctx>

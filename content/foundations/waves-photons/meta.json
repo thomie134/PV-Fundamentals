@@ -1,0 +1,117 @@
+{
+  "id": "waves-photons",
+  "title": "Waves and photons",
+  "summary": "Wavelength, frequency and the speed of light; why light comes in photons with E = hc/λ; and the difference between brighter and bluer.",
+  "order": 2,
+  "context": "radiation",
+  "weeks": [
+    1
+  ],
+  "terms": [
+    "electromagnetic-wave",
+    "wavelength",
+    "frequency",
+    "speed-of-light",
+    "photon",
+    "photon-energy",
+    "planck-constant",
+    "amplitude"
+  ],
+  "diagrams": [
+    {
+      "id": "photon-calculator",
+      "title": "From wavelength to photon energy",
+      "tryThis": "Slide from violet (400 nm) to the infrared (1200 nm): the energy per photon halves and halves again, while the number of photons in 1 W goes up."
+    }
+  ],
+  "checks": [
+    {
+      "id": "fw-frequency",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Frequency",
+      "concept": "photons",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "What is the frequency of orange light with a wavelength of 600 nm (in vacuum)?",
+      "answer": {
+        "value": 499700000000000.0,
+        "unit": "Hz"
+      },
+      "hints": [
+        "Speed = wavelength × frequency.",
+        "$\\nu = c/\\lambda$",
+        "Use λ = 600 × 10⁻⁹ m."
+      ],
+      "solution": [
+        "$\\nu = \\frac{c}{\\lambda} = \\frac{2.998 \\times 10^8}{600 \\times 10^{-9}} = 5.00 \\times 10^{14}$ Hz."
+      ]
+    },
+    {
+      "id": "fw-gap-wavelength",
+      "type": "numeric",
+      "week": 0,
+      "topic": "Photon energy",
+      "concept": "photons",
+      "difficulty": 2,
+      "prerequisites": [],
+      "prompt": "Silicon has a bandgap of 1.12 eV. What is the longest wavelength (in nm) a photon can have and still carry at least this energy?",
+      "answer": {
+        "value": 1107,
+        "unit": "nm",
+        "tolerance": 0.01
+      },
+      "hints": [
+        "Turn $E = hc/\\lambda$ around.",
+        "$\\lambda = \\frac{hc}{E}$ with E in joules, or $\\lambda[\\mathrm{nm}] \\approx 1240/E[\\mathrm{eV}]$.",
+        "$E = 1.12 \\times 1.602 \\times 10^{-19}$ J."
+      ],
+      "solution": [
+        "$\\lambda = \\frac{hc}{E} = \\frac{1.986 \\times 10^{-25}}{1.12 \\times 1.602 \\times 10^{-19}} = 1.107 \\times 10^{-6}$ m = 1107 nm.",
+        "Shortcut: 1240/1.12 = 1107 nm."
+      ]
+    },
+    {
+      "id": "fw-glass",
+      "type": "mcq",
+      "week": 0,
+      "topic": "Light in a medium",
+      "concept": "photons",
+      "difficulty": 1,
+      "prerequisites": [],
+      "prompt": "Light passes from air into glass ($n$ = 1.5). Which quantity stays the same?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The frequency (and hence the photon energy)",
+          "correct": true,
+          "feedback": "Correct: the frequency is set by the source; speed and wavelength both drop by a factor n."
+        },
+        {
+          "id": "b",
+          "text": "The wavelength",
+          "feedback": "The wavelength shrinks to λ₀/n inside the glass."
+        },
+        {
+          "id": "c",
+          "text": "The speed",
+          "feedback": "Light slows to c/n = 2.0 × 10⁸ m/s in glass."
+        },
+        {
+          "id": "d",
+          "text": "Nothing; all three change",
+          "feedback": "Frequency (and therefore photon energy hν) is unchanged."
+        }
+      ],
+      "hints": [
+        "$\\lambda = c/(n\\nu)$: which quantity has no n in it?",
+        "The source decides how often the field oscillates.",
+        "Photon energy is hν."
+      ],
+      "solution": [
+        "The frequency stays the same; the speed becomes c/n and the wavelength λ₀/n.",
+        "Because $E = h\\nu$, photon energy is also unchanged in the glass."
+      ]
+    }
+  ]
+}

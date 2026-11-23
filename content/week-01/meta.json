@@ -1,0 +1,136 @@
+{
+  "week": 1,
+  "title": "Solar radiation & solar cell optics",
+  "subtitle": "Where solar energy comes from, how it is spread over photon energies, and how much light actually gets into a solar cell.",
+  "lectureDate": "9 Nov 2026",
+  "chapters": "Ch. 4–5 (+ §10 coatings)",
+  "status": "complete",
+  "files": {
+    "lecture": "Material/Week 1/2026_11_09_L1_Rudi_Intro & Radiation (1).pdf",
+    "instruction": "Material/Week 1/instructions 1 (with answers).pdf"
+  },
+  "prerequisites": {
+    "terms": ["si-prefixes", "scientific-notation", "electron-volt", "power", "wavelength", "frequency", "kelvin", "sine-cosine", "exponential-function", "integral", "complex-number"],
+    "foundations": ["units", "waves-photons", "trigonometry", "exp-log", "integrals", "complex-numbers"],
+    "skills": [
+      "Convert nm → m, cm² → m² and eV ↔ J without thinking twice",
+      "Use sin and arcsin **in degrees** on your calculator",
+      "Evaluate $e^{-x}$ and $\\ln x$, and solve $e^{-x} = a$ for $x$",
+      "Read a spectrum plot: the area under the curve is a power"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "energy-power",
+      "title": "Energy, power and energy flow",
+      "summary": "Energy is conserved and only converted; power is energy per second; a solar cell taps the radiative energy flow from the hot Sun to cold space.",
+      "context": "energy",
+      "keywords": ["joule", "watt", "kWh", "eV", "work", "water wheel"],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slides 24–50 (§1.3 Energy flow)" },
+        { "kind": "lecture", "ref": "L1 slides 35–43 (photovoltaic effect, J–V curve preview)" },
+        { "kind": "book", "ref": "Book Ch. 1 & 3 (background)" }
+      ]
+    },
+    {
+      "id": "photons",
+      "title": "Light as waves and photons",
+      "summary": "Light is an electromagnetic wave with wavelength and frequency, and also a stream of photons with energy E = hν = hc/λ.",
+      "context": "radiation",
+      "keywords": ["photon energy", "wavelength", "frequency", "spectrum"],
+      "diagrams": [],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slides 54–55" },
+        { "kind": "book", "ref": "Book §4.2 (p. 28–29), eq. 4.6; §5.4 (p. 42), eq. 3.1/5.22" }
+      ]
+    },
+    {
+      "id": "blackbody",
+      "title": "Thermal radiation: the Sun as a blackbody",
+      "summary": "Every object radiates; a blackbody’s spectrum depends only on its temperature (Planck). Its peak follows Wien’s law and its total power σT⁴.",
+      "context": "radiation",
+      "keywords": ["Planck", "Wien", "Stefan-Boltzmann", "temperature"],
+      "diagrams": ["blackbody-explorer"],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slide 53" },
+        { "kind": "book", "ref": "Book §5.3 (p. 39–42), eq. 5.18–5.21" },
+        { "kind": "answers", "ref": "Answer book ex. 5.1" }
+      ]
+    },
+    {
+      "id": "solar-spectrum",
+      "title": "The solar spectrum: irradiance and photon flux",
+      "summary": "AM0 and AM1.5 spectra; spectral irradiance vs irradiance (area under the curve); converting power to photon flux; which photons a cell with bandgap E_G can use.",
+      "context": "radiation",
+      "keywords": ["AM1.5", "air mass", "irradiance", "photon flux", "bandgap", "photocurrent"],
+      "diagrams": ["spectrum-explorer"],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slides 16, 56–63" },
+        { "kind": "book", "ref": "Book §5.2 (p. 37–39), §5.5 (p. 42–44), eq. 5.12–5.15, 5.26, 7.3" },
+        { "kind": "instruction", "ref": "Instruction 1: book ex. 5.6; Q2(a), Q2(c)" },
+        { "kind": "external", "ref": "ASTM G173-03 reference spectra (diagram data)" }
+      ]
+    },
+    {
+      "id": "refraction-reflection",
+      "title": "Refraction, reflection and total internal reflection",
+      "summary": "Snell’s law bends light at interfaces; the Fresnel equations give how much is reflected; beyond the critical angle light cannot escape.",
+      "context": "optics",
+      "keywords": ["Snell", "Fresnel", "reflectance", "critical angle", "TIR", "polarisation"],
+      "diagrams": ["interface-optics"],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slides 65–68" },
+        { "kind": "book", "ref": "Book §4.3 (p. 29–31), eq. 4.10–4.19" },
+        { "kind": "instruction", "ref": "Instruction 1: Q1(a–d), Q2(b)" },
+        { "kind": "answers", "ref": "Answer book ex. 4.1–4.3" }
+      ]
+    },
+    {
+      "id": "anti-reflection",
+      "title": "Anti-reflective coatings and surface texture",
+      "summary": "A coating splits one big index step into two smaller ones and, at the right thickness, makes reflections cancel. Texture gives light a second chance and traps it.",
+      "context": "optics",
+      "keywords": ["ARC", "quarter wave", "interference", "texture", "Si3N4"],
+      "diagrams": ["arc-coating"],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slides 69–82" },
+        { "kind": "book", "ref": "Book Ch. 10 (p. 143–145), eq. 10.32, 10.38" },
+        { "kind": "instruction", "ref": "Instruction 1: Q1(e–g)" }
+      ]
+    },
+    {
+      "id": "absorption",
+      "title": "Absorption of light: Lambert–Beer",
+      "summary": "In an absorbing material the intensity decays exponentially, I = I₀ exp(−αz), with α = 4πκ/λ₀. Weakly absorbed light needs thick layers or light trapping.",
+      "context": "optics",
+      "keywords": ["absorption coefficient", "extinction coefficient", "penetration depth", "absorptance", "light trapping"],
+      "diagrams": ["absorption-depth"],
+      "sources": [
+        { "kind": "lecture", "ref": "L1 slides 65, 83–84" },
+        { "kind": "book", "ref": "Book §4.4 (p. 31–32), eq. 4.20–4.27" },
+        { "kind": "instruction", "ref": "Instruction 1: Q1(c, d); Instruction 2: book ex. 7.5(a)" },
+        { "kind": "external", "ref": "M. A. Green, Sol. Energy Mater. Sol. Cells 92 (2008), c-Si optical data (diagram)" }
+      ]
+    }
+  ],
+  "diagrams": [
+    { "id": "blackbody-explorer", "title": "Blackbody spectrum explorer", "concept": "blackbody", "tryThis": "Drag the temperature from 3000 K up to 8000 K and watch the peak move left while the curve grows much taller." },
+    { "id": "spectrum-explorer", "title": "Solar spectrum, photons and the bandgap", "concept": "solar-spectrum", "tryThis": "Switch between ‘Power’ and ‘Photons’, then slide the bandgap: watch how much of the spectrum a cell can use and what current that gives." },
+    { "id": "interface-optics", "title": "Refraction and reflection at an interface", "concept": "refraction-reflection", "tryThis": "Sweep the angle of incidence from 0° to 90° for air → c-Si, then press ‘Swap media’ and find the angle where the light suddenly stops escaping." },
+    { "id": "arc-coating", "title": "Anti-reflective coating designer", "concept": "anti-reflection", "tryThis": "Slide the coating index and find the minimum of R₁ + R₂; then switch to ‘Interference’ and change the thickness to see the coating’s colour shift." },
+    { "id": "absorption-depth", "title": "How deep does light get? (Lambert–Beer)", "concept": "absorption", "tryThis": "Move the wavelength from 400 nm to 1100 nm and watch how the absorbed fraction of a 180 µm wafer collapses; then switch on the back reflector." }
+  ],
+  "notes": [
+    { "type": "erratum", "text": "Instruction 1, Q1: the questions run a–g but the official answers run a–h. Answer “g” (coating thickness λ₀/4n) answers no question, and answer “h” belongs to question g (TIR threshold with a coating). This site follows the question letters." },
+    { "type": "erratum", "text": "Instruction 1, Q2(c): the cell-B lines are labelled ‘J_ph,B = q·φ_ph,X’ although the numbers use the absorbed flux of LEDs X+Y (experiment 2) and Y (experiment 3). The numbers are correct; only the label is wrong." },
+    { "type": "difference", "text": "Coatings without interference: instruction 1 Q1(f) uses $R_{tot} = R_1 + R_2$. The book (§10, p. 143) quotes the loss as $1 - (1 - R_1)(1 - R_2)$ (e.g. 22.9 % vs 24.4 % for the ideal interlayer on n = 4.3). Both ignore interference; use the instruction method in exam questions phrased like Q1." },
+    { "type": "difference", "text": "Notation: lecture 1 writes the spectral power density as $P(\\lambda)$ and the spectral photon flux density as $\\Phi(\\lambda)$; the book and formula sheet write $I_{e\\lambda}$ and $\\Phi_{ph,\\lambda}$. Same quantities. This site follows the lecture in explanations and shows both." },
+    { "type": "erratum", "text": "Lecture 1, slide 59 defines irradiance as ‘incident power per unit area, per unit wavelength’. ‘Per unit wavelength’ belongs to the *spectral* irradiance only; irradiance is W/m²." },
+    { "type": "flag", "text": "AM0 irradiance: lecture 1 slide 57 gives 1353 W/m², the book 1361 W/m², book ex. 5.1 uses 1350 W/m², and the ASTM G173 table used in the diagram integrates to ≈ 1348 W/m² over 280–4000 nm. Use whatever value a question gives." },
+    { "type": "erratum", "text": "Book Table 5.1 states that the Earth receives 1.7 × 10¹⁸ W. Lecture 1 slide 43 has 1.7 × 10¹⁷ W, which is correct: 1361 W/m² × π × (6.37 × 10⁶ m)² ≈ 1.7 × 10¹⁷ W." },
+    { "type": "flag", "text": "Lecture 1 slide 60: a yearly irradiation of 1050 kWh/m² corresponds to an average of 120 W/m² and 2.9 equivalent sun hours per day. The slide’s 114 W/m² and 2.7 h/day correspond to 1000 kWh/m² (the book’s value for NL). Small inconsistency, not important for the exam." },
+    { "type": "difference", "text": "Complex refractive index: the book writes ñ = n + iκ (eq. 4.21); book ex. 7.5 (instruction 2) writes ñ = n − ik. Only the sign convention differs; reflectance and $\\alpha = 4\\pi\\kappa/\\lambda_0$ are the same." },
+    { "type": "flag", "text": "Book eq. 5.25 gives $\\Omega_{Sun} \\approx 68.5$ µsr; evaluating eq. 5.24 with the book’s own numbers gives 68.1 µsr. Rounding in the book; irrelevant for the exam." },
+    { "type": "external", "text": "Diagrams use the ASTM G173-03 AM1.5G/AM0 tables (via pvlib) and the c-Si optical constants of M. A. Green (2008). These are standard reference data, not course material; the course’s own example values (n = 3.57 at 1000 nm, ñ = 3.84 + 0.015i at 650 nm) agree with them." }
+  ]
+}

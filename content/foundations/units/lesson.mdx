@@ -1,0 +1,47 @@
+## Why this matters
+
+Most points lost in PV calculations are not physics mistakes but unit slips: a wavelength left in nm, an area in cm², an energy in eV where joules were needed. The fix is one habit: **convert every quantity to base SI units (m, s, J, W, A, K) before it enters a formula**, and convert the answer back at the end if the question asks for other units.
+
+## SI prefixes
+
+<Term id="si-prefixes">Prefixes</Term> are powers of ten written as letters:
+
+| Prefix | Symbol | Factor | Course example |
+|---|---|---|---|
+| giga | G | 10⁹ | GW of PV installed |
+| mega | M | 10⁶ | MJ, MW |
+| kilo | k | 10³ | kWh, kW/m² |
+| centi | c | 10⁻² | cm⁻³ (carrier densities), mA/cm² |
+| milli | m | 10⁻³ | mA |
+| micro | µ | 10⁻⁶ | µm wafer thickness |
+| nano | n | 10⁻⁹ | nm wavelengths and coatings |
+
+Numbers this large and small are written in <Term id="scientific-notation" />: $4.25 \times 10^{21}$. Multiply mantissas and *add* exponents; divide and *subtract* them.
+
+## Squared and cubed units
+
+When a unit is squared or cubed, so is its prefix factor. This is where most errors hide:
+
+$$
+1\,\mathrm{cm^2} = (10^{-2}\,\mathrm{m})^2 = 10^{-4}\,\mathrm{m^2}, \qquad 1\,\mathrm{cm^3} = 10^{-6}\,\mathrm{m^3}, \qquad 1\,\mathrm{nm^2} = 10^{-18}\,\mathrm{m^2}
+$$
+
+For a quantity *per* volume it flips: $1\,\mathrm{cm^{-3}} = 10^{6}\,\mathrm{m^{-3}}$ (a cubic metre holds a million cubic centimetres, so it contains a million times more particles).
+
+<Diagram id="unit-converter" />
+
+## The conversions this course uses all the time
+
+- **Energy:** 1 <Term id="electron-volt" /> = 1.602 × 10⁻¹⁹ J (divide joules by $q$ to get eV). 1 <Term id="kilowatt-hour" /> = 3.6 × 10⁶ J.
+- **Wavelength:** 500 nm = 5.00 × 10⁻⁷ m.
+- **Spectral irradiance:** 1 W m⁻² nm⁻¹ = 10⁹ W m⁻³ (per nm → per m means 10⁹ times more per unit).
+- **Current density:** 1 mA/cm² = 10 A/m² (10⁻³ A over 10⁻⁴ m²).
+- **Temperature:** always in <Term id="kelvin" />: T[K] = T[°C] + 273.15.
+
+<KeyIdea>
+Write the units next to every number in every line. If the units on both sides of an equation don’t match, the numbers can’t be right either.
+</KeyIdea>
+
+## Sanity checks
+
+A quick check catches most slips: photon energies of sunlight are 0.5–4 eV, a reflectance lies between 0 and 1, a c-Si cell gives about 40 mA/cm², AM1.5 delivers about 4 × 10²¹ photons per m² per second. If your answer is 10⁹ times off, look for an nm that stayed an nm.

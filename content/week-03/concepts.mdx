@@ -1,0 +1,297 @@
+<Concept id="drift">
+
+Electrons and holes are never at rest. At room temperature they move randomly at the <Term id="thermal-velocity" /> of about $10^7$ cm/s, colliding constantly with vibrating lattice atoms and ionised dopants. In a uniform material this random motion produces **no net current**: as many carriers cross any plane to the left as to the right (lecture 3 slide 16).
+
+A net current needs one of two things (slide 17): an electric field (drift) or a concentration gradient (diffusion).
+
+### Drift velocity and mobility
+
+An <Term id="electric-field" /> $\xi$ pushes holes along the field and electrons against it. Between collisions they speed up, at each collision they lose their direction again; on average they acquire a <Term id="drift-velocity" /> proportional to the field (eq. 6.23):
+
+$$
+v_{dn} = -\mu_n\xi, \qquad v_{dp} = \mu_p\xi
+$$
+
+The proportionality constant is the <Term id="mobility" /> $\mu$. For c-Si (formula sheet): $\mu_n = 1360$ and $\mu_p = 450$ cm²V⁻¹s⁻¹. Electrons are three times as mobile as holes. Mobility drops when collisions become more frequent: at higher temperature (more lattice vibration) and higher doping (more ionised dopants).
+
+### Drift current and conductivity
+
+Electrons move against the field but carry negative charge, so **both** contribute current in the direction of the field (eq. 6.24–6.25, on the sheet):
+
+$$
+J_{\mathrm{drift}} = q\left(p\mu_p + n\mu_n\right)\xi
+$$
+
+The factor in front of $\xi$ is the <Term id="conductivity" /> (lecture slide 24):
+
+$$
+\sigma = q\left(n\mu_n + p\mu_p\right)
+$$
+
+**Numbers.** Intrinsic c-Si: $\sigma = 1.602 \times 10^{-19} \times 9.5 \times 10^9 \times (1360 + 450) = 2.8 \times 10^{-6}$ Ω⁻¹cm⁻¹, a near-insulator. With $10^{16}$ cm⁻³ phosphorus: $\sigma = 1.602 \times 10^{-19} \times 10^{16} \times 1360 = 2.2$ Ω⁻¹cm⁻¹, almost a million times higher. That answers slide 25's question, *what happens when we add n-type doping?*
+
+<KeyIdea>
+In doped material only the majority carriers matter for conductivity: $\sigma \approx qN_D\mu_n$ (n-type) or $qN_A\mu_p$ (p-type). Because $\mu_n \approx 3\mu_p$, n-type silicon conducts three times better than p-type silicon with the same doping.
+</KeyIdea>
+
+**Book ex. 7.6(h)** (self-derived, not official): what doping gives $J_{\mathrm{drift}} = 110$ A/cm² in p-type c-Si with $\mu_p = 470$ cm²/Vs at $\xi = 25$ V/cm? With $p \approx N_A$: $N_A = J/(q\mu_p\xi) = 110/(1.602 \times 10^{-19} \times 470 \times 25) = 5.8 \times 10^{16}$ cm⁻³.
+
+<Diagram id="drift-conductivity" />
+
+</Concept>
+
+<Concept id="diffusion">
+
+<Term id="diffusion">Diffusion</Term> needs no field at all: particles spread from regions of high concentration to regions of low concentration, purely by random thermal motion (slide 18). Picture a line where the density is higher on the left: random jumps across the line are equally likely in both directions *per particle*, but there are more particles on the left, so more cross to the right. With a flat profile the flows cancel and $J = 0$ (slide 21).
+
+The flux is proportional to the gradient. Converted to current density (eq. 6.26, slide 22):
+
+$$
+J_{n,\mathrm{diff}} = qD_n\frac{\mathrm{d}n}{\mathrm{d}x}, \qquad J_{p,\mathrm{diff}} = -qD_p\frac{\mathrm{d}p}{\mathrm{d}x}
+$$
+
+$D$ is the <Term id="diffusion-coefficient" /> in cm²/s. Mind the signs: both carriers diffuse *down* the gradient, but the electron's negative charge flips its current, so electron diffusion current points *up* the electron gradient. The sheet writes the total in 3-D form (eq. 6.27): $J_{\mathrm{diff}} = q(D_n\nabla n - D_p\nabla p)$.
+
+<Hint title="What is dn/dx?">
+The slope of the density profile, in cm⁻³ per cm = cm⁻⁴. For a straight line: (change in density) / (distance), with the distance in **cm**. The Foundations lesson [Slopes, derivatives and simple differential equations](/foundations/derivatives-odes) has a refresher.
+</Hint>
+
+**Book ex. 6.14** (official answer 749 A/cm²). $D_n = 36$ cm²/s; $n$ drops linearly from $2.7 \times 10^{16}$ to $10^{15}$ cm⁻³ over 2 µm:
+
+$$
+\frac{\mathrm{d}n}{\mathrm{d}x} = \frac{10^{15} - 2.7 \times 10^{16}}{2 \times 10^{-4}\ \mathrm{cm}} = -1.3 \times 10^{20}\ \mathrm{cm^{-4}}, \qquad |J_{n,\mathrm{diff}}| = 1.602 \times 10^{-19} \times 36 \times 1.3 \times 10^{20} = 750\ \mathrm{A/cm^2}
+$$
+
+### The Einstein relation
+
+Drift and diffusion are both limited by the same collisions, so $D$ and $\mu$ are linked (eq. 6.28, on the sheet):
+
+$$
+\frac{D_n}{\mu_n} = \frac{D_p}{\mu_p} = \frac{k_BT}{q}
+$$
+
+At 300 K, $k_BT/q = 0.0259$ V, so $D_n = 0.0259 \times 1360 = 35$ cm²/s and $D_p = 12$ cm²/s (book p. 60).
+
+<Diagram id="diffusion-current" />
+
+### Drift and diffusion together
+
+The total current is the sum (eq. 6.29):
+
+$$
+J = q\left(p\mu_p + n\mu_n\right)\xi + q\left(D_n\nabla n - D_p\nabla p\right)
+$$
+
+They can cancel. **Book ex. 6.15** asks which field balances the electron diffusion of ex. 6.14: set $qn\mu_n\xi = J_{n,\mathrm{diff}}$, so $\xi = J/(qn\mu_n)$. The answer book takes $n = 10^{15}$ cm⁻³ and $\mu_n = 1350$: $\xi = 749/(1.60 \times 10^{-19} \times 10^{15} \times 1350) = 3468$ V/cm.
+
+<Flag title="Which n in ex. 6.15?">
+The density varies across the gradient, so the balancing field varies too: 3468 V/cm at $n = 10^{15}$ cm⁻³ but only 128 V/cm at $2.7 \times 10^{16}$ cm⁻³. The official answer uses the low end. Exactly this balance between drift and diffusion holds inside a p-n junction in equilibrium (week 4).
+</Flag>
+
+</Concept>
+
+<Concept id="generation">
+
+<Term id="generation">Generation</Term> creates mobile electrons and holes (slide 27). Thermal generation happens all the time; in equilibrium it is exactly balanced by recombination. Under light, photogeneration adds pairs on top. For a photon of energy $E_{\mathrm{ph}}$ there are three cases (slide 28):
+
+- $E_{\mathrm{ph}} = E_G$: one electron–hole pair, nothing lost;
+- $E_{\mathrm{ph}} > E_G$: one pair, and the excess $E_{\mathrm{ph}} - E_G$ is lost as heat when electron and hole relax to the band edges: <Term id="thermalisation" /> (within about $10^{-12}$ s, book §7.6);
+- $E_{\mathrm{ph}} < E_G$: no absorption at all (non-absorption).
+
+### The generation profile
+
+Light is absorbed according to Lambert–Beer, now written for the photon flux (eq. 7.2): $\Phi(x) = \Phi_0 e^{-\alpha x}$. Every photon absorbed between $x$ and $x + \mathrm{d}x$ creates one pair, so the <Term id="generation-rate" /> is minus the slope of the flux (eq. 7.4, on the sheet):
+
+$$
+G_{L,\lambda}(x) = \eta_g\,\Phi^0_{\mathrm{ph},\lambda}\,\alpha(\lambda)\,\exp\left[-\alpha(\lambda)x\right]
+$$
+
+with $\eta_g$ the generation quantum efficiency (normally 1: one pair per photon). Units: photons per area per time × per length = **pairs per volume per time** (cm⁻³s⁻¹). With front reflection, multiply by $(1 - R)$ (book example p. 69). For a full spectrum, integrate over wavelength (eq. 7.5).
+
+<KeyIdea>
+$G$ is largest at the surface and falls off with the absorption length $1/\alpha$. Blue light ($\alpha \sim 10^4$–$10^5$ cm⁻¹) generates almost everything in the first micrometre, near-infrared light ($\alpha \sim 10^2$ cm⁻¹) throughout a 100–200 µm wafer.
+</KeyIdea>
+
+**Book ex. 7.5 (a)–(d)** (official answers). 650 nm, 1000 W/m², $\tilde n = 3.84 - 0.015i$:
+
+- $\alpha = 4\pi k/\lambda = 4\pi \times 0.015/650 \times 10^{-9} = 2.90 \times 10^5$ m⁻¹ (2900 cm⁻¹);
+- $R = \left|\frac{1 - (3.84 - 0.015i)}{1 + (3.84 - 0.015i)}\right|^2 = 0.344$;
+- $\Phi_0 = I\lambda/hc = 3.27 \times 10^{21}$ m⁻²s⁻¹, so just inside $\Phi(0) = (1 - R)\Phi_0 = 2.15 \times 10^{21}$ m⁻²s⁻¹;
+- at 50 µm: $\Phi = 2.15 \times 10^{21} e^{-14.5} = 1.08 \times 10^{15}$ m⁻²s⁻¹, and $G = \alpha\Phi = 3.1 \times 10^{20}$ m⁻³s⁻¹.
+
+<Flag title="Rounding in the official answer">
+The answer book writes $e^{-\alpha x} = 5.3 \times 10^{-7}$ and gets Φ(50 µm) = 1.14 × 10¹⁵ m⁻²s⁻¹ and G = 3.3 × 10²⁰ m⁻³s⁻¹. With $\alpha x = 14.5$ the exponential is $5.0 \times 10^{-7}$, about 5 % lower. Either answer is fine in an exam if your steps are clear.
+</Flag>
+
+<Diagram id="generation-profile" />
+
+</Concept>
+
+<Concept id="recombination">
+
+<Term id="recombination">Recombination</Term> is the reverse: a free electron falls back into a hole and both disappear (slide 27). The energy ($\approx E_G$) has to go somewhere. Lecture 3 distinguishes four ways (slides 29–38):
+
+1. <Term id="radiative-recombination">Radiative</Term>: the energy leaves as a photon with $E \approx E_G$. Important in **direct** semiconductors (GaAs); rare in silicon, because the indirect gap also needs a phonon (week 2). Rate: $R \propto np$ (eq. 7.11).
+2. <Term id="auger-recombination">Auger</Term>: the energy is handed to a **third** carrier, which is kicked deep into its band and then thermalises. Because three carriers are involved the rate grows steeply with density, $R_{\mathrm{Aug}} = C_nn^2p + C_pnp^2$ (eq. 7.43): dominant in heavily doped silicon.
+3. <Term id="srh-recombination">Shockley–Read–Hall (SRH)</Term>: an impurity or crystal defect creates an energy level $E_T$ in the gap (a <Term id="trap-state" />). The electron drops into the trap, then a hole arrives and completes the recombination. The energy goes to the lattice as heat. This is the dominant mechanism in most practical silicon.
+4. <Term id="surface-recombination">Surface</Term>: at a surface many atoms miss a bonding partner. These <Term id="dangling-bond">dangling bonds</Term> are defects with many trap states in the gap, so SRH happens there very efficiently.
+
+<KeyIdea>
+Recombination is always the enemy in a solar cell: every carrier that recombines before reaching the contacts is a lost electron. SRH (defects) and surface recombination can be reduced by making cleaner material and by <Term id="passivation" />; radiative and Auger recombination are intrinsic to the material.
+</KeyIdea>
+
+### Surface passivation
+
+Slides 37–38 show the effect of passivation: far fewer trap states at the surface. Book §7.5 describes two ways to get there. Deposit a thin layer (for example SiO₂ or SiNₓ) that ties up the dangling bonds, which removes trap states; or add a heavily doped layer under the surface that keeps the minority carriers away from it. The surface's quality is expressed by the <Term id="surface-recombination-velocity" /> $S$ (cm/s): $S = 0$ means no surface recombination; very large $S$ means every minority carrier reaching the surface recombines. The book defines it as $S_r = v_{th}\sigma N_{sT}$ (eq. 7.50).
+
+<GoDeeper title="Book: the full SRH rate" kind="book">
+
+Book §7.3 derives the SRH rate from four capture and emission processes (Table 7.1). With equal capture cross-sections $\sigma$ (eq. 7.38):
+
+$$
+R_{\mathrm{SRH}} = v_{th}\sigma N_T\,\frac{np - n_i^2}{n + p + 2n_i\cosh\left(\frac{E_T - E_{Fi}}{k_BT}\right)}
+$$
+
+Two conclusions: the rate is zero in equilibrium ($np = n_i^2$), and traps near midgap ($E_T \approx E_{Fi}$, small cosh) are the most harmful. You don't need to derive this; the low-injection form on the sheet (eq. 7.39–7.40) is what you use.
+
+</GoDeeper>
+
+</Concept>
+
+<Concept id="lifetime">
+
+Under <Term id="low-injection" /> (excess carriers ≪ majority carriers), every mechanism becomes proportional to the **excess minority** density. For n-type material (eq. 7.18, 7.39, on the sheet):
+
+$$
+R_d \approx \frac{p - p_0}{\tau_{pd}}, \qquad R_{\mathrm{SRH}} = c_pN_T(p - p_0) = \frac{p - p_0}{\tau_{p,\mathrm{SRH}}}
+$$
+
+(and the same with $n - n_0$ and $\tau_n$ for p-type, eq. 7.23 and 7.40). The time constant τ is the <Term id="minority-carrier-lifetime" />. Lecture slide 35 lists the three bulk mechanisms in this form:
+
+$$
+R_D = \beta n_0(p - p_0), \qquad R_{\mathrm{Aug}} \approx C_nN_D^2\,p, \qquad R_{\mathrm{SRH}} = C_pN_T(p - p_0)
+$$
+
+so $\tau_{\mathrm{rad}} = 1/(\beta n_0)$, $\tau_{\mathrm{Aug}} = 1/(C_nN_D^2)$ and $\tau_{\mathrm{SRH}} = 1/(c_pN_T)$ (eq. 7.19, 7.45, 7.41).
+
+**What τ means.** Switch the light off at $t = 0$: the excess density decays exponentially (eq. 7.22),
+
+$$
+p(t) = p_0 + G_L\tau_{p}\,e^{-t/\tau_p}
+$$
+
+So τ is the average time an excess minority carrier survives. In steady state under constant light, $\Delta p = G_L\tau_p$ (eq. 7.20). The lifetime tester on slides 40–41 measures exactly this decay; a wafer with worse surfaces shows a faster decay.
+
+### Several mechanisms at once
+
+Recombination rates add, so the inverse lifetimes add (eq. 7.27):
+
+$$
+\frac{1}{\tau_{\mathrm{tot}}} = \frac{1}{\tau_{\mathrm{rad}}} + \frac{1}{\tau_{\mathrm{Aug}}} + \frac{1}{\tau_{\mathrm{SRH}}} + \ldots
+$$
+
+The shortest lifetime dominates. Two mechanisms with 10 µs and 50 µs give 8.3 µs, not 30 µs.
+
+<Diagram id="lifetime-explorer" />
+
+### Diffusion length
+
+In its lifetime a minority carrier diffuses over a typical distance, the <Term id="diffusion-length" /> (eq. 7.28, on the sheet; lecture slide 39):
+
+$$
+L_n = \sqrt{D_n\tau_n}, \qquad L_p = \sqrt{D_p\tau_p}
+$$
+
+**Book ex. 7.2** (official): $\tau = 10$ µs, $D = 25.6$ cm²/s → $L = \sqrt{25.6 \times 10^{-5}} = 0.016$ cm = 160 µm. **Book ex. 7.3** (official): $L = 200$ µm, $D = 27$ cm²/s → $\tau = L^2/D = (0.02)^2/27 = 14.8$ µs.
+
+<KeyIdea>
+For good collection, $L$ must be large compared with the distance carriers must travel to the junction. With $D_n = 35$ cm²/s, a 1 µs lifetime gives $L \approx 60$ µm, less than a typical 180 µm wafer; 1 ms gives almost 2 mm.
+</KeyIdea>
+
+**Book ex. 7.5(e)** (official answer $4.1 \times 10^{14}$ m⁻³). Uniform illumination along the wafer, no current, steady state, low injection: generation and recombination balance locally, $\Delta n = G_L\tau_n$. With $\tau_n = L_n^2/D_n = (60 \times 10^{-4})^2/29 = 1.24$ µs and $G_L(50\ \mathrm{µm}) = 3.1 \times 10^{20}$ m⁻³s⁻¹: $\Delta n = 3.9 \times 10^{14}$ m⁻³ $= 3.9 \times 10^8$ cm⁻³ (official, with the rounded G: $4.1 \times 10^{14}$ m⁻³).
+
+</Concept>
+
+<Concept id="continuity">
+
+The <Term id="continuity-equation" /> is bookkeeping (book §6.5.3, lecture slide 42): the electron density in a small volume changes because of carriers flowing in or out, generation and recombination (eq. 6.34, on the sheet):
+
+$$
+\frac{\partial n}{\partial t} = \frac{1}{q}\nabla\cdot\mathbf{J}_n - R_n + G_n, \qquad \frac{\partial p}{\partial t} = -\frac{1}{q}\nabla\cdot\mathbf{J}_p - R_p + G_p
+$$
+
+Lecture 3 (slide 42) presents it as one of the five fundamental equations of semiconductor devices, together with the two current-density equations (drift + diffusion) and the <Term id="poisson-equation" /> $\frac{\partial^2\psi}{\partial x^2} = -\frac{\partial\xi}{\partial x} = -\frac{\rho}{\varepsilon_s}$, which links the field to the charge (week 4).
+
+### The steady-state recipe
+
+Most exercises use the same simplifications: 1-D, <Term id="steady-state" /> ($\partial/\partial t = 0$), no electric field (only diffusion), minority carriers in low injection. For holes in n-type material, $J_p = -qD_p\,\mathrm{d}p/\mathrm{d}x$ and $R = \Delta p/\tau_p$, and the continuity equation becomes
+
+$$
+D_p\frac{\mathrm{d}^2\Delta p}{\mathrm{d}x^2} - \frac{\Delta p}{\tau_p} + G(x) = 0
+$$
+
+Then: (1) write the equation for each region, (2) write its general solution, (3) apply the <Term id="boundary-condition">boundary conditions</Term>, matching value and slope where regions meet. Two cases cover the exercises:
+
+- **No recombination** ($\tau \to \infty$): $D\Delta'' = -G$. With uniform $G$ the profile is a parabola; without $G$ a straight line.
+- **No generation**: $\Delta'' = \Delta/L^2$, with solutions $e^{\pm x/L}$. In a thick wafer only the decaying one survives: $\Delta(x) = \Delta(0)\,e^{-x/L}$. This is where the diffusion length comes from.
+
+Boundary conditions: a contact or region where the excess is removed gives $\Delta = 0$; a perfect, passivated surface gives zero slope (no flow, $S = 0$); a real surface gives $D\,\mathrm{d}\Delta/\mathrm{d}x = -S\Delta$ (flow into the surface = surface recombination).
+
+### Book ex. 7.7 (self-derived, not official)
+
+n-type, generation $G_0$ for $-L < x < L$, infinite lifetime, $\Delta p = 0$ at $x = \pm 3L$, no field. By symmetry consider $x \geq 0$.
+
+- Inside ($|x| \leq L$): $D_p\Delta p'' = -G_0$, so $\Delta p = -\frac{G_0}{2D_p}x^2 + C$ (slope zero at $x = 0$ by symmetry).
+- Outside ($L \leq |x| \leq 3L$): $\Delta p'' = 0$, a straight line through zero at $3L$: $\Delta p = A(3L - |x|)$.
+- Match at $x = L$. Slopes: $-G_0L/D_p = -A$, so $A = G_0L/D_p$. Values: $-\frac{G_0L^2}{2D_p} + C = 2AL = \frac{2G_0L^2}{D_p}$, so $C = \frac{5G_0L^2}{2D_p}$.
+
+$$
+\Delta p(x) = \frac{G_0}{2D_p}\left(5L^2 - x^2\right) \quad \text{for } |x| \leq L
+$$
+
+$$
+\Delta p(x) = \frac{G_0L}{D_p}\left(3L - |x|\right) \quad \text{for } L \leq |x| \leq 3L
+$$
+
+A parabola in the middle with straight flanks: the carriers generated in the middle diffuse outwards to where they are removed at $\pm 3L$.
+
+### Book ex. 7.8 (self-derived, not official)
+
+p-type bar $0 \leq x \leq W$, uniform $G_L$, infinite lifetime, no field, $n(0) = 0$ (so $\Delta n(0) = -n_0$, see the flag in the notes), surface recombination velocity $S$ at $x = W$. Everywhere $D_n\Delta n'' = -G_L$:
+
+$$
+\Delta n(x) = -\frac{G_L}{2D_n}x^2 + C_1x - n_0
+$$
+
+**(a) S = 0** (no flow at $x = W$): $\Delta n'(W) = 0$ gives $C_1 = G_LW/D_n$:
+
+$$
+\Delta n(x) = \frac{G_L}{D_n}\left(Wx - \frac{x^2}{2}\right) - n_0
+$$
+
+**(b) S > 0**: $D_n\Delta n'(W) = -S\,\Delta n(W)$. Solving for $C_1$:
+
+$$
+C_1 = \frac{G_LW\left(1 + \frac{SW}{2D_n}\right) + Sn_0}{D_n + SW}
+$$
+
+For $S \to 0$ this returns (a); for $S \to \infty$, $\Delta n(W) \to 0$. **(c)** Both curves start at $-n_0 \approx 0$ at $x = 0$. Curve (a) rises to a maximum with zero slope at $x = W$; curve (b) lies below it everywhere, peaks inside the bar and bends down towards $x = W$, where carriers leak into the surface.
+
+<Diagram id="steady-state-profiles" />
+
+</Concept>
+
+<Concept id="pv-operation">
+
+Lecture 3 ends (slides 43–53) by walking through a c-Si solar cell: a p-type wafer with a thin n-type layer on top (the junction), an anti-reflection coating, and front and back electrodes.
+
+1. **Absorption and generation**: photons create electron–hole pairs throughout the wafer, most near the front (concept above).
+2. **Recombination** competes all the time: pairs that recombine are lost (slide 47).
+3. **Separation**: carriers that diffuse to the junction are separated by its electric field, electrons to the n-side and holes to the p-side (slides 48–50).
+4. **Collection**: the separated charges build up a voltage $V_{OC}$ between the electrodes (slide 51). Connect a load and a current flows: the cell delivers power (slides 52–53).
+
+<KeyIdea>
+Week 3 gives the conditions for step 3 to happen at all: minority carriers generated in the wafer must reach the junction by diffusion before they recombine. That needs a diffusion length longer than the wafer thickness, and good surface passivation. How the junction separates them is week 4.
+</KeyIdea>
+
+</Concept>

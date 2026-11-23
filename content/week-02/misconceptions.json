@@ -1,0 +1,81 @@
+[
+ {
+  "id": "m2-hole-particle",
+  "wrong": "A hole is a positive particle, like a proton, moving through the crystal.",
+  "right": "A hole is a **missing** bond electron. Neighbouring bond electrons jump into it one after another, so the empty place moves, and it behaves like a charge $+q$ in the valence band.",
+  "tip": "Think of a gap in a row of parked cars: the gap moves left as each car moves right.",
+  "concept": "electrons-holes"
+ },
+ {
+  "id": "m2-doping-charges",
+  "wrong": "n-type silicon is negatively charged because it has extra electrons.",
+  "right": "Doped silicon is **neutral**. Each donor brings one extra electron and one extra proton; after ionisation the free electron is balanced by the fixed positive ion: $p + N_D - n - N_A = 0$.",
+  "concept": "doping",
+  "foundation": "atoms-electrons"
+ },
+ {
+  "id": "m2-minority-unchanged",
+  "wrong": "Adding donors only adds electrons; the hole density stays at $n_i$.",
+  "right": "The product stays fixed: $np = n_i^2$. More electrons means holes recombine faster, so $p = n_i^2/N_D$ drops by the same factor that $n$ rises.",
+  "tip": "Instruction 2 Q2: $n$ up ×10⁷, $p$ down ×10⁷ (937 cm⁻³).",
+  "concept": "doping"
+ },
+ {
+  "id": "m2-ni-doping",
+  "wrong": "Doping changes $n_i$.",
+  "right": "$n_i$ is a material property: $n_i^2 = N_CN_Ve^{-E_G/k_BT}$. It depends on the bandgap and the temperature only. Doping changes $n$ and $p$, never their product.",
+  "concept": "carrier-density"
+ },
+ {
+  "id": "m2-midgap",
+  "wrong": "The intrinsic Fermi level lies exactly in the middle of the gap.",
+  "right": "Close, but not exactly: $E_{Fi} = E_C - E_G/2 + \\frac{k_BT}{2}\\ln(N_V/N_C)$. For c-Si $N_V < N_C$, so it lies 7 meV below midgap (0.567 eV below $E_C$).",
+  "concept": "carrier-density"
+ },
+ {
+  "id": "m2-mass-action-light",
+  "wrong": "$np = n_i^2$ always holds, also under illumination.",
+  "right": "Only in **thermal equilibrium**. Light adds electron–hole pairs, so $np > n_i^2$: $np = n_i^2\\,e^{(E_{Fn}-E_{Fp})/k_BT}$.",
+  "concept": "quasi-fermi"
+ },
+ {
+  "id": "m2-log10",
+  "wrong": "$E_C - E_F = k_BT\\log(N_C/N_D)$ with log on base 10.",
+  "right": "It is the **natural** logarithm (ln): it comes from undoing $e^{x}$. Using log₁₀ gives values 2.3 times too small.",
+  "tip": "Rule of thumb to check: 60 meV per factor 10 at 300 K.",
+  "concept": "fermi-level-doped",
+  "foundation": "exp-log"
+ },
+ {
+  "id": "m2-kT-units",
+  "wrong": "$k_BT = 1.38 \\times 10^{-23} \\times 300$, and then use that number next to energies in eV.",
+  "right": "$k_B T = 4.14 \\times 10^{-21}$ **J** $= 0.0259$ **eV**. In $e^{-E/k_BT}$ the energy and $k_BT$ must have the same unit, or the exponent is off by a factor $1.6 \\times 10^{-19}$.",
+  "concept": "carrier-statistics",
+  "foundation": "units"
+ },
+ {
+  "id": "m2-fermi-is-state",
+  "wrong": "The Fermi level is an energy level that electrons occupy.",
+  "right": "In a semiconductor $E_F$ usually lies in the **gap**, where there are no states at all. It is a reference energy: the energy at which a state *would* be filled with probability ½.",
+  "concept": "carrier-statistics"
+ },
+ {
+  "id": "m2-cube-units",
+  "wrong": "Atom density = $8/a^3$ with $a$ in metres gives atoms per cm³.",
+  "right": "With $a$ in m you get atoms per **m³** ($5 \\times 10^{28}$). Convert $a$ to cm first ($5.43 \\times 10^{-8}$ cm) or divide by $10^6$.",
+  "concept": "si-crystal",
+  "foundation": "units"
+ },
+ {
+  "id": "m2-qfl-both-move",
+  "wrong": "Under light both quasi-Fermi levels move away from $E_F$ by about the same amount, because $\\Delta n = \\Delta p$.",
+  "right": "The levels follow the **logarithm** of the densities. The majority density hardly changes, so its quasi-Fermi level stays; the minority density can grow by 10 orders of magnitude, so its level moves a lot.",
+  "concept": "quasi-fermi"
+ },
+ {
+  "id": "m2-gap-states",
+  "wrong": "Thermal energy at 300 K (0.026 eV) is far too small to free any electrons across a 1.12 eV gap.",
+  "right": "$k_BT$ is an *average*. The Fermi–Dirac tail gives a small but non-zero probability ($\\sim 3 \\times 10^{-10}$ at $E_C$ in intrinsic Si), and with $\\sim 10^{19}$ states that still means $10^{10}$ free electrons per cm³.",
+  "concept": "carrier-statistics"
+ }
+]
